@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=MyPeople
+Exec=qmlscene %U MyPeople/Main.qml
+Icon=MyPeople/MyPeople.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+

@@ -1,0 +1,15 @@
+{
+    "name": "mypeople.fulvio999",
+    "description": "A simple archiver, manager for contacts, people and friends",
+    "architecture": "@CLICK_ARCH@",
+    "title": "MyPeople",
+    "hooks": {
+        "MyPeople": {
+            "apparmor": "MyPeople/MyPeople.apparmor",
+            "desktop": "MyPeople/MyPeople.desktop"
+        }
+    },
+    "version": "1.6.1",
+    "maintainer": "fulvio999 <fulvio999@gmail.com>",
+    "framework": "ubuntu-sdk-15.04-qml"
+}

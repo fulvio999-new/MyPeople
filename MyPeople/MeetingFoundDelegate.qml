@@ -9,6 +9,7 @@ import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
 import "./storage.js" as Storage
+import "./DateUtils.js" as DateUtils
 
  /*
     Item that display a meeting with a SPECIFIC person previously chosen from the people list
@@ -16,7 +17,7 @@ import "./storage.js" as Storage
  */
  Item {
 
-        property string todayDateFormatted : Storage.formatFullDateToString(new Date());
+        property string todayDateFormatted : DateUtils.formatFullDateToString(new Date());
 
         id: meetingFoundDelegate
         width: searchMeetingWithPersonPage.width

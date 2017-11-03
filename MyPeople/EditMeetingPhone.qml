@@ -11,13 +11,14 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
 /* note: alias name must have first letter in upperCase */
 import "utility.js" as Utility
 import "storage.js" as Storage
+import "DateUtils.js" as DateUtils
 
 /*
   For PHONE: Component that allow to edit an already saved Meeting chosen from a ListModel
 */
 Column {
 
-    property string todayDateFormatted : Storage.formatFullDateToString(new Date());
+    property string todayDateFormatted : DateUtils.formatFullDateToString(new Date());
     property string meetingStatus;  /* currently saved meeting status */
     property string meetingStatusToSave; /* the meeting status to save */
 

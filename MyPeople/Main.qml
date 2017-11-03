@@ -201,7 +201,7 @@ MainView {
                             Rectangle {
                                 color: "transparent"
                                 width: parent.width
-                                height: units.gu(3)
+                                height: units.gu(7)
                             }
 
                             Row{
@@ -274,6 +274,48 @@ MainView {
                                         adaptivePageLayout.addPageToNextColumn(peopleListPage, searchAnyMeetingPage);
                                     }
                                 }
+                            }
+
+                            Row{
+                                id:todayInfo
+                                spacing: units.gu(5)
+
+                                Column{
+
+
+//                                    Label{
+//                                        text: "BirthDay"
+//                                    }
+MouseArea{
+    width: 50; height:50;
+                                    Image{
+                                        id:todayBirthdayImage
+                                        width: 50; height:50
+                                        fillMode: Image.PreserveAspectFit
+                                        source: "birthday.png"
+                                    }
+
+                                    onClicked: {
+                                        console.log("clickec");
+                                    }
+
+                                }
+                                }
+
+                                Column{
+
+//                                    Label{
+//                                        text: "Meetings"
+//                                    }
+
+                                    Image{
+                                        id:todayMeetingImage
+                                        width: 60; height:60
+                                        fillMode: Image.PreserveAspectFit
+                                        source: "meeting.png"
+                                    }
+                                }
+
                             }
                         }
                     }

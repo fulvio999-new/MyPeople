@@ -68,5 +68,7 @@ DISTFILES += \
     AllPeopleMeetingFoundDelegate.qml \
     AppConfigurationPhone.qml \
     AppConfigurationTablet.qml \
-    TodayMeetingsAlert.qml
+    TodayMeetingsAlert.qml \
+    DateUtils.js \
+    birthday.png
 

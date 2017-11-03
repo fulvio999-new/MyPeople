@@ -9,6 +9,7 @@ import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
 import "./storage.js" as Storage
+import "./DateUtils.js" as DateUtils
 
  /*
     Item that display a meeting item retrieved from the database.
@@ -16,7 +17,7 @@ import "./storage.js" as Storage
     (Note: a delegate object can access directly ath values in the dataModel)
  */
  Item {
-        property string todayDateFormatted : Storage.formatFullDateToString(new Date());
+        property string todayDateFormatted : DateUtils.formatFullDateToString(new Date());
 
         id: allPeopleMeetingFoundDelegate
         width: searchAnyMeetingPage.width

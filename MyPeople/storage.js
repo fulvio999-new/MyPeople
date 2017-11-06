@@ -191,6 +191,59 @@ function getUUID(suffix){
     }
 
 
+    /*
+        Get the amount of today birthday
+    */
+    function getAmountTodayBirthday(){
+
+        var db = getDatabase();
+        var today = new Date ();
+        var todayDateFormatted = Qt.formatDateTime(today, "dd MMMM yyyy")
+
+        //console.log("Today date formatted (dd MMMM yyyy) is: "+todayDateFormatted);
+
+        var rs = "";
+        db.transaction(function(tx) {
+            rs = tx.executeSql("SELECT count(id) as todayBirthday FROM people WHERE birthday = '"+todayDateFormatted+"';");
+        }
+        );
+
+        //console.log("Found today Birthday: "+rs.rows.item(0).todayBirthday);
+
+        return rs.rows.item(0).todayBirthday;
+    }
+
+
+    /*
+        Get the deatils of the the today birthday
+    */
+    function getTodayBirthday(){
+
+        var db = getDatabase();
+        var today = new Date ();
+        var todayDateFormatted = Qt.formatDateTime(today, "dd MMMM yyyy")
+
+        //console.log("Today date formatted (dd MMMM yyyy) is: "+todayDateFormatted);
+
+        var rs = "";
+        db.transaction(function(tx) {
+            rs = tx.executeSql("SELECT id,name,surname,phone,email FROM people WHERE birthday = '"+todayDateFormatted+"';");
+        }
+        );
+        /* fill the meeting ListModel to be shown in the result page */
+        for (var i = 0; i < rs.rows.length; i++) {
+             todayBirthdayModel.append( {
+                                  "id": rs.rows.item(i).id,
+                                  "name": rs.rows.item(i).name,
+                                  "surname": rs.rows.item(i).surname,
+                                  "phone": rs.rows.item(i).phone,
+                                  "email": rs.rows.item(i).email,
+              });
+        }
+
+    return rs;
+  }
+
 //----------------------------------------- MEETING (new features added from MyPeople 1.6) ---------------------------
 
 

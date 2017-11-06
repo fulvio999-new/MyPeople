@@ -70,5 +70,7 @@ DISTFILES += \
     AppConfigurationTablet.qml \
     TodayMeetingsAlert.qml \
     DateUtils.js \
-    birthday.png
+    birthday.png \
+    TodayBirthDayTablet.qml \
+    TodayBirthDayPhone.qml
 

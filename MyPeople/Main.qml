@@ -261,7 +261,7 @@ MainView {
 
                                 Button{
                                     id: showReportbutton
-                                    text: i18n.tr("Glogal Agenda Meeting")
+                                    text: i18n.tr("Global Agenda Meetings")
                                     color: UbuntuColors.green
                                     height: units.gu(4)
                                     anchors.centerIn: parent.Center
@@ -277,46 +277,66 @@ MainView {
                             }
 
                             Row{
-                                id:todayInfo
-                                spacing: units.gu(5)
+                                id:todayInfo                               
 
-                                Column{
+                                Grid {
+                                    id: categoryInstantReportChartRow
+                                    visible: true
+                                    columns:4
+                                    columnSpacing: units.gu(2)
+                                    verticalItemAlignment: Grid.AlignVCenter
+                                    horizontalItemAlignment: Grid.AlignHCenter
 
+                                    MouseArea{
+                                        width: todayBirthdayImage.width;
+                                        height:todayBirthdayImage.height;
 
-//                                    Label{
-//                                        text: "BirthDay"
-//                                    }
-MouseArea{
-    width: 50; height:50;
-                                    Image{
-                                        id:todayBirthdayImage
-                                        width: 50; height:50
-                                        fillMode: Image.PreserveAspectFit
-                                        source: "birthday.png"
+                                        Image{
+                                            id:todayBirthdayImage
+                                            width: 50; height:50
+                                            fillMode: Image.PreserveAspectFit
+                                            source: "birthday.png"
+                                        }
+
+                                        onClicked: {
+                                            Storage.getTodayBirthday();
+                                            adaptivePageLayout.addPageToNextColumn(peopleListPage, todayBirthdayPage)
+                                        }
                                     }
 
-                                    onClicked: {
-                                        console.log("clickec");
+                                    Label{
+                                        id: todayBirthDay
+                                        Component.onCompleted: {
+                                           todayBirthDay.text = "Today: "+ Storage.getAmountTodayBirthday()
+                                        }
                                     }
 
-                                }
-                                }
+                                    MouseArea{
+                                        width: todayBirthdayImage.width;
+                                        height:todayBirthdayImage.height;
 
-                                Column{
+                                        Image{
+                                            id:todayMeetingImage
+                                            width: 60; height:60
+                                            fillMode: Image.PreserveAspectFit
+                                            source: "meeting.png"
+                                        }
 
-//                                    Label{
-//                                        text: "Meetings"
-//                                    }
+                                        onClicked: {
+                                            console.log("clicked Meeting");
+                                            adaptivePageLayout.addPageToNextColumn(peopleListPage, addPersonPage)
+                                        }
+                                    }
 
-                                    Image{
-                                        id:todayMeetingImage
-                                        width: 60; height:60
-                                        fillMode: Image.PreserveAspectFit
-                                        source: "meeting.png"
+                                    Label{
+                                        id: todayMeeting
+                                        Component.onCompleted: {
+                                           todayMeeting.text = "Today: "+ Storage.getTodayMeetings()
+                                        }
                                     }
                                 }
 
-                            }
+                            } //ROW
                         }
                     }
                 }
@@ -435,7 +455,7 @@ MouseArea{
                     anchors.topMargin: units.gu(36)
                     anchors.fill: parent
                     focus: true
-                    /* nececessary otherwise the list scroll under the  */
+                    /* nececessary otherwise the list scroll under the header */
                     clip: true
                     model: meetingWithPersonFoundModel
                     boundsBehavior: Flickable.StopAtBounds
@@ -532,7 +552,7 @@ MouseArea{
                 id: searchAnyMeetingPage
 
                 header: PageHeader {
-                   title: i18n.tr("Search for meetings wiht any people")
+                   title: i18n.tr("Search for meetings with any people")
                 }
 
                 ListModel {
@@ -717,6 +737,55 @@ MouseArea{
             }
         }
 
+
+       //----------------- Today BirthDay Page -----------------
+       Page {
+            id: todayBirthdayPage
+
+            header: PageHeader {
+               title: i18n.tr("Today BirthDay")
+            }
+
+            ListModel {
+               id: todayBirthdayModel
+            }
+
+//            Component{
+//                id: birthDayFoundDelegate
+//            }
+
+
+//            UbuntuListView {
+//                   id: todayBirthDayResultList
+//                   /* necessary, otherwise hide the search criteria row */
+//                   anchors.topMargin: units.gu(36)
+//                   anchors.fill: parent
+//                   focus: true
+//                   /* nececessary otherwise the list scroll under the header */
+//                   clip: true
+//                   model: todayBirthdayModel
+//                   boundsBehavior: Flickable.StopAtBounds
+//                  // highlight: HighlightComponent{}
+//                   delegate: birthDayFoundDelegate
+//            }
+
+            Layouts {
+                id: layouttodayBirthdayPage
+                width: parent.width
+                height: parent.height
+                layouts:[
+
+                    ConditionalLayout {
+                        name: "layoutTodayBirthDay"
+                        when: root.width > units.gu(50)
+                        TodayBirthDayTablet{}
+                    }
+                ]
+                //else
+                TodayBirthDayPhone{}
+            }
+        }
+
        //-------------------------------------------------------
 
 
@@ -724,6 +793,8 @@ MouseArea{
 
 
     /*
+      USED ONLY FOR THE LEGACY MyPeople VERSIONS
+
       U1DB Databases "connetcors" to MyPeole 1.0 and 1.1 Databases. Used only to import old contacts into new Mypeople 1.2 database
       MyPeople 1.2 (and futere release) uses QT LocalStorage API instead of QML U1DB, so that the Database  will be located
       in a fixed folder independent from thre application version and NO import was necessary.

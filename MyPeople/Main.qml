@@ -750,25 +750,6 @@ MainView {
                id: todayBirthdayModel
             }
 
-//            Component{
-//                id: birthDayFoundDelegate
-//            }
-
-
-//            UbuntuListView {
-//                   id: todayBirthDayResultList
-//                   /* necessary, otherwise hide the search criteria row */
-//                   anchors.topMargin: units.gu(36)
-//                   anchors.fill: parent
-//                   focus: true
-//                   /* nececessary otherwise the list scroll under the header */
-//                   clip: true
-//                   model: todayBirthdayModel
-//                   boundsBehavior: Flickable.StopAtBounds
-//                  // highlight: HighlightComponent{}
-//                   delegate: birthDayFoundDelegate
-//            }
-
             Layouts {
                 id: layouttodayBirthdayPage
                 width: parent.width

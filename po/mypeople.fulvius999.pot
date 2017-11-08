@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-06 17:39+0000\n"
+"POT-Creation-Date: 2017-11-08 17:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -486,8 +486,8 @@ msgstr ""
 msgid "TODAY BIRTHDAY:"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/TodayBirthDayTablet.qml:29
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/TodayBirthDayTablet.qml:39
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/TodayBirthDayTablet.qml:51
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/TodayBirthDayTablet.qml:61
 msgid "TODAY BIRTHDAY"
 msgstr ""
 

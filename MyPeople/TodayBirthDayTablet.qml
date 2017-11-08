@@ -15,6 +15,28 @@ Column{
     spacing: units.gu(3.5)
     anchors.leftMargin: units.gu(2)
 
+
+                Component{
+                    id: birthDayFoundDelegate
+                    BirthDayFoundDelegate{}
+                }
+
+
+                UbuntuListView {
+                       id: todayBirthDayResultList
+                       /* necessary, otherwise hide the search criteria row */
+                       anchors.topMargin: units.gu(36)
+                       anchors.fill: parent
+                       focus: true
+                       /* nececessary otherwise the list scroll under the header */
+                       clip: true
+                       model: todayBirthdayModel
+                       boundsBehavior: Flickable.StopAtBounds
+                      // highlight: HighlightComponent{}
+                       delegate: birthDayFoundDelegate
+                }
+
+
     /* transparent placeholder */
     Rectangle {
         color: "transparent"

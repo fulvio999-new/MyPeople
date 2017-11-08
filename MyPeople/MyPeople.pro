@@ -72,5 +72,6 @@ DISTFILES += \
     DateUtils.js \
     birthday.png \
     TodayBirthDayTablet.qml \
-    TodayBirthDayPhone.qml
+    TodayBirthDayPhone.qml \
+    BirthDayFoundDelegate.qml
 

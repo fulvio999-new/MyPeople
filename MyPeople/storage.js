@@ -208,35 +208,37 @@ function getUUID(suffix){
         }
         );
 
-        //console.log("Found today Birthday: "+rs.rows.item(0).todayBirthday);
-
+        //console.log("Found today Birthday: "+rs.rows.item(0).todayBirthday); 
         return rs.rows.item(0).todayBirthday;
     }
 
 
     /*
-        Get the deatils of the the today birthday
+       Get the deatils of the the today birthday
     */
-    function getTodayBirthday(){
+    function getTodayBirthDaysDetails(){
 
         var db = getDatabase();
         var today = new Date ();
         var todayDateFormatted = Qt.formatDateTime(today, "dd MMMM yyyy")
 
-        //console.log("Today date formatted (dd MMMM yyyy) is: "+todayDateFormatted);
+        /* remove old values */
+        todayBirthdayModel.clear();
 
         var rs = "";
         db.transaction(function(tx) {
-            rs = tx.executeSql("SELECT id,name,surname,phone,email FROM people WHERE birthday = '"+todayDateFormatted+"';");
+            rs = tx.executeSql("SELECT id,name,surname,phone,email,mobilePhone FROM people WHERE birthday = '"+todayDateFormatted+"';");
         }
         );
-        /* fill the meeting ListModel to be shown in the result page */
+
+        /* fill the todayBirthdayModel ListModel to be shown in the result page */
         for (var i = 0; i < rs.rows.length; i++) {
              todayBirthdayModel.append( {
                                   "id": rs.rows.item(i).id,
                                   "name": rs.rows.item(i).name,
                                   "surname": rs.rows.item(i).surname,
                                   "phone": rs.rows.item(i).phone,
+                                  "mobilePhone": rs.rows.item(i).phone,
                                   "email": rs.rows.item(i).email,
               });
         }
@@ -397,7 +399,7 @@ function getUUID(suffix){
     /*
         Get the today meetings count for the 'remember me' function. The meeting with ARCHIVED status are excluded
     */
-    function getTodayMeetings(){
+    function getAmountTodayMeetings(){
 
         var db = getDatabase();
         var today = new Date ();
@@ -413,6 +415,41 @@ function getUUID(suffix){
         //console.log("Found today meetings: "+rs.rows.item(0).todayMeetings);
 
         return rs.rows.item(0).todayMeetings;
+    }
+
+
+    /*
+        Get the today meetings count for the 'remember me' function. The meeting with ARCHIVED status are excluded
+    */
+    function getTodayMeetingsDetails(){
+
+        var db = getDatabase();
+        var today = new Date();
+
+        var todayDateFormatted = formatSimpleDateToString(today);
+
+        var rs = "";
+        db.transaction(function(tx) {
+            rs = tx.executeSql("SELECT * FROM meeting WHERE date(date)= date('"+todayDateFormatted+"')");
+        }
+        );
+
+        /* fill the today meeting ListModel to be shown in the result page */
+        for (var i = 0; i < rs.rows.length; i++) {
+             todayMeetingModel.append( {
+                                  "id": rs.rows.item(i).id,
+                                  "name": rs.rows.item(i).name,
+                                  "surname": rs.rows.item(i).surname,
+                                  "subject": rs.rows.item(i).subject,
+                                  "place": rs.rows.item(i).place,
+                                  "date": rs.rows.item(i).date,
+                                  "subject": rs.rows.item(i).subject,
+                                  "status": rs.rows.item(i).status,
+                                  "note": rs.rows.item(i).note
+              });
+        }
+
+        return rs;
     }
 
     /*

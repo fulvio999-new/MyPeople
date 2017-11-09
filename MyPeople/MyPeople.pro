@@ -73,5 +73,7 @@ DISTFILES += \
     birthday.png \
     TodayBirthDayTablet.qml \
     TodayBirthDayPhone.qml \
-    BirthDayFoundDelegate.qml
+    BirthDayFoundDelegate.qml \
+    TodayMeetingTablet.qml \
+    TodayMeetingPhone.qml
 

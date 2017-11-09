@@ -56,6 +56,8 @@ MainView {
         Storage.addTelegramField();        
         Storage.loadAllPeople();
 
+        Storage.getTodayBirthDaysDetails();
+
         if(settings.rememberMeetingsEnabled){
           PopupUtils.open(todayMeetingsAlert)
         }
@@ -101,13 +103,23 @@ MainView {
         AboutProduct{}
     }
 
+    /* the people with a birthday that happen today */
+    ListModel {
+       id: todayBirthdayModel
+    }
+
+    /* the today Meeting (in any status) */
+    ListModel {
+       id: todayMeetingModel
+    }
+
     /* AdaptivePageLayout provides a flexible way of viewing a stack of pages in one or more columns */
     AdaptivePageLayout {
 
         id: adaptivePageLayout
         anchors.fill: parent
 
-        /* mandatory field */
+        /* mandatory field for AdaptivePageLayout */
         primaryPage: peopleListPage
 
         Page{
@@ -126,7 +138,6 @@ MainView {
                             PopupUtils.open(aboutComponentDialog)
                         }
                     }
-
                 ]
 
                 trailingActionBar.actions: [
@@ -161,12 +172,12 @@ MainView {
                         text: "Settings"
                         onTriggered:{
                             adaptivePageLayout.addPageToNextColumn(peopleListPage, configurationPage )
-
                         }
                     }
                 ]
             }
 
+            /* currently saved people */
             ListModel{
                 id: modelListPeople
             }
@@ -286,7 +297,7 @@ MainView {
                                     columnSpacing: units.gu(2)
                                     verticalItemAlignment: Grid.AlignVCenter
                                     horizontalItemAlignment: Grid.AlignHCenter
-
+                                    /* TODAY BIRTHDAY */
                                     MouseArea{
                                         width: todayBirthdayImage.width;
                                         height:todayBirthdayImage.height;
@@ -299,18 +310,17 @@ MainView {
                                         }
 
                                         onClicked: {
-                                            Storage.getTodayBirthday();
+                                            Storage.getTodayBirthDaysDetails();
                                             adaptivePageLayout.addPageToNextColumn(peopleListPage, todayBirthdayPage)
                                         }
                                     }
 
                                     Label{
                                         id: todayBirthDay
-                                        Component.onCompleted: {
-                                           todayBirthDay.text = "Today: "+ Storage.getAmountTodayBirthday()
-                                        }
+                                        text: "Today: "+ todayBirthdayModel.count
                                     }
 
+                                    /* TODAY MEETING */
                                     MouseArea{
                                         width: todayBirthdayImage.width;
                                         height:todayBirthdayImage.height;
@@ -322,9 +332,9 @@ MainView {
                                             source: "meeting.png"
                                         }
 
-                                        onClicked: {
-                                            console.log("clicked Meeting");
-                                            adaptivePageLayout.addPageToNextColumn(peopleListPage, addPersonPage)
+                                        onClicked: {                                            
+                                            Storage.getTodayMeetingsDetails();
+                                            adaptivePageLayout.addPageToNextColumn(peopleListPage, todayMeetingPage)
                                         }
                                     }
 
@@ -445,8 +455,8 @@ MainView {
 
              /* Component that display the Meetings found in the database */
              Component {
-                   id: meetingFoundDelegate
-                   MeetingFoundDelegate{}
+                 id: meetingFoundDelegate
+                 MeetingFoundDelegate{}
              }
 
              UbuntuListView {
@@ -455,7 +465,7 @@ MainView {
                     anchors.topMargin: units.gu(36)
                     anchors.fill: parent
                     focus: true
-                    /* nececessary otherwise the list scroll under the header */
+                    /* necessary otherwise the list scroll under the header */
                     clip: true
                     model: meetingWithPersonFoundModel
                     boundsBehavior: Flickable.StopAtBounds
@@ -470,7 +480,7 @@ MainView {
                    height: parent.height
                    layouts:[
 
-                      ConditionalLayout {
+                        ConditionalLayout {
                             name: "detailsContactLayout"
                             when: root.width > units.gu(80)
 
@@ -517,7 +527,6 @@ MainView {
                     bottom: addMeetingWithPersonPage.bottom
                     bottomMargin: units.gu(2)
                 }
-
 
                 /* Show the details of the selected person */
                 Layouts {
@@ -627,7 +636,6 @@ MainView {
                 title: i18n.tr("Edit meeting with: ") + "<b>" +editMeetingPage.name +" "+ editMeetingPage.surname+"</b>"
             }
 
-
             Flickable {
                 id: editMeetingPageFlickable
                 clip: true
@@ -735,7 +743,7 @@ MainView {
                 //else
                 AppConfigurationPhone{}
             }
-        }
+       }
 
 
        //----------------- Today BirthDay Page -----------------
@@ -743,11 +751,7 @@ MainView {
             id: todayBirthdayPage
 
             header: PageHeader {
-               title: i18n.tr("Today BirthDay")
-            }
-
-            ListModel {
-               id: todayBirthdayModel
+               title: i18n.tr("Today BirthDay")+ ": " + todayBirthdayModel.count
             }
 
             Layouts {
@@ -766,6 +770,33 @@ MainView {
                 TodayBirthDayPhone{}
             }
         }
+
+
+       //----------------- Today Meeting Page -----------------
+       Page {
+            id: todayMeetingPage
+
+            header: PageHeader {
+               title: i18n.tr("Today Meeting")+ ": " + todayBirthdayModel.count
+            }
+
+            Layouts {
+                id: layoutTodayMeetingPage
+                width: parent.width
+                height: parent.height
+                layouts:[
+
+                    ConditionalLayout {
+                        name: "layoutTodayMeeting"
+                        when: root.width > units.gu(50)
+                        TodayMeetingTablet{}
+                    }
+                ]
+                //else
+                 TodayMeetingyPhone{}
+            }
+        }
+
 
        //-------------------------------------------------------
 

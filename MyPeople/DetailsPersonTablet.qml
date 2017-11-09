@@ -348,7 +348,9 @@ Column {
 
                     PopupUtils.open(operationResultDialogue)
 
-                    Storage.loadAllPeople(); //refresh
+                    Storage.loadAllPeople();
+                    /* refresh in case of updating of birthday */
+                    Storage.getTodayBirthDaysDetails();
                 }
             }
         }

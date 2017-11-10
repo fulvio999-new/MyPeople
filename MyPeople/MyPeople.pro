@@ -51,12 +51,9 @@ DISTFILES += \
     OperationResult.qml \
     ItemNotFound.qml \
     AboutProduct.qml \
-    ConfirmDelete.qml \
-    ConfirmInsert.qml \
     InsertPersonFormPhone.qml \
     DetailsPersonTablet.qml \
     DetailsPersonPhone.qml \
-    ConfirmUpdate.qml \
     NewMeetingTablet.qml \
     NewMeetingPhone.qml \
     SearchMeetingWithPersonTablet.qml \
@@ -68,12 +65,14 @@ DISTFILES += \
     AllPeopleMeetingFoundDelegate.qml \
     AppConfigurationPhone.qml \
     AppConfigurationTablet.qml \
-    TodayMeetingsAlert.qml \
     DateUtils.js \
     birthday.png \
     TodayBirthDayTablet.qml \
     TodayBirthDayPhone.qml \
     BirthDayFoundDelegate.qml \
     TodayMeetingTablet.qml \
-    TodayMeetingPhone.qml
+    TodayMeetingPhone.qml \
+    ConfirmInsertPeople.qml \
+    ConfirmDeletePeople.qml \
+    ConfirmUpdatePeople.qml
 

@@ -383,6 +383,6 @@ Column {
 
     Component {
         id: confirmDeleteDialog
-        ConfirmDelete{}
+        ConfirmDeletePeople{}
     }
 }

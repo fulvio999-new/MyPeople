@@ -32,59 +32,6 @@ Column{
         OperationResult{}
     }
 
-    Row{
-        id: headerCurrencyRow
-        x: appConfigurationTablet.width/4
-        Label{
-            text: "<b>"+i18n.tr("GENERAL SETTINGS")+"</b>"
-        }
-    }
-
-    Row{
-        spacing: units.gu(4)
-
-        Label {
-            text: i18n.tr("Remember me today meetings enabled")
-        }
-
-        CheckBox {
-            id: rememberMeetingsCheckBox
-            checked: settings.rememberMeetingsEnabled
-        }
-    }
-
-    Row{
-        x: appConfigurationTablet.width/4
-
-        Button {
-            id: saveButton
-            width: units.gu(18)
-            text: i18n.tr("Save")
-            onClicked: {
-
-               if(rememberMeetingsCheckBox.checked){
-                  //console.log("rememberMe checked ");
-                  settings.rememberMeetingsEnabled = true
-
-               }else{
-                  //console.log("rememberMe NOT checked ");
-                  settings.rememberMeetingsEnabled = false
-               }
-
-                PopupUtils.open(operationResultDialogue)
-            }
-        }
-    }
-
-    /* line separator */
-    Rectangle {
-        color: "grey"
-        width: units.gu(100)
-        anchors.horizontalCenter: parent.horizontalCenter
-        height: units.gu(0.1)
-    }
-
-
     /* Dialog to Ask a confirmation for a delete operation for meetings */
     Component{
 

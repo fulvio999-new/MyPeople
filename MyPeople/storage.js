@@ -216,7 +216,7 @@ function getUUID(suffix){
     /*
        Get the deatils of the the today birthday
     */
-    function getTodayBirthDaysDetails(){
+    function getTodayBirthDays(){
 
         var db = getDatabase();
         var today = new Date ();
@@ -419,14 +419,17 @@ function getUUID(suffix){
 
 
     /*
-        Get the today meetings count for the 'remember me' function. The meeting with ARCHIVED status are excluded
+       Get the today meetings (with ANY status) count for the 'remember me' function.
     */
-    function getTodayMeetingsDetails(){
+    function getTodayMeetings(){
 
         var db = getDatabase();
         var today = new Date();
 
         var todayDateFormatted = formatSimpleDateToString(today);
+
+        /* remove old values */
+        todayMeetingModel.clear();
 
         var rs = "";
         db.transaction(function(tx) {

@@ -18,7 +18,12 @@ Column{
     anchors.fill: parent
 
     spacing: units.gu(3.5)
-    anchors.leftMargin: units.gu(2)
+    anchors.leftMargin: units.gu(2)    
+
+    Component {
+       id: confirmAddPeopleDialog
+       ConfirmInsertPeople{}
+    }
 
     /* transparent placeholder */
     Rectangle {
@@ -335,12 +340,5 @@ Column{
             }
         }
     }
-
-    //----------------------- Confirm Insertion new Person ----------
-    Component {
-        id: confirmAddPeopleDialog
-        ConfirmInsert{}
-    }
-
 
 }

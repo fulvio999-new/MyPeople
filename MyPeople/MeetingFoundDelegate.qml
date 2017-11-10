@@ -8,19 +8,18 @@ import Ubuntu.Layouts 1.0
 import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
-import "./storage.js" as Storage
-import "./DateUtils.js" as DateUtils
+import "storage.js" as Storage
+import "DateUtils.js" as DateUtils
 
  /*
     Item that display a meeting with a SPECIFIC person previously chosen from the people list
     (Note: a delegate object can access directly a the values in the dataModel associated at the ListView or similar)
  */
  Item {
-
-        property string todayDateFormatted : DateUtils.formatFullDateToString(new Date());
+        property string todayDateFormatted : DateUtils.formatFullDateToString(new Date());       
 
         id: meetingFoundDelegate
-        width: searchMeetingWithPersonPage.width
+        width: parent.width //searchMeetingWithPersonPage.width
         height: units.gu(13) /* the heigth of the rectangle that contains an meeting in the list */
 
         /* container for each meeting */
@@ -71,6 +70,8 @@ import "./DateUtils.js" as DateUtils
 
                             operationResultLabel.text = i18n.tr("Operation executed successfully")
                             executeButton.enabled = false;
+                            /* refresh */
+                            Storage.getTodayMeetingsDetails();
 
                             //TODO: refresh list
                         }
@@ -212,6 +213,7 @@ import "./DateUtils.js" as DateUtils
                             width: editMeetingIcon.width
                             height: editMeetingIcon.height
                             onClicked: {
+
                                 adaptivePageLayout.addPageToNextColumn(searchMeetingWithPersonPage, editMeetingPage,
                                                                        {
                                                                           /* <page-variable-name>:<property-value-to-pass> */

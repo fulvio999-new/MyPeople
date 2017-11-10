@@ -10,7 +10,7 @@ Dialog {
        title: i18n.tr("Product Info")
        contentWidth: Utility.getHelpPageWidth()
 
-       text: "<b>"+"MyPeople version: 1.6.1  Author: fulvio"+"</b><br/><br/>"+
+       text: "<b>"+"MyPeople version: "+root.appVersion+"  Author: fulvio"+"</b><br/><br/>"+
              "<b>"+i18n.tr("What you can do with MyPeople")+"</b><br/>"
                   +i18n.tr("Store (locally) informations of people <br/> (eg: name, address, phone, mail, telegram...)")+"<br/>"
                   +i18n.tr("Store meetings with the archived people")+"<br/>"+"<br/>"

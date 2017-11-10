@@ -20,6 +20,11 @@ Column{
     spacing: units.gu(3)
     anchors.leftMargin: units.gu(2)
 
+    Component {
+        id: confirmAddPeopleDialog
+        ConfirmInsertPeople{}
+    }
+
     /* transparent placeholder */
     Rectangle {
         color: "transparent"
@@ -310,12 +315,5 @@ Column{
             }
         }
     }
-
-    //----------------------- Confirm Insertion new Person ----------
-    Component {
-        id: confirmAddPeopleDialog
-        ConfirmInsert{}
-    }
-
 
 }

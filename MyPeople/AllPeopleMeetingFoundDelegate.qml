@@ -18,9 +18,11 @@ import "./DateUtils.js" as DateUtils
  */
  Item {
         property string todayDateFormatted : DateUtils.formatFullDateToString(new Date());
+        /* workaround to specify the origin page: todaMeeting or SearchMeeting. FIXME: find better solution  */
+        property bool isFromTodayMeetingPage: false;
 
         id: allPeopleMeetingFoundDelegate
-        width: searchAnyMeetingPage.width
+        width: parent.width
         height: units.gu(13) /* the heigth of the rectangle that contains an meeting in the list */
 
         /* container for each meeting */
@@ -205,7 +207,14 @@ import "./DateUtils.js" as DateUtils
                             width: editMeetingIcon.width
                             height: editMeetingIcon.height
                             onClicked: {
-                                adaptivePageLayout.addPageToNextColumn(searchAnyMeetingPage, editMeetingPage,
+
+                                /* workaround to get the */
+                                var sourcePage = searchAnyMeetingPage;
+                                if(isFromTodayMeetingPage === true){
+                                    sourcePage = todayMeetingPage;
+                                }
+
+                                adaptivePageLayout.addPageToNextColumn(sourcePage, editMeetingPage,
                                                                        {
                                                                           /* <page-variable-name>:<property-value-to-pass> */
                                                                           id:id,

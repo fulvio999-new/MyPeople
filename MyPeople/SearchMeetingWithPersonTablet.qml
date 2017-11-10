@@ -129,9 +129,9 @@ Column{
 
         /* The meeting status shown in the combo box */
         ListModel {
-                id: meetingTypeModel
-                ListElement { name: "<b>Scheduled</b>"; description: "meetings to participate"; }
-                ListElement { name: "<b>Archived</b>"; description: "participated old meetings"; }
+             id: meetingTypeModel
+             ListElement { name: "<b>Scheduled</b>"; description: "meetings to participate"; }
+             ListElement { name: "<b>Archived</b>"; description: "participated old meetings"; }
         }
 
         Label {
@@ -152,8 +152,7 @@ Column{
             }
         }
 
-
-         Button {
+        Button {
             id: searchExpenseButton
             text: "Search/Reload"
             color: UbuntuColors.orange

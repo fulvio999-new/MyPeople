@@ -11,8 +11,8 @@ import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
 /* note: alias name must have first letter in upperCase */
-import "./utility.js" as Utility
-import "./storage.js" as Storage
+import "utility.js" as Utility
+import "storage.js" as Storage
 
 
 MainView {
@@ -21,6 +21,8 @@ MainView {
     objectName: "mainView"
     automaticOrientation: true
     anchorToKeyboard: true
+
+    property string appVersion: "1.7"
 
     /* applicationName needs to match the "name" field in the application manifest
        Note:' applicationName' value sets the DB storage path if using U1DB api (remove the blank spaces in the url):
@@ -33,7 +35,7 @@ MainView {
     /* Settings file is saved in ~user/.config/<applicationName>/<applicationName>.conf  File */
     Settings {
         id:settings
-        /* to show or not the ProductNewFeatures popup */
+
         property bool isFirstUse: true;
         property bool isNewVersion: true;
         /* to notify user in case of import old contact form version < 1.5 was already done */
@@ -41,7 +43,7 @@ MainView {
         property bool createMeetingTable: true;
         property bool addTelegramField: true;
         /* on startup display the today meetings: value set in the App Configuration page */
-        property bool rememberMeetingsEnabled;
+        property bool rememberMeetingsEnabled; /* not used starting from 1.7 version */
     }
 
     ActivityIndicator {
@@ -56,11 +58,9 @@ MainView {
         Storage.addTelegramField();        
         Storage.loadAllPeople();
 
-        Storage.getTodayBirthDaysDetails();
-
-        if(settings.rememberMeetingsEnabled){
-          PopupUtils.open(todayMeetingsAlert)
-        }
+        /* initialize the label */
+        Storage.getTodayBirthDays();
+        Storage.getTodayMeetings();
 
         Utility.showNewFeatures();
     }
@@ -75,18 +75,11 @@ MainView {
         DatabaseImporter{}
     }
 
-    /* Show new features List for this MyPeople version */
     Component {
         id: showNewFeaturesDialogue
         ProductNewFeatures{}
     }
 
-    Component {
-        id: todayMeetingsAlert
-        TodayMeetingsAlert{totalTodayMeetings:Storage.getTodayMeetings()}
-    }
-
-    /* A PopUp that display the operation result */
     Component {
         id: operationResultDialogue
         OperationResult{}
@@ -97,18 +90,22 @@ MainView {
         ItemNotFound{}
     }
 
-    /* PopUp with Application Help and info page */
     Component {
-        id: aboutComponentDialog
+        id: aboutProductDialog
         AboutProduct{}
     }
 
-    /* the people with a birthday that happen today */
+    /* currently saved people */
+    ListModel{
+        id: modelListPeople
+    }
+
+    /* today birthdays list */
     ListModel {
        id: todayBirthdayModel
     }
 
-    /* the today Meeting (in any status) */
+    /* today Meeting list (in any status) */
     ListModel {
        id: todayMeetingModel
     }
@@ -135,7 +132,7 @@ MainView {
                         iconName: "help"
                         text: i18n.tr("Help")
                         onTriggered:{
-                            PopupUtils.open(aboutComponentDialog)
+                            PopupUtils.open(aboutProductDialog)
                         }
                     }
                 ]
@@ -175,12 +172,7 @@ MainView {
                         }
                     }
                 ]
-            }
-
-            /* currently saved people */
-            ListModel{
-                id: modelListPeople
-            }
+            }          
 
             /* A list of people */
             UbuntuListView {
@@ -258,7 +250,7 @@ MainView {
                                 Label{
                                     id: peopleFoundLabel                                   
                                     anchors.centerIn: parent.Center                                   
-                                    text: i18n.tr("Total people found: ") + listView.count
+                                    text: i18n.tr("Total people found")+": " + listView.count
                                     font.bold: false
                                     font.pointSize: units.gu(1.5)
                                 }
@@ -297,6 +289,7 @@ MainView {
                                     columnSpacing: units.gu(2)
                                     verticalItemAlignment: Grid.AlignVCenter
                                     horizontalItemAlignment: Grid.AlignHCenter
+
                                     /* TODAY BIRTHDAY */
                                     MouseArea{
                                         width: todayBirthdayImage.width;
@@ -310,14 +303,14 @@ MainView {
                                         }
 
                                         onClicked: {
-                                            Storage.getTodayBirthDaysDetails();
+                                            Storage.getTodayBirthDays();
                                             adaptivePageLayout.addPageToNextColumn(peopleListPage, todayBirthdayPage)
                                         }
                                     }
 
                                     Label{
                                         id: todayBirthDay
-                                        text: "Today: "+ todayBirthdayModel.count
+                                        text: i18n.tr("Today")+": "+ todayBirthdayModel.count
                                     }
 
                                     /* TODAY MEETING */
@@ -333,16 +326,14 @@ MainView {
                                         }
 
                                         onClicked: {                                            
-                                            Storage.getTodayMeetingsDetails();
+                                            Storage.getTodayMeetings();
                                             adaptivePageLayout.addPageToNextColumn(peopleListPage, todayMeetingPage)
                                         }
                                     }
 
                                     Label{
-                                        id: todayMeeting
-                                        Component.onCompleted: {
-                                           todayMeeting.text = "Today: "+ Storage.getTodayMeetings()
-                                        }
+                                        id: todayMeeting                                       
+                                        text: i18n.tr("Today")+": "+ todayMeetingModel.count
                                     }
                                 }
 
@@ -437,8 +428,7 @@ MainView {
             anchors.fill: parent
 
             /* Values passed as input properties when the AdaptiveLayout add the details page (See: PeopleListDelegate.qml)
-               Are the details vaules of the selected person in the people list used to fill the TextField
-               See Delegate Object of the ListView
+               Are the details vaules of the selected person to fill the TextField (See delegate object)
             */
             property string id  /* PK field not shown */
             property string personName;
@@ -512,7 +502,7 @@ MainView {
 
             header: PageHeader {
                 id: headerAddMeetingPage
-                title: i18n.tr("Create a meeting with: ") + "<b>"+addMeetingWithPersonPage.personName + " "+addMeetingWithPersonPage.personSurname+"<\b>"
+                title: i18n.tr("Create a meeting with")+ ": " + "<b>"+addMeetingWithPersonPage.personName + " "+addMeetingWithPersonPage.personSurname+"<\b>"
             }
 
             /* to have a scrollable column when the keyboard cover some input field */
@@ -633,7 +623,7 @@ MainView {
 
             header: PageHeader {
                 id: headerEditExpensePage
-                title: i18n.tr("Edit meeting with: ") + "<b>" +editMeetingPage.name +" "+ editMeetingPage.surname+"</b>"
+                title: i18n.tr("Edit meeting with") +": "+ "<b>" +editMeetingPage.name +" "+ editMeetingPage.surname+"</b>"
             }
 
             Flickable {
@@ -756,8 +746,7 @@ MainView {
 
             Layouts {
                 id: layouttodayBirthdayPage
-                width: parent.width
-                height: parent.height
+                anchors.fill: parent
                 layouts:[
 
                     ConditionalLayout {
@@ -777,13 +766,12 @@ MainView {
             id: todayMeetingPage
 
             header: PageHeader {
-               title: i18n.tr("Today Meeting")+ ": " + todayBirthdayModel.count
+               title: i18n.tr("Today Meeting")+ ": " + todayMeetingModel.count
             }
 
             Layouts {
                 id: layoutTodayMeetingPage
-                width: parent.width
-                height: parent.height
+                anchors.fill: parent
                 layouts:[
 
                     ConditionalLayout {
@@ -793,13 +781,11 @@ MainView {
                     }
                 ]
                 //else
-                 TodayMeetingyPhone{}
+                TodayMeetingPhone{}
             }
         }
 
-
        //-------------------------------------------------------
-
 
     }
 
@@ -817,8 +803,8 @@ MainView {
 
     U1db.Database {
         id: mypeopleDb1_0
-        /* create an empty db in: ~phablet/.local/share/mypeople.fulvio999/1.1/
-           the user will replace it his with his one about MyPeople1.0  */
+        /* create an empty db in: ~phablet/.local/share/<applicationName>/1.1/
+           the user will replace that empty database with his one taken from MyPeople1.0  */
          path: "1.0/MyPeople_db";
      }
 

@@ -349,12 +349,12 @@ Column {
 
     Component {
         id: confirmUpdateDialog
-        ConfirmUpdate{}
+        ConfirmUpdatePeople{}
     }
 
     Component {
         id: confirmDeleteDialog
-        ConfirmDelete{}
+        ConfirmDeletePeople{}
     }
 
 

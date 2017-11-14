@@ -27,6 +27,9 @@ Dialog {
 
             Storage.insertMeeting(nameField.text,surnameField.text,meetingSubjectField.text,meetingPlaceField.text,meetingFullDate,newMeetingNote.text);
 
+            /* refreshing */
+            Storage.getTodayMeetings();
+
             PopupUtils.open(operationResultDialogue)
 
             adaptivePageLayout.removePages(addMeetingWithPersonPage)

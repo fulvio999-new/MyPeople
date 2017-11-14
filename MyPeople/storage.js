@@ -227,6 +227,7 @@ function getUUID(suffix){
 
         var rs = "";
         db.transaction(function(tx) {
+            /* birthday date are like: 14 November 2017 */
             rs = tx.executeSql("SELECT id,name,surname,phone,email,mobilePhone FROM people WHERE birthday = '"+todayDateFormatted+"';");
         }
         );

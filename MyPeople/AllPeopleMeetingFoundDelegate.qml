@@ -39,7 +39,7 @@ import "./DateUtils.js" as DateUtils
         Component {
             id: confirmDeleteMeetingComponent          
             Dialog {
-                id: confirmDeleteExpense
+                id: confirmDeleteMeeting
                 title: i18n.tr("Confirmation")
                 modal:true
                 text: i18n.tr("Delete selected Meeting ?")
@@ -52,7 +52,11 @@ import "./DateUtils.js" as DateUtils
 
                 Button {
                     text: i18n.tr("Close")
-                    onClicked: PopupUtils.close(confirmDeleteExpense)
+                    onClicked: {
+                        /* refresh today meetings */
+                        Storage.getTodayMeetings();
+                        PopupUtils.close(confirmDeleteMeeting)
+                    }
                 }
 
                 Button {
@@ -60,14 +64,20 @@ import "./DateUtils.js" as DateUtils
                     text: i18n.tr("Execute")
 
                     onClicked: {
-                        /* from ListModel get the 'id' of the currently selected meeting */
-                        var meetingId = allPeopleMeetingFoundModel.get(allPeopleMeetingSearchResultList.currentIndex).id;
+
+                        var meetingId;
+                        /* depending on the source page, pick-up the meetingId from a different UbuntuListView */
+                        if(isFromTodayMeetingPage === true){
+                           meetingId = todayMeetingModel.get(todayMeetingResultList.currentIndex).id;
+                        }else{
+                           /* from ListModel get the 'id' of the currently selected meeting */
+                           meetingId = allPeopleMeetingFoundModel.get(allPeopleMeetingSearchResultList.currentIndex).id;
+                        }
+
                         Storage.deleteMeetingById(meetingId);
 
                         operationResultLabel.text = i18n.tr("Operation executed successfully")
                         executeButton.enabled = false;
-
-                        //TODO: refresh list
                     }
                 }
             }
@@ -245,7 +255,7 @@ import "./DateUtils.js" as DateUtils
                               width: deleteMeetingIcon.width
                               height: deleteMeetingIcon.height
                               onClicked: {
-                                    PopupUtils.open(confirmDeleteMeetingComponent);
+                                 PopupUtils.open(confirmDeleteMeetingComponent);
                               }
                          }
                       }
@@ -263,7 +273,7 @@ import "./DateUtils.js" as DateUtils
                               width: archiveMeetingIcon.width
                               height: archiveMeetingIcon.height
                               onClicked: {
-                                    PopupUtils.open(confirmArchiveMeetingComponent);
+                                 PopupUtils.open(confirmArchiveMeetingComponent);
                               }
                          }
                      }

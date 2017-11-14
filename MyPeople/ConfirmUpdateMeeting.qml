@@ -24,12 +24,12 @@ Dialog {
         onClicked: {
             PopupUtils.close(dialogue)
 
-            //console.log("Meeting to update has id: "+meetingId +" and status to save is: "+meetingStatusToSave);
-
             /* compose the full date because in the UI come from two different components */
             var meetingFullDate = editMeetingDateButton.text +" "+meetingTimeButton.text;
 
             Storage.updateMeeting(nameField.text,surnameField.text,meetingSubjectField.text,meetingPlaceField.text,meetingFullDate,meetingNote.text,editMeetingPage.id,meetingStatusToSave);
+            /* update today meetings in case of the user has edited meeting date */
+            Storage.getTodayMeetings();
 
             PopupUtils.open(operationResultDialogue)
 

@@ -13,7 +13,7 @@ import "./utility.js" as Utility
 import "./storage.js" as Storage
 
 /*
- Used in Main.qml to create a NEW meetimg wit a specific person. Used for Tablet
+ Used in Main.qml to create a NEW meetimg with a specific person. Used for Tablet
 
 */
 Column {

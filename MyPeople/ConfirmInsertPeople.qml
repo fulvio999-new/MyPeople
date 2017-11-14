@@ -59,6 +59,9 @@ Dialog {
             adaptivePageLayout.removePages(addPersonPage)
 
             Storage.loadAllPeople();
+
+            /* refresh in case of updating of birthday */
+            Storage.getTodayBirthDays();
         }
     }
 }

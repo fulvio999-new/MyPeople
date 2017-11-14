@@ -350,7 +350,7 @@ Column {
 
                     Storage.loadAllPeople();
                     /* refresh in case of updating of birthday */
-                    Storage.getTodayBirthDaysDetails();
+                    Storage.getTodayBirthDays();
                 }
             }
         }

@@ -27,6 +27,9 @@ Dialog {
             PopupUtils.open(operationResultDialogue)
             Storage.loadAllPeople(); //refresh
 
+            /* refresh in case of updating of birthday */
+            Storage.getTodayBirthDays();
+
             adaptivePageLayout.removePages(personDetailsPage)
         }
     }

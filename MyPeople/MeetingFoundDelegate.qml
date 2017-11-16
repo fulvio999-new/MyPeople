@@ -71,7 +71,7 @@ import "DateUtils.js" as DateUtils
                             operationResultLabel.text = i18n.tr("Operation executed successfully")
                             executeButton.enabled = false;
                             /* refresh */
-                            Storage.getTodayMeetingsDetails();
+                            Storage.getTodayMeetings();
 
                             //TODO: refresh list
                         }

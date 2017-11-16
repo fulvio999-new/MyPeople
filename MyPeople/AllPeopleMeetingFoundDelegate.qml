@@ -54,7 +54,10 @@ import "./DateUtils.js" as DateUtils
                     text: i18n.tr("Close")
                     onClicked: {
                         /* refresh today meetings */
-                        Storage.getTodayMeetings();
+                        if(isFromTodayMeetingPage === true){
+                          Storage.getTodayMeetings();
+                        }
+
                         PopupUtils.close(confirmDeleteMeeting)
                     }
                 }
@@ -122,15 +125,25 @@ import "./DateUtils.js" as DateUtils
                         width: units.gu(14)
                         text: i18n.tr("Execute")
 
-                        onClicked: {
-                            /* from ListModel get the 'id' of the currently selected meeting */
-                            var meetingId = allPeopleMeetingFoundModel.get(allPeopleMeetingSearchResultList.currentIndex).id;
+                        onClicked: {                           
+
+                            var meetingId;
+                            /* depending on the source page, pick-up the meetingId from a different UbuntuListView */
+                            if(isFromTodayMeetingPage === true){
+                               meetingId = todayMeetingModel.get(todayMeetingResultList.currentIndex).id;
+                            }else{
+                               /* from ListModel get the 'id' of the currently selected meeting */
+                               meetingId = allPeopleMeetingFoundModel.get(allPeopleMeetingSearchResultList.currentIndex).id;
+                            }
+
                             Storage.updateMeetingStatus(meetingId,"ARCHIVED");
 
                             operationResultLabel.text = i18n.tr("Operation executed successfully")
                             executeButton.enabled = false;
 
-                            //TODO: refresh list
+                            if(isFromTodayMeetingPage === true){
+                               Storage.getTodayMeetings();
+                            }
                         }
                     }
                 }

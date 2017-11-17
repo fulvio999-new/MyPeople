@@ -5,7 +5,7 @@ import Ubuntu.Layouts 1.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
 
-//--------------- For TABLET Page: today birthday list  ---------------
+//--------------- For TABLET Page: today birthday list
 
 
 Column{
@@ -22,8 +22,8 @@ Column{
         clip: true
         model: todayBirthdayModel
         boundsBehavior: Flickable.StopAtBounds   
-        delegate:  BirthDayFoundDelegate{}
+        highlight: HighlightBirthDayComponent{}
+        delegate: TodayBirthDayDelegate{}
     }
-
 }
 

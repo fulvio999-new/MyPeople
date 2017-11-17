@@ -104,7 +104,11 @@ Dialog {
                                 */
                                 settings.importAlreadyDone = false
 
-                                Storage.loadAllPeople(); /* refresh list */
+                                /* refresh lists */
+                                Storage.loadAllPeople();
+                                Storage.getTodayBirthDays();
+                                Storage.getTodayMeetings();
+
                                 adaptivePageLayout.removePages(personDetailsPage)
                                 loadingPageActivity.running = false
                             }

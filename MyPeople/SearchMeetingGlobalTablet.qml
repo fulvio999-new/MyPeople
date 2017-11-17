@@ -125,18 +125,16 @@ Column{
         }
 
         Component {
-                id: meetingTypeSelectorDelegate
-                OptionSelectorDelegate { text: name; subText: description; }
+             id: meetingTypeSelectorDelegate
+             OptionSelectorDelegate { text: name; subText: description; }
         }
-
 
         /* The meeting status shown in the combo box */
         ListModel {
-                id: meetingTypeModel
-                ListElement { name: "<b>Scheduled</b>"; description: "meetings to participate"; }
-                ListElement { name: "<b>Archived</b>"; description: "participated old meetings"; }
+             id: meetingTypeModel
+             ListElement { name: "<b>Scheduled</b>"; description: "meetings to participate"; }
+             ListElement { name: "<b>Archived</b>"; description: "participated old meetings"; }
         }
-
 
         Label {
             id: meetingStatusItemSelectorLabel
@@ -158,7 +156,7 @@ Column{
 
         Button {
             id: searchExpenseButton
-            text: "Search/Reload"
+            text: "Search"
             color: UbuntuColors.orange
             onClicked: {
                 var meetingStatus = "SCHEDULED"
@@ -169,6 +167,10 @@ Column{
 
                /* search meetings and fill the ListModel to display */
                Storage.searchMeetingByTimeRange(meetingDateFromButton.text,meetingDateToButton.text,meetingStatus);
+
+               searchAnyMeetingPage.dateFrom = meetingDateFromButton.text;
+               searchAnyMeetingPage.dateTo = meetingDateToButton.text;
+               searchAnyMeetingPage.meetingStatus = meetingStatus;
 
                meetingFoundLabel.text = "<b>Found: </b>"+ allPeopleMeetingFoundModel.count +"<b> meeting(s) (listed in chronological order)</b>"
             }

@@ -17,11 +17,18 @@ import "./DateUtils.js" as DateUtils
     (Note: a delegate object can access directly ath values in the dataModel)
  */
  Item {
+        id: allPeopleMeetingFoundDelegate
+
         property string todayDateFormatted : DateUtils.formatFullDateToString(new Date());
         /* workaround to specify the origin page: todaMeeting or SearchMeeting. FIXME: find better solution  */
         property bool isFromTodayMeetingPage: false;
 
-        id: allPeopleMeetingFoundDelegate
+        /* used to reaped user search in case of Meeting deletion */
+        property string dateFrom;
+        property string dateTo;
+        property string meetingStatus;
+
+
         width: parent.width
         height: units.gu(13) /* the heigth of the rectangle that contains an meeting in the list */
 
@@ -78,6 +85,8 @@ import "./DateUtils.js" as DateUtils
                         }
 
                         Storage.deleteMeetingById(meetingId);
+                        /* refresh repating the same user search */
+                        Storage.searchMeetingByTimeRange(allPeopleMeetingFoundDelegate.dateFrom,allPeopleMeetingFoundDelegate.dateTo,allPeopleMeetingFoundDelegate.meetingStatus);
 
                         operationResultLabel.text = i18n.tr("Operation executed successfully")
                         executeButton.enabled = false;
@@ -150,14 +159,18 @@ import "./DateUtils.js" as DateUtils
             }
         }
 
-
         /* This mouse region covers the entire delegate */
         MouseArea {
             id: selectableMouseArea
             anchors.fill: parent
             onClicked: {
-                /* move the highlight component to the currently selected item */
-                allPeopleMeetingSearchResultList.currentIndex = index
+
+                 if(isFromTodayMeetingPage === true){
+                    todayMeetingResultList.currentIndex = index
+                 }else{
+                    /* move the highlight component to the currently selected item */
+                    allPeopleMeetingSearchResultList.currentIndex = index
+                }
             }
         }
 

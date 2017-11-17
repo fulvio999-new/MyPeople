@@ -16,7 +16,7 @@ import "DateUtils.js" as DateUtils
     (Note: a delegate object can access directly a the values in the dataModel associated at the ListView or similar)
  */
  Item {
-        property string todayDateFormatted : DateUtils.formatFullDateToString(new Date());       
+        property string todayDateFormatted : DateUtils.formatFullDateToString(new Date());
 
         id: meetingFoundDelegate
         width: parent.width //searchMeetingWithPersonPage.width
@@ -87,7 +87,7 @@ import "DateUtils.js" as DateUtils
             Dialog {
                 id: confirmArchiveMeeting
                 title: i18n.tr("Confirmation")
-                modal:true               
+                modal:true
                 contentWidth: units.gu(47)
 
                 Text {
@@ -270,7 +270,7 @@ import "DateUtils.js" as DateUtils
                       Component.onCompleted: {
                             if (status ==="ARCHIVED"){
                                 archiveMeetingRow.visible = false
-                           }                          
+                           }
                       }
                 }
             }

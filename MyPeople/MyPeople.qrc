@@ -3,8 +3,9 @@
         <file>utility.js</file>
         <file>storage.js</file>
         <file>importer.js</file>
-        <file>MeetingFoundDelegate.qml</file>
         <file>archiveMeeting.png</file>
         <file>DateUtils.js</file>
+        <file>birthday.png</file>
+        <file>meeting.png</file>
     </qresource>
 </RCC>

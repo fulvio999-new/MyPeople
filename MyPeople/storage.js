@@ -462,7 +462,7 @@ function getUUID(suffix){
     function searchMeetingByTimeRange(dateFrom, dateTo, status) {
 
         var db = getDatabase();
-        allPeopleMeetingFoundModel.clear(); /* the ListModel to fill */
+        allPeopleMeetingFoundModel.clear(); /* clean the ListModel to fill */
 
         var to = new Date (dateTo);
         var from = new Date (dateFrom);

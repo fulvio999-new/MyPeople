@@ -69,10 +69,12 @@ DISTFILES += \
     birthday.png \
     TodayBirthDayTablet.qml \
     TodayBirthDayPhone.qml \
-    BirthDayFoundDelegate.qml \
     TodayMeetingTablet.qml \
     TodayMeetingPhone.qml \
     ConfirmInsertPeople.qml \
     ConfirmDeletePeople.qml \
-    ConfirmUpdatePeople.qml
+    ConfirmUpdatePeople.qml \
+    HighlightBirthDayComponent.qml \
+    HighlightMeetingComponent.qml \
+    TodayBirthDayDelegate.qml
 

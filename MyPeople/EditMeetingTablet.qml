@@ -21,6 +21,7 @@ Column {
     property string todayDateFormatted : DateUtils.formatFullDateToString(new Date());
     property string meetingStatus;  /* currently saved meeting status */
     property string meetingStatusToSave; /* the meeting status to save */
+    property string meetingDate;
 
     id: editMeetingLayout
     anchors.fill: parent
@@ -43,6 +44,10 @@ Column {
       }
     }
 
+    /* to have a refresh of the meeting date Button */
+    onMeetingDateChanged: {
+       editMeetingDateButton.text = Qt.formatDateTime(meetingDate.split(' ')[0], "dd MMMM yyyy")
+    }
 
     Rectangle{
         color: "transparent"
@@ -104,7 +109,6 @@ Column {
             hasClearButton: false
             readOnly: true
         }
-
 
         Label {
             id: surnameLabel
@@ -173,7 +177,6 @@ Column {
         id: meetingTimeRow
         spacing: units.gu(6)
 
-
         Label {
             id: meetingDateLabel
             anchors.verticalCenter: editMeetingDateButton.verticalCenter
@@ -182,15 +185,13 @@ Column {
 
         Button {
             id: editMeetingDateButton
-            property date date: new Date()
-            text: Qt.formatDateTime(editMeetingPage.date.split(' ')[0], "dd MMMM yyyy")
-            width: units.gu(18)           
+            width: units.gu(18)
             //Don't use the PickerPanel api because doesn't allow to set minum date
             onClicked: PopupUtils.open(popoverDatePickerComponent, editMeetingDateButton)
         }
 
         /* Create a PopOver conteining a DatePicker, necessary use a PopOver a container due to a bug on setting minimum date
-               with a simple DatePicker Component
+           with a simple DatePicker Component
         */
         Component {
             id: popoverDatePickerComponent
@@ -213,7 +214,6 @@ Column {
                 }
             }
         }
-
 
         Label {
             id: meetingTimeLabel

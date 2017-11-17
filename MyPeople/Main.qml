@@ -183,7 +183,7 @@ MainView {
 
                 /* disable the dragging of the model list elements */
                 boundsBehavior: Flickable.StopAtBounds
-                highlight: HighlightComponent{}
+                highlight: HighlightPersonComponent{}
                 focus: true
 
                 /* header for the list. Is declared here, inside at the UbuntuListView, to have access at the List items width param */
@@ -450,17 +450,16 @@ MainView {
              }
 
              UbuntuListView {
-                    id: meetingSearchResultList
-                    /* necessary, otherwise hide the search criteria row */
-                    anchors.topMargin: units.gu(36)
-                    anchors.fill: parent
-                    focus: true
-                    /* necessary otherwise the list scroll under the header */
-                    clip: true
-                    model: meetingWithPersonFoundModel
-                    boundsBehavior: Flickable.StopAtBounds
-                    highlight: HighlightComponent{}
-                    delegate: meetingFoundDelegate
+                 id: meetingSearchResultList
+                 anchors.topMargin: units.gu(36)
+                 anchors.fill: parent
+                 focus: true
+                 /* necessary otherwise the list scroll under the header */
+                 clip: true
+                 model: meetingWithPersonFoundModel
+                 boundsBehavior: Flickable.StopAtBounds
+                 highlight: HighlightPersonComponent{}
+                 delegate: meetingFoundDelegate
              }
 
              /* Show the details of the selected person */
@@ -554,31 +553,36 @@ MainView {
                    title: i18n.tr("Search for meetings with any people")
                 }
 
+                /* the values chosen in the search meeting form */
+                property string dateFrom;
+                property string dateTo;
+                property string meetingStatus;
+
                 ListModel {
-                    id: allPeopleMeetingFoundModel
+                   id: allPeopleMeetingFoundModel
                 }
 
                 /* Component that display the Meetings found in the database */
                 Component {
                     id: allPeopleMeetingFoundDelegate
-                    AllPeopleMeetingFoundDelegate{}
+                    AllPeopleMeetingFoundDelegate{dateFrom:searchAnyMeetingPage.dateFrom; dateTo:searchAnyMeetingPage.dateTo; meetingStatus:searchAnyMeetingPage.meetingStatus}
                 }
 
                 UbuntuListView {
                     id: allPeopleMeetingSearchResultList
                     /* necessary, otherwise hide the search criteria row */
-                    anchors.topMargin: units.gu(36) //units.gu(searchReloadRow.height + expenseFoundTitle.height + searchCriteriaRow.height + dateFilterRow.height + categoryFilterRow.height)
+                    anchors.topMargin: units.gu(36)
                     anchors.fill: parent
                     focus: true
-                    /* nececessary otherwise the list scroll under the  */
+                    /* necessary otherwise the list scroll under the header */
                     clip: true
                     model: allPeopleMeetingFoundModel
                     boundsBehavior: Flickable.StopAtBounds
-                    highlight: HighlightComponent{}
+                    highlight: HighlightMeetingComponent{}
                     delegate: allPeopleMeetingFoundDelegate
                 }
 
-                /* Show a form to add a new contact */
+                /* Show a form to search meeting with any contact */
                 Layouts {
                     id: agendaLayouts
                     width: parent.width
@@ -595,7 +599,6 @@ MainView {
                     SearchMeetingGlobalPhone{}
                 }
 
-
             /* To show a scrolbar on the side */
             Scrollbar {
                 flickableItem: allPeopleMeetingSearchResultList
@@ -607,7 +610,6 @@ MainView {
         //------------ Edit an existing Meeting planned with a specific Person -------------
 
         Page{
-
             id: editMeetingPage
             anchors.fill: parent
 
@@ -648,7 +650,7 @@ MainView {
                         ConditionalLayout {
                             name: "editMeetingLayout"
                             when: root.width > units.gu(80)
-                            EditMeetingTablet{ meetingStatus:editMeetingPage.status}
+                            EditMeetingTablet{ meetingStatus:editMeetingPage.status;meetingDate:editMeetingPage.date}
                         }
                     ]
                     //else

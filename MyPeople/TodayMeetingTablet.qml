@@ -22,6 +22,7 @@ Column{
         clip: true
         model: todayMeetingModel
         boundsBehavior: Flickable.StopAtBounds
+        highlight: HighlightMeetingComponent{}
         delegate: AllPeopleMeetingFoundDelegate{isFromTodayMeetingPage:true}
     }
 

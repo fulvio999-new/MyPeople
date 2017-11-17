@@ -1,11 +1,11 @@
-import QtQuick 2.0
+import QtQuick 2.4
 
 
 /*
  Used by the ListView in Main.qml to highlight the currently selected Item in the People List
 */
 Component {
-    id: highlightComponent
+    id: highlightBirthDayComponent
 
     Rectangle {
         width: 180; height: 44
@@ -13,7 +13,7 @@ Component {
 
         radius: 2
         /* move the Rectangle on the currently selected List item with the keyboard */
-        y: listView.currentItem.y
+        y: todayBirthDayResultList.currentItem.y
 
         /* show an animation on change ListItem selection */
         Behavior on y {

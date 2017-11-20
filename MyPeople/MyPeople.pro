@@ -49,7 +49,6 @@ DISTFILES += \
     DatabaseImporter.qml \
     DataBaseEraser.qml \
     OperationResult.qml \
-    ItemNotFound.qml \
     AboutProduct.qml \
     InsertPersonFormPhone.qml \
     DetailsPersonTablet.qml \
@@ -58,7 +57,6 @@ DISTFILES += \
     NewMeetingPhone.qml \
     SearchMeetingWithPersonTablet.qml \
     SearchMeetingWithPersonPhone.qml \
-    ConfirmSaveMeeting.qml \
     EditMeetingTablet.qml \
     EditMeetingPhone.qml \
     ConfirmUpdateMeeting.qml \
@@ -74,7 +72,5 @@ DISTFILES += \
     ConfirmInsertPeople.qml \
     ConfirmDeletePeople.qml \
     ConfirmUpdatePeople.qml \
-    HighlightBirthDayComponent.qml \
-    HighlightMeetingComponent.qml \
-    TodayBirthDayDelegate.qml
+    ConfirmInsertMeeting.qml
 

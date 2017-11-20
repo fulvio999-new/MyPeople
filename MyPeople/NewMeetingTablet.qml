@@ -14,7 +14,6 @@ import "./storage.js" as Storage
 
 /*
  Used in Main.qml to create a NEW meetimg with a specific person. Used for Tablet
-
 */
 Column {
 
@@ -246,6 +245,6 @@ Column {
 
     Component {
         id: confirmInsertDialog
-        ConfirmSaveMeeting{}
+        ConfirmInsertMeeting{}
     }
 }

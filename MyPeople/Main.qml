@@ -47,7 +47,7 @@ MainView {
     }
 
     ActivityIndicator {
-        id: loadingPageActivity
+       id: loadingPageActivity
     }
 
     /* Executed at application startup */
@@ -83,11 +83,6 @@ MainView {
     Component {
         id: operationResultDialogue
         OperationResult{}
-    }
-
-    Component {
-        id: itemNotFoundResultDialogue
-        ItemNotFound{}
     }
 
     Component {
@@ -183,7 +178,28 @@ MainView {
 
                 /* disable the dragging of the model list elements */
                 boundsBehavior: Flickable.StopAtBounds
-                highlight: HighlightPersonComponent{}
+                highlight:
+                    Component {
+                    id: highlightComponent
+
+                    Rectangle {
+                        width: 180; height: 44
+                        color: "blue";
+
+                        radius: 2
+                        /* move the Rectangle on the currently selected List item with the keyboard */
+                        y: listView.currentItem.y
+
+                        /* show an animation on change ListItem selection */
+                        Behavior on y {
+                            SpringAnimation {
+                                spring: 5
+                                damping: 0.1
+                            }
+                        }
+                    }
+                }
+
                 focus: true
 
                 /* header for the list. Is declared here, inside at the UbuntuListView, to have access at the List items width param */
@@ -458,7 +474,27 @@ MainView {
                  clip: true
                  model: meetingWithPersonFoundModel
                  boundsBehavior: Flickable.StopAtBounds
-                 highlight: HighlightPersonComponent{}
+                 highlight:
+                     Component {
+                     id: highlightMeetingComponent
+
+                     Rectangle {
+                         width: 180; height: 44
+                         color: "blue";
+                         radius: 2
+                         /* move the Rectangle on the currently selected List item with the keyboard */
+                         y: meetingSearchResultList.currentItem.y
+
+                         /* show an animation on change ListItem selection */
+                         Behavior on y {
+                             SpringAnimation {
+                                 spring: 5
+                                 damping: 0.1
+                             }
+                         }
+                     }
+                 }
+
                  delegate: meetingFoundDelegate
              }
 
@@ -578,7 +614,28 @@ MainView {
                     clip: true
                     model: allPeopleMeetingFoundModel
                     boundsBehavior: Flickable.StopAtBounds
-                    highlight: HighlightMeetingComponent{}
+                    highlight:
+                        Component{
+
+                        id: highlightAnyMeetingComponent
+
+                        Rectangle {
+                            width: 180; height: 44
+                            color: "blue";
+                            radius: 2
+                            /* move the Rectangle on the currently selected List item with the keyboard */
+                            y: allPeopleMeetingFoundModel.currentItem.y
+
+                            /* show an animation on change ListItem selection */
+                            Behavior on y {
+                                SpringAnimation {
+                                    spring: 5
+                                    damping: 0.1
+                                }
+                            }
+                        }
+                    }
+
                     delegate: allPeopleMeetingFoundDelegate
                 }
 
@@ -709,7 +766,7 @@ MainView {
                 flickableItem: newPersonPageFlickable
                 align: Qt.AlignTrailing
             }
-        }
+       }
 
 
        //----------------- Application Configuration page -----------------

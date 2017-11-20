@@ -8,9 +8,8 @@ import Ubuntu.Layouts 1.0
 /* replace the 'incomplete' QML API U1db with the low-level QtQuick API */
 import QtQuick.LocalStorage 2.0
 
-import "./utility.js" as Utility
-import "./storage.js" as Storage
-
+import "utility.js" as Utility
+import "storage.js" as Storage
 
 /* Display a form with the components to insert/add a new contact: usec in Tablet view */
 Column{
@@ -98,7 +97,7 @@ Column{
             width: units.gu(18)
             property date date: new Date()
             text: Qt.formatDateTime(date, "dd MMMM yyyy")
-            //Don't use the PickerPanel api because doesn't allow to set minum date
+            /* Don't use the PickerPanel api because doesn't allow to set a minum date */
             onClicked: PopupUtils.open(newPopoverDatePickerComponent, newBirthdayButton)
         }
 

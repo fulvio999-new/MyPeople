@@ -42,7 +42,7 @@ Dialog {
 
             PopupUtils.open(operationResultDialogue)
 
-            //clean fields
+            /* clean form fields */
             newNameField.text = ""
             newSurnameField.text = ""
             newJobField.text = ""
@@ -60,7 +60,7 @@ Dialog {
 
             Storage.loadAllPeople();
 
-            /* refresh in case of updating of birthday */
+            /* refresh in case of persan have today birthday */
             Storage.getTodayBirthDays();
         }
     }

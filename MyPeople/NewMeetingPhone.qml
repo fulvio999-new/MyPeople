@@ -254,6 +254,6 @@ Column {
 
     Component {
         id: confirmInsertDialog
-        ConfirmSaveMeeting{}
+        ConfirmInsertMeeting{}
     }
 }

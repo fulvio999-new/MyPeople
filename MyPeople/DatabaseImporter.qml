@@ -7,18 +7,19 @@ import QtQuick.LocalStorage 2.0
 import "./storage.js" as Storage
 
 
-/* Show a Dialog where the user can choose to import contacts for databases of oldest Mypeople version */
+/* Show a Dialog where the user can choose to import contacts for databases of oldest Mypeople versions (1.0 and 1.1)
+   for newest version is not necessary import data
+*/
 Dialog {
 
     id: fileBrowserDialog
     text: "<b>To import data from old versions 1.0 and 1.1 visit:</b>"
     property int importedContact : 0;
-
     property color linkColor: "blue"
     property string website : "http://iutility.blogspot.it/2016/11/MyPeople.html"
 
     function colorLinks(text) {
-        return text.replace(/<a(.*?)>(.*?)</g, "<a $1><font color=\"" + linkColor + "\">$2</font><")
+       return text.replace(/<a(.*?)>(.*?)</g, "<a $1><font color=\"" + linkColor + "\">$2</font><")
     }
 
     Component.onCompleted: {

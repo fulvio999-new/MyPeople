@@ -8,8 +8,8 @@ import Ubuntu.Layouts 1.0
 import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
-import "./storage.js" as Storage
-import "./DateUtils.js" as DateUtils
+import "storage.js" as Storage
+import "DateUtils.js" as DateUtils
 
  /*
     Item that display a meeting item retrieved from the database.
@@ -23,11 +23,10 @@ import "./DateUtils.js" as DateUtils
         /* workaround to specify the origin page: todaMeeting or SearchMeeting. FIXME: find better solution  */
         property bool isFromTodayMeetingPage: false;
 
-        /* used to reaped user search in case of Meeting deletion */
+        /* used to reapeat user search in case of Meeting deletion */
         property string dateFrom;
         property string dateTo;
         property string meetingStatus;
-
 
         width: parent.width
         height: units.gu(13) /* the heigth of the rectangle that contains an meeting in the list */
@@ -85,8 +84,9 @@ import "./DateUtils.js" as DateUtils
                         }
 
                         Storage.deleteMeetingById(meetingId);
-                        /* refresh repating the same user search */
+                        /* to refresh repeat the same user search */
                         Storage.searchMeetingByTimeRange(allPeopleMeetingFoundDelegate.dateFrom,allPeopleMeetingFoundDelegate.dateTo,allPeopleMeetingFoundDelegate.meetingStatus);
+                        Storage.getTodayMeetings();
 
                         operationResultLabel.text = i18n.tr("Operation executed successfully")
                         executeButton.enabled = false;
@@ -94,7 +94,6 @@ import "./DateUtils.js" as DateUtils
                 }
             }
         }
-
 
         Component {
             id: confirmArchiveMeetingComponent
@@ -266,7 +265,6 @@ import "./DateUtils.js" as DateUtils
 
                              }
                         }
-
                     }
                 }
 

@@ -35,7 +35,6 @@ Dialog {
                     CheckBox {
                         id: deleteContactsCheckBox
                         checked: false
-
                     }
                 }
 

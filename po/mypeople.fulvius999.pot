@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-17 17:46+0000\n"
+"POT-Creation-Date: 2017-11-20 14:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -84,8 +84,8 @@ msgid ""
 "future date and manually change his status"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:50
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:104
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:49
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:103
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AppConfigurationPhone.qml:41
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AppConfigurationTablet.qml:42
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/MeetingFoundDelegate.qml:41
@@ -93,24 +93,24 @@ msgstr ""
 msgid "Confirmation"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:52
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:51
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/MeetingFoundDelegate.qml:43
 msgid "Delete selected Meeting ?"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:61
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:127
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:60
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:126
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/MeetingFoundDelegate.qml:56
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/MeetingFoundDelegate.qml:111
 msgid "Close"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:74
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:135
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:73
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:134
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AppConfigurationPhone.qml:58
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AppConfigurationTablet.qml:59
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/ConfirmDeletePeople.qml:22
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/ConfirmSaveMeeting.qml:22
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/ConfirmInsertMeeting.qml:22
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/ConfirmUpdateMeeting.qml:23
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/ConfirmUpdatePeople.qml:21
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/DetailsPersonTablet.qml:328
@@ -120,31 +120,31 @@ msgid "Execute"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:91
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:150
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:149
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/MeetingFoundDelegate.qml:71
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/MeetingFoundDelegate.qml:126
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/OperationResult.qml:12
 msgid "Operation executed successfully"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:110
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:109
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/MeetingFoundDelegate.qml:95
 msgid "Mark as 'ARCHIVED' and leave it in the database ?"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:111
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:110
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/MeetingFoundDelegate.qml:96
 msgid "(if you archive a meeting you can reuse it"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:112
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AllPeopleMeetingFoundDelegate.qml:111
 msgid "in the future simply updating it)"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AppConfigurationPhone.qml:52
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/AppConfigurationTablet.qml:53
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/ConfirmDeletePeople.qml:17
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/ConfirmSaveMeeting.qml:17
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/ConfirmInsertMeeting.qml:17
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/ConfirmUpdateMeeting.qml:18
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/ConfirmUpdatePeople.qml:16
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/DetailsPersonTablet.qml:323
@@ -211,24 +211,24 @@ msgstr ""
 msgid "People"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/DataBaseEraser.qml:47
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/DataBaseEraser.qml:46
 msgid "Meetings"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/DataBaseEraser.qml:83
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/DataBaseEraser.qml:82
 msgid "Please, select an option"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/DataBaseEraser.qml:99
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/DataBaseEraser.qml:98
 msgid "Deletion executed successfully. <br>Deleted "
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/DatabaseImporter.qml:51
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/DatabaseImporter.qml:52
 #, qt-format
 msgid "<a href=\"%1\">http://iutility.blogspot.it/2016/11/MyPeople.html</a>"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/DatabaseImporter.qml:142
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/DatabaseImporter.qml:143
 msgid "OK, succesfully imported: "
 msgstr ""
 
@@ -395,69 +395,60 @@ msgstr ""
 msgid "Add"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/ItemNotFound.qml:8
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/OperationResult.qml:9
-msgid "Operation Result"
-msgstr ""
-
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/ItemNotFound.qml:9
-msgid "No People Found !"
-msgstr ""
-
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:133
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:128
 msgid "Help"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:229
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:245
 msgid "Search"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:253
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:269
 msgid "Total people found"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:267
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:283
 msgid "Global Agenda Meetings"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:313
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:336
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:329
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:352
 msgid "Today"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:382
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:398
 msgid "Details for "
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:439
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:455
 msgid "Search meeting with: "
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:504
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:540
 msgid "Create a meeting with"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:553
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:589
 msgid "Search for meetings with any people"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:628
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:685
 msgid "Edit meeting with"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:674
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:731
 msgid "Add new person"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:720
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:777
 msgid "Application Configuration"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:746
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:803
 msgid "Today BirthDay"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:771
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/Main.qml:828
 msgid "Today Meeting"
 msgstr ""
 
@@ -475,10 +466,14 @@ msgstr ""
 msgid "Save the new meeting ?"
 msgstr ""
 
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/OperationResult.qml:9
+msgid "Operation Result"
+msgstr ""
+
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/ProductNewFeatures.qml:12
 msgid "What's new in this version"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/build-MyPeople-UbuntuSDK_for_desktop_kit_device_i386_GCC_i386_ubuntu_sdk_15_04_EMULATOR-Debug/MyPeople/MyPeople.desktop.h:1
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/build-MyPeople-UbuntuSDK_for_desktop_GCC_amd64_ubuntu_sdk_15_04-Debug/MyPeople/MyPeople.desktop.h:1
 msgid "MyPeople"
 msgstr ""

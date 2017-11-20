@@ -155,7 +155,7 @@ Column{
         }
 
         Button {
-            id: searchExpenseButton
+            id: searchMeetingButton
             text: "Search"
             color: UbuntuColors.orange
             onClicked: {

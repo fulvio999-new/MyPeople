@@ -239,7 +239,7 @@ function getUUID(suffix){
                                   "name": rs.rows.item(i).name,
                                   "surname": rs.rows.item(i).surname,
                                   "phone": rs.rows.item(i).phone,
-                                  "mobilePhone": rs.rows.item(i).phone,
+                                  "mobilePhone": rs.rows.item(i).mobilePhone,
                                   "email": rs.rows.item(i).email,
               });
         }

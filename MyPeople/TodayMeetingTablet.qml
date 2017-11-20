@@ -8,14 +8,15 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
 //--------------- For TABLET Page: today meeting list  ---------------
 
 
-Column{
+Item{
     id: todayMeetingTablet
-    anchors.fill: parent
+    width: parent.width
+    height: parent.height
 
     UbuntuListView {
         id: todayMeetingResultList
-        /* necessary, otherwise hide the page header */
-        anchors.topMargin: units.gu(6)
+        /* necessary, otherwise hide the page header */       
+        anchors.topMargin: todayMeetingPageHeader.height
         anchors.fill: parent
         focus: true
         /* nececessary otherwise the list scroll under the header */

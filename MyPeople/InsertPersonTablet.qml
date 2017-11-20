@@ -14,10 +14,7 @@ import "storage.js" as Storage
 /* Display a form with the components to insert/add a new contact: usec in Tablet view */
 Column{
     id: addPersonPageLayout
-    anchors.fill: parent
-
     spacing: units.gu(3)
-    anchors.leftMargin: units.gu(2)
 
     Component {
         id: confirmAddPeopleDialog

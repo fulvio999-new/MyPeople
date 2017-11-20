@@ -149,7 +149,6 @@ Column {
         }
     }
 
-
     Row{
         id: meetingPlaceRow
         spacing: units.gu(6)
@@ -171,7 +170,6 @@ Column {
             hasClearButton: true
         }
     }
-
 
     Row{
         id: meetingTimeRow
@@ -224,8 +222,8 @@ Column {
         Button {
             id: meetingTimeButton                      
             text: editMeetingPage.date.split(' ')[1].trim()
-            //Don't use the PickerPanel api because doesn't allow to set minum date
-            onClicked: PopupUtils.open(popoverDatePickerComponent2, meetingTimeButton)
+            /* Don't use the PickerPanel api because doesn't allow to set minum date */
+            onClicked: PopupUtils.open(popoverDatePickerComponent2, meetingTimeButton)           
         }
 
         /* Create a PopOver conteining a DatePicker, necessary use a PopOver a container due to a bug on setting minimum date

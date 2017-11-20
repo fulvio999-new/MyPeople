@@ -14,11 +14,9 @@ import "./storage.js" as Storage
 
 /* Display a form with the components to insert/add a new contact: used in Phone view */
 Column{
-    id: addPersonPageLayout
-    anchors.fill: parent
+    id: addPersonPageLayout    
 
-    spacing: units.gu(3.5)
-    anchors.leftMargin: units.gu(2)    
+    spacing: units.gu(3.5)   
 
     Component {
        id: confirmAddPeopleDialog

@@ -20,7 +20,6 @@ import "./storage.js" as Storage
  in the field, and when is used there are refresh problem of the TextField when another person is chosen in the list
 */
 Column {
-
     id: personDetailPageLayout
     anchors.fill: parent
     spacing: units.gu(3)

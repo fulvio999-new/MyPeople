@@ -5,23 +5,24 @@ import Ubuntu.Layouts 1.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
 
-//--------------- For PHONE Page: today birthday list  ---------------
+//--------------- For PHONE Page: today meeting list  ---------------
 
 
-Column{
-    id: todayBirthDayTablet
-    anchors.fill: parent
+Item{
+    id: todayMeetingPhone
+    width: parent.width
+    height: parent.height
 
     UbuntuListView {
         id: todayMeetingResultList
-        /* necessary, otherwise hide the search criteria row */
-        anchors.topMargin: units.gu(6)
+        /* necessary, otherwise hide the page header */
+        anchors.topMargin: todayMeetingPageHeader.height
         anchors.fill: parent
         focus: true
         /* nececessary otherwise the list scroll under the header */
         clip: true
         model: todayMeetingModel
-        boundsBehavior: Flickable.StopAtBounds        
+        boundsBehavior: Flickable.StopAtBounds
         highlight: Component{
 
             id: highlightComponent
@@ -46,6 +47,7 @@ Column{
 
         delegate: AllPeopleMeetingFoundDelegate{isFromTodayMeetingPage:true}
     }
-
 }
+
+
 

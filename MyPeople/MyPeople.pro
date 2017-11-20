@@ -50,7 +50,6 @@ DISTFILES += \
     DataBaseEraser.qml \
     OperationResult.qml \
     AboutProduct.qml \
-    InsertPersonFormPhone.qml \
     DetailsPersonTablet.qml \
     DetailsPersonPhone.qml \
     NewMeetingTablet.qml \
@@ -72,5 +71,6 @@ DISTFILES += \
     ConfirmInsertPeople.qml \
     ConfirmDeletePeople.qml \
     ConfirmUpdatePeople.qml \
-    ConfirmInsertMeeting.qml
+    ConfirmInsertMeeting.qml \
+    InsertPersonPhone.qml
 

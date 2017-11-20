@@ -7,15 +7,15 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
 
 //--------------- For TABLET Page: today birthday list
 
-
-Column{
+Item{
     id: todayBirthDayTablet
-    anchors.fill: parent
+    width: parent.width
+    height: parent.height
 
     UbuntuListView {
         id: todayBirthDayResultList
         /* necessary, otherwise hide the search criteria row */
-        anchors.topMargin: units.gu(6)
+        anchors.topMargin: todayBirthdayPageHeader.height
         anchors.fill: parent
         focus: true
         /* nececessary otherwise the list scroll under the header */
@@ -61,8 +61,10 @@ Column{
             }
 
             MouseArea {
-                id: selectableMouseArea
-                anchors.fill: parent
+                id: selectableMouseArea              
+                width: parent.width
+                height: parent.height
+
                 onClicked: {
                     /* move the highlight component to the currently selected item */
                     todayBirthDayResultList.currentIndex = index

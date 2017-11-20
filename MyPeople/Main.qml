@@ -580,8 +580,7 @@ MainView {
         }
 
 
-        //----------------- SEARCH MEETINGS with ANY People ---------------------
-
+        //----------------- SEARCH MEETINGS with ANY People ------------------
         Page {
                 id: searchAnyMeetingPage
 
@@ -623,8 +622,8 @@ MainView {
                             width: 180; height: 44
                             color: "blue";
                             radius: 2
-                            /* move the Rectangle on the currently selected List item with the keyboard */
-                            y: allPeopleMeetingFoundModel.currentItem.y
+                            /* move the Rectangle on the currently selected List item with the keyboard */                            
+                            y: allPeopleMeetingSearchResultList.currentItem.y
 
                             /* show an animation on change ListItem selection */
                             Behavior on y {
@@ -675,9 +674,9 @@ MainView {
             property string name;
             property string surname;
             property string subject;
-            property string date;
+            property string date : "1970-01-13 00:00"; /* placeholder */
             property string place;
-            property string status; /* TODO, ARCHIVED */
+            property string status; /* ie: TODO, ARCHIVED */
             property string note;
 
             header: PageHeader {
@@ -726,6 +725,8 @@ MainView {
         //------------- ADD NEW PERSON PAGE --------------------
         Page {
             id: addPersonPage
+            anchors.fill: parent
+            anchors.leftMargin: units.gu(2)
 
             header: PageHeader {
                 title: i18n.tr("Add new person")
@@ -748,16 +749,17 @@ MainView {
                     id: layouts
                     width: parent.width
                     height: parent.height
+
                     layouts:[
 
                         ConditionalLayout {
                             name: "addContactLayout"
                             when: root.width > units.gu(80)
-                            InsertPersonFormTablet{}
+                            InsertPersonTablet{}
                         }
                     ]
                     //else
-                    InsertPersonFormPhone{}
+                    InsertPersonPhone{}
                 }
             }
 
@@ -798,8 +800,10 @@ MainView {
        //----------------- Today BirthDay Page -----------------
        Page {
             id: todayBirthdayPage
+            anchors.fill: parent
 
             header: PageHeader {
+               id: todayBirthdayPageHeader
                title: i18n.tr("Today BirthDay")+ ": " + todayBirthdayModel.count
             }
 
@@ -817,14 +821,15 @@ MainView {
                 //else
                 TodayBirthDayPhone{}
             }
-        }
-
+       }
 
        //----------------- Today Meeting Page -----------------
        Page {
             id: todayMeetingPage
+            anchors.fill: parent
 
             header: PageHeader {
+               id: todayMeetingPageHeader
                title: i18n.tr("Today Meeting")+ ": " + todayMeetingModel.count
             }
 

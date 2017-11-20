@@ -710,7 +710,7 @@ MainView {
                         }
                     ]
                     //else
-                    EditMeetingPhone{ meetingStatus:editMeetingPage.status }
+                    EditMeetingPhone{ meetingStatus:editMeetingPage.status;meetingDate:editMeetingPage.date }
                 }
             }
 

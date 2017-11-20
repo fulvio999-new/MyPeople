@@ -184,6 +184,7 @@ Column {
         Button {
             id: editMeetingDateButton
             width: units.gu(18)
+             text: editMeetingLayout.meetingDate //editMeetingPage.date.split(' ')[1].trim()
             //Don't use the PickerPanel api because doesn't allow to set minum date
             onClicked: PopupUtils.open(popoverDatePickerComponent, editMeetingDateButton)
         }

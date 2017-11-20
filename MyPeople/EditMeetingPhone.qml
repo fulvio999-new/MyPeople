@@ -14,17 +14,18 @@ import "storage.js" as Storage
 import "DateUtils.js" as DateUtils
 
 /*
-  For PHONE: Component that allow to edit an already saved Meeting chosen from a ListModel
+  For TABLET: Component that allow to edit an already saved Meeting chosen from a ListModel
 */
 Column {
 
     property string todayDateFormatted : DateUtils.formatFullDateToString(new Date());
     property string meetingStatus;  /* currently saved meeting status */
     property string meetingStatusToSave; /* the meeting status to save */
+    property string meetingDate;
 
     id: editMeetingLayout
     anchors.fill: parent
-    spacing: units.gu(2.5)
+    spacing: units.gu(3.5)
     anchors.leftMargin: units.gu(2)
 
 
@@ -43,18 +44,27 @@ Column {
       }
     }
 
+    /* to have a refresh of the meeting date Button */
+    onMeetingDateChanged: {
+       editMeetingDateButton.text = Qt.formatDateTime(meetingDate.split(' ')[0], "dd MMMM yyyy")
+    }
+
     Rectangle{
         color: "transparent"
         width: parent.width
-        height: units.gu(5)
+        height: units.gu(4)
     }
 
-    Row{
-        spacing: units.gu(4.5)
+    Rectangle {
+        id:statusContainer
+        width: parent.width -units.gu(2);
+        height: units.gu(4)
+        border.color: "lightsteelblue"
 
         Button{
             id: changeStatusButton
-            height: units.gu(3)
+            anchors.verticalCenter: statusContainer.verticalCenter
+            height: statusContainer.height -units.gu(1)
             text: i18n.tr("Change status")
             color: UbuntuColors.green
             onClicked: {
@@ -65,33 +75,24 @@ Column {
                    meetingStatusLabel.text = meetingStatusLabel.text.replace("ARCHIVED","SCHEDULED")
                 }
 
-                else if(meetingStatusLabel.text.indexOf("SCHEDULED") !== -1){  //true "SCHEDULED" is found
+              else if(meetingStatusLabel.text.indexOf("SCHEDULED") !== -1){  //true "SCHEDULED" is found
                    meetingStatusToSave = "ARCHIVED";
                    meetingStatusLabel.text = meetingStatusLabel.text.replace("SCHEDULED","ARCHIVED")
                 }
             }
         }
 
-        Label {            
-            id: meetingStatusLabel           
-            anchors.verticalCenter: changeStatusButton.verticalCenter
+        Label {
+            id: meetingStatusLabel
+            anchors.centerIn: parent
             text: editMeetingPage.status
-        }      
-    }
-
-
-    /* line separator */
-    Rectangle {
-         color: "grey"
-         width: editMeetingLayout.width //units.gu(100)
-         anchors.horizontalCenter: parent.horizontalCenter
-         height: units.gu(0.1)
+        }
     }
 
 
     Row{
         id: nameRow
-        spacing: units.gu(4.5)
+        spacing: units.gu(5)
 
         Label {
             id: nameLabel
@@ -108,10 +109,6 @@ Column {
             hasClearButton: false
             readOnly: true
         }
-     }
-
-     Row{
-        spacing: units.gu(2)
 
         Label {
             id: surnameLabel
@@ -132,7 +129,7 @@ Column {
 
     Row{
         id: meetingSubjectRow
-        spacing: units.gu(2.5)
+        spacing: units.gu(4.5)
 
         //------------- Subject --------------
         Label {
@@ -147,14 +144,15 @@ Column {
             text: editMeetingPage.subject
             echoMode: TextInput.Normal
             readOnly: false
-            width: units.gu(35)
+            width: units.gu(55)
             hasClearButton: false
         }
     }
 
     Row{
         id: meetingPlaceRow
-        spacing: units.gu(4)
+        spacing: units.gu(6)
+
 
         Label {
             id: meetingPlaceLabel
@@ -168,14 +166,14 @@ Column {
             text: editMeetingPage.place
             echoMode: TextInput.Normal
             readOnly: false
-            width: units.gu(35)
+            width: units.gu(55)
             hasClearButton: true
         }
     }
 
     Row{
         id: meetingTimeRow
-        spacing: units.gu(4.5)
+        spacing: units.gu(6)
 
         Label {
             id: meetingDateLabel
@@ -185,15 +183,14 @@ Column {
 
         Button {
             id: editMeetingDateButton
-            property date date: new Date()
-            text: Qt.formatDateTime(editMeetingPage.date.split(' ')[0], "dd MMMM yyyy")
             width: units.gu(18)
+             text: editMeetingLayout.meetingDate //editMeetingPage.date.split(' ')[1].trim()
             //Don't use the PickerPanel api because doesn't allow to set minum date
             onClicked: PopupUtils.open(popoverDatePickerComponent, editMeetingDateButton)
         }
 
         /* Create a PopOver conteining a DatePicker, necessary use a PopOver a container due to a bug on setting minimum date
-               with a simple DatePicker Component
+           with a simple DatePicker Component
         */
         Component {
             id: popoverDatePickerComponent
@@ -216,11 +213,6 @@ Column {
                 }
             }
         }
-    }
-
-    Row{
-        id: timeRow
-        spacing: units.gu(4.5)
 
         Label {
             id: meetingTimeLabel
@@ -231,7 +223,7 @@ Column {
         Button {
             id: meetingTimeButton
             text: editMeetingPage.date.split(' ')[1].trim()
-            //Don't use the PickerPanel api because doesn't allow to set minum date
+            /* Don't use the PickerPanel api because doesn't allow to set minum date */
             onClicked: PopupUtils.open(popoverDatePickerComponent2, meetingTimeButton)
         }
 
@@ -264,7 +256,7 @@ Column {
 
     Row{
         id: meetingObjectRow
-        spacing: units.gu(4)
+        spacing: units.gu(6)
 
         Label {
             id: noteLabel
@@ -276,8 +268,8 @@ Column {
             id: meetingNote
             textFormat:TextEdit.AutoText
             text: editMeetingPage.note
-            height: units.gu(13)
-            width: units.gu(35)
+            height: units.gu(15)
+            width: units.gu(70)
             readOnly: false
         }
     }

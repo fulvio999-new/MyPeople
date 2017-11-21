@@ -58,7 +58,6 @@ DISTFILES += \
     SearchMeetingWithPersonPhone.qml \
     EditMeetingTablet.qml \
     EditMeetingPhone.qml \
-    ConfirmUpdateMeeting.qml \
     AllPeopleMeetingFoundDelegate.qml \
     AppConfigurationPhone.qml \
     AppConfigurationTablet.qml \

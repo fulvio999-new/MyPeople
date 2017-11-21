@@ -12,13 +12,23 @@ import "storage.js" as Storage
 import "DateUtils.js" as DateUtils
 
  /*
-    Item that display a meeting with a SPECIFIC person previously chosen from the people list
+    Item that display a meeting with a SPECIFIC person
     (Note: a delegate object can access directly a the values in the dataModel associated at the ListView or similar)
  */
  Item {
         property string todayDateFormatted : DateUtils.formatFullDateToString(new Date());
 
-        id: meetingFoundDelegate
+        /* workaround to specify the origin page: todaMeeting or SearchMeeting. FIXME: find better solution  */
+        property bool isFromTodayMeetingPage: false;
+
+        /* used to reapeat user search in case of Meeting deletion */
+        property string personName;
+        property string personSurname;
+        property string dateFrom;
+        property string dateTo;
+        property string meetingStatus;
+
+        id: peopleMeetingFoundDelegate
         width: parent.width //searchMeetingWithPersonPage.width
         height: units.gu(13) /* the heigth of the rectangle that contains an meeting in the list */
 
@@ -55,26 +65,30 @@ import "DateUtils.js" as DateUtils
                     Button {
                         text: i18n.tr("Close")
                         width: units.gu(14)
-                        onClicked: PopupUtils.close(confirmDeleteMeeting)
+                        onClicked: {
+                            /* refresh and repeat the user search */
+                            Storage.getTodayMeetings();
+                            Storage.searchMeetingByTimeAndPerson(searchMeetingWithPersonPage.personName,searchMeetingWithPersonPage.personSurname,searchMeetingWithPersonPage.dateFrom,searchMeetingWithPersonPage.dateTo,searchMeetingWithPersonPage.meetingStatus);
+
+                            PopupUtils.close(confirmDeleteMeeting)
+                        }
                     }
 
                     Button {
                         id:executeButton
-                        text: i18n.tr("Execute")
+                        text: i18n.tr("Execute") //DELETE
                         width: units.gu(14)
 
                         onClicked: {
                             /* from ListModel get the 'id' of the currently selected meeting */
                             var meetingId = meetingWithPersonFoundModel.get(meetingSearchResultList.currentIndex).id;
                             Storage.deleteMeetingById(meetingId);
-
-                            operationResultLabel.text = i18n.tr("Operation executed successfully")
-                            executeButton.enabled = false;
                             /* refresh */
                             Storage.getTodayMeetings();
 
-                            //TODO: refresh list
-                        }
+                            operationResultLabel.text = i18n.tr("Operation executed successfully")
+                            executeButton.enabled = false;                            
+                         }
                     }
                 }
             }
@@ -110,23 +124,26 @@ import "DateUtils.js" as DateUtils
                     Button {
                         text: i18n.tr("Close")
                         width: units.gu(14)
-                        onClicked: PopupUtils.close(confirmArchiveMeeting)
+                        onClicked: {
+                           Storage.searchMeetingByTimeAndPerson(peopleMeetingFoundDelegate.personName,peopleMeetingFoundDelegate.personSurname,peopleMeetingFoundDelegate.dateFrom,peopleMeetingFoundDelegate.dateTo,peopleMeetingFoundDelegate.meetingStatus);
+
+                           PopupUtils.close(confirmArchiveMeeting)
+                        }
                     }
 
                     Button {
                         id:executeButton
                         width: units.gu(14)
-                        text: i18n.tr("Execute")
+                        text: i18n.tr("Execute") //ARCHIVE
 
                         onClicked: {
-                            /* from ListModel get the 'id' of the currently selected meeting */
-                            var meetingId = allPeopleMeetingFoundModel.get(allPeopleMeetingSearchResultList.currentIndex).id;
+                            /* get the 'id' of the currently selected meeting */
+                            var meetingId = meetingWithPersonFoundModel.get(meetingSearchResultList.currentIndex).id;
+
                             Storage.updateMeetingStatus(meetingId,"ARCHIVED");
 
                             operationResultLabel.text = i18n.tr("Operation executed successfully")
                             executeButton.enabled = false;
-
-                            //TODO: refresh list
                         }
                     }
                 }
@@ -155,7 +172,7 @@ import "DateUtils.js" as DateUtils
 
             Column {
                 width: background.width - 10 - editMeetingColumn.width;
-                height: meetingFoundDelegate.height
+                height: peopleMeetingFoundDelegate.height
                 spacing: units.gu(0.2)
 
                 Label {
@@ -220,12 +237,17 @@ import "DateUtils.js" as DateUtils
                                                                           id:id,
                                                                           name:name,
                                                                           surname:surname,
+                                                                          subject:subject,
                                                                           date:date,
                                                                           place:place,
                                                                           status: meetingStatusLabel.text,
-                                                                          note:note
+                                                                          note:note,
+                                                                          isFromGlobalSearch:false,
+                                                                          dateFrom:dateFrom,
+                                                                          dateTo:dateTo,
+                                                                          meetingStatus:meetingStatus
                                                                         }
-                                                                       )
+                                                                       )                                 
 
                              }
                         }
@@ -247,7 +269,7 @@ import "DateUtils.js" as DateUtils
                                   PopupUtils.open(confirmDeleteMeetingComponent);
                               }
                          }
-                      }
+                    }
                 }
 
                 Row{
@@ -262,7 +284,7 @@ import "DateUtils.js" as DateUtils
                               width: archiveMeetingIcon.width
                               height: archiveMeetingIcon.height
                               onClicked: {
-                                    PopupUtils.open(confirmArchiveMeetingComponent);
+                                  PopupUtils.open(confirmArchiveMeetingComponent);
                               }
                          }
                       }

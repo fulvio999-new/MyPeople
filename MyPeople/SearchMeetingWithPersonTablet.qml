@@ -31,7 +31,7 @@ Column{
         x: searchMeetingWithPeopleColum.width/3
         Label{
             id: meetingFoundLabel
-            text: " " /* empty spaces as placeholder */
+            text: "<b>Found: </b>"+ meetingSearchResultList.count +"<b> meeting(s) (listed in chronological order)</b>"
         }
     }
 
@@ -122,10 +122,9 @@ Column{
         }
 
         Component {
-                id: meetingTypeSelectorDelegate
-                OptionSelectorDelegate { text: name; subText: description; }
+            id: meetingTypeSelectorDelegate
+            OptionSelectorDelegate { text: name; subText: description; }
         }
-
 
         /* The meeting status shown in the combo box */
         ListModel {
@@ -154,7 +153,7 @@ Column{
 
         Button {
             id: searchExpenseButton
-            text: "Search/Reload"
+            text: i18n.tr("Search")
             color: UbuntuColors.orange
             onClicked: {                
 
@@ -166,15 +165,10 @@ Column{
 
                 Storage.searchMeetingByTimeAndPerson(searchMeetingWithPersonPage.personName,searchMeetingWithPersonPage.personSurname,meetingDateFromButton.text,meetingDateToButton.text,meetingStatus);
 
-                meetingFoundLabel.text = "<b>Found: </b>"+ meetingWithPersonFoundModel.count +"<b> meetings (in chronological order)</b>"
+                searchMeetingWithPersonPage.dateFrom = meetingDateFromButton.text;
+                searchMeetingWithPersonPage.dateTo = meetingDateToButton.text;
+                searchMeetingWithPersonPage.meetingStatus = meetingStatus;
             }
         }
-      }
-
-      //-- Thanks to: gajdos.sk/ubuntuapps/dynamically-filled-listview-in-qml/ for the idea
-      Row{
-          id: expenseFoundRow
-          anchors.topMargin: searchCriteriaRow.height
-          height: parent.height - searchCriteriaRow.height
       }
 }

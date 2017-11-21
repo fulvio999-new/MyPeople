@@ -353,7 +353,7 @@ MainView {
                                     }
                                 }
 
-                            } //ROW
+                            }
                         }
                     }
                 }
@@ -449,6 +449,10 @@ MainView {
             property string id  /* PK field not shown */
             property string personName;
             property string personSurname
+            /* the values chosen in the search meeting form */
+            property string dateFrom;
+            property string dateTo;
+            property string meetingStatus;
 
             header: PageHeader {
                 id: headersearchAnyMeetingPage
@@ -461,8 +465,8 @@ MainView {
 
              /* Component that display the Meetings found in the database */
              Component {
-                 id: meetingFoundDelegate
-                 MeetingFoundDelegate{}
+                 id: peopleMeetingFoundDelegate
+                 PeopleMeetingFoundDelegate{personName:searchMeetingWithPersonPage.personName;personSurname:searchMeetingWithPersonPage.personSurname;dateFrom:searchMeetingWithPersonPage.dateFrom; dateTo:searchMeetingWithPersonPage.dateTo; meetingStatus:searchMeetingWithPersonPage.meetingStatus}
              }
 
              UbuntuListView {
@@ -495,7 +499,7 @@ MainView {
                      }
                  }
 
-                 delegate: meetingFoundDelegate
+                 delegate: peopleMeetingFoundDelegate
              }
 
              /* Show the details of the selected person */
@@ -664,7 +668,6 @@ MainView {
 
 
         //------------ Edit an existing Meeting planned with a specific Person -------------
-
         Page{
             id: editMeetingPage
             anchors.fill: parent
@@ -678,6 +681,11 @@ MainView {
             property string place;
             property string status; /* ie: TODO, ARCHIVED */
             property string note;
+            property bool isFromGlobalSearch; /* true if the user has made meeting search with any people */
+            /* to repaeat the search */
+            property string dateFrom;
+            property string dateTo;
+            property string meetingStatus;
 
             header: PageHeader {
                 id: headerEditExpensePage
@@ -706,11 +714,11 @@ MainView {
                         ConditionalLayout {
                             name: "editMeetingLayout"
                             when: root.width > units.gu(80)
-                            EditMeetingTablet{ meetingStatus:editMeetingPage.status;meetingDate:editMeetingPage.date}
+                            EditMeetingTablet{ meetingStatus:editMeetingPage.status;meetingDate:editMeetingPage.date;isFromGlobalSearch:editMeetingPage.isFromGlobalSearch;dateFrom:editMeetingPage.dateFrom;dateTo:editMeetingPage.dateTo}
                         }
                     ]
                     //else
-                    EditMeetingPhone{ meetingStatus:editMeetingPage.status;meetingDate:editMeetingPage.date }
+                    EditMeetingPhone{ meetingStatus:editMeetingPage.status;meetingDate:editMeetingPage.date;isFromGlobalSearch:editMeetingPage.isFromGlobalSearch;dateFrom:editMeetingPage.dateFrom;dateTo:editMeetingPage.dateTo }
                 }
             }
 

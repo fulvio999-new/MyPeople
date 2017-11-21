@@ -22,6 +22,10 @@ Column {
     property string meetingStatus;  /* currently saved meeting status */
     property string meetingStatusToSave; /* the meeting status to save */
     property string meetingDate;
+    property bool isFromGlobalSearch;
+
+    property string dateFrom;
+    property string dateTo;
 
     id: editMeetingLayout
     anchors.fill: parent
@@ -46,7 +50,8 @@ Column {
 
     /* to have a refresh of the meeting date Button */
     onMeetingDateChanged: {
-       editMeetingDateButton.text = Qt.formatDateTime(meetingDate.split(' ')[0], "dd MMMM yyyy")
+       editMeetingDateButton.text = Qt.formatDateTime(meetingDate.split(' ')[0], "dd MMMM yyyy");
+        meetingTimeButton.text = meetingDate.split(' ')[1].trim();
     }
 
     Rectangle{
@@ -131,7 +136,6 @@ Column {
         id: meetingSubjectRow
         spacing: units.gu(4.5)
 
-        //------------- Subject --------------
         Label {
             id:  meetingSubjectLabel
             anchors.verticalCenter: meetingSubjectField.verticalCenter
@@ -184,8 +188,7 @@ Column {
         Button {
             id: editMeetingDateButton
             width: units.gu(18)
-             text: editMeetingLayout.meetingDate //editMeetingPage.date.split(' ')[1].trim()
-            //Don't use the PickerPanel api because doesn't allow to set minum date
+            text: editMeetingPage.date.split(' ')[0].trim()
             onClicked: PopupUtils.open(popoverDatePickerComponent, editMeetingDateButton)
         }
 
@@ -223,19 +226,17 @@ Column {
         Button {
             id: meetingTimeButton
             text: editMeetingPage.date.split(' ')[1].trim()
-            /* Don't use the PickerPanel api because doesn't allow to set minum date */
             onClicked: PopupUtils.open(popoverDatePickerComponent2, meetingTimeButton)
         }
 
-        /* Create a PopOver conteining a DatePicker, necessary use a PopOver a container due to a bug on setting minimum date
-               with a simple DatePicker Component
+        /* Create a PopOver with a DatePicker, necessary use a PopOver a container due to a 'bug' on setting minimum date
+           with a simple DatePicker Component
         */
         Component {
             id: popoverDatePickerComponent2
 
             Popover {
                 id: popoverDatePicker
-                //contentWidth: units.gu(25)
 
                 DatePicker {
                     id: timePicker
@@ -290,6 +291,47 @@ Column {
 
     Component {
         id: confirmUpdateMeetingDialog
-        ConfirmUpdateMeeting{ meetingId:editMeetingPage.id }
+
+        /* Ask a confirmation before updating a Meeting */
+        Dialog {
+            id: dialogue
+            title: "Confirmation"
+            modal:true
+
+            property string meetingId;
+
+            Button {
+               text: i18n.tr("Cancel")
+               onClicked: PopupUtils.close(dialogue)
+            }
+
+            Button {
+                text: i18n.tr("Execute")
+                onClicked: {
+                    PopupUtils.close(dialogue)
+
+                    /* compose the full date because in the UI come from two different components */
+                    var meetingFullDate = editMeetingDateButton.text +" "+meetingTimeButton.text;
+
+                    Storage.updateMeeting(nameField.text,surnameField.text,meetingSubjectField.text,meetingPlaceField.text,meetingFullDate,meetingNote.text,editMeetingPage.id,meetingStatusToSave);
+
+                    PopupUtils.open(operationResultDialogue)
+
+                    /* update today meetings in case of the user has edited meeting date */
+                    Storage.getTodayMeetings();
+
+                    /* repeat the user search */
+                    if(isFromGlobalSearch === true){
+                        console.log("Search from User specific");
+                        Storage.searchMeetingByTimeAndPerson(searchMeetingWithPersonPage.personName,searchMeetingWithPersonPage.personSurname,searchMeetingWithPersonPage.dateFrom,searchMeetingWithPersonPage.dateTo,searchMeetingWithPersonPage.meetingStatus);
+                    }
+
+                    /* refresh re-executong the search */
+                    Storage.searchMeetingByTimeRange(dateFrom,dateTo,meetingStatusToSave);
+
+                    adaptivePageLayout.removePages(editMeetingPage)
+                }
+            }
+        }
     }
 }

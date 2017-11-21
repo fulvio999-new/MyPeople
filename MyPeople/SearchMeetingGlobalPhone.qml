@@ -33,7 +33,8 @@ Column{
         x: units.gu(3)
         Label{
             id: meetingFoundLabel
-            text:" " /* placeholder */
+            /* using the 'count' field of the Listview instead of ListModel we have an auto-refresh wen a meeting is deleted */
+            text : "<b>Found: </b>"+ allPeopleMeetingSearchResultList.count +"<b> meeting(s) (listed in chronological order)</b>"
         }
     }
 
@@ -179,16 +180,7 @@ Column{
 
                /* search meetings and fill the ListModel to display */
                Storage.searchMeetingByTimeRange(meetingDateFromButton.text,meetingDateToButton.text,meetingStatus);
-
-               meetingFoundLabel.text = "<b>Found: </b>"+ allPeopleMeetingFoundModel.count +"<b> meeting(s) (listed in chronological order)</b>"
             }
           }
-     }
-
-     //-- Thanks to: gajdos.sk/ubuntuapps/dynamically-filled-listview-in-qml/ for the idea
-     Row{
-          id: expenseFoundRow
-          anchors.topMargin: searchCriteriaRow.height
-          height: parent.height - searchCriteriaRow.height
-     }
+     } 
 }

@@ -59,10 +59,11 @@ import "DateUtils.js" as DateUtils
                 Button {
                     text: i18n.tr("Close")
                     onClicked: {
-                        /* refresh today meetings */
-                        if(isFromTodayMeetingPage === true){
-                          Storage.getTodayMeetings();
-                        }
+                        /* update */
+                        Storage.getTodayMeetings();
+
+                        /* to refresh repeat the same user search */
+                        Storage.searchMeetingByTimeRange(allPeopleMeetingFoundDelegate.dateFrom,allPeopleMeetingFoundDelegate.dateTo,allPeopleMeetingFoundDelegate.meetingStatus);
 
                         PopupUtils.close(confirmDeleteMeeting)
                     }
@@ -70,7 +71,7 @@ import "DateUtils.js" as DateUtils
 
                 Button {
                     id:executeButton
-                    text: i18n.tr("Execute")
+                    text: i18n.tr("Execute")  //Delete
 
                     onClicked: {
 
@@ -84,9 +85,6 @@ import "DateUtils.js" as DateUtils
                         }
 
                         Storage.deleteMeetingById(meetingId);
-                        /* to refresh repeat the same user search */
-                        Storage.searchMeetingByTimeRange(allPeopleMeetingFoundDelegate.dateFrom,allPeopleMeetingFoundDelegate.dateTo,allPeopleMeetingFoundDelegate.meetingStatus);
-                        Storage.getTodayMeetings();
 
                         operationResultLabel.text = i18n.tr("Operation executed successfully")
                         executeButton.enabled = false;
@@ -125,13 +123,23 @@ import "DateUtils.js" as DateUtils
                     Button {
                         text: i18n.tr("Close")
                         width: units.gu(14)
-                        onClicked: PopupUtils.close(confirmArchiveMeeting)
+                        onClicked: {                           
+
+                            if(isFromTodayMeetingPage === true){
+                               Storage.getTodayMeetings();
+                            }
+
+                            /* refresh re-executong the search */
+                            Storage.searchMeetingByTimeRange(allPeopleMeetingFoundDelegate.dateFrom,allPeopleMeetingFoundDelegate.dateTo,allPeopleMeetingFoundDelegate.meetingStatus);
+
+                            PopupUtils.close(confirmArchiveMeeting)
+                        }
                     }
 
                     Button {
                         id:executeButton
                         width: units.gu(14)
-                        text: i18n.tr("Execute")
+                        text: i18n.tr("Execute") //Archive
 
                         onClicked: {                           
 
@@ -147,11 +155,7 @@ import "DateUtils.js" as DateUtils
                             Storage.updateMeetingStatus(meetingId,"ARCHIVED");
 
                             operationResultLabel.text = i18n.tr("Operation executed successfully")
-                            executeButton.enabled = false;
-
-                            if(isFromTodayMeetingPage === true){
-                               Storage.getTodayMeetings();
-                            }
+                            executeButton.enabled = false;                           
                         }
                     }
                 }
@@ -243,7 +247,7 @@ import "DateUtils.js" as DateUtils
                             height: editMeetingIcon.height
                             onClicked: {
 
-                                /* workaround to get the */
+                                /* workaround to get the source page */
                                 var sourcePage = searchAnyMeetingPage;
                                 if(isFromTodayMeetingPage === true){
                                     sourcePage = todayMeetingPage;
@@ -259,7 +263,11 @@ import "DateUtils.js" as DateUtils
                                                                           date:date,
                                                                           place:place,
                                                                           status: meetingStatusLabel.text,
-                                                                          note:note
+                                                                          note:note,
+                                                                          isFromGlobalSearch:true,
+                                                                          dateFrom:dateFrom,
+                                                                          dateTo:dateTo,
+                                                                          meetingStatus:meetingStatus
                                                                         }
                                                                        )
 

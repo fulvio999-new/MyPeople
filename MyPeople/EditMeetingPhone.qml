@@ -29,7 +29,7 @@ Column {
 
     id: editMeetingLayout
     anchors.fill: parent
-    spacing: units.gu(3.5)
+    spacing: units.gu(2.5)
     anchors.leftMargin: units.gu(2)
 
     /* Only if the meeting is ARCHIVED is show a button to change the status bask to SCHEDULED status */
@@ -93,7 +93,7 @@ Column {
 
     Row{
         id: nameRow
-        spacing: units.gu(5)
+        spacing: units.gu(4.5)
 
         Label {
             id: nameLabel
@@ -110,7 +110,10 @@ Column {
             hasClearButton: false
             readOnly: true
         }
+    }
 
+    Row{
+        spacing: units.gu(2)
         Label {
             id: surnameLabel
             anchors.verticalCenter: surnameField.verticalCenter
@@ -130,7 +133,7 @@ Column {
 
     Row{
         id: meetingSubjectRow
-        spacing: units.gu(4.5)
+        spacing: units.gu(2.5)
 
         Label {
             id:  meetingSubjectLabel
@@ -144,14 +147,14 @@ Column {
             text: editMeetingPage.subject
             echoMode: TextInput.Normal
             readOnly: false
-            width: units.gu(55)
+            width: units.gu(35)
             hasClearButton: false
         }
     }
 
     Row{
         id: meetingPlaceRow
-        spacing: units.gu(6)
+        spacing: units.gu(4)
 
         Label {
             id: meetingPlaceLabel
@@ -165,14 +168,14 @@ Column {
             text: editMeetingPage.place
             echoMode: TextInput.Normal
             readOnly: false
-            width: units.gu(55)
+            width: units.gu(35)
             hasClearButton: true
         }
     }
 
     Row{
         id: meetingTimeRow
-        spacing: units.gu(6)
+        spacing: units.gu(4.5)
 
         Label {
             id: meetingDateLabel
@@ -211,6 +214,11 @@ Column {
                 }
             }
         }
+    }
+
+    Row{
+        id: timeRow
+        spacing: units.gu(4.5)
 
         Label {
             id: meetingTimeLabel
@@ -252,7 +260,7 @@ Column {
 
     Row{
         id: meetingObjectRow
-        spacing: units.gu(6)
+        spacing: units.gu(4)
 
         Label {
             id: noteLabel
@@ -264,8 +272,8 @@ Column {
             id: meetingNote
             textFormat:TextEdit.AutoText
             text: editMeetingPage.note
-            height: units.gu(15)
-            width: units.gu(70)
+            height: units.gu(13)
+            width: units.gu(35)
             readOnly: false
         }
     }

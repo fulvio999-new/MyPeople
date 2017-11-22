@@ -374,7 +374,7 @@ MainView {
             /* Values passed as input properties when the AdaptiveLayout add the details page (See: PeopleListDelegate.qml)
                Are the details of the selected person in the people list used to fill the TextField
             */
-            property string id  /* PK field not shown */
+            property string id  /* PK Person Id (not shown) */
             property string personName;
             property string personSurname
             property string personPhone
@@ -677,7 +677,7 @@ MainView {
             property string place;
             property string status; /* ie: TODO, ARCHIVED */
             property string note;
-            property bool isFromGlobalSearch; /* true if the user has made meeting search with any people */
+            property bool isFromGlobalMeetingSearch; /* true if the user has made meeting search with any people */
             /* to repaeat the search */
             property string dateFrom;
             property string dateTo;
@@ -710,11 +710,11 @@ MainView {
                         ConditionalLayout {
                             name: "editMeetingLayout"
                             when: root.width > units.gu(80)
-                            EditMeetingTablet{ meetingStatus:editMeetingPage.status;meetingDate:editMeetingPage.date;isFromGlobalMeetingSearch:editMeetingPage.isFromGlobalSearch;dateFrom:editMeetingPage.dateFrom;dateTo:editMeetingPage.dateTo}
+                            EditMeetingTablet{ meetingStatus:editMeetingPage.status;meetingDate:editMeetingPage.date;isFromGlobalMeetingSearch:editMeetingPage.isFromGlobalMeetingSearch;dateFrom:editMeetingPage.dateFrom;dateTo:editMeetingPage.dateTo}
                         }
                     ]
                     //else
-                    EditMeetingPhone{ meetingStatus:editMeetingPage.status;meetingDate:editMeetingPage.date;isFromGlobalMeetingSearch:editMeetingPage.isFromGlobalSearch;dateFrom:editMeetingPage.dateFrom;dateTo:editMeetingPage.dateTo }
+                    EditMeetingPhone{ meetingStatus:editMeetingPage.status;meetingDate:editMeetingPage.date;isFromGlobalMeetingSearch:editMeetingPage.isFromGlobalMeetingSearch;dateFrom:editMeetingPage.dateFrom;dateTo:editMeetingPage.dateTo }
                 }
             }
 

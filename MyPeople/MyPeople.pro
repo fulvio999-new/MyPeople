@@ -4,6 +4,7 @@ TARGET = MyPeople
 RESOURCES += MyPeople.qrc
 
 QML_FILES += $$files(*.qml,true) \
+             $$files(*.png,true) \
              $$files(*.js,true)
 
 CONF_FILES +=  MyPeople.apparmor \
@@ -14,7 +15,7 @@ AP_TEST_FILES += tests/autopilot/run \
 
 OTHER_FILES += $${CONF_FILES} \
                $${QML_FILES} \
-               $${AP_TEST_FILES} \
+               $${AP_TEST_FILES} \              
                MyPeople.desktop
 
 #specify where the qml/js files are installed to

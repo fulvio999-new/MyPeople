@@ -259,7 +259,7 @@ import "DateUtils.js" as DateUtils
                                                                           place:place,
                                                                           status: meetingStatusLabel.text,
                                                                           note:note,
-                                                                          isFromGlobalSearch:true,
+                                                                          isFromGlobalMeetingSearch:true,
                                                                           dateFrom:searchAnyMeetingPage.dateFrom,
                                                                           dateTo:searchAnyMeetingPage.dateTo,
                                                                           meetingStatus:searchAnyMeetingPage.meetingStatus

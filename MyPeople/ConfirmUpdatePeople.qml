@@ -21,7 +21,6 @@ Dialog {
         text: i18n.tr("Execute")
         onClicked: {
             PopupUtils.close(dialogue)
-            //console.log("Updating to DB peopleId: "+personDetailsPage.id)
 
             Storage.updatePeople(personDetailsPage.id,
                                  nameField.text,
@@ -43,7 +42,7 @@ Dialog {
 
             Storage.loadAllPeople();
             /* refresh in case of updating of birthday */
-            Storage.getTodayBirthDaysDetails();
+            Storage.getTodayBirthDays();
         }
     }
 }

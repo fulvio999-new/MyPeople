@@ -11,5 +11,5 @@
     },
     "version": "1.7",
     "maintainer": "fulvio999 <fulvio999@gmail.com>",
-    "framework": "ubuntu-sdk-15.04-html"
+    "framework": "ubuntu-sdk-15.04-qml"
 }

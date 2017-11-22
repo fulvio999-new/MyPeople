@@ -5,13 +5,14 @@ import Ubuntu.Layouts 1.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
 
-//--------------- For PHONE Page: today meeting list  ---------------
+//--------------- For TABLET Page: today meeting list  ---------------
 
 
 Item{
-    id: todayMeetingPhone
-    width: parent.width
-    height: parent.height
+    id: todayMeetingTablet
+//    width: parent.width
+//    height: parent.height
+     anchors.fill: parent
 
     UbuntuListView {
         id: todayMeetingResultList

@@ -168,7 +168,7 @@ Column{
 
         Button {
             id: searchExpenseButton
-            text: "Search/Reload"
+            text: "Search"
             width:units.gu(18)
             color: UbuntuColors.orange
             onClicked: {

@@ -21,12 +21,7 @@ import "DateUtils.js" as DateUtils
 
         property string todayDateFormatted : DateUtils.formatFullDateToString(new Date());
         /* workaround to specify the origin page: todaMeeting or SearchMeeting. FIXME: find better solution  */
-        property bool isFromTodayMeetingPage: false;
-
-        /* used to reapeat user search in case of Meeting deletion */
-        property string dateFrom;
-        property string dateTo;
-        property string meetingStatus;
+        property bool isFromTodayMeetingPage: false;   //isFromGlobalMeetingSearch
 
         width: parent.width
         height: units.gu(13) /* the heigth of the rectangle that contains an meeting in the list */
@@ -63,7 +58,7 @@ import "DateUtils.js" as DateUtils
                         Storage.getTodayMeetings();
 
                         /* to refresh repeat the same user search */
-                        Storage.searchMeetingByTimeRange(allPeopleMeetingFoundDelegate.dateFrom,allPeopleMeetingFoundDelegate.dateTo,allPeopleMeetingFoundDelegate.meetingStatus);
+                        Storage.searchMeetingByTimeRange(searchAnyMeetingPage.dateFrom,searchAnyMeetingPage.dateTo,searchAnyMeetingPage.meetingStatus);
 
                         PopupUtils.close(confirmDeleteMeeting)
                     }
@@ -80,7 +75,7 @@ import "DateUtils.js" as DateUtils
                         if(isFromTodayMeetingPage === true){
                            meetingId = todayMeetingModel.get(todayMeetingResultList.currentIndex).id;
                         }else{
-                           /* from ListModel get the 'id' of the currently selected meeting */
+                           /* the 'id' of the currently selected meeting */
                            meetingId = allPeopleMeetingFoundModel.get(allPeopleMeetingSearchResultList.currentIndex).id;
                         }
 
@@ -130,7 +125,7 @@ import "DateUtils.js" as DateUtils
                             }
 
                             /* refresh re-executong the search */
-                            Storage.searchMeetingByTimeRange(allPeopleMeetingFoundDelegate.dateFrom,allPeopleMeetingFoundDelegate.dateTo,allPeopleMeetingFoundDelegate.meetingStatus);
+                            Storage.searchMeetingByTimeRange(searchAnyMeetingPage.dateFrom,searchAnyMeetingPage.dateTo,searchAnyMeetingPage.meetingStatus);
 
                             PopupUtils.close(confirmArchiveMeeting)
                         }
@@ -139,7 +134,7 @@ import "DateUtils.js" as DateUtils
                     Button {
                         id:executeButton
                         width: units.gu(14)
-                        text: i18n.tr("Execute") //Archive
+                        text: i18n.tr("Execute") //ARCHIVE
 
                         onClicked: {                           
 
@@ -148,7 +143,7 @@ import "DateUtils.js" as DateUtils
                             if(isFromTodayMeetingPage === true){
                                meetingId = todayMeetingModel.get(todayMeetingResultList.currentIndex).id;
                             }else{
-                               /* from ListModel get the 'id' of the currently selected meeting */
+                               /* the 'id' of the selected meeting */
                                meetingId = allPeopleMeetingFoundModel.get(allPeopleMeetingSearchResultList.currentIndex).id;
                             }
 
@@ -265,9 +260,9 @@ import "DateUtils.js" as DateUtils
                                                                           status: meetingStatusLabel.text,
                                                                           note:note,
                                                                           isFromGlobalSearch:true,
-                                                                          dateFrom:dateFrom,
-                                                                          dateTo:dateTo,
-                                                                          meetingStatus:meetingStatus
+                                                                          dateFrom:searchAnyMeetingPage.dateFrom,
+                                                                          dateTo:searchAnyMeetingPage.dateTo,
+                                                                          meetingStatus:searchAnyMeetingPage.meetingStatus
                                                                         }
                                                                        )
 

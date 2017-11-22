@@ -18,21 +18,11 @@ import "DateUtils.js" as DateUtils
  Item {
         property string todayDateFormatted : DateUtils.formatFullDateToString(new Date());
 
-        /* workaround to specify the origin page: todaMeeting or SearchMeeting. FIXME: find better solution  */
-        property bool isFromTodayMeetingPage: false;
-
-        /* used to reapeat user search in case of Meeting deletion */
-        property string personName;
-        property string personSurname;
-        property string dateFrom;
-        property string dateTo;
-        property string meetingStatus;
-
         id: peopleMeetingFoundDelegate
-        width: parent.width //searchMeetingWithPersonPage.width
-        height: units.gu(13) /* the heigth of the rectangle that contains an meeting in the list */
+        width: parent.width
+        height: units.gu(13) /* the heigth of the rectangle that contains a meeting in the list */
 
-        /* container for each meeting */
+        /* meeting container */
         Rectangle {
             id: background
             x: 2;
@@ -80,7 +70,7 @@ import "DateUtils.js" as DateUtils
                         width: units.gu(14)
 
                         onClicked: {
-                            /* from ListModel get the 'id' of the currently selected meeting */
+                            /* the 'id' of the selected meeting */
                             var meetingId = meetingWithPersonFoundModel.get(meetingSearchResultList.currentIndex).id;
                             Storage.deleteMeetingById(meetingId);
                             /* refresh */
@@ -125,7 +115,8 @@ import "DateUtils.js" as DateUtils
                         text: i18n.tr("Close")
                         width: units.gu(14)
                         onClicked: {
-                           Storage.searchMeetingByTimeAndPerson(peopleMeetingFoundDelegate.personName,peopleMeetingFoundDelegate.personSurname,peopleMeetingFoundDelegate.dateFrom,peopleMeetingFoundDelegate.dateTo,peopleMeetingFoundDelegate.meetingStatus);
+                          // Storage.searchMeetingByTimeAndPerson(peopleMeetingFoundDelegate.personName,peopleMeetingFoundDelegate.personSurname,peopleMeetingFoundDelegate.dateFrom,peopleMeetingFoundDelegate.dateTo,peopleMeetingFoundDelegate.meetingStatus);
+                            Storage.searchMeetingByTimeAndPerson(searchMeetingWithPersonPage.personName,searchMeetingWithPersonPage.personSurname,searchMeetingWithPersonPage.dateFrom,searchMeetingWithPersonPage.dateTo,searchMeetingWithPersonPage.meetingStatus);
 
                            PopupUtils.close(confirmArchiveMeeting)
                         }
@@ -176,7 +167,7 @@ import "DateUtils.js" as DateUtils
                 spacing: units.gu(0.2)
 
                 Label {
-                      text: "<b>Name: </b>"+name +"   <b>Surname: </b>"+ surname
+                      text: "<b>Name: </b>"+searchMeetingWithPersonPage.name +"   <b>Surname: </b>"+ searchMeetingWithPersonPage.surname
                       fontSize: "medium"
                 }
 
@@ -240,12 +231,12 @@ import "DateUtils.js" as DateUtils
                                                                           subject:subject,
                                                                           date:date,
                                                                           place:place,
-                                                                          status: meetingStatusLabel.text,
+                                                                          status:status,
                                                                           note:note,
-                                                                          isFromGlobalSearch:false,
-                                                                          dateFrom:dateFrom,
-                                                                          dateTo:dateTo,
-                                                                          meetingStatus:meetingStatus
+                                                                          isFromGlobalMeetingSearch:searchMeetingWithPersonPage.isFromGlobalMeetingSearch,
+                                                                          dateFrom:searchMeetingWithPersonPage.dateFrom,
+                                                                          dateTo:searchMeetingWithPersonPage.dateTo,
+                                                                          meetingStatus:searchMeetingWithPersonPage.meetingStatus
                                                                         }
                                                                        )                                 
 

@@ -22,7 +22,7 @@ Column {
     property string meetingStatus;  /* currently saved meeting status */
     property string meetingStatusToSave; /* the meeting status to save */
     property string meetingDate;
-    property bool isFromGlobalSearch;
+    property bool isFromGlobalMeetingSearch; /* flag to know the user search to repeat (global or user) */
 
     property string dateFrom;
     property string dateTo;
@@ -32,11 +32,7 @@ Column {
     spacing: units.gu(3.5)
     anchors.leftMargin: units.gu(2)
 
-
-    /* ONLY for ARCHIVED meeting the user must change manually the status.
-       For 'SCHEDULED (EXPIRED)' meetings is only necessary set his start date to a future one
-       to automatically place the meeting to SCHEDULED status.
-    */
+    /* Only if the meeting is ARCHIVED is show a button to change the status bask to SCHEDULED status */
     onMeetingStatusChanged: {
 
       if(meetingStatus.indexOf("SCHEDULED") !== -1){ //if true == found
@@ -44,7 +40,7 @@ Column {
          meetingStatusToSave = "SCHEDULED";
       }else{
          changeStatusButton.visible = true;
-         /* the status must be manually change with the dedicated button */
+         /* the status must be manually changed with the dedicated button */
       }
     }
 
@@ -157,7 +153,6 @@ Column {
         id: meetingPlaceRow
         spacing: units.gu(6)
 
-
         Label {
             id: meetingPlaceLabel
             anchors.verticalCenter: meetingPlaceField.verticalCenter
@@ -192,7 +187,7 @@ Column {
             onClicked: PopupUtils.open(popoverDatePickerComponent, editMeetingDateButton)
         }
 
-        /* Create a PopOver conteining a DatePicker, necessary use a PopOver a container due to a bug on setting minimum date
+        /* Create a PopOver conteining a DatePicker, use a PopOver as container due to a bug on setting minimum date
            with a simple DatePicker Component
         */
         Component {
@@ -320,14 +315,14 @@ Column {
                     /* update today meetings in case of the user has edited meeting date */
                     Storage.getTodayMeetings();
 
-                    /* repeat the user search */
-                    if(isFromGlobalSearch === true){
-                        console.log("Search from User specific");
+                    /* repeat the user search depending with the user has made a all people meeting seartch or by pesron */
+                    if(isFromGlobalMeetingSearch === false){
+                        console.log("Repeat Search for user specific");
                         Storage.searchMeetingByTimeAndPerson(searchMeetingWithPersonPage.personName,searchMeetingWithPersonPage.personSurname,searchMeetingWithPersonPage.dateFrom,searchMeetingWithPersonPage.dateTo,searchMeetingWithPersonPage.meetingStatus);
+                    }else{
+                        console.log("Repeat Search for ALL user meetings");
+                        Storage.searchMeetingByTimeRange(dateFrom,dateTo,meetingStatusToSave);
                     }
-
-                    /* refresh re-executong the search */
-                    Storage.searchMeetingByTimeRange(dateFrom,dateTo,meetingStatusToSave);
 
                     adaptivePageLayout.removePages(editMeetingPage)
                 }

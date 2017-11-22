@@ -168,6 +168,7 @@ Column{
                 searchMeetingWithPersonPage.dateFrom = meetingDateFromButton.text;
                 searchMeetingWithPersonPage.dateTo = meetingDateToButton.text;
                 searchMeetingWithPersonPage.meetingStatus = meetingStatus;
+                searchMeetingWithPersonPage.isFromGlobalMeetingSearch = false;
             }
         }
       }

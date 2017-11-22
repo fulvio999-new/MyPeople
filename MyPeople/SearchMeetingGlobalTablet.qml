@@ -12,7 +12,7 @@ import "./storage.js" as Storage
 
 
 /*
-    Search meetings with ANY people inside a user defined date range
+    Search meetings with ANY people inside a date range
 */
 Column{
 
@@ -160,10 +160,10 @@ Column{
             text: "Search"
             color: UbuntuColors.orange
             onClicked: {
-                var meetingStatus = "SCHEDULED"
+                var meetingStatus = "SCHEDULED";
 
                 if (meetingTypeModel.get(meetingTypeItemSelector.selectedIndex).name === "<b>Archived</b>") {
-                   meetingStatus = "ARCHIVED"
+                   meetingStatus = "ARCHIVED";
                 }
 
                /* search meetings and fill the ListModel to display */

@@ -57,8 +57,7 @@ MainView {
         Storage.createMeetingTable();
         Storage.addTelegramField();        
         Storage.loadAllPeople();
-
-        /* initialize the label */
+        /* New: from v 1.7 */
         Storage.getTodayBirthDays();
         Storage.getTodayMeetings();
 
@@ -90,7 +89,7 @@ MainView {
         AboutProduct{}
     }
 
-    /* currently saved people */
+    /* saved people list */
     ListModel{
         id: modelListPeople
     }
@@ -185,7 +184,6 @@ MainView {
                     Rectangle {
                         width: 180; height: 44
                         color: "blue";
-
                         radius: 2
                         /* move the Rectangle on the currently selected List item with the keyboard */
                         y: listView.currentItem.y
@@ -288,7 +286,6 @@ MainView {
                                     onClicked: {
                                         meetingWithPersonFoundModel.clear();
                                         allPeopleMeetingFoundModel.clear();
-
                                                                              //sintax: (current-page, page to add)
                                         adaptivePageLayout.addPageToNextColumn(peopleListPage, searchAnyMeetingPage);
                                     }
@@ -368,15 +365,14 @@ MainView {
         }
 
 
-        //-------------------------- PERSON DETAILS PAGE: details of the selected person -----------------------------------
+        //-------------------- PERSON DETAILS PAGE -------------------------------
         Page{
             id:personDetailsPage
 
             anchors.fill: parent
 
             /* Values passed as input properties when the AdaptiveLayout add the details page (See: PeopleListDelegate.qml)
-               Are the details vaules of the selected person in the people list used to fill the TextField
-               See Delegate Object of the ListView
+               Are the details of the selected person in the people list used to fill the TextField
             */
             property string id  /* PK field not shown */
             property string personName;
@@ -446,13 +442,14 @@ MainView {
             /* Values passed as input properties when the AdaptiveLayout add the details page (See: PeopleListDelegate.qml)
                Are the details vaules of the selected person to fill the TextField (See delegate object)
             */
-            property string id  /* PK field not shown */
+            property string id;  /* PK field not shown */
             property string personName;
-            property string personSurname
+            property string personSurname;
             /* the values chosen in the search meeting form */
             property string dateFrom;
             property string dateTo;
             property string meetingStatus;
+            property string isFromGlobalMeetingSearch;
 
             header: PageHeader {
                 id: headersearchAnyMeetingPage
@@ -466,7 +463,7 @@ MainView {
              /* Component that display the Meetings found in the database */
              Component {
                  id: peopleMeetingFoundDelegate
-                 PeopleMeetingFoundDelegate{personName:searchMeetingWithPersonPage.personName;personSurname:searchMeetingWithPersonPage.personSurname;dateFrom:searchMeetingWithPersonPage.dateFrom; dateTo:searchMeetingWithPersonPage.dateTo; meetingStatus:searchMeetingWithPersonPage.meetingStatus}
+                 PeopleMeetingFoundDelegate{}
              }
 
              UbuntuListView {
@@ -589,7 +586,7 @@ MainView {
                 id: searchAnyMeetingPage
 
                 header: PageHeader {
-                   title: i18n.tr("Search for meetings with any people")
+                   title: i18n.tr("Search meetings with any people")
                 }
 
                 /* the values chosen in the search meeting form */
@@ -604,7 +601,7 @@ MainView {
                 /* Component that display the Meetings found in the database */
                 Component {
                     id: allPeopleMeetingFoundDelegate
-                    AllPeopleMeetingFoundDelegate{dateFrom:searchAnyMeetingPage.dateFrom; dateTo:searchAnyMeetingPage.dateTo; meetingStatus:searchAnyMeetingPage.meetingStatus}
+                    AllPeopleMeetingFoundDelegate{}
                 }
 
                 UbuntuListView {
@@ -619,24 +616,23 @@ MainView {
                     boundsBehavior: Flickable.StopAtBounds
                     highlight:
                         Component{
+                            id: highlightAnyMeetingComponent
 
-                        id: highlightAnyMeetingComponent
+                            Rectangle {
+                                width: 180; height: 44
+                                color: "blue";
+                                radius: 2
+                                /* move the Rectangle on the currently selected List item with the keyboard */
+                                y: allPeopleMeetingSearchResultList.currentItem.y
 
-                        Rectangle {
-                            width: 180; height: 44
-                            color: "blue";
-                            radius: 2
-                            /* move the Rectangle on the currently selected List item with the keyboard */                            
-                            y: allPeopleMeetingSearchResultList.currentItem.y
-
-                            /* show an animation on change ListItem selection */
-                            Behavior on y {
-                                SpringAnimation {
-                                    spring: 5
-                                    damping: 0.1
+                                /* show an animation on change ListItem selection */
+                                Behavior on y {
+                                    SpringAnimation {
+                                        spring: 5
+                                        damping: 0.1
+                                    }
                                 }
                             }
-                        }
                     }
 
                     delegate: allPeopleMeetingFoundDelegate
@@ -667,17 +663,17 @@ MainView {
         }
 
 
-        //------------ Edit an existing Meeting planned with a specific Person -------------
+        //------- Edit an existing Meeting with a specific Person -------------
         Page{
             id: editMeetingPage
             anchors.fill: parent
 
             /* meeting info to edit */
-            property string id; /* meetingId not editable, used for update uery */
+            property string id; /* meetingId */
             property string name;
             property string surname;
             property string subject;
-            property string date : "1970-01-13 00:00"; /* placeholder */
+            property string date : "1970-01-01 00:00"; /* placeholder value */
             property string place;
             property string status; /* ie: TODO, ARCHIVED */
             property string note;
@@ -714,11 +710,11 @@ MainView {
                         ConditionalLayout {
                             name: "editMeetingLayout"
                             when: root.width > units.gu(80)
-                            EditMeetingTablet{ meetingStatus:editMeetingPage.status;meetingDate:editMeetingPage.date;isFromGlobalSearch:editMeetingPage.isFromGlobalSearch;dateFrom:editMeetingPage.dateFrom;dateTo:editMeetingPage.dateTo}
+                            EditMeetingTablet{ meetingStatus:editMeetingPage.status;meetingDate:editMeetingPage.date;isFromGlobalMeetingSearch:editMeetingPage.isFromGlobalSearch;dateFrom:editMeetingPage.dateFrom;dateTo:editMeetingPage.dateTo}
                         }
                     ]
                     //else
-                    EditMeetingPhone{ meetingStatus:editMeetingPage.status;meetingDate:editMeetingPage.date;isFromGlobalSearch:editMeetingPage.isFromGlobalSearch;dateFrom:editMeetingPage.dateFrom;dateTo:editMeetingPage.dateTo }
+                    EditMeetingPhone{ meetingStatus:editMeetingPage.status;meetingDate:editMeetingPage.date;isFromGlobalMeetingSearch:editMeetingPage.isFromGlobalSearch;dateFrom:editMeetingPage.dateFrom;dateTo:editMeetingPage.dateTo }
                 }
             }
 
@@ -730,7 +726,7 @@ MainView {
         }
 
 
-        //------------- ADD NEW PERSON PAGE --------------------
+        //------------- ADD NEW PERSON --------------------
         Page {
             id: addPersonPage
             anchors.fill: parent
@@ -779,7 +775,7 @@ MainView {
        }
 
 
-       //----------------- Application Configuration page -----------------
+       //---------------- Application Configuration ----------------
        Page {
             id: configurationPage
 
@@ -805,7 +801,7 @@ MainView {
        }
 
 
-       //----------------- Today BirthDay Page -----------------
+       //----------------- Today BirthDay -----------------
        Page {
             id: todayBirthdayPage
             anchors.fill: parent
@@ -831,7 +827,7 @@ MainView {
             }
        }
 
-       //----------------- Today Meeting Page -----------------
+       //----------------- Today Meeting -----------------
        Page {
             id: todayMeetingPage
             anchors.fill: parent
@@ -872,7 +868,6 @@ MainView {
 
 
     /* For MyPepole version 1.0 importing data */
-
     U1db.Database {
         id: mypeopleDb1_0
         /* create an empty db in: ~phablet/.local/share/<applicationName>/1.1/
@@ -894,7 +889,6 @@ MainView {
 
 
     /* For MyPeole version 1.1 importing data */
-
     U1db.Database {
         id: mypeopleDb1_1
         /* create an empty db in: ~phablet/.local/share/mypeople.fulvio999/1.1/

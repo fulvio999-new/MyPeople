@@ -180,6 +180,10 @@ Column{
 
                /* search meetings and fill the ListModel to display */
                Storage.searchMeetingByTimeRange(meetingDateFromButton.text,meetingDateToButton.text,meetingStatus);
+
+               searchAnyMeetingPage.dateFrom = meetingDateFromButton.text;
+               searchAnyMeetingPage.dateTo = meetingDateToButton.text;
+               searchAnyMeetingPage.meetingStatus = meetingStatus;
             }
           }
      } 

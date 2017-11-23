@@ -68,7 +68,10 @@ Column{
                       var deletedMeetings = Storage.deleteExpenseByCategoryAndTime(dateFromButton.text,dateToButton.text,meetingStatus);
 
                       deleteSuccessLabel.text = i18n.tr("Done, deleted")+": "+deletedMeetings+" meeting(s)"
-                      executeDeleteButton.enabled = false;                     
+                      executeDeleteButton.enabled = false;
+
+                      /* update today meetings count */
+                      Storage.getTodayMeetings();
                   }
               }
           }

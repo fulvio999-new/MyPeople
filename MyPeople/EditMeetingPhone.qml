@@ -65,8 +65,10 @@ Column {
         Button{
             id: changeStatusButton
             anchors.verticalCenter: statusContainer.verticalCenter
-            height: statusContainer.height -units.gu(1)
-            text: i18n.tr("Change status")
+            //height: statusContainer.height -units.gu(1)
+            height: units.gu(3)
+            width: units.gu(9)
+            text: i18n.tr("Change")
             color: UbuntuColors.green
             onClicked: {
 
@@ -87,9 +89,9 @@ Column {
             id: meetingStatusLabel
             anchors.centerIn: parent
             text: editMeetingPage.status
+            fontSize: Label.Small
         }
     }
-
 
     Row{
         id: nameRow
@@ -323,13 +325,13 @@ Column {
                     /* update today meetings in case of the user has edited meeting date */
                     Storage.getTodayMeetings();
 
-                    /* repeat the user search depending with the user has made a all people meeting seartch or by pesron */
+                    /* repeat the user search using the with the criteria provided in 'search all' o 'search with person' forms */
                     if(isFromGlobalMeetingSearch === false){
-                        console.log("Repeat Search for user specific");
+                        //console.log("Repeat Search for user specific");
                         Storage.searchMeetingByTimeAndPerson(searchMeetingWithPersonPage.personName,searchMeetingWithPersonPage.personSurname,searchMeetingWithPersonPage.dateFrom,searchMeetingWithPersonPage.dateTo,searchMeetingWithPersonPage.meetingStatus);
                     }else{
-                        console.log("Repeat Search for ALL user meetings");
-                        Storage.searchMeetingByTimeRange(dateFrom,dateTo,meetingStatusToSave);
+                        console.log("Repeat Search for ALL user meetings, dateFrom: "+dateFrom+ "dateTo: "+dateTo+ " status: "+meetingStatusToSave);
+                        //Storage.searchMeetingByTimeRange(searchAnyMeetingPage.dateFrom,searchAnyMeetingPage.dateTo,meetingStatusToSave);
                     }
 
                     adaptivePageLayout.removePages(editMeetingPage)

@@ -57,7 +57,7 @@ MainView {
         Storage.createMeetingTable();
         Storage.addTelegramField();        
         Storage.loadAllPeople();
-        /* New: from v 1.7 */
+        /* New: from v1.7 */
         Storage.getTodayBirthDays();
         Storage.getTodayMeetings();
 
@@ -460,12 +460,6 @@ MainView {
                 id: meetingWithPersonFoundModel
              }
 
-             /* Component that display the Meetings found in the database */
-             Component {
-                 id: peopleMeetingFoundDelegate
-                 PeopleMeetingFoundDelegate{}
-             }
-
              UbuntuListView {
                  id: meetingSearchResultList
                  anchors.topMargin: units.gu(36)
@@ -496,7 +490,7 @@ MainView {
                      }
                  }
 
-                 delegate: peopleMeetingFoundDelegate
+                 delegate: PeopleMeetingFoundDelegate{}
              }
 
              /* Show the details of the selected person */
@@ -598,12 +592,6 @@ MainView {
                    id: allPeopleMeetingFoundModel
                 }
 
-                /* Component that display the Meetings found in the database */
-                Component {
-                    id: allPeopleMeetingFoundDelegate
-                    AllPeopleMeetingFoundDelegate{}
-                }
-
                 UbuntuListView {
                     id: allPeopleMeetingSearchResultList
                     /* necessary, otherwise hide the search criteria row */
@@ -635,7 +623,7 @@ MainView {
                             }
                     }
 
-                    delegate: allPeopleMeetingFoundDelegate
+                    delegate: AllPeopleMeetingFoundDelegate{}
                 }
 
                 /* Show a form to search meeting with any contact */

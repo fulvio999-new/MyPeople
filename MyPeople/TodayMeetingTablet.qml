@@ -10,9 +10,8 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
 
 Item{
     id: todayMeetingTablet
-//    width: parent.width
-//    height: parent.height
-     anchors.fill: parent
+
+    anchors.fill: parent
 
     UbuntuListView {
         id: todayMeetingResultList

@@ -525,7 +525,7 @@ function getUUID(suffix){
      Maintenance function used to delete meetings inside the provided range and with the given status.
      Return the number of Deleted rows in the meeting table.
   */
-  function deleteExpenseByCategoryAndTime(dateFrom, dateTo, status){
+  function deleteMeetingByStatusAndTime(dateFrom, dateTo, status){
 
      var db = getDatabase();
      allPeopleMeetingFoundModel.clear(); /* the ListModel to fill */
@@ -537,7 +537,7 @@ function getUUID(suffix){
      var fullDateFrom = formatSimpleDateToString(from);
      var fullDateTo = formatSimpleDateToString(to);
 
-     console.log('Deleting ALL meetings from date:'+fullDateFrom + ' to date:'+fullDateTo+ ' with status: '+status);
+     //console.log('Deleting ALL meetings from date:'+fullDateFrom + ' to date:'+fullDateTo+ ' with status: '+status);
 
      var rs = ""
      db.transaction(function(tx) {
@@ -548,3 +548,22 @@ function getUUID(suffix){
 
      return rs.rowsAffected;
  }
+
+    /*
+        Delete alla the meeting with the provided person
+    */
+    function deleteAllMeetingPeople(personName, personSurname){
+
+        var db = getDatabase();
+
+        console.log('Deleting ALL meetings with person Name:'+personName + ' Surname:'+personSurname);
+
+        var rs = ""
+        db.transaction(function(tx) {
+              /* for each subCategory calculate the amount to remove from the 'subcategory_report_current' table */
+              rs = tx.executeSql("DELETE FROM meeting where name=? and surname=?;",[personName,personSurname]);
+            }
+        );
+
+        return rs.rowsAffected;
+    }

@@ -65,7 +65,7 @@ Column{
                          meetingStatus = "ARCHIVED"
                       }
 
-                      var deletedMeetings = Storage.deleteExpenseByCategoryAndTime(dateFromButton.text,dateToButton.text,meetingStatus);
+                      var deletedMeetings = Storage.deleteMeetingByStatusAndTime(dateFromButton.text,dateToButton.text,meetingStatus);
 
                       deleteSuccessLabel.text = i18n.tr("Done, deleted")+": "+deletedMeetings+" meeting(s)"
                       executeDeleteButton.enabled = false;

@@ -24,6 +24,9 @@ Dialog {
             PopupUtils.close(dialogue)
             Storage.deletePeopleById(personDetailsPage.id);
 
+            delete all the people meeting
+            Storage.deleteAllMeetingPeople(personDetailsPage.personName, personDetailsPage.personSurname);
+
             PopupUtils.open(operationResultDialogue)
             Storage.loadAllPeople(); //refresh
 

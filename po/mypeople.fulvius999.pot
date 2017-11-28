@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-26 00:15+0000\n"
+"POT-Creation-Date: 2017-11-28 18:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -350,8 +350,11 @@ msgid "Confirm the update ?"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/DetailsPersonPhone.qml:387
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/DetailsPersonTablet.qml:378
 msgid "Delete this person ?"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/DetailsPersonTablet.qml:378
+msgid "Delete person AND his meettings ?"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/MyPeople/EditMeetingPhone.qml:71
@@ -481,6 +484,6 @@ msgstr ""
 msgid "What's new in this version"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/build-MyPeople-UbuntuSDK_for_desktop_15_04_amd64_GCC_amd64_ubuntu_sdk_15_04-Debug/MyPeople/MyPeople.desktop.h:1
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/build-MyPeople-UbuntuSDK_for_desktop_GCC_amd64_ubuntu_sdk_15_04-Debug/MyPeople/MyPeople.desktop.h:1
 msgid "MyPeople"
 msgstr ""

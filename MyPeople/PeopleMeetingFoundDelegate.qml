@@ -167,7 +167,7 @@ import "DateUtils.js" as DateUtils
                 spacing: units.gu(0.2)
 
                 Label {
-                      text: "<b>Name: </b>"+searchMeetingWithPersonPage.name +"   <b>Surname: </b>"+ searchMeetingWithPersonPage.surname
+                      text: "<b>Name: </b>"+name +"   <b>Surname: </b>"+ surname
                       fontSize: "medium"
                 }
 

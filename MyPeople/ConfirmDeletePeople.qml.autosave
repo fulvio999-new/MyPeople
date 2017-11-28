@@ -24,6 +24,8 @@ Dialog {
             PopupUtils.close(dialogue)
             Storage.deletePeopleById(personDetailsPage.id);
 
+            Storage.de
+            
             PopupUtils.open(operationResultDialogue)
             Storage.loadAllPeople(); //refresh
 

@@ -375,7 +375,7 @@ Column {
             text: i18n.tr("Delete")
             width: units.gu(18)
             onClicked: {
-                PopupUtils.open(confirmDeleteDialog, deleteButton,{text: i18n.tr("Delete this person ?")})
+                PopupUtils.open(confirmDeleteDialog, deleteButton,{text: i18n.tr("Delete person AND his meetings ?")})
             }
         }
     }

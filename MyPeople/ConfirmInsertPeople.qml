@@ -22,7 +22,7 @@ Dialog {
     Button {
         text: "Save"
         onClicked: {
-            PopupUtils.close(confirmDialogue)
+            PopupUtils.close(confirmDialogue)           
 
             Storage.insertPeople(Storage.getUUID('people'),
                                  newNameField.text,

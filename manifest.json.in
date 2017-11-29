@@ -9,7 +9,7 @@
             "desktop": "MyPeople/MyPeople.desktop"
         }
     },
-    "version": "1.7",
+    "version": "1.7.1",
     "maintainer": "fulvio999 <fulvio999@gmail.com>",
     "framework": "ubuntu-sdk-15.04-qml"
 }

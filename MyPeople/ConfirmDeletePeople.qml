@@ -24,14 +24,12 @@ Dialog {
             PopupUtils.close(dialogue)
             Storage.deletePeopleById(personDetailsPage.id);
 
-            delete all the people meeting
             Storage.deleteAllMeetingPeople(personDetailsPage.personName, personDetailsPage.personSurname);
+            Storage.getTodayMeetings();
+            Storage.getTodayBirthDays();
 
             PopupUtils.open(operationResultDialogue)
-            Storage.loadAllPeople(); //refresh
-
-            /* refresh birthday */
-            Storage.getTodayBirthDays();
+            Storage.loadAllPeople();
 
             adaptivePageLayout.removePages(personDetailsPage)
         }

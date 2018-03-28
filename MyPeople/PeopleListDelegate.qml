@@ -10,7 +10,7 @@ import "./storage.js" as Storage
     Component that display a Person item retrieved from the Database and inserted in a ListItem (See Main.qml)
     (Note: a delegate object is able to access at the data from the ListModel directly)
 */
-Component {   
+Component {
     id: peopleListDelegate
 
     Item {
@@ -38,7 +38,7 @@ Component {
                    crash the ListWiew model auto refresh whe a person is added/removed
                 */
                 adaptivePageLayout.addPageToNextColumn(peopleListPage, personDetailsPage,
-                                                       {                                                         
+                                                       {
                                                            /* <variable-name>:<property-value> */
                                                            id:id,
                                                            personName:name,
@@ -84,15 +84,15 @@ Component {
                     font.pointSize: units.gu(1.3)
                 }
                 Label {
-                    text: "phone: "+phone
+                    text: i18n.tr("phone")+": "+phone
                     fontSize: "small"
                 }
                 Label {
-                    text: "mobile: "+mobilePhone
+                    text: i18n.tr("mobile")+": "+mobilePhone
                     fontSize: "small"
                 }
                 Label {
-                    text: "mail: "+email
+                    text: i18n.tr("mail")+": "+email
                     fontSize: "small"
                 }
             }
@@ -100,7 +100,7 @@ Component {
             /* Agenda meeting management functions */
             Column{
 
-                id: editExpenseColumn               
+                id: editExpenseColumn
                 anchors.verticalCenter: topLayout.Center
                 spacing: units.gu(1.5)
 

@@ -35,9 +35,9 @@ Column {
     /* Only if the meeting is ARCHIVED is show a button to change the status bask to SCHEDULED status */
     onMeetingStatusChanged: {
 
-      if(meetingStatus.indexOf("SCHEDULED") !== -1){ //if true == found
+      if(meetingStatus.indexOf(i18n.tr("SCHEDULED")) !== -1){ //if true == found
          changeStatusButton.visible = false;
-         meetingStatusToSave = "SCHEDULED";
+         meetingStatusToSave = i18n.tr("SCHEDULED");
       }else{
          changeStatusButton.visible = true;
          /* the status must be manually changed with the dedicated button */
@@ -72,15 +72,15 @@ Column {
             color: UbuntuColors.green
             onClicked: {
 
-                if(meetingStatusLabel.text.indexOf("ARCHIVED") !== -1){  //true if "ARCHIVED" is found
+                if(meetingStatusLabel.text.indexOf(i18n.tr("ARCHIVED")) !== -1){  //true if "ARCHIVED" is found
 
-                   meetingStatusToSave = "SCHEDULED";
-                   meetingStatusLabel.text = meetingStatusLabel.text.replace("ARCHIVED","SCHEDULED")
+                   meetingStatusToSave = i18n.tr("SCHEDULED");
+                   meetingStatusLabel.text = meetingStatusLabel.text.replace(i18n.tr("ARCHIVED"),i18n.tr("SCHEDULED"))
                 }
 
-              else if(meetingStatusLabel.text.indexOf("SCHEDULED") !== -1){  //true "SCHEDULED" is found
-                   meetingStatusToSave = "ARCHIVED";
-                   meetingStatusLabel.text = meetingStatusLabel.text.replace("SCHEDULED","ARCHIVED")
+              else if(meetingStatusLabel.text.indexOf(i18n.tr("SCHEDULED")) !== -1){  //true "SCHEDULED" is found
+                   meetingStatusToSave = i18n.tr("ARCHIVED");
+                   meetingStatusLabel.text = meetingStatusLabel.text.replace(i18n.tr("SCHEDULED"),i18n.tr("ARCHIVED"))
                 }
             }
         }
@@ -100,7 +100,7 @@ Column {
         Label {
             id: nameLabel
             anchors.verticalCenter: nameField.verticalCenter
-            text: i18n.tr("Name:")
+            text: i18n.tr("Name")+":"
         }
 
         TextField {
@@ -119,7 +119,7 @@ Column {
         Label {
             id: surnameLabel
             anchors.verticalCenter: surnameField.verticalCenter
-            text: i18n.tr("Surname:")
+            text: i18n.tr("Surname")+":"
         }
 
         TextField {
@@ -140,7 +140,7 @@ Column {
         Label {
             id:  meetingSubjectLabel
             anchors.verticalCenter: meetingSubjectField.verticalCenter
-            text: i18n.tr("Subject:")
+            text: i18n.tr("Subject")+":"
         }
 
         TextField {
@@ -161,7 +161,7 @@ Column {
         Label {
             id: meetingPlaceLabel
             anchors.verticalCenter: meetingPlaceField.verticalCenter
-            text: i18n.tr("Place:")
+            text: i18n.tr("Place")+":"
         }
 
         TextField {
@@ -182,7 +182,7 @@ Column {
         Label {
             id: meetingDateLabel
             anchors.verticalCenter: editMeetingDateButton.verticalCenter
-            text: i18n.tr("Date:")
+            text: i18n.tr("Date")+":"
         }
 
         Button {
@@ -225,7 +225,7 @@ Column {
         Label {
             id: meetingTimeLabel
             anchors.verticalCenter: meetingTimeButton.verticalCenter
-            text: i18n.tr("Time:")
+            text: i18n.tr("Time")+":"
         }
 
         Button {
@@ -267,7 +267,7 @@ Column {
         Label {
             id: noteLabel
             anchors.verticalCenter: meetingNote.verticalCenter
-            text: i18n.tr("Note:")
+            text: i18n.tr("Note")+":"
         }
 
         TextArea {
@@ -300,7 +300,7 @@ Column {
         /* Ask a confirmation before updating a Meeting */
         Dialog {
             id: dialogue
-            title: "Confirmation"
+            title: i18n.tr("Confirmation")
             modal:true
 
             property string meetingId;
@@ -330,7 +330,7 @@ Column {
                         //console.log("Repeat Search for user specific");
                         Storage.searchMeetingByTimeAndPerson(searchMeetingWithPersonPage.personName,searchMeetingWithPersonPage.personSurname,searchMeetingWithPersonPage.dateFrom,searchMeetingWithPersonPage.dateTo,searchMeetingWithPersonPage.meetingStatus);
                     }else{
-                        console.log("Repeat Search for ALL user meetings, dateFrom: "+dateFrom+ "dateTo: "+dateTo+ " status: "+meetingStatusToSave);
+                        //console.log("Repeat Search for ALL user meetings, dateFrom: "+dateFrom+ "dateTo: "+dateTo+ " status: "+meetingStatusToSave);
                         //Storage.searchMeetingByTimeRange(searchAnyMeetingPage.dateFrom,searchAnyMeetingPage.dateTo,meetingStatusToSave);
                     }
 

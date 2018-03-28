@@ -77,7 +77,7 @@ import "DateUtils.js" as DateUtils
                             Storage.getTodayMeetings();
 
                             operationResultLabel.text = i18n.tr("Operation executed successfully")
-                            executeButton.enabled = false;                            
+                            executeButton.enabled = false;
                          }
                     }
                 }
@@ -131,7 +131,7 @@ import "DateUtils.js" as DateUtils
                             /* get the 'id' of the currently selected meeting */
                             var meetingId = meetingWithPersonFoundModel.get(meetingSearchResultList.currentIndex).id;
 
-                            Storage.updateMeetingStatus(meetingId,"ARCHIVED");
+                            Storage.updateMeetingStatus(meetingId,i18n.tr("ARCHIVED"));
 
                             operationResultLabel.text = i18n.tr("Operation executed successfully")
                             executeButton.enabled = false;
@@ -167,28 +167,28 @@ import "DateUtils.js" as DateUtils
                 spacing: units.gu(0.2)
 
                 Label {
-                      text: "<b>Name: </b>"+name +"   <b>Surname: </b>"+ surname
+                      text: "<b>"+i18n.tr("Name")+": </b>"+name +"   <b>"+i18n.tr("Surname")+": </b>"+ surname
                       fontSize: "medium"
                 }
 
                 Label {
-                    text: "<b>Date (yyyy-mm-dd): </b>"+date.split(' ')[0] + "  <b>Time: </b>"+date.split(' ')[1]
+                    text: "<b>"+i18n.tr("Date")+" (yyyy-mm-dd): </b>"+date.split(' ')[0] + "  <b>"+i18n.tr("Time")+": </b>"+date.split(' ')[1]
                     fontSize: "medium"
                 }
 
                 Label {
-                    text: "<b>Place: </b>"+place
+                    text: "<b>"+i18n.tr("Place")+": </b>"+place
                     fontSize: "medium"
                 }
 
                 Label {
-                    text: "<b>Subject: </b>"+subject
+                    text: "<b>"+i18n.tr("Subject")+": </b>"+subject
                     fontSize: "medium"
                 }
 
                 Label {
                     id: meetingStatusLabel
-                    text: "<b>Meeting status: </b>"+"<b>"+status+"</b>"
+                    text: "<b>"+i18n.tr("Meeting status")+": </b>"+"<b>"+status+"</b>"
                     fontSize: "medium"
                     color: "grey"
                 }
@@ -196,8 +196,8 @@ import "DateUtils.js" as DateUtils
                 Component.onCompleted: {
 
                     /* if a meeting with status TODO and date greater than now is notified as expired */
-                    if(date < todayDateFormatted && status !== 'ARCHIVED') {
-                       meetingStatusLabel.text =  meetingStatusLabel.text + " (EXPIRED)"
+                    if(date < todayDateFormatted && status !== i18n.tr("ARCHIVED")) {
+                       meetingStatusLabel.text =  meetingStatusLabel.text + " "+i18n.tr("(EXPIRED)")
                        meetingStatusLabel.color = "orange"
                     }
                 }
@@ -238,7 +238,7 @@ import "DateUtils.js" as DateUtils
                                                                           dateTo:searchMeetingWithPersonPage.dateTo,
                                                                           meetingStatus:searchMeetingWithPersonPage.meetingStatus
                                                                         }
-                                                                       )                                 
+                                                                       )
 
                              }
                         }

@@ -40,7 +40,7 @@ Column {
         Label {
             id: nameLabel
             anchors.verticalCenter: nameField.verticalCenter
-            text:  i18n.tr("Name:")
+            text:  i18n.tr("Name")+":"
         }
 
         TextField {
@@ -67,7 +67,7 @@ Column {
         Label {
             id: surnameLabel
             anchors.verticalCenter: surnameField.verticalCenter
-            text: i18n.tr("Surname:")
+            text: i18n.tr("Surname")+":"
         }
 
         TextField {
@@ -87,7 +87,7 @@ Column {
 
         Label {
             id: categoryLabel
-            text: i18n.tr("Job:")
+            text: i18n.tr("Job")+":"
         }
 
         TextField {
@@ -109,7 +109,7 @@ Column {
         Label {
             id: birthdayLabel
             anchors.verticalCenter: birthdayButton.verticalCenter
-            text: i18n.tr("Birthday:")
+            text: i18n.tr("Birthday")+":"
         }
 
         /* Create a PopOver containing a DatePicker, necessary use a PopOver a container due to a bug on setting minimum date
@@ -156,7 +156,7 @@ Column {
         Label {
             id: taxCodeFieldLabel
             anchors.verticalCenter: taxCodeField.verticalCenter
-            text: i18n.tr("Tax code:")
+            text: i18n.tr("Tax code")+":"
         }
 
         TextField {
@@ -178,7 +178,7 @@ Column {
         Label {
             id: vatNumberLabel
             anchors.verticalCenter: vatNumberField.verticalCenter
-            text: i18n.tr("Vat code:")
+            text: i18n.tr("Vat code")+":"
         }
 
         TextField {
@@ -200,7 +200,7 @@ Column {
         Label{
             id: addressLabel
             anchors.verticalCenter: addressField.verticalCenter
-            text: i18n.tr("Address:")
+            text: i18n.tr("Address")+":"
         }
 
         TextField {
@@ -222,7 +222,7 @@ Column {
         Label{
             id: phoneLabel
             anchors.verticalCenter: phoneField.verticalCenter
-            text: i18n.tr("Phone:")
+            text: i18n.tr("Phone")+":"
         }
 
         TextField
@@ -245,7 +245,7 @@ Column {
         Label {
             id: mobilePhoneLabel
             anchors.verticalCenter: mobilePhoneField.verticalCenter
-            text: i18n.tr("Mobile:")
+            text: i18n.tr("Mobile")+":"
         }
 
         TextField
@@ -268,7 +268,7 @@ Column {
         Label {
             id: emailLabel
             anchors.verticalCenter: emailField.verticalCenter
-            text: i18n.tr("Email:")
+            text: i18n.tr("Email")+":"
         }
 
         TextField {
@@ -290,7 +290,7 @@ Column {
         Label {
             id: skypeLabel
             anchors.verticalCenter: skypeField.verticalCenter
-            text: i18n.tr("Skype:")
+            text: i18n.tr("Skype")+":"
         }
 
         TextField {
@@ -312,7 +312,7 @@ Column {
         Label {
             id: telegramLabel
             anchors.verticalCenter: telegramField.verticalCenter
-            text: i18n.tr("Telegram:")
+            text: i18n.tr("Telegram")+":"
         }
 
         TextField {
@@ -334,7 +334,7 @@ Column {
         Label {
             id: noteLabel
             anchors.verticalCenter: noteTextArea.verticalCenter
-            text: i18n.tr("Note:")
+            text: i18n.tr("Note")+":"
         }
 
         TextArea {

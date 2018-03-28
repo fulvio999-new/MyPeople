@@ -11,7 +11,7 @@ import "./storage.js" as Storage
 */
 Dialog {
     id: confirmDialogue
-    title: "Confirmation"
+    title:  i18n.tr("Confirmation")
     text: i18n.tr("Save this person ?")
 
     Button {
@@ -22,7 +22,7 @@ Dialog {
     Button {
         text: "Save"
         onClicked: {
-            PopupUtils.close(confirmDialogue)           
+            PopupUtils.close(confirmDialogue)
 
             Storage.insertPeople(Storage.getUUID('people'),
                                  newNameField.text,
@@ -65,6 +65,3 @@ Dialog {
         }
     }
 }
-
-
-

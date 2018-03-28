@@ -18,7 +18,7 @@ Dialog {
                   +i18n.tr("Is a flag used to keep the status of the meeting.")+"<br/>"
                   +i18n.tr("There are three status: <br/><b>SCHEDULED, ARCHIVED, SCHEDULED (EXPIRED)</b>")+"<br/><br/>"
                   +i18n.tr("When a future meeting is created get the 'SCHEDULED' status to indicate that is programmed.")+"<br/><br/>"
-                  +i18n.tr("The user can delete a meeting or archive it <br/> (for example when is finished or deleted). <br/> Archiving a meeting place it in ARCHIVED status")+"<br/>"
+                  +i18n.tr("The user can delete a meeting or archive it")+ "<br/>"+i18n.tr("(for example when is finished or deleted)")+"<br/>"+i18n.tr("Archiving a meeting place it in ARCHIVED status")+"<br/>"
                   +i18n.tr("Archiving a meeting means that is kept in the database,so that can be re-scheduled in the future, or simply to keep it as a report.")+"<br/><br/>"
                   +i18n.tr("When the current time is greater than the meeting datetime, the meeting is 'SCHEDULED (EXPIRED)'.")+"<br/><br/>"
                   +i18n.tr("Updating the date of an 'SCHEDULED (EXPIRED)' meeting with a future date, it return automatically in SCHEDULED status again.")+"<br/><br/>"
@@ -27,7 +27,7 @@ Dialog {
 
        Button {
            width: units.gu(18)
-           text: "Close"
+           text: i18n.tr("Close")
            onClicked: PopupUtils.close(aboutDialogue)
        }
 }

@@ -36,7 +36,7 @@ Column{
         Label {
             id: newNameLabel
             anchors.verticalCenter:  newNameField.verticalCenter
-            text: i18n.tr("Name:")
+            text: i18n.tr("Name")+":"
         }
 
         TextField {
@@ -51,7 +51,7 @@ Column{
         Label {
             id: newSurnameLabel
             anchors.verticalCenter: newSurnameField.verticalCenter
-            text: i18n.tr("Surname:")
+            text: i18n.tr("Surname")+":"
         }
 
         TextField {
@@ -71,7 +71,7 @@ Column{
         Label {
             id: newCategoryLabel
             anchors.verticalCenter: newJobField.verticalCenter
-            text: i18n.tr("Job:")
+            text: i18n.tr("Job")+":"
         }
 
         TextField {
@@ -86,7 +86,7 @@ Column{
         Label {
             id: newBirthdayLabel
             anchors.verticalCenter: newBirthdayButton.verticalCenter
-            text: i18n.tr("Birthday:")
+            text: i18n.tr("Birthday")+":"
         }
 
         Button {
@@ -132,7 +132,7 @@ Column{
         Label {
             id: newTaxCodeFieldLabel
             anchors.verticalCenter: newTaxCodeField.verticalCenter
-            text: i18n.tr("Tax code:")
+            text: i18n.tr("Tax code")+":"
         }
 
         TextField {
@@ -153,7 +153,7 @@ Column{
         Label {
             id: newVatNumberLabel
             anchors.verticalCenter: newVatNumberField.verticalCenter
-            text: i18n.tr("Vat code:")
+            text: i18n.tr("Vat code")+":"
         }
 
         TextField {
@@ -174,7 +174,7 @@ Column{
         Label {
             id: newAddressLabel
             anchors.verticalCenter: newAddressField.verticalCenter
-            text: i18n.tr("Address:")
+            text: i18n.tr("Address")+":"
         }
 
         TextField {
@@ -194,7 +194,7 @@ Column{
         Label{
             id: newPhoneLabel
             anchors.verticalCenter: newPhoneField.verticalCenter
-            text: i18n.tr("Phone:")
+            text: i18n.tr("Phone")+":"
         }
 
         TextField
@@ -210,7 +210,7 @@ Column{
         Label {
             id: newMobilePhoneLabel
             anchors.verticalCenter: newMobilePhoneField.verticalCenter
-            text: i18n.tr("Mobile:")
+            text: i18n.tr("Mobile")+":"
         }
 
         TextField
@@ -231,7 +231,7 @@ Column{
         Label {
             id: newEmailLabel
             anchors.verticalCenter: newEmailField.verticalCenter
-            text: i18n.tr("Email:")
+            text: i18n.tr("Email")+":"
         }
 
         TextField {
@@ -245,7 +245,7 @@ Column{
         Label {
             id: newSkypeLabel
             anchors.verticalCenter: newSkypeField.verticalCenter
-            text: i18n.tr("Skype:")
+            text: i18n.tr("Skype")+":"
         }
 
         TextField {
@@ -265,7 +265,7 @@ Column{
         Label {
             id: newTelegramLabel
             anchors.verticalCenter: newTelegramField.verticalCenter
-            text: i18n.tr("Telegram:")
+            text: i18n.tr("Telegram")+":"
         }
 
         TextField {
@@ -285,7 +285,7 @@ Column{
         Label {
             id: newNoteLabel
             anchors.verticalCenter: newNoteTextArea.verticalCenter
-            text: i18n.tr("Note:")
+            text: i18n.tr("Note")+":"
         }
 
         TextArea {

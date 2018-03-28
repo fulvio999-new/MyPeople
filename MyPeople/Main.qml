@@ -22,7 +22,7 @@ MainView {
     automaticOrientation: true
     anchorToKeyboard: true
 
-    property string appVersion: "1.7"
+    property string appVersion: "1.7.2"
 
     /* applicationName needs to match the "name" field in the application manifest
        Note:' applicationName' value sets the DB storage path if using U1DB api (remove the blank spaces in the url):
@@ -55,7 +55,7 @@ MainView {
         Storage.setDefaultConfig();
         Storage.initialize();
         Storage.createMeetingTable();
-        Storage.addTelegramField();        
+        Storage.addTelegramField();
         Storage.loadAllPeople();
         /* New: from v1.7 */
         Storage.getTodayBirthDays();
@@ -135,7 +135,7 @@ MainView {
 
                     Action {
                         iconName: "list-add"
-                        text: "Add"
+                        text: i18n.tr("Add")
                         onTriggered:{
                             adaptivePageLayout.addPageToNextColumn(peopleListPage, addPersonPage)
                         }
@@ -143,7 +143,7 @@ MainView {
 
                     Action {
                         iconName: "delete"
-                        text: "Delete"
+                        text: i18n.tr("Delete")
                         onTriggered:{
                             PopupUtils.open(dataBaseEraser)
                         }
@@ -151,7 +151,7 @@ MainView {
 
                     Action {
                         iconName: "import"
-                        text: "Import"
+                        text: i18n.tr("Import")
                         onTriggered:{
                             PopupUtils.open(dataBaseImporter)
                         }
@@ -160,13 +160,13 @@ MainView {
                     /* New config page from version 1.6 */
                     Action {
                         iconName: "settings"
-                        text: "Settings"
+                        text: i18n.tr("Settings")
                         onTriggered:{
                             adaptivePageLayout.addPageToNextColumn(peopleListPage, configurationPage )
                         }
                     }
                 ]
-            }          
+            }
 
             /* A list of people */
             UbuntuListView {
@@ -228,7 +228,7 @@ MainView {
 
                                 TextField{
                                     id: searchField
-                                    placeholderText: "name OR surname to search"
+                                    placeholderText: i18n.tr("name OR surname to search")
                                     onTextChanged: {
                                         if(text.length == 0 ) {
                                             Storage.loadAllPeople();
@@ -262,8 +262,8 @@ MainView {
                                 id:row2
                                 spacing: units.gu(1)
                                 Label{
-                                    id: peopleFoundLabel                                   
-                                    anchors.centerIn: parent.Center                                   
+                                    id: peopleFoundLabel
+                                    anchors.centerIn: parent.Center
                                     text: i18n.tr("Total people found")+": " + listView.count
                                     font.bold: false
                                     font.pointSize: units.gu(1.5)
@@ -293,7 +293,7 @@ MainView {
                             }
 
                             Row{
-                                id:todayInfo                               
+                                id:todayInfo
 
                                 Grid {
                                     id: categoryInstantReportChartRow
@@ -338,14 +338,14 @@ MainView {
                                             source: "meeting.png"
                                         }
 
-                                        onClicked: {                                            
+                                        onClicked: {
                                             Storage.getTodayMeetings();
                                             adaptivePageLayout.addPageToNextColumn(peopleListPage, todayMeetingPage)
                                         }
                                     }
 
                                     Label{
-                                        id: todayMeeting                                       
+                                        id: todayMeeting
                                         text: i18n.tr("Today")+": "+ todayMeetingModel.count
                                     }
                                 }
@@ -391,7 +391,7 @@ MainView {
 
             header: PageHeader {
                 id: headerDetailsPage
-                title: i18n.tr("Details for ") + "<b>"+personDetailsPage.personName + " "+personDetailsPage.personSurname+"<\b>"
+                title: i18n.tr("Details for") + " <b>"+personDetailsPage.personName + " "+personDetailsPage.personSurname+"<\b>"
             }
 
             /* to have a scrollable column when the keyboard cover some input field */
@@ -453,8 +453,8 @@ MainView {
 
             header: PageHeader {
                 id: headersearchAnyMeetingPage
-                title: i18n.tr("Search meeting with: ") + "<b>"+searchMeetingWithPersonPage.personName + " "+searchMeetingWithPersonPage.personSurname+"<\b>"
-            } 
+                title: i18n.tr("Search meeting with") + ": <b>"+searchMeetingWithPersonPage.personName + " "+searchMeetingWithPersonPage.personSurname+"<\b>"
+            }
 
              ListModel {
                 id: meetingWithPersonFoundModel
@@ -897,4 +897,3 @@ MainView {
     }
 
 }
-

@@ -40,7 +40,7 @@ Column{
               id: confirmDeleteDialogue
               title: i18n.tr("Confirmation")
               modal:true
-              text:"Remove meetings in the range (no restore) ?"
+              text:i18n.tr("Remove meetings in the range (no restore) ?")
 
               Label{
                   id: deleteSuccessLabel
@@ -58,15 +58,15 @@ Column{
                   text: i18n.tr("Execute")
                   onClicked: {
 
-                      var meetingStatus = "SCHEDULED";
+                      var meetingStatus = i18n.tr("SCHEDULED");
 
-                      if (meetingTypeModel.get(meetingTypeItemSelector.selectedIndex).name === "<b>Archived</b>") {
-                         meetingStatus = "ARCHIVED"
+                      if (meetingTypeModel.get(meetingTypeItemSelector.selectedIndex).name === "<b>"+i18n.tr("Archived")+"</b>") {
+                         meetingStatus = i18n.tr("ARCHIVED")
                       }
 
                       var deletedMeetings = Storage.deleteMeetingByStatusAndTime(dateFromButton.text,dateToButton.text,meetingStatus);
 
-                      deleteSuccessLabel.text = i18n.tr("Done, deleted")+": "+deletedMeetings+" meeting(s)"
+                      deleteSuccessLabel.text = i18n.tr("Done, deleted")+": "+deletedMeetings+" "+i18n.tr("meeting(s)")
 
                       executeDeleteButton.enabled = false;
 
@@ -136,7 +136,7 @@ Column{
               Label {
                   id: toDateLabel
                   anchors.verticalCenter: dateToButton.verticalCenter
-                  text: i18n.tr("To:")
+                  text: i18n.tr("To")+":"
               }
 
               /* Create a PopOver containing a DatePicker, necessary use a PopOver a container due to a bug on setting minimum date
@@ -175,24 +175,28 @@ Column{
              spacing: units.gu(1)
               //----------- meeting status selector --------------
               Component {
-                      id: meetingTypeSelectorDelegate
-                      OptionSelectorDelegate { text: name; subText: description; }
+                    id: meetingTypeSelectorDelegate
+                    OptionSelectorDelegate { text: name; subText: description; }
               }
 
               /* The meeting status shown in the combo box */
               ListModel {
-                      id: meetingTypeModel
-                      ListElement { name: "<b>Scheduled</b>"; description: "meetings to participate"; }
-                      ListElement { name: "<b>Archived</b>"; description: "participated old meetings"; }
+                    id: meetingTypeModel
+              }
+
+              /* fill listmodel using this method because allow you to use i18n */
+              Component.onCompleted: {
+                  meetingTypeModel.append( { name: "<b>"+i18n.tr("Scheduled")+"</b>", description: i18n.tr("meetings to participate"), value:1 } );
+                  meetingTypeModel.append( { name: "<b>"+i18n.tr("Archived")+"</b>", description: i18n.tr("participated old meetings"), value:2 } );
               }
 
               Label {
                   id: meetingStatusItemSelectorLabel
                   anchors.verticalCenter: meetingTypeItemSelector.Center
-                  text: i18n.tr("Meeting status:")
+                  text: i18n.tr("Meeting status")+":"
               }
 
-              Rectangle{                 
+              Rectangle{
                   width: appConfigurationTablet.width - meetingStatusItemSelectorLabel.width - units.gu(2)
                   height:units.gu(7)
 
@@ -220,4 +224,3 @@ Column{
               }
           }
 }
-

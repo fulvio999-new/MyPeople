@@ -13,7 +13,7 @@ import "./storage.js" as Storage
 Dialog {
 
     id: fileBrowserDialog
-    text: "<b>To import data from old versions 1.0 and 1.1 visit:</b>"
+    text: "<b>"+ i18n.tr("To import data from old versions 1.0 and 1.1 visit")+":</b>"
     property int importedContact : 0;
     property color linkColor: "blue"
     property string website : "http://iutility.blogspot.it/2016/11/MyPeople.html"
@@ -27,14 +27,14 @@ Dialog {
         if(allPeopleQuery1_0.documents.length === 0 && allPeopleQuery1_1.documents.length === 0)
         {
             importButton.enabled = false
-            importOperationResult.text = "No contacts to import (First installation ?)"
+            importOperationResult.text =  i18n.tr("No contacts found (First installation ?)")
             importOperationResult.color = UbuntuColors.green
         } else{
              importButton.enabled = true
              importOperationResult.text = ""
 
             if(settings.importAlreadyDone){
-              importOperationResult.text = "<b>Note:</b> an import was already done. <br/> If redone you can have duplicated"
+              importOperationResult.text = "<b>"+ i18n.tr("Note")+":</b>"+ i18n.tr("an import was already done")+". <br/>"+ i18n.tr("If redone you can have duplicated")
             }
         }
     }
@@ -63,12 +63,12 @@ Dialog {
                     }
 
                     Text {
-                        text: "Found " + allPeopleQuery1_0.documents.length + " Contact(s) from MyPeople 1.0"
+                        text:  i18n.tr("Found")+" " + allPeopleQuery1_0.documents.length + " "+ i18n.tr("Contact(s) from")+ "MyPeople 1.0"
                     }
                 }
                 Row{
                     Text {
-                        text: "Found " + allPeopleQuery1_1.documents.length + " Contact(s) from MyPeople 1.1"
+                        text:  i18n.tr("Found")+" " + allPeopleQuery1_1.documents.length + " "+ i18n.tr("Contact(s) from")+ "MyPeople 1.1"
                     }
                 }
                 Row{
@@ -83,14 +83,14 @@ Dialog {
 
                     Button {
                         id: closeButton
-                        text: "Close"
+                        text:  i18n.tr("Close")
                         //color: UbuntuColors.orange
                         onClicked: PopupUtils.close(fileBrowserDialog)
                     }
 
                     Button {
                         id: importButton
-                        text: "Import"                       
+                        text:  i18n.tr("Import")
                         onClicked: {
 
                             closeButton.enabled = false
@@ -140,7 +140,7 @@ Dialog {
 
                             //console.log("Imported: "+importedContact+ " Contact");
 
-                            importOperationResult.text = i18n.tr("OK, succesfully imported: "+importedContact +" contacts")
+                            importOperationResult.text = i18n.tr("OK, succesfully imported")+": "+importedContact +" "+ i18n.tr("contacts")
                             closeButton.enabled = true
                             importButton.enabled = false
 

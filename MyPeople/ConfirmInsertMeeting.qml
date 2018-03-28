@@ -10,7 +10,7 @@ import "./storage.js" as Storage
 Dialog {
 
     id: dialogue
-    title: "Confirmation"
+    title:  i18n.tr("Confirmation")
     modal:true
 
     Button {
@@ -36,5 +36,3 @@ Dialog {
         }
     }
 }
-
-

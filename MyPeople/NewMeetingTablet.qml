@@ -36,7 +36,7 @@ Column {
         Label {
             id: nameLabel
             anchors.verticalCenter: nameField.verticalCenter
-            text: i18n.tr("Name:")
+            text: i18n.tr("Name")+":"
         }
 
         TextField {
@@ -60,7 +60,7 @@ Column {
         Label {
             id: surnameLabel
             anchors.verticalCenter: surnameField.verticalCenter
-            text: i18n.tr("Surname:")
+            text: i18n.tr("Surname")+":"
         }
 
         TextField {
@@ -83,7 +83,7 @@ Column {
         Label {
             id:  meetingSubjectLabel
             anchors.verticalCenter: meetingSubjectField.verticalCenter
-            text: i18n.tr("Subject:")
+            text: i18n.tr("Subject")+":"
         }
 
         TextField {
@@ -106,12 +106,12 @@ Column {
         Label {
             id:  meetingPlaceLabel
             anchors.verticalCenter: meetingPlaceField.verticalCenter
-            text: i18n.tr("Place:")
+            text: i18n.tr("Place")+":"
         }
 
         TextField {
             id: meetingPlaceField
-            placeholderText: ""           
+            placeholderText: ""
             echoMode: TextInput.Normal
             readOnly: false
             width: units.gu(55)
@@ -128,7 +128,7 @@ Column {
         Label {
             id: newBirthdayLabel
             anchors.verticalCenter: newMeetingDateButton.verticalCenter
-            text: i18n.tr("Date:")
+            text: i18n.tr("Date")+":"
         }
 
         Button {
@@ -169,7 +169,7 @@ Column {
         Label {
             id: newMeetingTimeLabel
             anchors.verticalCenter: newMeetingTimeButton.verticalCenter
-            text: i18n.tr("Time:")
+            text: i18n.tr("Time")+":"
         }
 
         Button {
@@ -215,7 +215,7 @@ Column {
         Label {
             id: noteLabel
             anchors.verticalCenter: newMeetingNote.verticalCenter
-            text: i18n.tr("Note:")
+            text: i18n.tr("Note")+":"
         }
 
         TextArea {

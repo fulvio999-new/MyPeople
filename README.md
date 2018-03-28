@@ -5,4 +5,6 @@ NO data are stored or shared online.
 
 Available on OpensStore: https://open.uappexplorer.com/app/mypeople.fulvio999
 
+V. 1.7.2 : added spanish translation
+
 

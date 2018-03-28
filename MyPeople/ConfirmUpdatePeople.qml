@@ -9,7 +9,7 @@ import "./storage.js" as Storage
 /* Ask a confirmation before updating an existing People */
 Dialog {
     id: dialogue
-    title: "Confirmation"
+    title:  i18n.tr("Confirmation")
     modal:true
     text:""  /* value passed by the caller button */
     Button {

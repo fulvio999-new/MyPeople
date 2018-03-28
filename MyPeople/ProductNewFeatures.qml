@@ -18,14 +18,14 @@ import Ubuntu.Layouts 1.0
                 enabled: false
                 autoSize: true
                 horizontalAlignment: TextEdit.AlignHCenter
-                placeholderText: "* Meeting, appointments management functions<br/> * Added telegram input field<br/> * Various bug fixes<br/> * New configuration page"
+                placeholderText: "*"+i18n.tr("Meeting, appointments management functions")+"<br/> *"+i18n.tr("Added telegram input field")+"<br/> *"+i18n.tr("Various bug fixes")+"<br/> *"+i18n.tr("New configuration page")
             }
         }
 
         Row {
             spacing: units.gu(1)
             Label {
-                text: "Don't show again"
+                text: i18n.tr("Don't show again")
             }
             CheckBox {
                 id: hideNewsListNextTime
@@ -51,10 +51,8 @@ import Ubuntu.Layouts 1.0
                 height: units.gu(3)
             }
             Button {
-                text: "Close"
+                text: i18n.tr("Close")
                 onClicked: PopupUtils.close(newFeaturesDialogue)
             }
         }
     }
-
-

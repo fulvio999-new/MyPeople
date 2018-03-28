@@ -64,14 +64,14 @@ Dialog {
                     Button {
                         id: closeButton
                         width: units.gu(12)
-                        text: "Close"                        
+                        text:  i18n.tr("Close")
                         onClicked: PopupUtils.close(dataBaseEraserDialog)
                     }
 
                     Button {
                         id: deleteButton
                         width: units.gu(12)
-                        text: "Delete"
+                        text:  i18n.tr("Delete")
                         color: UbuntuColors.orange
                         onClicked: {
                             loadingPageActivity.running = true
@@ -95,8 +95,7 @@ Dialog {
                                 }
 
                                 deleteOperationResult.color = UbuntuColors.green
-                                deleteOperationResult.text = i18n.tr("Deletion executed successfully. <br>Deleted "+deletedPeople+ " pepole"
-                                                                     +" and "+deletedMeeting +" meetings")
+                                deleteOperationResult.text = i18n.tr("Deletion executed successfully")+"<br>"+ i18n.tr("Deleted")+" "+deletedPeople+ " "+ i18n.tr("pepole and")+" "+deletedMeeting +" "+ i18n.tr("meetings")
                                 closeButton.enabled = true
                                 /* blank flag that notify previously data import form version 1.0 and 1.2
                                    Note: for versions > 1.5 the import is not necessary

@@ -22,7 +22,7 @@ Item{
         /* nececessary otherwise the list scroll under the header */
         clip: true
         model: todayBirthdayModel
-        boundsBehavior: Flickable.StopAtBounds   
+        boundsBehavior: Flickable.StopAtBounds
         highlight:
             Component {
                 id: highlightBirthDayComponent
@@ -62,7 +62,7 @@ Item{
             }
 
             MouseArea {
-                id: selectableMouseArea              
+                id: selectableMouseArea
                 width: parent.width
                 height: parent.height
 
@@ -92,15 +92,15 @@ Item{
                         font.pointSize: units.gu(1.3)
                     }
                     Label {
-                        text: "phone: "+phone
+                        text: i18n.tr("phone")+": "+phone
                         fontSize: "small"
                     }
                     Label {
-                        text: "mobile: "+mobilePhone
+                        text: i18n.tr("mobile")+": "+mobilePhone
                         fontSize: "small"
                     }
                     Label {
-                        text: "mail: "+email
+                        text: i18n.tr("mail")+": "+email
                         fontSize: "small"
                     }
                 }
@@ -108,4 +108,3 @@ Item{
         }
     }
 }
-

@@ -9,7 +9,7 @@ import "./storage.js" as Storage
 /* Ask a confirmation at delete People operation */
 Dialog {
     id: dialogue
-    title: "Confirmation"
+    title:  i18n.tr("Confirmation")
     modal:true
     text:"" /* value passed as param by the caller */
 
@@ -35,5 +35,3 @@ Dialog {
         }
     }
 }
-
-

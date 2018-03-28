@@ -34,7 +34,7 @@ Column{
         Label{
             id: meetingFoundLabel
             /* using the 'count' field of the Listview instead of ListModel we have an auto-refresh wen a meeting is deleted */
-            text : "<b>Found: </b>"+ allPeopleMeetingSearchResultList.count +"<b> meeting(s) (listed in chronological order)</b>"
+            text : "<b>"+i18n.tr("Found")+": </b>"+ allPeopleMeetingSearchResultList.count +"<b>"+i18n.tr("meeting(s) (listed in chronological order)")+"</b>"
         }
     }
 
@@ -46,7 +46,7 @@ Column{
         Label {
             id: expenseDateFromLabel
             anchors.verticalCenter: meetingDateFromButton.verticalCenter
-            text: i18n.tr("From:")
+            text: i18n.tr("From")+":"
         }
 
         /*
@@ -88,7 +88,7 @@ Column{
         Label {
             id: expenseDateToLabel
             anchors.verticalCenter: meetingDateToButton.verticalCenter
-            text: i18n.tr("To:")
+            text: i18n.tr("To")+":"
         }
 
         /* a PopOver containing a DatePicker, necessary use a PopOver a container due to a bug on setting minimum date
@@ -133,14 +133,18 @@ Column{
         /* The meeting status shown in the combo box */
         ListModel {
              id: meetingTypeModel
-             ListElement { name: "<b>Scheduled</b>"; description: "meetings to participate"; }
-             ListElement { name: "<b>Archived</b>"; description: "participated old meetings"; }
         }
+
+        /* fill listmodel using this method because allow you to use i18n */
+        Component.onCompleted: {
+            meetingTypeModel.append( { name: "<b>"+i18n.tr("Scheduled")+"</b>", description: i18n.tr("meetings to participate"), value:1 } );
+            meetingTypeModel.append( { name: "<b>"+i18n.tr("Archived")+"</b>", description: i18n.tr("participated old meetings"), value:2 } );
+       }
 
         Label {
             id: meetingStatusItemSelectorLabel
             anchors.verticalCenter: meetingTypeItemSelector.Center
-            text: i18n.tr("Meeting status:")
+            text: i18n.tr("Meeting status")+":"
         }
 
         Rectangle{
@@ -157,12 +161,12 @@ Column{
 
         Button {
             id: searchMeetingButton
-            text: "Search"
+            text: i18n.tr("Search")
             color: UbuntuColors.orange
             onClicked: {
                 var meetingStatus = "SCHEDULED";
 
-                if (meetingTypeModel.get(meetingTypeItemSelector.selectedIndex).name === "<b>Archived</b>") {
+                if (meetingTypeModel.get(meetingTypeItemSelector.selectedIndex).name === 2) {
                    meetingStatus = "ARCHIVED";
                 }
 
@@ -174,5 +178,5 @@ Column{
                searchAnyMeetingPage.meetingStatus = meetingStatus;
              }
           }
-        }   
+        }
 }

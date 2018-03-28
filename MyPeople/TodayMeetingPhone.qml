@@ -5,7 +5,7 @@ import Ubuntu.Layouts 1.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
 
-//--------------- For TABLET Page: today meeting list  ---------------
+//--------------- For Phone Page: today meeting list  ---------------
 
 
 Item{
@@ -48,6 +48,3 @@ Item{
         delegate: AllPeopleMeetingFoundDelegate{isFromTodayMeetingPage:true}
     }
 }
-
-
-

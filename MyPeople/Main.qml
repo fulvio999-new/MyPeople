@@ -32,6 +32,10 @@ MainView {
     width: units.gu(160)
     height: units.gu(90)
 
+    /* phone */
+    //width: units.gu(50)
+    //height: units.gu(96)
+
     /* Settings file is saved in ~user/.config/<applicationName>/<applicationName>.conf  File */
     Settings {
         id:settings

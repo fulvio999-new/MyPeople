@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-28 15:13+0000\n"
+"POT-Creation-Date: 2018-03-29 10:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -359,7 +359,7 @@ msgstr ""
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/DataBaseEraser.qml:74
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/DetailsPersonPhone.qml:384
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/DetailsPersonTablet.qml:375
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:146
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:150
 msgid "Delete"
 msgstr ""
 
@@ -459,7 +459,7 @@ msgid "Contact(s) from"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/DatabaseImporter.qml:93
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:154
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:158
 msgid "Import"
 msgstr ""
 
@@ -573,23 +573,23 @@ msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/InsertPersonPhone.qml:334
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/InsertPersonTablet.qml:307
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:138
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:142
 msgid "Add"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:127
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:131
 msgid "Help"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:163
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:167
 msgid "Settings"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:231
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:235
 msgid "name OR surname to search"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:243
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:247
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/SearchMeetingGlobalPhone.qml:175
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/SearchMeetingGlobalTablet.qml:164
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/SearchMeetingWithPersonPhone.qml:169
@@ -597,52 +597,52 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:267
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:271
 msgid "Total people found"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:281
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:285
 msgid "Global Agenda Meetings"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:326
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:349
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:330
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:353
 msgid "Today"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:394
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:398
 msgid "Details for"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:456
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:460
 msgid "Search meeting with"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:535
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:539
 msgid "Create a meeting with"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:583
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:587
 msgid "Search meetings with any people"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:676
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:680
 msgid "Edit meeting with"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:724
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:728
 msgid "Add new person"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:771
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:775
 msgid "Application Configuration"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:799
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:803
 msgid "Today BirthDay"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:825
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/MyPeople/source/MyPeople/MyPeople/Main.qml:829
 msgid "Today Meeting"
 msgstr ""
 

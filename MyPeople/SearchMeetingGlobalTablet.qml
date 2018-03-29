@@ -166,11 +166,11 @@ Column{
             onClicked: {
                 var meetingStatus = "SCHEDULED";
 
-                if (meetingTypeModel.get(meetingTypeItemSelector.selectedIndex).name === 2) {
+                if (meetingTypeModel.get(meetingTypeItemSelector.selectedIndex).value === 2) {
                    meetingStatus = "ARCHIVED";
                 }
 
-               /* search meetings and fill the ListModel to display */
+               /* search meetings and fill the ListModel to display */              
                Storage.searchMeetingByTimeRange(meetingDateFromButton.text,meetingDateToButton.text,meetingStatus);
 
                searchAnyMeetingPage.dateFrom = meetingDateFromButton.text;

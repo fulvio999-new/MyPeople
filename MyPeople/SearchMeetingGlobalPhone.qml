@@ -178,7 +178,7 @@ Column{
             onClicked: {
                 var meetingStatus = "SCHEDULED"
 
-                if (meetingTypeModel.get(meetingTypeItemSelector.selectedIndex).name === 2) {
+                if (meetingTypeModel.get(meetingTypeItemSelector.selectedIndex).value === 2) {
                    meetingStatus = "ARCHIVED"
                 }
 

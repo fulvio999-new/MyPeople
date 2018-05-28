@@ -1,7 +1,7 @@
 {
     "name": "mypeople.fulvio999",
     "description": "A simple archiver, manager for contacts, people and friends",
-    "architecture": "@CLICK_ARCH@",
+    "architecture": "all",
     "title": "MyPeople",
     "hooks": {
         "MyPeople": {

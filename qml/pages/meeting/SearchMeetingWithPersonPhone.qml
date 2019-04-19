@@ -8,7 +8,7 @@ import Ubuntu.Layouts 1.0
 import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
-import "./js/storage.js" as Storage
+import "../../js/storage.js" as Storage
 
 /*
   PHONE: Search for meetings ONLY with a specific person in the user provide time range

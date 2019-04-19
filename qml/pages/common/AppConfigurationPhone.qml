@@ -8,17 +8,19 @@ import Ubuntu.Layouts 1.0
 import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
-import "./js/storage.js" as Storage
+import "../../js/storage.js" as Storage
 
-//--------------- For TABLET Page with application settings and maintenance utility ---------------
+/* import folder */
+import "../../dialogs"
 
+//--------------- For PHONES: Page with application settings and maintenance utility ---------------
 
 Column{
     id: appConfigurationTablet
 
     anchors.fill: parent
     spacing: units.gu(3.5)
-    anchors.leftMargin: units.gu(2)
+    anchors.leftMargin: units.gu(1)
 
     /* transparent placeholder */
     Rectangle {
@@ -31,7 +33,6 @@ Column{
         id: operationResultDialogue
         OperationResult{}
     }
-
 
     /* Dialog to Ask a confirmation for a delete operation for meetings */
     Component{
@@ -68,6 +69,7 @@ Column{
                       var deletedMeetings = Storage.deleteMeetingByStatusAndTime(dateFromButton.text,dateToButton.text,meetingStatus);
 
                       deleteSuccessLabel.text = i18n.tr("Done, deleted")+": "+deletedMeetings+" "+i18n.tr("meeting(s)")
+
                       executeDeleteButton.enabled = false;
 
                       /* update today meetings count */
@@ -80,7 +82,7 @@ Column{
 
       Row{
           id: maintenanceRowHeader
-          x: appConfigurationTablet.width/3
+          x: appConfigurationTablet.width/5
           Label{
               text: "<b>"+i18n.tr("MAINTENANCE: delete old meetings")+"</b>"
           }
@@ -88,20 +90,20 @@ Column{
 
 
       Row{
-              id: dateRow
-              spacing: units.gu(1)
+             id: dateRow
+             spacing: units.gu(1)
 
-              //------------------ Date from ------------------
-              Label {
+             //------------------ Date from ------------------
+             Label {
                   id: fromDateLabel
                   anchors.verticalCenter: dateFromButton.verticalCenter
-                  text: i18n.tr("From")+":"
-              }
+                  text: i18n.tr("From:")
+             }
 
-              /* Create a PopOver containing a DatePicker, necessary use a PopOver a container due to a bug on setting minimum date
+             /* Create a PopOver containing a DatePicker, necessary use a PopOver a container due to a bug on setting minimum date
                  with a simple DatePicker Component
-              */
-              Component {
+             */
+             Component {
                   id: popoverDateFromPickerComponent
                   Popover {
                       id: popoverDateFromPicker
@@ -168,24 +170,27 @@ Column{
                      PopupUtils.open(popoverDateToPickerComponent, dateToButton)
                   }
               }
+         }
 
+         Row{
+
+             spacing: units.gu(1)
               //----------- meeting status selector --------------
               Component {
-                  id: meetingTypeSelectorDelegate
-                  OptionSelectorDelegate { text: name; subText: description; }
+                    id: meetingTypeSelectorDelegate
+                    OptionSelectorDelegate { text: name; subText: description; }
               }
 
               /* The meeting status shown in the combo box */
               ListModel {
-                  id: meetingTypeModel
+                    id: meetingTypeModel
               }
 
               /* fill listmodel using this method because allow you to use i18n */
               Component.onCompleted: {
-                   meetingTypeModel.append( { name: "<b>"+i18n.tr("Scheduled")+"</b>", description: i18n.tr("meetings to participate"), value:1 } );
-                   meetingTypeModel.append( { name: "<b>"+i18n.tr("Archived")+"</b>", description: i18n.tr("participated old meetings"), value:2 } );
+                  meetingTypeModel.append( { name: "<b>"+i18n.tr("Scheduled")+"</b>", description: i18n.tr("meetings to participate"), value:1 } );
+                  meetingTypeModel.append( { name: "<b>"+i18n.tr("Archived")+"</b>", description: i18n.tr("participated old meetings"), value:2 } );
               }
-
 
               Label {
                   id: meetingStatusItemSelectorLabel
@@ -194,7 +199,7 @@ Column{
               }
 
               Rectangle{
-                  width:units.gu(27)
+                  width: appConfigurationTablet.width - meetingStatusItemSelectorLabel.width - units.gu(2)
                   height:units.gu(7)
 
                   ListItem.ItemSelector {
@@ -204,12 +209,16 @@ Column{
                       containerHeight: itemHeight * 3
                   }
               }
+         }
+
+         Row{
+              x: appConfigurationTablet.width/4
 
               Button {
                   id: confirmDeleteButton
                   text:  i18n.tr("Delete")
                   iconName: "delete"
-                  width: units.gu(16)
+                  width: units.gu(18)
                   color: UbuntuColors.orange
                   onClicked: {
                      PopupUtils.open(confirmDeleteDialogueComponent, confirmDeleteButton)

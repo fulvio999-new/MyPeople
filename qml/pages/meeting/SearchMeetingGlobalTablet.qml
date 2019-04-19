@@ -8,11 +8,11 @@ import Ubuntu.Layouts 1.0
 import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
-import "./js/storage.js" as Storage
+import "../../js/storage.js" as Storage
 
 
 /*
-   PHONE: Search meetings with ANY people inside a user defined date range
+    Search meetings with ANY people inside a date range
 */
 Column{
 
@@ -30,17 +30,17 @@ Column{
     /* label to show search result */
     Row{
         id: expenseFoundTitle
-        x: units.gu(3)
+        x: searchMeetingColum.width/3
         Label{
             id: meetingFoundLabel
             /* using the 'count' field of the Listview instead of ListModel we have an auto-refresh wen a meeting is deleted */
-            text : "<b>"+i18n.tr("Found")+": </b>"+ allPeopleMeetingSearchResultList.count +"<b> "+i18n.tr("meeting(s) (listed in chronological order)")+"</b>"
+            text : "<b>"+i18n.tr("Found")+": </b>"+ allPeopleMeetingSearchResultList.count +"<b>"+i18n.tr("meeting(s) (listed in chronological order)")+"</b>"
         }
     }
 
     Row{
         id: searchCriteriaRow
-        spacing: units.gu(1)
+        spacing: units.gu(1.1)
         x: units.gu(1)
 
         Label {
@@ -124,21 +124,15 @@ Column{
                 PopupUtils.open(popoverDateToPickerComponent, meetingDateToButton)
             }
         }
-   }
-
-    Row{
-        spacing: units.gu(1)
-        x: units.gu(1)
 
         Component {
-            id: meetingTypeSelectorDelegate
-            OptionSelectorDelegate { text: name; subText: description; }
+             id: meetingTypeSelectorDelegate
+             OptionSelectorDelegate { text: name; subText: description; }
         }
-
 
         /* The meeting status shown in the combo box */
         ListModel {
-            id: meetingTypeModel
+             id: meetingTypeModel
         }
 
         /* fill listmodel using this method because allow you to use i18n */
@@ -147,7 +141,6 @@ Column{
             meetingTypeModel.append( { name: "<b>"+i18n.tr("Archived")+"</b>", description: i18n.tr("participated old meetings"), value:2 } );
        }
 
-
         Label {
             id: meetingStatusItemSelectorLabel
             anchors.verticalCenter: meetingTypeItemSelector.Center
@@ -155,7 +148,7 @@ Column{
         }
 
         Rectangle{
-            width: searchMeetingColum.width - meetingStatusItemSelectorLabel.width - units.gu(3)
+            width:units.gu(30)
             height:units.gu(7)
 
             ListItem.ItemSelector {
@@ -165,21 +158,16 @@ Column{
                 containerHeight: itemHeight * 3
             }
         }
-    }
-
-    Row{
-        x: searchMeetingColum.width/3
 
         Button {
-            id: searchExpenseButton
+            id: searchMeetingButton
             text: i18n.tr("Search")
-            width:units.gu(18)
             color: UbuntuColors.orange
             onClicked: {
-                var meetingStatus = "SCHEDULED"
+                var meetingStatus = "SCHEDULED";
 
                 if (meetingTypeModel.get(meetingTypeItemSelector.selectedIndex).value === 2) {
-                   meetingStatus = "ARCHIVED"
+                   meetingStatus = "ARCHIVED";
                 }
 
                /* search meetings and fill the ListModel to display */
@@ -188,7 +176,7 @@ Column{
                searchAnyMeetingPage.dateFrom = meetingDateFromButton.text;
                searchAnyMeetingPage.dateTo = meetingDateToButton.text;
                searchAnyMeetingPage.meetingStatus = meetingStatus;
-            }
+             }
           }
-     }
+        }
 }

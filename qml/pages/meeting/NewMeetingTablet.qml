@@ -9,21 +9,21 @@ import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
 /* note: alias name must have first letter in upperCase */
-import "./js/utility.js" as Utility
-import "./js/storage.js" as Storage
+import "../../js/utility.js" as Utility
+import "../../js/storage.js" as Storage
 
 /* import folder */
-import "./dialogs"
+import "../../dialogs"
+
 
 /*
- PHONE Layout, Used in Main.qml to create a NEW meetimg wit a specific person. Used for Tablet
-
+ Used in Main.qml to create a NEW meetimg with a specific person. Used for Tablet
 */
 Column {
 
     id: newMeetingwithPersonLayout
     anchors.fill: parent
-    spacing: units.gu(3)
+    spacing: units.gu(3.5)
     anchors.leftMargin: units.gu(2)
 
     Rectangle{
@@ -34,7 +34,7 @@ Column {
 
     Row{
         id: nameRow
-        spacing: units.gu(4.5)
+        spacing: units.gu(5)
 
         //------------- Name --------------
         Label {
@@ -59,10 +59,7 @@ Column {
                 meetingSubjectField.text = ""
             }
         }
-    }
 
-    Row{
-        spacing: units.gu(2)
         //------------- Surname --------------
         Label {
             id: surnameLabel
@@ -84,7 +81,7 @@ Column {
 
     Row{
         id: meetingSubjectRow
-        spacing: units.gu(2.5)
+        spacing: units.gu(4.5)
 
         //------------- Subject --------------
         Label {
@@ -99,7 +96,7 @@ Column {
             text: ""
             echoMode: TextInput.Normal
             readOnly: false
-            width: units.gu(35)
+            width: units.gu(55)
             hasClearButton: false
         }
     }
@@ -107,7 +104,7 @@ Column {
 
     Row{
         id: meetingPlaceRow
-        spacing: units.gu(4)
+        spacing: units.gu(6)
 
         //------------- Place --------------
         Label {
@@ -121,7 +118,7 @@ Column {
             placeholderText: ""
             echoMode: TextInput.Normal
             readOnly: false
-            width: units.gu(35)
+            width: units.gu(55)
             hasClearButton: false
         }
     }
@@ -129,7 +126,7 @@ Column {
 
     Row{
         id: meetingTimeRow
-        spacing: units.gu(4.5)
+        spacing: units.gu(6)
 
         //------------- Date --------------
         Label {
@@ -171,11 +168,6 @@ Column {
                 }
             }
         }
-     }
-
-     Row{
-        id: timeRow
-        spacing: units.gu(4.5)
 
         //------------- Time --------------
         Label {
@@ -221,7 +213,7 @@ Column {
 
     Row{
         id: meetingObjectRow
-        spacing: units.gu(4)
+        spacing: units.gu(6)
 
         //------------- Note --------------
         Label {
@@ -235,7 +227,7 @@ Column {
             textFormat:TextEdit.AutoText
             text: ""
             height: units.gu(15)
-            width: units.gu(35)
+            width: units.gu(70)
             readOnly: false
         }
     }

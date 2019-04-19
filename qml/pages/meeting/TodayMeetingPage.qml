@@ -11,31 +11,34 @@ import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
 /* note: alias name must have first letter in upperCase */
-import "./js/utility.js" as Utility
-import "./js/storage.js" as Storage
+import "../../js/utility.js" as Utility
+import "../../js/storage.js" as Storage
 
-//----------------- Today BirthDay -----------------
+/* import folder */
+import "../person"
+
+//----------------- Today Meeting -----------------
 Page {
-     id: todayBirthdayPage
+     id: todayMeetingPage
      anchors.fill: parent
 
      header: PageHeader {
-        id: todayBirthdayPageHeader
-        title: i18n.tr("Today BirthDay")+ ": " + todayBirthdayModel.count
+        id: todayMeetingPageHeader
+        title: i18n.tr("Today Meeting")+ ": " + todayMeetingModel.count
      }
 
      Layouts {
-         id: layouttodayBirthdayPage
+         id: layoutTodayMeetingPage
          anchors.fill: parent
          layouts:[
 
              ConditionalLayout {
-                 name: "layoutTodayBirthDay"
+                 name: "layoutTodayMeeting"
                  when: root.width > units.gu(50)
-                 TodayBirthDayTablet{}
+                 TodayMeetingTablet{}
              }
          ]
          //else
-         TodayBirthDayPhone{}
+         TodayMeetingPhone{}
      }
-}
+ }

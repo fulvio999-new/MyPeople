@@ -8,20 +8,21 @@ import Ubuntu.Layouts 1.0
 /* replace the 'incomplete' QML API U1db with the low-level QtQuick API */
 import QtQuick.LocalStorage 2.0
 
-import "./js/utility.js" as Utility
-import "./js/storage.js" as Storage
+import "../../js/utility.js" as Utility
+import "../../js/storage.js" as Storage
 
 /* import folder */
-import "./dialogs"
+import "../../dialogs"
 
-/* Display a form with the components to insert/add a new contact: usec in Tablet view */
+/* Display a form with the components to insert/add a new contact: used in Phone view */
 Column{
     id: addPersonPageLayout
-    spacing: units.gu(3)
+
+    spacing: units.gu(3.5)
 
     Component {
-        id: confirmAddPeopleDialog
-        ConfirmInsertPeople{}
+       id: confirmAddPeopleDialog
+       ConfirmInsertPeople{}
     }
 
     /* transparent placeholder */
@@ -48,8 +49,14 @@ Column{
             placeholderText: ""
             echoMode: TextInput.Normal
             readOnly: false
-            width: units.gu(35)
+            width: units.gu(30)
         }
+    }
+
+    //-------- SurName ------------
+    Row{
+        id: newSurnameRow
+        spacing: units.gu(3)
 
         Label {
             id: newSurnameLabel
@@ -62,7 +69,7 @@ Column{
             placeholderText: ""
             echoMode: TextInput.Normal
             readOnly: false
-            width: units.gu(35)
+            width: units.gu(30)
         }
     }
 
@@ -83,9 +90,14 @@ Column{
             text: ""
             echoMode: TextInput.Normal
             readOnly: false
-            width: units.gu(35)
+            width: units.gu(30)
         }
+    }
 
+    //-------- Birthday ------------
+    Row{
+        id:newBirthdayRow
+        spacing: units.gu(3)
         Label {
             id: newBirthdayLabel
             anchors.verticalCenter: newBirthdayButton.verticalCenter
@@ -97,7 +109,7 @@ Column{
             width: units.gu(18)
             property date date: new Date()
             text: Qt.formatDateTime(date, "dd MMMM yyyy")
-            /* Don't use the PickerPanel api because doesn't allow to set a minum date */
+            //Don't use the PickerPanel api because doesn't allow to set minum date
             onClicked: PopupUtils.open(newPopoverDatePickerComponent, newBirthdayButton)
         }
 
@@ -144,7 +156,7 @@ Column{
             text: ""
             echoMode: TextInput.Normal
             readOnly: false
-            width: units.gu(35)
+            width: units.gu(30)
         }
     }
 
@@ -165,11 +177,11 @@ Column{
             text: ""
             echoMode: TextInput.Normal
             readOnly: false
-            width: units.gu(35)
+            width: units.gu(30)
         }
     }
 
-    //--------------- Address -------------------
+    //------------ Address -------------
     Row{
         id: newAddressRow
         spacing: units.gu(3.6)
@@ -185,7 +197,7 @@ Column{
             placeholderText: ""
             echoMode: TextInput.Normal
             readOnly: false
-            width: units.gu(35)
+            width: units.gu(30)
         }
     }
 
@@ -206,10 +218,14 @@ Column{
             placeholderText: ""
             echoMode: TextInput.Normal
             readOnly: false
-            width: units.gu(35)
+            width: units.gu(30)
         }
+    }
 
-        //-------- mobile phone
+    //-------- mobile phone ------------
+    Row{
+        id: newMobilePhoneRow
+        spacing: units.gu(5)
         Label {
             id: newMobilePhoneLabel
             anchors.verticalCenter: newMobilePhoneField.verticalCenter
@@ -226,7 +242,7 @@ Column{
         }
     }
 
-    //------------ Email & Skype------------
+    //---------- Email ------------
     Row{
         id: newEmailRow
         spacing: units.gu(6)
@@ -242,9 +258,14 @@ Column{
             placeholderText: ""
             echoMode: TextInput.Normal
             readOnly: false
-            width: units.gu(35)
+            width: units.gu(30)
         }
+    }
 
+    //-------- Skype------------
+    Row{
+        spacing: units.gu(5.5)
+        id: newSkypeRow
         Label {
             id: newSkypeLabel
             anchors.verticalCenter: newSkypeField.verticalCenter
@@ -276,7 +297,7 @@ Column{
             placeholderText: ""
             echoMode: TextInput.Normal
             readOnly: false
-            width: units.gu(35)
+            width: units.gu(30)
         }
     }
 
@@ -295,20 +316,25 @@ Column{
             id: newNoteTextArea
             textFormat:TextEdit.AutoText
             height: units.gu(15)
-            width: units.gu(70)
+            width: units.gu(30)
             readOnly: false
         }
     }
 
     //------------- Command buttom -------------
     Row{
-        x: newNoteLabel.width + units.gu(6)
+
+        Rectangle {
+            color: "transparent"
+            width: units.gu(15)
+            height: addButton.height
+        }
 
         Button {
             id: addButton
             objectName: "Add"
             text: i18n.tr("Add")
-            width: units.gu(18)
+            width: units.gu(12)
             onClicked: {
                 PopupUtils.open(confirmAddPeopleDialog)
             }

@@ -8,25 +8,21 @@ import Ubuntu.Layouts 1.0
 import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
-import "./js/storage.js" as Storage
-import "./js/DateUtils.js" as DateUtils
+import "../../js/storage.js" as Storage
+import "../../js/DateUtils.js" as DateUtils
 
  /*
-    Item that display a meeting item retrieved from the database.
-    Used to diplay the search result for meetings with ANY people
-    (Note: a delegate object can access directly ath values in the dataModel)
+    Item that display a meeting with a SPECIFIC person
+    (Note: a delegate object can access directly a the values in the dataModel associated at the ListView or similar)
  */
  Item {
-        id: allPeopleMeetingFoundDelegate
-
         property string todayDateFormatted : DateUtils.formatFullDateToString(new Date());
-        /* workaround to specify the origin page: todaMeeting or SearchMeeting. FIXME: find better solution  */
-        property bool isFromTodayMeetingPage: false;   //isFromGlobalMeetingSearch
 
+        id: peopleMeetingFoundDelegate
         width: parent.width
-        height: units.gu(13) /* the heigth of the rectangle that contains an meeting in the list */
+        height: units.gu(13) /* the heigth of the rectangle that contains a meeting in the list */
 
-        /* container for each meeting */
+        /* meeting container */
         Rectangle {
             id: background
             x: 2;
@@ -39,6 +35,7 @@ import "./js/DateUtils.js" as DateUtils
 
         Component {
             id: confirmDeleteMeetingComponent
+
             Dialog {
                 id: confirmDeleteMeeting
                 title: i18n.tr("Confirmation")
@@ -51,42 +48,42 @@ import "./js/DateUtils.js" as DateUtils
                     color: UbuntuColors.green
                 }
 
-                Button {
-                    text: i18n.tr("Close")
-                    onClicked: {
-                        /* update */
-                        Storage.getTodayMeetings();
+                Row{
+                    spacing: units.gu(1)
+                    anchors.horizontalCenter: parent.horizontalCenter
 
-                        /* to refresh repeat the same user search */
-                        Storage.searchMeetingByTimeRange(searchAnyMeetingPage.dateFrom,searchAnyMeetingPage.dateTo,searchAnyMeetingPage.meetingStatus);
+                    Button {
+                        text: i18n.tr("Close")
+                        width: units.gu(14)
+                        onClicked: {
+                            /* refresh and repeat the user search */
+                            Storage.getTodayMeetings();
+                            Storage.searchMeetingByTimeAndPerson(searchMeetingWithPersonPage.personName,searchMeetingWithPersonPage.personSurname,searchMeetingWithPersonPage.dateFrom,searchMeetingWithPersonPage.dateTo,searchMeetingWithPersonPage.meetingStatus);
 
-                        PopupUtils.close(confirmDeleteMeeting)
-                    }
-                }
-
-                Button {
-                    id:executeButton
-                    text: i18n.tr("Execute")  //Delete
-
-                    onClicked: {
-
-                        var meetingId;
-                        /* depending on the source page, pick-up the meetingId from a different UbuntuListView */
-                        if(isFromTodayMeetingPage === true){
-                           meetingId = todayMeetingModel.get(todayMeetingResultList.currentIndex).id;
-                        }else{
-                           /* the 'id' of the currently selected meeting */
-                           meetingId = allPeopleMeetingFoundModel.get(allPeopleMeetingSearchResultList.currentIndex).id;
+                            PopupUtils.close(confirmDeleteMeeting)
                         }
+                    }
 
-                        Storage.deleteMeetingById(meetingId);
+                    Button {
+                        id:executeButton
+                        text: i18n.tr("Execute") //DELETE
+                        width: units.gu(14)
 
-                        operationResultLabel.text = i18n.tr("Operation executed successfully")
-                        executeButton.enabled = false;
+                        onClicked: {
+                            /* the 'id' of the selected meeting */
+                            var meetingId = meetingWithPersonFoundModel.get(meetingSearchResultList.currentIndex).id;
+                            Storage.deleteMeetingById(meetingId);
+                            /* refresh */
+                            Storage.getTodayMeetings();
+
+                            operationResultLabel.text = i18n.tr("Operation executed successfully")
+                            executeButton.enabled = false;
+                         }
                     }
                 }
             }
         }
+
 
         Component {
             id: confirmArchiveMeetingComponent
@@ -101,8 +98,7 @@ import "./js/DateUtils.js" as DateUtils
                     anchors.horizontalCenter: parent.Center
                     text: "<b>"+ i18n.tr("Mark as 'ARCHIVED' and leave it in the database ?")  +"</b><br/>"
                                 +"<br/>"+i18n.tr("(if you archive a meeting you can reuse it")+"<br/>"
-                                +i18n.tr("in the future simply updating it)")
-
+                                +i18n.tr("in the future simply updating the date)")
                 }
 
                 Label{
@@ -119,15 +115,10 @@ import "./js/DateUtils.js" as DateUtils
                         text: i18n.tr("Close")
                         width: units.gu(14)
                         onClicked: {
+                          // Storage.searchMeetingByTimeAndPerson(peopleMeetingFoundDelegate.personName,peopleMeetingFoundDelegate.personSurname,peopleMeetingFoundDelegate.dateFrom,peopleMeetingFoundDelegate.dateTo,peopleMeetingFoundDelegate.meetingStatus);
+                            Storage.searchMeetingByTimeAndPerson(searchMeetingWithPersonPage.personName,searchMeetingWithPersonPage.personSurname,searchMeetingWithPersonPage.dateFrom,searchMeetingWithPersonPage.dateTo,searchMeetingWithPersonPage.meetingStatus);
 
-                            if(isFromTodayMeetingPage === true){
-                               Storage.getTodayMeetings();
-                            }
-
-                            /* refresh re-executong the search */
-                            Storage.searchMeetingByTimeRange(searchAnyMeetingPage.dateFrom,searchAnyMeetingPage.dateTo,searchAnyMeetingPage.meetingStatus);
-
-                            PopupUtils.close(confirmArchiveMeeting)
+                           PopupUtils.close(confirmArchiveMeeting)
                         }
                     }
 
@@ -137,17 +128,10 @@ import "./js/DateUtils.js" as DateUtils
                         text: i18n.tr("Execute") //ARCHIVE
 
                         onClicked: {
+                            /* get the 'id' of the currently selected meeting */
+                            var meetingId = meetingWithPersonFoundModel.get(meetingSearchResultList.currentIndex).id;
 
-                            var meetingId;
-                            /* depending on the source page, pick-up the meetingId from a different UbuntuListView */
-                            if(isFromTodayMeetingPage === true){
-                               meetingId = todayMeetingModel.get(todayMeetingResultList.currentIndex).id;
-                            }else{
-                               /* the 'id' of the selected meeting */
-                               meetingId = allPeopleMeetingFoundModel.get(allPeopleMeetingSearchResultList.currentIndex).id;
-                            }
-
-                            Storage.updateMeetingStatus(meetingId,"ARCHIVED");
+                            Storage.updateMeetingStatus(meetingId,i18n.tr("ARCHIVED"));
 
                             operationResultLabel.text = i18n.tr("Operation executed successfully")
                             executeButton.enabled = false;
@@ -157,18 +141,14 @@ import "./js/DateUtils.js" as DateUtils
             }
         }
 
+
         /* This mouse region covers the entire delegate */
         MouseArea {
             id: selectableMouseArea
             anchors.fill: parent
             onClicked: {
-
-                 if(isFromTodayMeetingPage === true){
-                    todayMeetingResultList.currentIndex = index
-                 }else{
-                    /* move the highlight component to the currently selected item */
-                    allPeopleMeetingSearchResultList.currentIndex = index
-                }
+                /* move the highlight component to the currently selected item */
+                meetingSearchResultList.currentIndex = index
             }
         }
 
@@ -183,16 +163,16 @@ import "./js/DateUtils.js" as DateUtils
 
             Column {
                 width: background.width - 10 - editMeetingColumn.width;
-                height: allPeopleMeetingFoundDelegate.height
+                height: peopleMeetingFoundDelegate.height
                 spacing: units.gu(0.2)
 
                 Label {
-                      text: "<b>"+i18n.tr("Name")+": "+"</b>"+name +"   <b>"+i18n.tr("Surname")+": </b>"+ surname
+                      text: "<b>"+i18n.tr("Name")+": </b>"+name +"   <b>"+i18n.tr("Surname")+": </b>"+ surname
                       fontSize: "medium"
                 }
 
                 Label {
-                    text: "<b>"+i18n.tr("Date")+"(yyyy-mm-dd): </b>"+date.split(' ')[0] + "  <b>"+i18n.tr("Time")+": </b>"+date.split(' ')[1]
+                    text: "<b>"+i18n.tr("Date")+" (yyyy-mm-dd): </b>"+date.split(' ')[0] + "  <b>"+i18n.tr("Time")+": </b>"+date.split(' ')[1]
                     fontSize: "medium"
                 }
 
@@ -230,7 +210,7 @@ import "./js/DateUtils.js" as DateUtils
                 spacing: units.gu(1)
 
                 Row{
-                    /* note: use Icon Object insted of Image to access at sytem default icon without specify a full path to image */
+                    /* note: use Icon Object insted of Image to access at system default icon without specify a full path to image */
                     Icon {
                         id: editMeetingIcon
                         width: units.gu(3)
@@ -242,13 +222,7 @@ import "./js/DateUtils.js" as DateUtils
                             height: editMeetingIcon.height
                             onClicked: {
 
-                                /* workaround to get the source page */
-                                var sourcePage = searchAnyMeetingPage;
-                                if(isFromTodayMeetingPage === true){
-                                    sourcePage = todayMeetingPage;
-                                }
-
-                                adaptivePageLayout.addPageToNextColumn(sourcePage, editMeetingPage,
+                                adaptivePageLayout.addPageToNextColumn(searchMeetingWithPersonPage, editMeetingPage,
                                                                        {
                                                                           /* <page-variable-name>:<property-value-to-pass> */
                                                                           id:id,
@@ -257,17 +231,18 @@ import "./js/DateUtils.js" as DateUtils
                                                                           subject:subject,
                                                                           date:date,
                                                                           place:place,
-                                                                          status: meetingStatusLabel.text,
+                                                                          status:status,
                                                                           note:note,
-                                                                          isFromGlobalMeetingSearch:true,
-                                                                          dateFrom:searchAnyMeetingPage.dateFrom,
-                                                                          dateTo:searchAnyMeetingPage.dateTo,
-                                                                          meetingStatus:searchAnyMeetingPage.meetingStatus
+                                                                          isFromGlobalMeetingSearch:searchMeetingWithPersonPage.isFromGlobalMeetingSearch,
+                                                                          dateFrom:searchMeetingWithPersonPage.dateFrom,
+                                                                          dateTo:searchMeetingWithPersonPage.dateTo,
+                                                                          meetingStatus:searchMeetingWithPersonPage.meetingStatus
                                                                         }
                                                                        )
 
                              }
                         }
+
                     }
                 }
 
@@ -282,10 +257,10 @@ import "./js/DateUtils.js" as DateUtils
                               width: deleteMeetingIcon.width
                               height: deleteMeetingIcon.height
                               onClicked: {
-                                 PopupUtils.open(confirmDeleteMeetingComponent);
+                                  PopupUtils.open(confirmDeleteMeetingComponent);
                               }
                          }
-                      }
+                    }
                 }
 
                 Row{
@@ -300,18 +275,17 @@ import "./js/DateUtils.js" as DateUtils
                               width: archiveMeetingIcon.width
                               height: archiveMeetingIcon.height
                               onClicked: {
-                                 PopupUtils.open(confirmArchiveMeetingComponent);
+                                  PopupUtils.open(confirmArchiveMeetingComponent);
                               }
                          }
-                     }
-                     /* if the meeting is already marked as ARCHIVED hide the icons */
-                     Component.onCompleted: {
-                          if (status ===i18n.tr("ARCHIVED")){
-                              archiveMeetingRow.visible = false
-                         }
-                     }
+                      }
+                      /* if the meeting is already marked as ARCHIVED hide the icons */
+                      Component.onCompleted: {
+                            if (status ==="ARCHIVED"){
+                                archiveMeetingRow.visible = false
+                           }
+                      }
                 }
-
             }
         }
     }

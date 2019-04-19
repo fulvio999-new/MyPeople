@@ -12,8 +12,8 @@ import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
 /* note: alias name must have first letter in upperCase */
-import "./js/utility.js" as Utility
-import "./js/storage.js" as Storage
+import "../../js/utility.js" as Utility
+import "../../js/storage.js" as Storage
 
 
 //----------------- SEARCH MEETINGS with ANY People ------------------
@@ -27,7 +27,7 @@ Page {
         /* the values chosen in the search meeting form */
         property string dateFrom;
         property string dateTo;
-        property string meetingStatus;      
+        property string meetingStatus;
 
         UbuntuListView {
             id: allPeopleMeetingSearchResultList

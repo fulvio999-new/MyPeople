@@ -3,8 +3,11 @@ import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Components.Pickers 1.3
 
-import "./js/utility.js" as Utility
-import "./js/storage.js" as Storage
+import "../../js/utility.js" as Utility
+import "../../js/storage.js" as Storage
+
+/* import folder */
+import "../meeting"
 
 /*
     Component that display a Person item retrieved from the Database and inserted in a ListItem (See Main.qml)
@@ -117,7 +120,7 @@ Component {
                             height: editExpenseIcon.height
                             onClicked: {
 
-                                adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("AddMeetingWithPersonPage.qml"),
+                                adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("../meeting/AddMeetingWithPersonPage.qml"),
                                                                         {
                                                                             /* <variable-name>:<property-value> */
                                                                             id:id,
@@ -147,7 +150,7 @@ Component {
                             height: deleteExpenseIcon.height
                             onClicked: {
 
-                                adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("SearchMeetingWithPersonPage.qml"),
+                                adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("../meeting/SearchMeetingWithPersonPage.qml"),
                                                                         {
                                                                             /* <variable-name>:<property-value> */
                                                                             id:id,

@@ -11,11 +11,14 @@ import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
 /* note: alias name must have first letter in upperCase */
-import "./js/utility.js" as Utility
-import "./js/storage.js" as Storage
+import "../../js/utility.js" as Utility
+import "../../js/storage.js" as Storage
 
 /* import folder */
-import "./utils"
+import "../../utils"
+
+/* import folder */
+import "../meeting"
 
 /*
    Primary page loaded on startup by AdaptiveLayout. Show a list of saved persons and search form
@@ -33,7 +36,7 @@ Page{
                 iconName: "help"
                 text: i18n.tr("Help")
                 onTriggered:{
-                    PopupUtils.open(Qt.resolvedUrl("AboutProduct.qml"))
+                    PopupUtils.open(Qt.resolvedUrl("../common/AboutProduct.qml"))
                 }
             }
         ]
@@ -69,7 +72,7 @@ Page{
                 iconName: "settings"
                 text: i18n.tr("Settings")
                 onTriggered:{
-                    adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("ConfigurationPage.qml") )
+                    adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("../common/ConfigurationPage.qml") )
                 }
             }
         ]
@@ -194,7 +197,7 @@ Page{
                                 meetingWithPersonFoundModel.clear();
                                 allPeopleMeetingFoundModel.clear();
                                                                        //sintax: (current-page, page to add)
-                                adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("SearchAnyMeetingPage.qml"));
+                                adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("../meeting/SearchAnyMeetingPage.qml"));
                             }
                         }
                     }
@@ -219,12 +222,12 @@ Page{
                                     id:todayBirthdayImage
                                     width: 50; height:50
                                     fillMode: Image.PreserveAspectFit
-                                    source: Qt.resolvedUrl("images/birthday.png")
+                                    source: Qt.resolvedUrl("../../images/birthday.png")
                                 }
 
                                 onClicked: {
                                     Storage.getTodayBirthDays();
-                                    adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("TodayBirthdayPage.qml"))
+                                    adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("../birthday/TodayBirthdayPage.qml"))
                                 }
                             }
 
@@ -242,12 +245,12 @@ Page{
                                     id:todayMeetingImage
                                     width: 60; height:60
                                     fillMode: Image.PreserveAspectFit
-                                    source:  Qt.resolvedUrl("images/meeting.png")
+                                    source:  Qt.resolvedUrl("../../images/meeting.png")
                                 }
 
                                 onClicked: {
                                     Storage.getTodayMeetings();
-                                    adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("TodayMeetingPage.qml"))
+                                    adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("../meeting/TodayMeetingPage.qml"))
                                 }
                             }
 
@@ -256,7 +259,6 @@ Page{
                                 text: i18n.tr("Today")+": "+ todayMeetingModel.count
                             }
                         }
-
                     }
                 }
             }

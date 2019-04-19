@@ -2,7 +2,7 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 
-import "./js/utility.js" as Utility
+import "../../js/utility.js" as Utility
 
 /* General info about the application and Help page */
 Dialog {

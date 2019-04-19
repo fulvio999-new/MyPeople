@@ -8,17 +8,15 @@ import Ubuntu.Layouts 1.0
 import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
-import "./js/storage.js" as Storage
-
+import "../../js/storage.js" as Storage
 
 /*
-    Search meetings with ANY people inside a date range
+  Search for meetings ONLY with a specific person in the user provide time range
 */
 Column{
-
-    id: searchMeetingColum
-    anchors.fill: parent
-    spacing: units.gu(3)
+     id: searchMeetingWithPeopleColum
+     anchors.fill: parent
+     spacing: units.gu(3)
 
     /* transparent placeholder: required to place the content under the header */
     Rectangle {
@@ -29,12 +27,11 @@ Column{
 
     /* label to show search result */
     Row{
-        id: expenseFoundTitle
-        x: searchMeetingColum.width/3
+        id: meetingFoundTitle
+        x: searchMeetingWithPeopleColum.width/3
         Label{
             id: meetingFoundLabel
-            /* using the 'count' field of the Listview instead of ListModel we have an auto-refresh wen a meeting is deleted */
-            text : "<b>"+i18n.tr("Found")+": </b>"+ allPeopleMeetingSearchResultList.count +"<b>"+i18n.tr("meeting(s) (listed in chronological order)")+"</b>"
+            text: "<b>"+i18n.tr("Found")+": </b>"+ meetingSearchResultList.count +"<b> "+i18n.tr("meeting(s) (listed in chronological order)")+"</b>"
         }
     }
 
@@ -50,12 +47,11 @@ Column{
         }
 
         /*
-           A PopOver containing a DatePicker, necessary use a PopOver a container due to a bug on setting minimum date
+           A PopOver containing a DatePicker, is necessary due to a "bug" on setting minimum date
            with a simple DatePicker Component
-        */
-        Component {
+       */
+       Component {
             id: popoverDateFromPickerComponent
-
             Popover {
                 id: popoverDateFromPicker
 
@@ -91,7 +87,7 @@ Column{
             text: i18n.tr("To")+":"
         }
 
-        /* a PopOver containing a DatePicker, necessary use a PopOver a container due to a bug on setting minimum date
+        /* A PopOver containing a DatePicker is necessary due to a "bug" on setting minimum date
            with a simple DatePicker Component
         */
         Component {
@@ -126,8 +122,8 @@ Column{
         }
 
         Component {
-             id: meetingTypeSelectorDelegate
-             OptionSelectorDelegate { text: name; subText: description; }
+            id: meetingTypeSelectorDelegate
+            OptionSelectorDelegate { text: name; subText: description; }
         }
 
         /* The meeting status shown in the combo box */
@@ -137,9 +133,9 @@ Column{
 
         /* fill listmodel using this method because allow you to use i18n */
         Component.onCompleted: {
-            meetingTypeModel.append( { name: "<b>"+i18n.tr("Scheduled")+"</b>", description: i18n.tr("meetings to participate"), value:1 } );
-            meetingTypeModel.append( { name: "<b>"+i18n.tr("Archived")+"</b>", description: i18n.tr("participated old meetings"), value:2 } );
-       }
+             meetingTypeModel.append( { name: "<b>"+i18n.tr("Scheduled")+"</b>", description: i18n.tr("meetings to participate"), value:1 } );
+             meetingTypeModel.append( { name: "<b>"+i18n.tr("Archived")+"</b>", description: i18n.tr("participated old meetings"), value:2 } );
+        }
 
         Label {
             id: meetingStatusItemSelectorLabel
@@ -160,23 +156,24 @@ Column{
         }
 
         Button {
-            id: searchMeetingButton
+            id: searchExpenseButton
             text: i18n.tr("Search")
             color: UbuntuColors.orange
             onClicked: {
+
                 var meetingStatus = "SCHEDULED";
 
                 if (meetingTypeModel.get(meetingTypeItemSelector.selectedIndex).value === 2) {
-                   meetingStatus = "ARCHIVED";
+                   meetingStatus = "ARCHIVED"
                 }
 
-               /* search meetings and fill the ListModel to display */
-               Storage.searchMeetingByTimeRange(meetingDateFromButton.text,meetingDateToButton.text,meetingStatus);
+                Storage.searchMeetingByTimeAndPerson(searchMeetingWithPersonPage.personName,searchMeetingWithPersonPage.personSurname,meetingDateFromButton.text,meetingDateToButton.text,meetingStatus);
 
-               searchAnyMeetingPage.dateFrom = meetingDateFromButton.text;
-               searchAnyMeetingPage.dateTo = meetingDateToButton.text;
-               searchAnyMeetingPage.meetingStatus = meetingStatus;
-             }
-          }
+                searchMeetingWithPersonPage.dateFrom = meetingDateFromButton.text;
+                searchMeetingWithPersonPage.dateTo = meetingDateToButton.text;
+                searchMeetingWithPersonPage.meetingStatus = meetingStatus;
+                searchMeetingWithPersonPage.isFromGlobalMeetingSearch = false;
+            }
         }
+      }
 }

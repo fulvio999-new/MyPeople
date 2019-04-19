@@ -9,9 +9,9 @@ import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
 /* note: alias name must have first letter in upperCase */
-import "./js/utility.js" as Utility
-import "./js/storage.js" as Storage
-import "./js/DateUtils.js" as DateUtils
+import "../../js/utility.js" as Utility
+import "../../js/storage.js" as Storage
+import "../../js/DateUtils.js" as DateUtils
 
 /*
   For TABLET: Component that allow to edit an already saved Meeting chosen from a ListModel

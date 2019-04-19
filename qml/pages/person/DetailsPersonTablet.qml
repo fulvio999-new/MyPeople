@@ -9,11 +9,11 @@ import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
 /* note: alias name must have first letter in upperCase */
-import "./js/utility.js" as Utility
-import "./js/storage.js" as Storage
+import "../../js/utility.js" as Utility
+import "../../js/storage.js" as Storage
 
 /* import folder */
-import "./dialogs"
+import "../../dialogs"
 
 /*
  Used in Main.qml to show the details of a selectd Person/contact in the contacts List. Used for Tablet

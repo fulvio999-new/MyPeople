@@ -1,15 +1,15 @@
 {
     "name": "mypeople.fulvio999",
-    "description": "A simple archiver, manager for contacts, people and friends",
+    "description": "A simple offline archiver, manager for contacts, people and friends",
     "architecture": "all",
     "title": "MyPeople",
     "hooks": {
         "MyPeople": {
-            "apparmor": "MyPeople/MyPeople.apparmor",
-            "desktop": "MyPeople/MyPeople.desktop"
+            "apparmor": "MyPeople.apparmor",
+            "desktop":  "MyPeople.desktop"
         }
     },
-    "version": "1.7.2",
-    "maintainer": "fulvio999 <fulvio999@gmail.com>",
-    "framework": "ubuntu-sdk-16.04"
+    "version": "1.7.3",
+    "maintainer": "fulvio <fulvio999@gmail.com>",
+    "framework" : "ubuntu-sdk-16.04"
 }

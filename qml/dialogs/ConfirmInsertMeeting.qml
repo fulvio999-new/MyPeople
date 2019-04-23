@@ -33,7 +33,7 @@ Dialog {
 
             PopupUtils.open(operationResultDialogue)
 
-            adaptivePageLayout.removePages(addMeetingWithPersonPage)
+            adaptivePageLayout.removePages(createMeetingWithPersonPage)
         }
     }
 }

@@ -17,8 +17,6 @@ import "./js/storage.js" as Storage
 
 /* import folder */
 import "./utils"
-
-/* import folder */
 import "./dialogs"
 import "./pages/meeting"
 import "./pages/person"

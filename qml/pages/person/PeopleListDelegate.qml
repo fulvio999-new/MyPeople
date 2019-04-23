@@ -120,7 +120,7 @@ Component {
                             height: editExpenseIcon.height
                             onClicked: {
 
-                                adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("../meeting/AddMeetingWithPersonPage.qml"),
+                                adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("../meeting/CreateMeetingWithPersonPage.qml"),
                                                                         {
                                                                             /* <variable-name>:<property-value> */
                                                                             id:id,

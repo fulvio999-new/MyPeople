@@ -14,9 +14,11 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
 import "../../js/utility.js" as Utility
 import "../../js/storage.js" as Storage
 
-//------------ ADD A NEW MEETING WITH the selected person ------------
+/*
+   CREATE A NEW MEETING WITH the selected person in the People listed
+*/
 Page{
-    id:addMeetingWithPersonPage
+    id:createMeetingWithPersonPage
 
     anchors.fill: parent
 
@@ -27,19 +29,19 @@ Page{
 
     header: PageHeader {
         id: headerAddMeetingPage
-        title: i18n.tr("Create a meeting with")+ ": " + "<b>"+addMeetingWithPersonPage.personName + " "+addMeetingWithPersonPage.personSurname+"<\b>"
+        title: i18n.tr("Create a meeting with")+ ": " + "<b>"+createMeetingWithPersonPage.personName + " "+createMeetingWithPersonPage.personSurname+"<\b>"
     }
 
     /* to have a scrollable column when the keyboard cover some input field */
     Flickable {
-        id: addMeetingWithPersonPageFlickable
+        id: createMeetingWithPersonPageFlickable
         clip: true
         contentHeight: Utility.getContentHeight()
         anchors {
             top: parent.top
             left: parent.left
             right: parent.right
-            bottom: addMeetingWithPersonPage.bottom
+            bottom: createMeetingWithPersonPage.bottom
             bottomMargin: units.gu(2)
         }
 
@@ -54,17 +56,17 @@ Page{
                     name: "detailsContactLayout"
                     when: root.width > units.gu(80)
 
-                        NewMeetingTablet{}
+                        InsertMeetingFormTablet{}
                 }
             ]
             //else
-            NewMeetingPhone{}
+            InsertMeetingFormPhone{}
         }
     }
 
     /* To show a scrollbar on the side */
     Scrollbar {
-        flickableItem: addMeetingWithPersonPageFlickable
+        flickableItem: createMeetingWithPersonPageFlickable
         align: Qt.AlignTrailing
     }
 }

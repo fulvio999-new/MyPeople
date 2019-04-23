@@ -169,7 +169,7 @@ Column{
                    meetingStatus = "ARCHIVED";
                 }
 
-                /* search meetings and fill the ListModel to display */
+                /* search meetings with any people and fill the ListModel to display */
                 Storage.searchMeetingByTimeRange(meetingDateFromButton.text,meetingDateToButton.text,meetingStatus);
 
                 searchAnyMeetingPage.dateFrom = meetingDateFromButton.text;

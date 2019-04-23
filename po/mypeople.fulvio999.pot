@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mypeople.fulvio999\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-23 15:29+0000\n"
+"POT-Creation-Date: 2019-04-23 15:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -105,7 +105,7 @@ msgstr ""
 #: ../qml/pages/person/DetailsPersonPhone.qml:386
 #: ../qml/pages/person/DetailsPersonTablet.qml:377
 #: ../qml/pages/common/AppConfigurationPhone.qml:219
-#: ../qml/pages/common/AppConfigurationTablet.qml:212
+#: ../qml/pages/common/AppConfigurationTablet.qml:216
 msgid "Delete"
 msgstr ""
 
@@ -448,7 +448,7 @@ msgstr ""
 #: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:46
 #: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:46
 #: ../qml/pages/meeting/MeetingListGlobalTablet.qml:48
-#: ../qml/pages/common/AppConfigurationTablet.qml:100
+#: ../qml/pages/common/AppConfigurationTablet.qml:104
 msgid "From"
 msgstr ""
 
@@ -457,7 +457,7 @@ msgstr ""
 #: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:87
 #: ../qml/pages/meeting/MeetingListGlobalTablet.qml:90
 #: ../qml/pages/common/AppConfigurationPhone.qml:141
-#: ../qml/pages/common/AppConfigurationTablet.qml:141
+#: ../qml/pages/common/AppConfigurationTablet.qml:145
 msgid "To"
 msgstr ""
 
@@ -466,7 +466,7 @@ msgstr ""
 #: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:136
 #: ../qml/pages/meeting/MeetingListGlobalTablet.qml:139
 #: ../qml/pages/common/AppConfigurationPhone.qml:191
-#: ../qml/pages/common/AppConfigurationTablet.qml:187
+#: ../qml/pages/common/AppConfigurationTablet.qml:191
 msgid "Scheduled"
 msgstr ""
 
@@ -475,7 +475,7 @@ msgstr ""
 #: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:136
 #: ../qml/pages/meeting/MeetingListGlobalTablet.qml:139
 #: ../qml/pages/common/AppConfigurationPhone.qml:191
-#: ../qml/pages/common/AppConfigurationTablet.qml:187
+#: ../qml/pages/common/AppConfigurationTablet.qml:191
 msgid "meetings to participate"
 msgstr ""
 
@@ -486,7 +486,7 @@ msgstr ""
 #: ../qml/pages/common/AppConfigurationPhone.qml:65
 #: ../qml/pages/common/AppConfigurationPhone.qml:192
 #: ../qml/pages/common/AppConfigurationTablet.qml:66
-#: ../qml/pages/common/AppConfigurationTablet.qml:188
+#: ../qml/pages/common/AppConfigurationTablet.qml:192
 msgid "Archived"
 msgstr ""
 
@@ -495,7 +495,7 @@ msgstr ""
 #: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:137
 #: ../qml/pages/meeting/MeetingListGlobalTablet.qml:140
 #: ../qml/pages/common/AppConfigurationPhone.qml:192
-#: ../qml/pages/common/AppConfigurationTablet.qml:188
+#: ../qml/pages/common/AppConfigurationTablet.qml:192
 msgid "participated old meetings"
 msgstr ""
 
@@ -506,7 +506,7 @@ msgstr ""
 #: ../qml/pages/meeting/MeetingListGlobalTablet.qml:146
 #: ../qml/pages/meeting/PeopleMeetingFoundDelegate.qml:191
 #: ../qml/pages/common/AppConfigurationPhone.qml:198
-#: ../qml/pages/common/AppConfigurationTablet.qml:195
+#: ../qml/pages/common/AppConfigurationTablet.qml:199
 msgid "Meeting status"
 msgstr ""
 
@@ -595,7 +595,7 @@ msgid "meeting(s)"
 msgstr ""
 
 #: ../qml/pages/common/AppConfigurationPhone.qml:87
-#: ../qml/pages/common/AppConfigurationTablet.qml:87
+#: ../qml/pages/common/AppConfigurationTablet.qml:91
 msgid "MAINTENANCE: delete old meetings"
 msgstr ""
 

@@ -74,6 +74,10 @@ Column{
 
                       /* update today meetings count */
                       Storage.getTodayMeetings();
+
+                      /* clean other ListModel */
+                      meetingWithPersonFoundModel.clear();
+                      allPeopleMeetingFoundModel.clear();
                   }
               }
           }

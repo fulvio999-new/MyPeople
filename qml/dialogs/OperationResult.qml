@@ -3,7 +3,7 @@ import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 
 
-/* Notify an operation executed successfully */
+/* Generic Dialog to notify an operation executed successfully */
 Dialog {
     id: operationResult
     title: i18n.tr("Operation Result")

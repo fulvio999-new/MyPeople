@@ -328,10 +328,10 @@ Column {
                     /* repeat the user search using the with the criteria provided in 'search all' o 'search with person' forms */
                     if(isFromGlobalMeetingSearch === false){
                         //console.log("Repeat Search for user specific");
-                        Storage.searchMeetingByTimeAndPerson(searchMeetingWithPersonPage.personName,searchMeetingWithPersonPage.personSurname,searchMeetingWithPersonPage.dateFrom,searchMeetingWithPersonPage.dateTo,searchMeetingWithPersonPage.meetingStatus);
+                        Storage.searchMeetingByTimeAndPerson(nameField.text,surnameField.text,dateFrom,dateTo,meetingStatusToSave);
                     }else{
                         //console.log("Repeat Search for ALL user meetings, dateFrom: "+dateFrom+ "dateTo: "+dateTo+ " status: "+meetingStatusToSave);
-                        //Storage.searchMeetingByTimeRange(searchAnyMeetingPage.dateFrom,searchAnyMeetingPage.dateTo,meetingStatusToSave);
+                        Storage.searchMeetingByTimeRange(dateFrom,dateTo,meetingStatusToSave);
                     }
 
                     adaptivePageLayout.removePages(editMeetingPage)

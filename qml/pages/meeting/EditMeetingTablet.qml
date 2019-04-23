@@ -315,10 +315,10 @@ Column {
                     /* update today meetings in case of the user has edited meeting date */
                     Storage.getTodayMeetings();
 
-                    /* repeat the user search depending with the user has made a all people meeting seartch or by pesron */
+                    /* repeat the user search depending on the serach type made by user: meeting with all people or meeting with specific person */
                     if(isFromGlobalMeetingSearch === false){
                         //console.log("Repeat Search for user specific");
-                        Storage.searchMeetingByTimeAndPerson(searchMeetingWithPersonPage.personName,searchMeetingWithPersonPage.personSurname,searchMeetingWithPersonPage.dateFrom,searchMeetingWithPersonPage.dateTo,searchMeetingWithPersonPage.meetingStatus);
+                        Storage.searchMeetingByTimeAndPerson(nameField.text,surnameField.text,dateFrom,dateTo,meetingStatusToSave);
                     }else{
                         //console.log("Repeat Search for ALL user meetings");
                         Storage.searchMeetingByTimeRange(dateFrom,dateTo,meetingStatusToSave);

@@ -33,9 +33,8 @@ Column{
         x: searchMeetingColum.width/3
         Label{
             id: meetingFoundLabel
-            /* using the 'count' field of the Listview instead of ListModel we have an auto-refresh wen a meeting is deleted */
-            text : "<b>"+i18n.tr("Found")+": </b>"+ allPeopleMeetingSearchResultList.count +"<b>"+i18n.tr("meeting(s) (listed in chronological order)")+"</b>"
-        }
+            text : " " //placeholder
+          }
     }
 
     Row{
@@ -170,12 +169,15 @@ Column{
                    meetingStatus = "ARCHIVED";
                 }
 
-               /* search meetings and fill the ListModel to display */
-               Storage.searchMeetingByTimeRange(meetingDateFromButton.text,meetingDateToButton.text,meetingStatus);
+                /* search meetings and fill the ListModel to display */
+                Storage.searchMeetingByTimeRange(meetingDateFromButton.text,meetingDateToButton.text,meetingStatus);
 
-               searchAnyMeetingPage.dateFrom = meetingDateFromButton.text;
-               searchAnyMeetingPage.dateTo = meetingDateToButton.text;
-               searchAnyMeetingPage.meetingStatus = meetingStatus;
+                searchAnyMeetingPage.dateFrom = meetingDateFromButton.text;
+                searchAnyMeetingPage.dateTo = meetingDateToButton.text;
+                searchAnyMeetingPage.meetingStatus = meetingStatus;
+
+                /* using the 'count' field of the Listview instead of ListModel we have an auto-refresh wen a meeting is deleted */
+                meetingFoundLabel.text = "<b>"+i18n.tr("Found")+": </b>"+ allPeopleMeetingSearchResultList.count +"<b> "+i18n.tr("meeting(s) (listed in chronological order)")+"</b>"
              }
           }
         }

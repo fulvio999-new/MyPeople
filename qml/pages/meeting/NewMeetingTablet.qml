@@ -242,13 +242,13 @@ Column {
             text: i18n.tr("Save")
             width: units.gu(18)
             onClicked: {
-                PopupUtils.open(confirmInsertDialog, saveButton,{text: i18n.tr("Save the new meeting ?")})
+                PopupUtils.open(confirmInsertMeetingDialog, saveButton,{text: i18n.tr("Save the new meeting ?")})
             }
         }
     }
 
     Component {
-        id: confirmInsertDialog
+        id: confirmInsertMeetingDialog
         ConfirmInsertMeeting{}
     }
 }

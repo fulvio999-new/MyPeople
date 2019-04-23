@@ -11,7 +11,7 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
 import "../../js/storage.js" as Storage
 
 /*
-  PHONE: Search for meetings ONLY with a specific person in the user provide time range
+  TABLET LAYOUT: Display the search result for the meeting search with a specific person in the provided time range
 */
 Column{
      id: searchMeetingWithPeopleColum
@@ -28,16 +28,16 @@ Column{
     /* label to show search result */
     Row{
         id: meetingFoundTitle
-        x: units.gu(3)
+        x: searchMeetingWithPeopleColum.width/3
         Label{
             id: meetingFoundLabel
-            text: "<b>"+i18n.tr("Found")+": </b>"+ meetingSearchResultList.count +"<b> "+i18n.tr("meeting(s) (listed in chronological order)")+"</b>"
+            text: " "
         }
     }
 
     Row{
         id: searchCriteriaRow
-        spacing: units.gu(1)
+        spacing: units.gu(1.1)
         x: units.gu(1)
 
         Label {
@@ -120,11 +120,6 @@ Column{
                 PopupUtils.open(popoverDateToPickerComponent, meetingDateToButton)
             }
         }
-    }
-
-    Row{
-        spacing: units.gu(1)
-        x: units.gu(1)
 
         Component {
             id: meetingTypeSelectorDelegate
@@ -133,23 +128,23 @@ Column{
 
         /* The meeting status shown in the combo box */
         ListModel {
-            id: meetingTypeModel
+             id: meetingTypeModel
         }
 
         /* fill listmodel using this method because allow you to use i18n */
         Component.onCompleted: {
-            meetingTypeModel.append( { name: "<b>"+i18n.tr("Scheduled")+"</b>", description: i18n.tr("meetings to participate"), value:1 } );
-            meetingTypeModel.append( { name: "<b>"+i18n.tr("Archived")+"</b>", description: i18n.tr("participated old meetings"), value:2 } );
+             meetingTypeModel.append( { name: "<b>"+i18n.tr("Scheduled")+"</b>", description: i18n.tr("meetings to participate"), value:1 } );
+             meetingTypeModel.append( { name: "<b>"+i18n.tr("Archived")+"</b>", description: i18n.tr("participated old meetings"), value:2 } );
         }
 
         Label {
             id: meetingStatusItemSelectorLabel
-            anchors.verticalCenter: meetingTypeItemSelector.Center
+            anchors.verticalCenter: meetingDateToButton.verticalCenter
             text: i18n.tr("Meeting status")+":"
         }
 
         Rectangle{
-            width: searchMeetingWithPeopleColum.width - meetingStatusItemSelectorLabel.width - units.gu(3)
+            width:units.gu(30)
             height:units.gu(7)
 
             ListItem.ItemSelector {
@@ -159,22 +154,17 @@ Column{
                 containerHeight: itemHeight * 3
             }
         }
-     }
 
-     Row{
-         x: searchMeetingWithPeopleColum.width/3
-
-         Button {
+        Button {
             id: searchExpenseButton
             text: i18n.tr("Search")
-            width:units.gu(18)
             color: UbuntuColors.orange
             onClicked: {
 
                 var meetingStatus = "SCHEDULED";
 
                 if (meetingTypeModel.get(meetingTypeItemSelector.selectedIndex).value === 2) {
-                    meetingStatus = "ARCHIVED"
+                   meetingStatus = "ARCHIVED"
                 }
 
                 Storage.searchMeetingByTimeAndPerson(searchMeetingWithPersonPage.personName,searchMeetingWithPersonPage.personSurname,meetingDateFromButton.text,meetingDateToButton.text,meetingStatus);
@@ -182,7 +172,10 @@ Column{
                 searchMeetingWithPersonPage.dateFrom = meetingDateFromButton.text;
                 searchMeetingWithPersonPage.dateTo = meetingDateToButton.text;
                 searchMeetingWithPersonPage.meetingStatus = meetingStatus;
+                searchMeetingWithPersonPage.isFromGlobalMeetingSearch = false;
+
+                meetingFoundLabel.text = "<b>"+i18n.tr("Found")+": </b>"+ meetingSearchResultList.count +"<b> "+i18n.tr("meeting(s) (listed in chronological order)")+"</b>"
             }
         }
-     }
+      }
 }

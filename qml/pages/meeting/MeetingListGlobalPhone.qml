@@ -12,7 +12,7 @@ import "../../js/storage.js" as Storage
 
 
 /*
-   PHONE: Search meetings with ANY people inside a user defined date range
+  PHONE LAYOUT: Display the search result for the meeting search with ANY person in the provided time range
 */
 Column{
 
@@ -150,7 +150,7 @@ Column{
 
         Label {
             id: meetingStatusItemSelectorLabel
-            anchors.verticalCenter: meetingTypeItemSelector.Center
+            anchors.verticalCenter: meetingDateToButton.verticalCenter
             text: i18n.tr("Meeting status")+":"
         }
 

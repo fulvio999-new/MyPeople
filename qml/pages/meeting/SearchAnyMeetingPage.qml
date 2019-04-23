@@ -16,7 +16,10 @@ import "../../js/utility.js" as Utility
 import "../../js/storage.js" as Storage
 
 
-//----------------- SEARCH MEETINGS with ANY People ------------------
+/*
+  Form to search meetings ** WITH ANY** person in the people list. 
+  User must provide a time range for the search operation
+*/
 Page {
         id: searchAnyMeetingPage
 
@@ -73,11 +76,11 @@ Page {
                 ConditionalLayout {
                     name: "addContactLayout"
                     when: root.width > units.gu(80)
-                    SearchMeetingGlobalTablet{}
+                    MeetingListGlobalTablet{}
                 }
             ]
             //else
-            SearchMeetingGlobalPhone{}
+            MeetingListGlobalPhone{}
         }
 
     /* To show a scrolbar on the side */

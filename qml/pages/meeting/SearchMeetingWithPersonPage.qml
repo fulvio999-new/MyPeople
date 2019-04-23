@@ -14,7 +14,10 @@ import Ubuntu.Components.ListItems 1.3 as ListItem
 import "../../js/utility.js" as Utility
 import "../../js/storage.js" as Storage
 
-//------------ SEARCH MEETINGS *ONLY WITH* THE SELECTED PERSON ------------
+/*
+  Form to search meetings **ONLY WITH** the currenlty selected person in the people list. 
+  User must provide a time range for the search operation
+*/
 Page{
     id:searchMeetingWithPersonPage
 
@@ -81,11 +84,11 @@ Page{
                     name: "detailsContactLayout"
                     when: root.width > units.gu(80)
 
-                        SearchMeetingWithPersonTablet{}
+                        MeetingListWithPersonTablet{}
                 }
            ]
            //else
-           SearchMeetingWithPersonPhone{}
+           MeetingListWithPersonPhone{}
      }
 
      /* To show a scrollbar on the side to scroll meeting search result list */

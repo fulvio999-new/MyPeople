@@ -242,13 +242,7 @@ import "../../js/DateUtils.js" as DateUtils
                             height: editMeetingIcon.height
                             onClicked: {
 
-                                /* workaround to get the source page */
-                                var sourcePage = searchAnyMeetingPage;
-                                if(isFromTodayMeetingPage === true){
-                                    sourcePage = todayMeetingPage;
-                                }
-
-                                adaptivePageLayout.addPageToNextColumn(sourcePage, editMeetingPage,
+                                adaptivePageLayout.addPageToNextColumn(searchAnyMeetingPage,Qt.resolvedUrl("EditMeetingPage.qml") ,
                                                                        {
                                                                           /* <page-variable-name>:<property-value-to-pass> */
                                                                           id:id,

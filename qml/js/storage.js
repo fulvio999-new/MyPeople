@@ -208,7 +208,7 @@ function getUUID(suffix){
         }
         );
 
-        //console.log("Found today Birthday: "+rs.rows.item(0).todayBirthday); 
+        //console.log("Found today Birthday: "+rs.rows.item(0).todayBirthday);
         return rs.rows.item(0).todayBirthday;
     }
 
@@ -269,7 +269,7 @@ function getUUID(suffix){
     }
 
     /* delete ALL meetings in the database, leaving the table empty.
-       Return the number of entry deleted
+       Clean the associated ListModel and return the number of entry deleted
     */
     function deleteAllMeeting(){
 
@@ -280,7 +280,10 @@ function getUUID(suffix){
         }
         );
 
-       return rs.rowsAffected;
+        allPeopleMeetingFoundModel.clear();
+        meetingWithPersonFoundModel.clear();
+
+        return rs.rowsAffected;
     }
 
 

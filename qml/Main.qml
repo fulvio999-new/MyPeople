@@ -133,71 +133,7 @@ MainView {
         /* mandatory field for AdaptivePageLayout */
         primaryPage: PeopleListPage{}
 
-        //------- Edit an existing Meeting with a specific Person -------------
-        Page{
-            id: editMeetingPage
-            anchors.fill: parent
-
-            /* meeting info to edit */
-            property string id; /* meetingId */
-            property string name;
-            property string surname;
-            property string subject;
-            property string date : "1970-01-01 00:00"; /* placeholder value */
-            property string place;
-            property string status; /* ie: TODO, ARCHIVED */
-            property string note;
-            property bool isFromGlobalMeetingSearch; /* true if the user has made meeting search with any people */
-            /* to repaeat the search */
-            property string dateFrom;
-            property string dateTo;
-            property string meetingStatus;
-
-            header: PageHeader {
-                id: headerEditExpensePage
-                title: i18n.tr("Edit meeting with") +": "+ "<b>" +editMeetingPage.name +" "+ editMeetingPage.surname+"</b>"
-            }
-
-            Flickable {
-                id: editMeetingPageFlickable
-                clip: true
-                contentHeight: Utility.getContentHeight()
-                anchors {
-                    top: parent.top
-                    left: parent.left
-                    right: parent.right
-                    bottom: editMeetingPage.bottom
-                    bottomMargin: units.gu(2)
-                }
-
-                /* Show the details of the selected meeting */
-                Layouts {
-                    id: layoutEditExpensePage
-                    width: parent.width
-                    height: parent.height
-                    layouts:[
-
-                        ConditionalLayout {
-                            name: "editMeetingLayout"
-                            when: root.width > units.gu(80)
-                            EditMeetingTablet{ meetingStatus:editMeetingPage.status;meetingDate:editMeetingPage.date;isFromGlobalMeetingSearch:editMeetingPage.isFromGlobalMeetingSearch;dateFrom:editMeetingPage.dateFrom;dateTo:editMeetingPage.dateTo}
-                        }
-                    ]
-                    //else
-                    EditMeetingPhone{ meetingStatus:editMeetingPage.status;meetingDate:editMeetingPage.date;isFromGlobalMeetingSearch:editMeetingPage.isFromGlobalMeetingSearch;dateFrom:editMeetingPage.dateFrom;dateTo:editMeetingPage.dateTo }
-                }
-            }
-
-            /* To show a scrolbar on the side */
-            Scrollbar {
-                flickableItem: editMeetingPageFlickable
-                align: Qt.AlignTrailing
-            }
-        }
-
-
     }
-
 
     /*
       USED ONLY FOR THE LEGACY MyPeople VERSIONS

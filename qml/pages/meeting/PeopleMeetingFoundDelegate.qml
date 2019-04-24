@@ -222,7 +222,7 @@ import "../../js/DateUtils.js" as DateUtils
                             height: editMeetingIcon.height
                             onClicked: {
 
-                                adaptivePageLayout.addPageToNextColumn(searchMeetingWithPersonPage, editMeetingPage,
+                                adaptivePageLayout.addPageToNextColumn(searchMeetingWithPersonPage, Qt.resolvedUrl("EditMeetingPage.qml"),
                                                                        {
                                                                           /* <page-variable-name>:<property-value-to-pass> */
                                                                           id:id,

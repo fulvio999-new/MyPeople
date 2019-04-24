@@ -14,7 +14,7 @@ import "../../js/storage.js" as Storage
 import "../../js/DateUtils.js" as DateUtils
 
 /*
-  For TABLET: Component that allow to edit an already saved Meeting chosen from a ListModel
+  Content of the EditMeeting page for PHONES
 */
 Column {
 

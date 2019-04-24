@@ -173,7 +173,6 @@ Column{
          }
 
          Row{
-
              spacing: units.gu(1)
               //----------- meeting status selector --------------
               Component {
@@ -194,7 +193,7 @@ Column{
 
               Label {
                   id: meetingStatusItemSelectorLabel
-                  anchors.verticalCenter: meetingTypeItemSelector.Center
+                  anchors.verticalCenter: dateToButton.verticalCenter
                   text: i18n.tr("Meeting status")+":"
               }
 

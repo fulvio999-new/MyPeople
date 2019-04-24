@@ -29,3 +29,37 @@ function formatSimpleDateToString(date)
 
   return (yyyy + "-" + MM + "-" + dd);
 }
+
+
+/* Return the todayDate with UTC values set to zero */
+function getTodayDate(){
+
+        var today = new Date();
+        //today.setUTCHours(0);
+        //today.setUTCMinutes(0);
+        today.setUTCSeconds(0);
+        today.setUTCMilliseconds(0);
+
+        return today;
+}
+
+/*
+  Return true if the chosen meeting date is NOT before today. That means that user is creating an expired meeting,
+ is necessary notify That
+*/
+function isMeetingDateValid(chosenMeetingDate, chosenMeetingHour){
+
+    var todayDate = DateUtils.getTodayDate();
+
+    var meetingDate = new Date(chosenMeetingDate);
+    meetingDate.setHours(chosenMeetingHour.split(':')[0]);
+    meetingDate.setMinutes(chosenMeetingHour.split(':')[1]);
+    meetingDate.setSeconds(0);
+    meetingDate.setMilliseconds(0);
+
+    if(meetingDate <= todayDate){
+       return false;
+    }else{
+       return true;
+    }
+}

@@ -358,7 +358,7 @@ Column {
     }
 
     Row{
-        x: noteLabel.width + units.gu(6)
+        anchors.horizontalCenter: parent.horizontalCenter
         spacing: units.gu(2)
 
         Button {
@@ -376,6 +376,7 @@ Column {
             objectName: "Delete"
             text: i18n.tr("Delete")
             width: units.gu(18)
+            color: UbuntuColors.red
             onClicked: {
                 PopupUtils.open(confirmDeleteDialog, deleteButton,{text: i18n.tr("Delete person AND his meetings ?")})
             }

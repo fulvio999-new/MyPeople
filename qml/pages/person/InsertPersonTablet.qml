@@ -302,7 +302,7 @@ Column{
 
     //------------- Command buttom -------------
     Row{
-        x: newNoteLabel.width + units.gu(6)
+        anchors.horizontalCenter: parent.horizontalCenter
 
         Button {
             id: addButton

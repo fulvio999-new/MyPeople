@@ -323,6 +323,7 @@ Column{
 
     //------------- Command buttom -------------
     Row{
+       anchors.horizontalCenter: parent.horizontalCenter
 
         Rectangle {
             color: "transparent"

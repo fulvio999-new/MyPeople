@@ -362,6 +362,7 @@ Column {
 
     //------------- Command buttoms -------------
     Row{
+        anchors.horizontalCenter: parent.horizontalCenter
         spacing: units.gu(2)
 
         Rectangle {
@@ -375,6 +376,7 @@ Column {
             objectName: "Update"
             text: i18n.tr("Update")
             width: units.gu(12)
+            color: UbuntuColors.red
             onClicked: {
                 PopupUtils.open(confirmUpdateDialog,updateButton,{text: i18n.tr("Confirm the update ?")})
             }

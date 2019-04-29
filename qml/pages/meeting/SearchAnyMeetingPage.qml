@@ -17,7 +17,7 @@ import "../../js/storage.js" as Storage
 
 
 /*
-  Form to search meetings ** WITH ANY** person in the people list. 
+  Form to search meetings ** WITH ANY** person in the people list.
   User must provide a time range for the search operation
 */
 Page {
@@ -75,7 +75,7 @@ Page {
 
                 ConditionalLayout {
                     name: "addContactLayout"
-                    when: root.width > units.gu(80)
+                    when: root.width > units.gu(120)
                     MeetingListGlobalTablet{}
                 }
             ]

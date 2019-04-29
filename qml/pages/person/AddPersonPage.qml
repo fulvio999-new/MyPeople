@@ -46,7 +46,7 @@ Page {
 
                 ConditionalLayout {
                     name: "addContactLayout"
-                    when: root.width > units.gu(80)
+                    when: root.width > units.gu(120)
                     InsertPersonTablet{}
                 }
             ]

@@ -68,7 +68,7 @@ Page{
 
                 ConditionalLayout {
                     name: "detailsContactLayout"
-                    when: root.width > units.gu(80)
+                    when: root.width > units.gu(120)
 
                         DetailsPersonTablet{}
                 }
@@ -80,7 +80,7 @@ Page{
 
     /* To show a scrollbar on the side */
     Scrollbar {
-        flickableItem: layoutsDetailsContact
+        flickableItem: personDetailsFlickable
         align: Qt.AlignTrailing
     }
 }

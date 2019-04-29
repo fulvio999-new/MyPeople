@@ -30,7 +30,7 @@ Page {
 
              ConditionalLayout {
                  name: "layoutsConfiguration"
-                 when: root.width > units.gu(50)
+                 when: root.width > units.gu(120)
                  AppConfigurationTablet{}
              }
          ]

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mypeople.fulvio999\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-29 12:04+0000\n"
+"POT-Creation-Date: 2019-04-29 12:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -559,7 +559,7 @@ msgstr ""
 msgid "in the future simply updating it)"
 msgstr ""
 
-#: ../qml/pages/meeting/EditMeetingPage.qml:38
+#: ../qml/pages/meeting/EditMeetingPage.qml:39
 msgid "Edit meeting with"
 msgstr ""
 

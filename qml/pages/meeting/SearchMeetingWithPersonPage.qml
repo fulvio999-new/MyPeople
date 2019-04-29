@@ -82,7 +82,7 @@ Page{
 
                 ConditionalLayout {
                     name: "detailsContactLayout"
-                    when: root.width > units.gu(80)
+                    when: root.width > units.gu(120)
 
                         MeetingListWithPersonTablet{}
                 }

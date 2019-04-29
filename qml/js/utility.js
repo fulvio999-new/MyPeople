@@ -47,9 +47,9 @@ function getContentHeight(){
 function getPageHeight(pageHeight){
 
     if(root.width > units.gu(80))
-        return pageHeight.height + units.gu(20)
+        return pageHeight.height + pageHeight.height/2 + units.gu(20)
     else
-        return pageHeight.height + units.gu(30) //phone
+        return pageHeight.height + pageHeight.height/2 + units.gu(10) //phone
 }
 
 /* Depending on the Page widht of the Page (ie: the Device type) decide the Height of the scrollable */

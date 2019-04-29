@@ -9,11 +9,12 @@ import QtQuick.LocalStorage 2.0
 import Ubuntu.Components.ListItems 1.3 as ListItem
 
 import "../../js/storage.js" as Storage
+import "../../js/utility.js" as Utility
 
 
 /*
   Edit an existing Meeting
-*/  
+*/
 Page{
     id: editMeetingPage
     anchors.fill: parent
@@ -41,7 +42,7 @@ Page{
     Flickable {
         id: editMeetingPageFlickable
         clip: true
-        contentHeight: Utility.getContentHeight()
+        contentHeight: Utility.getPageHeight(editMeetingPage)
         anchors {
             top: parent.top
             left: parent.left
@@ -59,7 +60,7 @@ Page{
 
                 ConditionalLayout {
                     name: "editMeetingLayout"
-                    when: root.width > units.gu(80)
+                    when: root.width > units.gu(120)
                     EditMeetingTablet{ meetingStatus:editMeetingPage.status;meetingDate:editMeetingPage.date;isFromGlobalMeetingSearch:editMeetingPage.isFromGlobalMeetingSearch;dateFrom:editMeetingPage.dateFrom;dateTo:editMeetingPage.dateTo}
                 }
             ]

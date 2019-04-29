@@ -362,7 +362,7 @@ Column {
 
     //------------- Command buttoms -------------
     Row{
-        anchors.horizontalCenter: personDetailsPage.horizontalCenter
+        anchors.horizontalCenter: personDetailPageLayout.horizontalCenter
         spacing: units.gu(2)
 
         Rectangle {

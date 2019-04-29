@@ -215,10 +215,11 @@ Column{
 
               Button {
                   id: confirmDeleteButton
+                  anchors.verticalCenter: dateToButton.verticalCenter
                   text:  i18n.tr("Delete")
                   iconName: "delete"
                   width: units.gu(18)
-                  color: UbuntuColors.orange
+                  color: UbuntuColors.red
                   onClicked: {
                      PopupUtils.open(confirmDeleteDialogueComponent, confirmDeleteButton)
                   }

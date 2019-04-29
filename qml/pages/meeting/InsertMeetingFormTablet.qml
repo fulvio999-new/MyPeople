@@ -240,6 +240,7 @@ Column {
             id: saveButton
             objectName: "save"
             text: i18n.tr("Save")
+            color: UbuntuColors.orange
             width: units.gu(18)
             onClicked: {
                 PopupUtils.open(confirmInsertMeetingDialog, saveButton,{text: i18n.tr("Save the new meeting ?")})

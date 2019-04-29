@@ -162,6 +162,7 @@ Column{
 
         Button {
             id: searchExpenseButton
+            anchors.verticalCenter: dateToButton.verticalCenter
             text: i18n.tr("Search")
             color: UbuntuColors.orange
             onClicked: {

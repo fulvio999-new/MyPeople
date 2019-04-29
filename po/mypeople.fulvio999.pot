@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mypeople.fulvio999\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-29 09:47+0000\n"
+"POT-Creation-Date: 2019-04-29 10:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,8 +51,8 @@ msgstr ""
 
 #: ../qml/utils/DatabaseImporter.qml:66 ../qml/utils/DatabaseImporter.qml:71
 #: ../qml/pages/meeting/MeetingListGlobalPhone.qml:197
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:191
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:182
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:192
+#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:183
 #: ../qml/pages/meeting/MeetingListGlobalTablet.qml:185
 msgid "Found"
 msgstr ""
@@ -104,8 +104,8 @@ msgstr ""
 #: ../qml/utils/DataBaseEraser.qml:75 ../qml/pages/person/PeopleListPage.qml:54
 #: ../qml/pages/person/DetailsPersonPhone.qml:388
 #: ../qml/pages/person/DetailsPersonTablet.qml:377
-#: ../qml/pages/common/AppConfigurationPhone.qml:218
-#: ../qml/pages/common/AppConfigurationTablet.qml:216
+#: ../qml/pages/common/AppConfigurationPhone.qml:219
+#: ../qml/pages/common/AppConfigurationTablet.qml:217
 msgid "Delete"
 msgstr ""
 
@@ -146,12 +146,12 @@ msgstr ""
 #: ../qml/dialogs/ConfirmInsertMeeting.qml:14
 #: ../qml/dialogs/ConfirmUpdatePeople.qml:13
 #: ../qml/pages/person/DetailsPersonTablet.qml:320
-#: ../qml/pages/meeting/EditMeetingTablet.qml:293
+#: ../qml/pages/meeting/EditMeetingTablet.qml:294
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:41
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:93
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:44
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:96
-#: ../qml/pages/meeting/EditMeetingPhone.qml:303
+#: ../qml/pages/meeting/EditMeetingPhone.qml:304
 #: ../qml/pages/common/AppConfigurationPhone.qml:43
 #: ../qml/pages/common/AppConfigurationTablet.qml:44
 msgid "Confirmation"
@@ -161,8 +161,8 @@ msgstr ""
 #: ../qml/dialogs/ConfirmInsertMeeting.qml:18
 #: ../qml/dialogs/ConfirmUpdatePeople.qml:17
 #: ../qml/pages/person/DetailsPersonTablet.qml:324
-#: ../qml/pages/meeting/EditMeetingTablet.qml:299
-#: ../qml/pages/meeting/EditMeetingPhone.qml:309
+#: ../qml/pages/meeting/EditMeetingTablet.qml:300
+#: ../qml/pages/meeting/EditMeetingPhone.qml:310
 #: ../qml/pages/common/AppConfigurationPhone.qml:54
 #: ../qml/pages/common/AppConfigurationTablet.qml:55
 msgid "Cancel"
@@ -172,12 +172,12 @@ msgstr ""
 #: ../qml/dialogs/ConfirmInsertMeeting.qml:23
 #: ../qml/dialogs/ConfirmUpdatePeople.qml:22
 #: ../qml/pages/person/DetailsPersonTablet.qml:329
-#: ../qml/pages/meeting/EditMeetingTablet.qml:304
+#: ../qml/pages/meeting/EditMeetingTablet.qml:305
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:69
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:128
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:69
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:137
-#: ../qml/pages/meeting/EditMeetingPhone.qml:314
+#: ../qml/pages/meeting/EditMeetingPhone.qml:315
 #: ../qml/pages/common/AppConfigurationPhone.qml:60
 #: ../qml/pages/common/AppConfigurationTablet.qml:61
 msgid "Execute"
@@ -303,8 +303,8 @@ msgstr ""
 
 #: ../qml/pages/person/PeopleListPage.qml:151
 #: ../qml/pages/meeting/MeetingListGlobalPhone.qml:179
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:174
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:165
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:175
+#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:166
 #: ../qml/pages/meeting/MeetingListGlobalTablet.qml:168
 msgid "Search"
 msgstr ""
@@ -439,8 +439,8 @@ msgstr ""
 msgid "Time"
 msgstr ""
 
-#: ../qml/pages/meeting/EditMeetingTablet.qml:282
-#: ../qml/pages/meeting/EditMeetingPhone.qml:292
+#: ../qml/pages/meeting/EditMeetingTablet.qml:283
+#: ../qml/pages/meeting/EditMeetingPhone.qml:293
 msgid "Update the meeting ?"
 msgstr ""
 
@@ -535,8 +535,8 @@ msgid "participated old meetings"
 msgstr ""
 
 #: ../qml/pages/meeting/MeetingListGlobalPhone.qml:197
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:191
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:182
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:192
+#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:183
 #: ../qml/pages/meeting/MeetingListGlobalTablet.qml:185
 msgid "meeting(s) (listed in chronological order)"
 msgstr ""
@@ -546,8 +546,8 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: ../qml/pages/meeting/InsertMeetingFormPhone.qml:253
-#: ../qml/pages/meeting/InsertMeetingFormTablet.qml:245
+#: ../qml/pages/meeting/InsertMeetingFormPhone.qml:254
+#: ../qml/pages/meeting/InsertMeetingFormTablet.qml:246
 msgid "Save the new meeting ?"
 msgstr ""
 

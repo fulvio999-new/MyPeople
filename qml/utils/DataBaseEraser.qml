@@ -73,7 +73,7 @@ Dialog {
                         id: deleteButton
                         width: units.gu(12)
                         text:  i18n.tr("Delete")
-                        color: UbuntuColors.orange
+                        color: UbuntuColors.red
                         onClicked: {
                             loadingPageActivity.running = true
 

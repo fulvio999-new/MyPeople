@@ -308,6 +308,7 @@ Column{
             id: addButton
             objectName: "Add"
             text: i18n.tr("Add")
+            color: UbuntuColors.orange
             width: units.gu(18)
             onClicked: {
                 PopupUtils.open(confirmAddPeopleDialog)

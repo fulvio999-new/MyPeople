@@ -277,6 +277,7 @@ Column {
             id: saveButton
             objectName: "update"
             text: i18n.tr("Update")
+            color: UbuntuColors.orange
             width: units.gu(18)
             onClicked: {
                 PopupUtils.open(confirmUpdateMeetingDialog, saveButton,{text: i18n.tr("Update the meeting ?")})

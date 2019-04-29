@@ -39,12 +39,33 @@ MainView {
        eg: ~phablet/.local/share/<applicationName>/file:/opt/<click.ubuntu.com>/<applicationName>/<version-number>/MyPeople/MyPeople_db
     */
     applicationName: "mypeople.fulvio999"
-    width: units.gu(160)
-    height: units.gu(90)
 
-    /* phone */
-    //width: units.gu(50)
-    //height: units.gu(96)
+    /*------- Tablet (width >= 110) -------- */
+    //vertical
+    //width: units.gu(75)
+    //height: units.gu(111)
+
+    //horizontal (rel)
+    //width: units.gu(100)
+    //height: units.gu(75)
+
+    //Tablet horizontal
+    //width: units.gu(128)
+    //height: units.gu(80)
+
+    //Tablet vertical
+    //width: units.gu(80)
+    //height: units.gu(128)
+
+    /* ----- phone 4.5 (the smallest one) ---- */
+    //vertical
+    width: units.gu(50)
+    height: units.gu(96)
+
+    //horizontal
+    //width: units.gu(96)
+    //height: units.gu(50)
+    /* -------------------------------------- */
 
     /* Settings file is saved in ~user/.config/<applicationName>/<applicationName>.conf  File */
     Settings {

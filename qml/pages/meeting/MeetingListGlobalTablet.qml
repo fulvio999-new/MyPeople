@@ -155,6 +155,11 @@ Column{
                 delegate: meetingTypeSelectorDelegate
                 model: meetingTypeModel
                 containerHeight: itemHeight * 3
+
+                /* ItemSelectionChange event is not built-in with ItemSelector component: use a workaround */
+                onDelegateClicked:{
+                   meetingFoundLabel.text = " " //clean result label
+                }
             }
         }
 

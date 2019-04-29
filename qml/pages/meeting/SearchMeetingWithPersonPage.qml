@@ -15,7 +15,7 @@ import "../../js/utility.js" as Utility
 import "../../js/storage.js" as Storage
 
 /*
-  Form to search meetings **ONLY WITH** the currenlty selected person in the people list. 
+  Form to search meetings **ONLY WITH** the currenlty selected person in the people list.
   User must provide a time range for the search operation
 */
 Page{
@@ -70,7 +70,7 @@ Page{
              }
          }
 
-         delegate: PeopleMeetingFoundDelegate{}
+         delegate: MeetingWithPersonFoundDelegate{}
      }
 
      /* Show the details of the selected person */

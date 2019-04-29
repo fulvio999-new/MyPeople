@@ -358,7 +358,7 @@ Column {
     }
 
     Row{
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.horizontalCenter: personDetailsPage.horizontalCenter
         spacing: units.gu(2)
 
         Button {

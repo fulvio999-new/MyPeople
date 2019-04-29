@@ -50,7 +50,7 @@ Page{
     Flickable {
         id: personDetailsFlickable
         clip: true
-        contentHeight: Utility.getContentHeight()
+        contentHeight: Utility.getPageHeight(personDetailsPage)
         anchors {
             top: parent.top
             left: parent.left
@@ -80,7 +80,7 @@ Page{
 
     /* To show a scrollbar on the side */
     Scrollbar {
-        flickableItem: personDetailsFlickable
+        flickableItem: layoutsDetailsContact
         align: Qt.AlignTrailing
     }
 }

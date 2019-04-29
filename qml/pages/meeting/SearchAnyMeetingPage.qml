@@ -63,7 +63,7 @@ Page {
                     }
             }
 
-            delegate: AllPeopleMeetingFoundDelegate{}
+            delegate: AllPeopleMeetingFoundDelegate{isFromTodayMeetingPage:false}
         }
 
         /* Show a form to search meeting with any contact */

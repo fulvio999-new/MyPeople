@@ -34,7 +34,7 @@ Page {
 
              ConditionalLayout {
                  name: "layoutTodayMeeting"
-                 when: root.width > units.gu(50)
+                 when: root.width > units.gu(120)
                  TodayMeetingTablet{}
              }
          ]

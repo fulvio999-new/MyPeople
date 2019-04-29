@@ -15,7 +15,7 @@ Item{
 
     UbuntuListView {
         id: todayMeetingResultList
-        /* necessary, otherwise hide the page header */       
+        /* necessary, otherwise hide the page header */
         anchors.topMargin: todayMeetingPageHeader.height
         anchors.fill: parent
         focus: true
@@ -45,9 +45,6 @@ Item{
             }
         }
 
-        delegate: AllPeopleMeetingFoundDelegate{isFromTodayMeetingPage:true}
+        delegate: TodayMeetingFoundDelegate{}
     }
 }
-
-
-

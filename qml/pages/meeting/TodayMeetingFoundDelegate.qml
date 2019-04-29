@@ -12,12 +12,11 @@ import "../../js/storage.js" as Storage
 import "../../js/DateUtils.js" as DateUtils
 
  /*
-    Item that display a meeting item retrieved from the database.
-    Used to diplay the search result for meetings with ANY people
+    Item that display a meeting item retrieved from the database, Scheduled ONLY for TODAY
     (Note: a delegate object can access directly ath values in the dataModel)
  */
  Item {
-        id: allPeopleMeetingFoundDelegate
+        id: todayMeetingFoundDelegate
 
         property string todayDateFormatted : DateUtils.formatFullDateToString(new Date());
         /* workaround to specify the origin page: todaMeeting or SearchMeeting. FIXME: find better solution  */
@@ -68,16 +67,8 @@ import "../../js/DateUtils.js" as DateUtils
                     id:executeButton
                     text: i18n.tr("Execute")  //Delete
 
-                    onClicked: {
-
-                        var meetingId;
-                        /* depending on the source page, pick-up the meetingId from a different UbuntuListView */
-                        if(isFromTodayMeetingPage === true){
-                           meetingId = todayMeetingModel.get(todayMeetingResultList.currentIndex).id;
-                        }else{
-                           /* the 'id' of the currently selected meeting */
-                           meetingId = allPeopleMeetingFoundModel.get(allPeopleMeetingSearchResultList.currentIndex).id;
-                        }
+                    onClicked: {                      
+                        var  meetingId = todayMeetingModel.get(todayMeetingResultList.currentIndex).id;
 
                         Storage.deleteMeetingById(meetingId);
 
@@ -183,7 +174,7 @@ import "../../js/DateUtils.js" as DateUtils
 
             Column {
                 width: background.width - 10 - editMeetingColumn.width;
-                height: allPeopleMeetingFoundDelegate.height
+                height: todayMeetingFoundDelegate.height
                 spacing: units.gu(0.2)
 
                 Label {
@@ -242,7 +233,7 @@ import "../../js/DateUtils.js" as DateUtils
                             height: editMeetingIcon.height
                             onClicked: {
 
-                                adaptivePageLayout.addPageToNextColumn(searchAnyMeetingPage,Qt.resolvedUrl("EditMeetingPage.qml") ,
+                                adaptivePageLayout.addPageToNextColumn(todayMeetingPage,Qt.resolvedUrl("EditMeetingPage.qml") ,
                                                                        {
                                                                           /* <page-variable-name>:<property-value-to-pass> */
                                                                           id:id,

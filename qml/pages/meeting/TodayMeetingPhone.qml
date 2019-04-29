@@ -45,6 +45,6 @@ Item{
             }
         }
 
-        delegate: AllPeopleMeetingFoundDelegate{isFromTodayMeetingPage:true}
+        delegate: TodayMeetingFoundDelegate{}
     }
 }

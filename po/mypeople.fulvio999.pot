@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mypeople.fulvio999\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-29 14:51+0000\n"
+"POT-Creation-Date: 2019-05-02 09:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,8 +51,8 @@ msgstr ""
 
 #: ../qml/utils/DatabaseImporter.qml:66 ../qml/utils/DatabaseImporter.qml:71
 #: ../qml/pages/meeting/MeetingListGlobalPhone.qml:197
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:192
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:183
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:194
+#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:184
 #: ../qml/pages/meeting/MeetingListGlobalTablet.qml:185
 msgid "Found"
 msgstr ""
@@ -313,8 +313,8 @@ msgstr ""
 
 #: ../qml/pages/person/PeopleListPage.qml:151
 #: ../qml/pages/meeting/MeetingListGlobalPhone.qml:179
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:175
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:166
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:177
+#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:167
 #: ../qml/pages/meeting/MeetingListGlobalTablet.qml:168
 msgid "Search"
 msgstr ""
@@ -485,7 +485,7 @@ msgstr ""
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:191
 #: ../qml/pages/meeting/MeetingListGlobalPhone.qml:153
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:211
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:148
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:149
 #: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:202
 #: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:143
 #: ../qml/pages/meeting/MeetingListGlobalTablet.qml:146
@@ -518,7 +518,7 @@ msgid "To"
 msgstr ""
 
 #: ../qml/pages/meeting/MeetingListGlobalPhone.qml:145
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:141
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:142
 #: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:136
 #: ../qml/pages/meeting/MeetingListGlobalTablet.qml:139
 #: ../qml/pages/common/AppConfigurationPhone.qml:190
@@ -527,7 +527,7 @@ msgid "Scheduled"
 msgstr ""
 
 #: ../qml/pages/meeting/MeetingListGlobalPhone.qml:145
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:141
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:142
 #: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:136
 #: ../qml/pages/meeting/MeetingListGlobalTablet.qml:139
 #: ../qml/pages/common/AppConfigurationPhone.qml:190
@@ -536,7 +536,7 @@ msgid "meetings to participate"
 msgstr ""
 
 #: ../qml/pages/meeting/MeetingListGlobalPhone.qml:146
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:142
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:143
 #: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:137
 #: ../qml/pages/meeting/MeetingListGlobalTablet.qml:140
 #: ../qml/pages/common/AppConfigurationPhone.qml:65
@@ -547,7 +547,7 @@ msgid "Archived"
 msgstr ""
 
 #: ../qml/pages/meeting/MeetingListGlobalPhone.qml:146
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:142
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:143
 #: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:137
 #: ../qml/pages/meeting/MeetingListGlobalTablet.qml:140
 #: ../qml/pages/common/AppConfigurationPhone.qml:191
@@ -556,8 +556,8 @@ msgid "participated old meetings"
 msgstr ""
 
 #: ../qml/pages/meeting/MeetingListGlobalPhone.qml:197
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:192
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:183
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:194
+#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:184
 #: ../qml/pages/meeting/MeetingListGlobalTablet.qml:185
 msgid "meeting(s) (listed in chronological order)"
 msgstr ""

@@ -36,7 +36,7 @@ Column{
     }
 
     Row{
-        id: searchCriteriaRow
+        id: searchRow
         spacing: units.gu(1.1)
         x: units.gu(1)
 
@@ -139,11 +139,12 @@ Column{
 
         Label {
             id: meetingStatusItemSelectorLabel
-            anchors.verticalCenter: meetingDateToButton.verticalCenter
+            anchors.verticalCenter: searchRow.verticalCenter
             text: i18n.tr("Meeting status")+":"
         }
 
         Rectangle{
+            id:meetingStatusContainer
             width:units.gu(30)
             height:units.gu(7)
 

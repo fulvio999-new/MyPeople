@@ -149,7 +149,7 @@ Column{
 
         Label {
             id: meetingStatusItemSelectorLabel
-            anchors.verticalCenter: meetingDateToButton.verticalCenter
+            //anchors.verticalCenter: meetingDateToButton.verticalCenter
             text: i18n.tr("Meeting status")+":"
         }
 

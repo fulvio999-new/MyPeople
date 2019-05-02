@@ -123,6 +123,7 @@ Column{
     }
 
     Row{
+        id: searchRow
         spacing: units.gu(1)
         x: units.gu(1)
 
@@ -144,11 +145,12 @@ Column{
 
         Label {
             id: meetingStatusItemSelectorLabel
-            anchors.verticalCenter: meetingDateToButton.verticalCenter
+            anchors.verticalCenter: searchRow.verticalCenter
             text: i18n.tr("Meeting status")+":"
         }
 
         Rectangle{
+            id:meetingStatusContainer
             width: searchMeetingWithPeopleColum.width - meetingStatusItemSelectorLabel.width - units.gu(3)
             height:units.gu(7)
 
@@ -170,8 +172,8 @@ Column{
          x: searchMeetingWithPeopleColum.width/3
 
          Button {
-            id: searchExpenseButton
-            anchors.verticalCenter: dateToButton.verticalCenter
+            id: searchButton
+            //anchors.verticalCenter: dateToButton.verticalCenter
             text: i18n.tr("Search")
             width:units.gu(18)
             color: UbuntuColors.orange

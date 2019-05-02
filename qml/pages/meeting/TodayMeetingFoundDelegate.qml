@@ -67,7 +67,7 @@ import "../../js/DateUtils.js" as DateUtils
                     id:executeButton
                     text: i18n.tr("Execute")  //Delete
 
-                    onClicked: {                      
+                    onClicked: {
                         var  meetingId = todayMeetingModel.get(todayMeetingResultList.currentIndex).id;
 
                         Storage.deleteMeetingById(meetingId);
@@ -111,12 +111,12 @@ import "../../js/DateUtils.js" as DateUtils
                         width: units.gu(14)
                         onClicked: {
 
-                            if(isFromTodayMeetingPage === true){
+                            //if(isFromTodayMeetingPage === true){
                                Storage.getTodayMeetings();
-                            }
+                            //}
 
                             /* refresh re-executong the search */
-                            Storage.searchMeetingByTimeRange(searchAnyMeetingPage.dateFrom,searchAnyMeetingPage.dateTo,searchAnyMeetingPage.meetingStatus);
+                            //Storage.searchMeetingByTimeRange(searchAnyMeetingPage.dateFrom,searchAnyMeetingPage.dateTo,searchAnyMeetingPage.meetingStatus);
 
                             PopupUtils.close(confirmArchiveMeeting)
                         }
@@ -131,12 +131,12 @@ import "../../js/DateUtils.js" as DateUtils
 
                             var meetingId;
                             /* depending on the source page, pick-up the meetingId from a different UbuntuListView */
-                            if(isFromTodayMeetingPage === true){
+                            //if(isFromTodayMeetingPage === true){
                                meetingId = todayMeetingModel.get(todayMeetingResultList.currentIndex).id;
-                            }else{
+                            //}else{
                                /* the 'id' of the selected meeting */
-                               meetingId = allPeopleMeetingFoundModel.get(allPeopleMeetingSearchResultList.currentIndex).id;
-                            }
+                            //   meetingId = allPeopleMeetingFoundModel.get(allPeopleMeetingSearchResultList.currentIndex).id;
+                            //}
 
                             Storage.updateMeetingStatus(meetingId,"ARCHIVED");
 

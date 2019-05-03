@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mypeople.fulvio999\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-02 09:31+0000\n"
+"POT-Creation-Date: 2019-05-03 15:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,10 +50,10 @@ msgid "<a href=\"%1\">http://iutility.blogspot.it/2016/11/MyPeople.html</a>"
 msgstr ""
 
 #: ../qml/utils/DatabaseImporter.qml:66 ../qml/utils/DatabaseImporter.qml:71
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:197
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:194
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:184
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:185
+#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:198
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:195
+#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:185
+#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:186
 msgid "Found"
 msgstr ""
 
@@ -312,10 +312,10 @@ msgid "name OR surname to search"
 msgstr ""
 
 #: ../qml/pages/person/PeopleListPage.qml:151
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:179
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:177
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:167
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:168
+#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:180
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:178
+#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:168
+#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:169
 msgid "Search"
 msgstr ""
 
@@ -555,10 +555,10 @@ msgstr ""
 msgid "participated old meetings"
 msgstr ""
 
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:197
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:194
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:184
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:185
+#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:198
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:195
+#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:185
+#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:186
 msgid "meeting(s) (listed in chronological order)"
 msgstr ""
 

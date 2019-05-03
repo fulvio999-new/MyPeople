@@ -145,7 +145,7 @@ Column{
 
         Label {
             id: meetingStatusItemSelectorLabel
-            anchors.verticalCenter: searchRow.verticalCenter
+            anchors.verticalCenter: meetingTypeItemSelector.verticalCenter
             text: i18n.tr("Meeting status")+":"
         }
 
@@ -163,6 +163,7 @@ Column{
                 /* ItemSelectionChange event is not built-in with ItemSelector component: use a workaround */
                 onDelegateClicked:{
                    meetingFoundLabel.text = " " //clean result label
+                   meetingWithPersonFoundModel.clear();
                 }
             }
         }

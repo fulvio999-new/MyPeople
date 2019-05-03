@@ -159,6 +159,7 @@ Column{
                 /* ItemSelectionChange event is not built-in with ItemSelector component: use a workaround */
                 onDelegateClicked:{
                    meetingFoundLabel.text = " " //clean result label
+                   allPeopleMeetingFoundModel.clear();
                 }
             }
         }

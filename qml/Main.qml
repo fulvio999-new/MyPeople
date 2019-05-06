@@ -46,8 +46,8 @@ MainView {
     //height: units.gu(111)
 
     //horizontal (rel)
-    width: units.gu(100)
-    height: units.gu(75)
+    //width: units.gu(100)
+    //height: units.gu(75)
 
     //Tablet horizontal
     //width: units.gu(128)
@@ -59,8 +59,8 @@ MainView {
 
     /* ----- phone 4.5 (the smallest one) ---- */
     //vertical
-    //width: units.gu(50)
-    //height: units.gu(96)
+    width: units.gu(50)
+    height: units.gu(96)
 
     //horizontal
     //width: units.gu(96)

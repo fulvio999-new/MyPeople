@@ -150,6 +150,9 @@ Component {
                             height: deleteExpenseIcon.height
                             onClicked: {
 
+                                /* clear meeting ListModel to prevent data caching after  deletes from maintenance page */
+                                meetingWithPersonFoundModel.clear();
+
                                 adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("../meeting/SearchMeetingWithPersonPage.qml"),
                                                                         {
                                                                             /* <variable-name>:<property-value> */

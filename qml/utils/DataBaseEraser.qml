@@ -106,7 +106,7 @@ Dialog {
                                 /* refresh lists */
                                 Storage.loadAllPeople();
                                 Storage.getTodayBirthDays();
-                                Storage.getTodayMeetings();
+                                Storage.getTodayMeetings();                              
 
                                 adaptivePageLayout.removePages(personDetailsPage)
                                 loadingPageActivity.running = false

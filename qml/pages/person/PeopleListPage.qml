@@ -192,6 +192,7 @@ Page{
                             anchors.centerIn: parent.Center
                             width: parent.width
                             onClicked: {
+                                /* clean data to prevent caching after delete from maintenance page */
                                 meetingWithPersonFoundModel.clear();
                                 allPeopleMeetingFoundModel.clear();
                                                                        //sintax: (current-page, page to add)

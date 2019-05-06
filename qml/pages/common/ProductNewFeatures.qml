@@ -18,7 +18,7 @@ import Ubuntu.Layouts 1.0
                 enabled: false
                 autoSize: true
                 horizontalAlignment: TextEdit.AlignHCenter
-                placeholderText: "*"+i18n.tr("Meeting, appointments management functions")+"<br/> *"+i18n.tr("Added telegram input field")+"<br/> *"+i18n.tr("Various bug fixes")+"<br/> *"+i18n.tr("New configuration page")
+                placeholderText: "*"+i18n.tr("Code refactoring")+"<br/> *"+i18n.tr("Little fix for layout")+"<br/>"
             }
         }
 

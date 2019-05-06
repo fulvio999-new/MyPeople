@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mypeople.fulvio999\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-03 15:35+0000\n"
+"POT-Creation-Date: 2019-05-06 11:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,7 +69,7 @@ msgstr ""
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:119
 #: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:54
 #: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:110
-#: ../qml/pages/common/AboutProduct.qml:30
+#: ../qml/pages/common/AboutProduct.qml:28
 #: ../qml/pages/common/ProductNewFeatures.qml:54
 msgid "Close"
 msgstr ""
@@ -327,8 +327,8 @@ msgstr ""
 msgid "Global Agenda Meetings"
 msgstr ""
 
-#: ../qml/pages/person/PeopleListPage.qml:234
-#: ../qml/pages/person/PeopleListPage.qml:257
+#: ../qml/pages/person/PeopleListPage.qml:235
+#: ../qml/pages/person/PeopleListPage.qml:258
 msgid "Today"
 msgstr ""
 
@@ -634,17 +634,16 @@ msgid "Product Info"
 msgstr ""
 
 #: ../qml/pages/common/AboutProduct.qml:14
-msgid "What you can do with MyPeople"
+msgid "With MyPeople you can:"
 msgstr ""
 
 #: ../qml/pages/common/AboutProduct.qml:15
 msgid ""
-"Store (locally) informations of people <br/> (eg: name, address, phone, "
-"mail, telegram...)"
+"a) Store (locally) informations of people <br/> (No data are shared online)"
 msgstr ""
 
 #: ../qml/pages/common/AboutProduct.qml:16
-msgid "Store meetings with the archived people"
+msgid "b) Create an Agenda of meetings with the archived people"
 msgstr ""
 
 #: ../qml/pages/common/AboutProduct.qml:17
@@ -652,54 +651,45 @@ msgid "What is the meeting status ?"
 msgstr ""
 
 #: ../qml/pages/common/AboutProduct.qml:18
-msgid "Is a flag used to keep the status of the meeting."
+msgid "Is a flag used to organize the stored meetings."
 msgstr ""
 
 #: ../qml/pages/common/AboutProduct.qml:19
 msgid ""
-"There are three status: <br/><b>SCHEDULED, ARCHIVED, SCHEDULED (EXPIRED)</b>"
+"Currently there are three status: <br/><b>'SCHEDULED', 'ARCHIVED', "
+"'SCHEDULED (EXPIRED)''</b>"
 msgstr ""
 
 #: ../qml/pages/common/AboutProduct.qml:20
 msgid ""
-"When a future meeting is created get the 'SCHEDULED' status to indicate that "
-"is programmed."
+"A just created meeting (for a future data) get 'SCHEDULED' status (that "
+"means 'is programmed')."
 msgstr ""
 
 #: ../qml/pages/common/AboutProduct.qml:21
-msgid "The user can delete a meeting or archive it"
+msgid "A meeting can be deleted or archived by the user."
 msgstr ""
 
 #: ../qml/pages/common/AboutProduct.qml:21
-msgid "(for example when is finished or deleted)"
-msgstr ""
-
-#: ../qml/pages/common/AboutProduct.qml:21
-msgid "Archiving a meeting place it in ARCHIVED status"
+msgid "Archiving set the meeting status to 'ARCHIVED'"
 msgstr ""
 
 #: ../qml/pages/common/AboutProduct.qml:22
 msgid ""
-"Archiving a meeting means that is kept in the database,so that can be re-"
-"scheduled in the future, or simply to keep it as a report."
+"That means: 'kept the meeting to use it again in the future, just change his "
+"time'."
 msgstr ""
 
 #: ../qml/pages/common/AboutProduct.qml:23
 msgid ""
-"When the current time is greater than the meeting datetime, the meeting is "
+"When the current time is greater than the meeting one, the meeting is set as "
 "'SCHEDULED (EXPIRED)'."
 msgstr ""
 
 #: ../qml/pages/common/AboutProduct.qml:24
 msgid ""
-"Updating the date of an 'SCHEDULED (EXPIRED)' meeting with a future date, it "
-"return automatically in SCHEDULED status again."
-msgstr ""
-
-#: ../qml/pages/common/AboutProduct.qml:25
-msgid ""
-"An ARCHIVED meeting can return in SCHEDULED status setting his datetime to a "
-"future date and manually change his status"
+"Updating the date of a 'SCHEDULED (EXPIRED)' meeting with a future date, it "
+"return automatically in 'SCHEDULED' status."
 msgstr ""
 
 #: ../qml/pages/common/ProductNewFeatures.qml:12
@@ -707,19 +697,11 @@ msgid "What's new in this version"
 msgstr ""
 
 #: ../qml/pages/common/ProductNewFeatures.qml:21
-msgid "Meeting, appointments management functions"
+msgid "Code refactoring"
 msgstr ""
 
 #: ../qml/pages/common/ProductNewFeatures.qml:21
-msgid "Added telegram input field"
-msgstr ""
-
-#: ../qml/pages/common/ProductNewFeatures.qml:21
-msgid "Various bug fixes"
-msgstr ""
-
-#: ../qml/pages/common/ProductNewFeatures.qml:21
-msgid "New configuration page"
+msgid "Little fix for layout"
 msgstr ""
 
 #: ../qml/pages/common/ProductNewFeatures.qml:28

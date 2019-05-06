@@ -11,19 +11,17 @@ Dialog {
        contentWidth: Utility.getHelpPageWidth()
 
        text: "<b>"+"MyPeople version: "+root.appVersion+"  Author: fulvio"+"</b><br/><br/>"+
-             "<b>"+i18n.tr("What you can do with MyPeople")+"</b><br/>"
-                  +i18n.tr("Store (locally) informations of people <br/> (eg: name, address, phone, mail, telegram...)")+"<br/>"
-                  +i18n.tr("Store meetings with the archived people")+"<br/>"+"<br/>"
+             "<b>"+i18n.tr("With MyPeople you can:")+"</b><br/>"
+                  +i18n.tr("a) Store (locally) informations of people <br/> (No data are shared online)")+"<br/>"
+                  +i18n.tr("b) Create an Agenda of meetings with the archived people")+"<br/>"+"<br/>"
                   +"<b>"+i18n.tr("What is the meeting status ?")+"</b><br/>"
-                  +i18n.tr("Is a flag used to keep the status of the meeting.")+"<br/>"
-                  +i18n.tr("There are three status: <br/><b>SCHEDULED, ARCHIVED, SCHEDULED (EXPIRED)</b>")+"<br/><br/>"
-                  +i18n.tr("When a future meeting is created get the 'SCHEDULED' status to indicate that is programmed.")+"<br/><br/>"
-                  +i18n.tr("The user can delete a meeting or archive it")+ "<br/>"+i18n.tr("(for example when is finished or deleted)")+"<br/>"+i18n.tr("Archiving a meeting place it in ARCHIVED status")+"<br/>"
-                  +i18n.tr("Archiving a meeting means that is kept in the database,so that can be re-scheduled in the future, or simply to keep it as a report.")+"<br/><br/>"
-                  +i18n.tr("When the current time is greater than the meeting datetime, the meeting is 'SCHEDULED (EXPIRED)'.")+"<br/><br/>"
-                  +i18n.tr("Updating the date of an 'SCHEDULED (EXPIRED)' meeting with a future date, it return automatically in SCHEDULED status again.")+"<br/><br/>"
-                  +i18n.tr("An ARCHIVED meeting can return in SCHEDULED status setting his datetime to a future date and manually change his status")+"<br/>"
-
+                  +i18n.tr("Is a flag used to organize the stored meetings.")+"<br/>"
+                  +i18n.tr("Currently there are three status: <br/><b>'SCHEDULED', 'ARCHIVED', 'SCHEDULED (EXPIRED)''</b>")+"<br/><br/>"
+                  +i18n.tr("A just created meeting (for a future data) get 'SCHEDULED' status (that means 'is programmed').")+"<br/><br/>"
+                  +i18n.tr("A meeting can be deleted or archived by the user.")+ "<br/>"+i18n.tr("Archiving set the meeting status to 'ARCHIVED'")+"<br/>"
+                  +i18n.tr("That means: 'kept the meeting to use it again in the future, just change his time'.")+"<br/><br/>"
+                  +i18n.tr("When the current time is greater than the meeting one, the meeting is set as 'SCHEDULED (EXPIRED)'.")+"<br/><br/>"
+                  +i18n.tr("Updating the date of a 'SCHEDULED (EXPIRED)' meeting with a future date, it return automatically in 'SCHEDULED' status.")+"<br/>"
 
        Button {
            width: units.gu(18)

@@ -100,10 +100,13 @@ MainView {
     }
 
     /* ---- Common models used in sub-pages ---- */
+
+    /* list of meeting with a specific person */
     ListModel {
        id: meetingWithPersonFoundModel
     }
 
+    /* list of meeting with any people */
     ListModel {
        id: allPeopleMeetingFoundModel
     }
@@ -157,7 +160,7 @@ MainView {
     }
 
     /*
-      USED ONLY FOR THE LEGACY MyPeople VERSIONS
+      USED ONLY FOR THE LEGACY MyPeople VERSIONS (1.0 and 1.1)
 
       U1DB Databases "connetcors" to MyPeole 1.0 and 1.1 Databases. Used only to import old contacts into new Mypeople 1.2 database
       MyPeople 1.2 (and futere release) uses QT LocalStorage API instead of QML U1DB, so that the Database  will be located

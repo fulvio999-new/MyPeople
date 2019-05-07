@@ -42,7 +42,7 @@ Page{
     Flickable {
         id: editMeetingPageFlickable
         clip: true
-        contentHeight: Utility.getPageHeight(editMeetingPage)
+        contentHeight: Utility.getEditMeetingPageContentHeight()
         anchors {
             top: parent.top
             left: parent.left

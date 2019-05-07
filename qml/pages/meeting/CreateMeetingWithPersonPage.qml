@@ -36,7 +36,7 @@ Page{
     Flickable {
         id: createMeetingWithPersonPageFlickable
         clip: true
-        contentHeight: Utility.getContentHeight()
+        contentHeight: Utility.getNewMeetingContentHeight()
         anchors {
             top: parent.top
             left: parent.left

@@ -34,6 +34,22 @@ function showNewFeatures(){
      }
 }
 
+/*  the scroll heigth for newMeetingPage page */
+function getNewMeetingContentHeight(){
+    if(root.width > units.gu(80))
+        return createMeetingWithPersonPage.height + units.gu(30)
+    else
+        return createMeetingWithPersonPage.height + units.gu(30) //phone
+}
+
+/*  the scroll heigth for editMeetingPage page */
+function getEditMeetingPageContentHeight(){
+    if(root.width > units.gu(80))
+        return editMeetingPage.height + units.gu(30)
+    else
+        return editMeetingPage.height + units.gu(30) //phone
+}
+
 
 /* Depending on the Page width of the Page (ie: the Device type) decide the Height of the scrollable */
 function getContentHeight(){

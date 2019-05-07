@@ -32,7 +32,7 @@ MainView {
     automaticOrientation: true
     anchorToKeyboard: true
 
-    property string appVersion: "1.7.3"
+    property string appVersion: "1.7.4"
 
     /* applicationName needs to match the "name" field in the application manifest
        Note:' applicationName' value sets the DB storage path if using U1DB api (remove the blank spaces in the url):

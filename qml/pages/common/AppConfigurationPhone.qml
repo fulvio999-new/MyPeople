@@ -24,7 +24,8 @@ Column{
 
     /* transparent placeholder */
     Rectangle {
-        color: "transparent"
+        /* to get the background color of the curreunt theme. Necessary if default theme is not used */
+        color: theme.palette.normal.background
         width: parent.width
         height: units.gu(6)
     }
@@ -173,7 +174,9 @@ Column{
          }
 
          Row{
+             id: selectRow
              spacing: units.gu(1)
+
               //----------- meeting status selector --------------
               Component {
                     id: meetingTypeSelectorDelegate
@@ -193,13 +196,15 @@ Column{
 
               Label {
                   id: meetingStatusItemSelectorLabel
-                  anchors.verticalCenter: dateToButton.verticalCenter
+                  anchors.verticalCenter: selectRow.verticalCenter
                   text: i18n.tr("Meeting status")+":"
               }
 
               Rectangle{
                   width: appConfigurationTablet.width - meetingStatusItemSelectorLabel.width - units.gu(2)
                   height:units.gu(7)
+                  /* to get the background color of the curreunt theme. Necessary if default theme is not used */
+                  color: theme.palette.normal.background
 
                   ListItem.ItemSelector {
                       id: meetingTypeItemSelector

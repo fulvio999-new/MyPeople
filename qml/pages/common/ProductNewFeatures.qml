@@ -23,7 +23,9 @@ import Ubuntu.Layouts 1.0
         }
 
         Row {
-            spacing: units.gu(1)
+            spacing: units.gu(2)
+            anchors.horizontalCenter: parent.horizontalCenter
+
             Label {
                 text: i18n.tr("Don't show again")
             }
@@ -43,13 +45,16 @@ import Ubuntu.Layouts 1.0
         }
 
         Row{
-            spacing: units.gu(1)
+            anchors.horizontalCenter: parent.horizontalCenter
+            spacing: units.gu(2)
+
             /* placeholder */
             Rectangle {
                 color: "transparent"
-                width: units.gu(8)
+                width: units.gu(7)
                 height: units.gu(3)
             }
+
             Button {
                 text: i18n.tr("Close")
                 onClicked: PopupUtils.close(newFeaturesDialogue)

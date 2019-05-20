@@ -26,6 +26,8 @@ Component {
             id: background
             x: 2; y: 2; width: parent.width - x*2; height: parent.height - y*1
             border.color: "black"
+            /* to get the background color of the curreunt theme. Necessary if default theme is not used */
+            color: theme.palette.normal.background
             radius: 5
         }
 

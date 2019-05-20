@@ -39,24 +39,19 @@ Dialog {
         }
     }
 
-    Rectangle {
-        width: units.gu(120)
-        height: units.gu(15)
+      Column{
+              spacing: units.gu(1)
 
-        Item{
-            Column{
-                spacing: units.gu(1)
-
-                Row{
+              Row{
                      Label {
                        text: colorLinks(i18n.tr("<a href=\"%1\">http://iutility.blogspot.it/2016/11/MyPeople.html</a>").arg(website))
                        width: fileBrowserDialog.width
                        textSize:Label.Small
                        onLinkActivated: Qt.openUrlExternally(link)
                     }
-                }
+              }
 
-                Row{
+              Row{
                     anchors {
                         bottomMargin: units.gu(3)
                         horizontalCenter: parent.center
@@ -74,12 +69,7 @@ Dialog {
                 Row{
                     spacing: units.gu(1)
 
-                    /* placeholder */
-                    Rectangle {
-                        color: "transparent"
-                        width: units.gu(4)
-                        height: units.gu(3)
-                    }
+                    anchors.horizontalCenter: parent.horizontalCenter
 
                     Button {
                         id: closeButton
@@ -160,6 +150,6 @@ Dialog {
                     }
                 }
             }
-        }
-    }
+
+
 }

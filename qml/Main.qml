@@ -32,6 +32,9 @@ MainView {
     automaticOrientation: true
     anchorToKeyboard: true
 
+    /* to test themes others then default one */
+    theme.name: "Ubuntu.Components.Themes.SuruDark"
+
     property string appVersion: "1.7.4"
 
     /* applicationName needs to match the "name" field in the application manifest
@@ -50,8 +53,8 @@ MainView {
     //height: units.gu(75)
 
     //Tablet horizontal
-    //width: units.gu(128)
-    //height: units.gu(80)
+    width: units.gu(128)
+    height: units.gu(80)
 
     //Tablet vertical
     //width: units.gu(80)
@@ -59,8 +62,8 @@ MainView {
 
     /* ----- phone 4.5 (the smallest one) ---- */
     //vertical
-    width: units.gu(50)
-    height: units.gu(96)
+    //width: units.gu(50)
+    //height: units.gu(96)
 
     //horizontal
     //width: units.gu(96)

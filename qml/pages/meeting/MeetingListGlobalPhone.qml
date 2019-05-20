@@ -22,9 +22,11 @@ Column{
 
     /* transparent placeholder: required to place the content under the header */
     Rectangle {
-        color: "transparent"
+        //color: "transparent"
         width: parent.width
         height: units.gu(5)
+        /* to get the background color of the curreunt theme. Necessary if default theme is not used */
+        color: theme.palette.normal.background
     }
 
     /* label to show search result */
@@ -156,6 +158,8 @@ Column{
         Rectangle{
             width: searchMeetingColum.width - meetingStatusItemSelectorLabel.width - units.gu(3)
             height:units.gu(7)
+            /* to get the background color of the curreunt theme. Necessary if default theme is not used */
+            color: theme.palette.normal.background
 
             ListItem.ItemSelector {
                 id: meetingTypeItemSelector

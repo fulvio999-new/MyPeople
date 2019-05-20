@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mypeople.fulvio999\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-07 09:10+0000\n"
+"POT-Creation-Date: 2019-05-20 14:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,14 +26,14 @@ msgid "No contacts found (First installation ?)"
 msgstr ""
 
 #: ../qml/utils/DatabaseImporter.qml:37
-#: ../qml/pages/person/InsertPersonTablet.qml:291
-#: ../qml/pages/person/InsertPersonPhone.qml:312
-#: ../qml/pages/person/DetailsPersonPhone.qml:339
-#: ../qml/pages/person/DetailsPersonTablet.qml:302
-#: ../qml/pages/meeting/EditMeetingTablet.qml:260
+#: ../qml/pages/person/InsertPersonTablet.qml:292
+#: ../qml/pages/person/InsertPersonPhone.qml:313
+#: ../qml/pages/person/DetailsPersonPhone.qml:340
+#: ../qml/pages/person/DetailsPersonTablet.qml:303
+#: ../qml/pages/meeting/EditMeetingTablet.qml:264
 #: ../qml/pages/meeting/InsertMeetingFormPhone.qml:230
 #: ../qml/pages/meeting/InsertMeetingFormTablet.qml:222
-#: ../qml/pages/meeting/EditMeetingPhone.qml:270
+#: ../qml/pages/meeting/EditMeetingPhone.qml:274
 msgid "Note"
 msgstr ""
 
@@ -45,89 +45,89 @@ msgstr ""
 msgid "If redone you can have duplicated"
 msgstr ""
 
-#: ../qml/utils/DatabaseImporter.qml:52
+#: ../qml/utils/DatabaseImporter.qml:47
 msgid "<a href=\"%1\">http://iutility.blogspot.it/2016/11/MyPeople.html</a>"
 msgstr ""
 
-#: ../qml/utils/DatabaseImporter.qml:66 ../qml/utils/DatabaseImporter.qml:71
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:198
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:195
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:185
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:186
+#: ../qml/utils/DatabaseImporter.qml:61 ../qml/utils/DatabaseImporter.qml:66
+#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:202
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:198
+#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:188
+#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:189
 msgid "Found"
 msgstr ""
 
-#: ../qml/utils/DatabaseImporter.qml:66 ../qml/utils/DatabaseImporter.qml:71
+#: ../qml/utils/DatabaseImporter.qml:61 ../qml/utils/DatabaseImporter.qml:66
 msgid "Contact(s) from"
 msgstr ""
 
-#: ../qml/utils/DatabaseImporter.qml:86 ../qml/utils/DataBaseEraser.qml:68
+#: ../qml/utils/DatabaseImporter.qml:76 ../qml/utils/DataBaseEraser.qml:54
 #: ../qml/dialogs/OperationResult.qml:17
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:56
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:115
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:55
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:119
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:54
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:110
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:58
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:117
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:57
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:121
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:56
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:112
 #: ../qml/pages/common/AboutProduct.qml:28
-#: ../qml/pages/common/ProductNewFeatures.qml:54
+#: ../qml/pages/common/ProductNewFeatures.qml:59
 msgid "Close"
 msgstr ""
 
-#: ../qml/utils/DatabaseImporter.qml:93
+#: ../qml/utils/DatabaseImporter.qml:83
 #: ../qml/pages/person/PeopleListPage.qml:62
 msgid "Import"
 msgstr ""
 
-#: ../qml/utils/DatabaseImporter.qml:143
+#: ../qml/utils/DatabaseImporter.qml:133
 msgid "OK, succesfully imported"
 msgstr ""
 
-#: ../qml/utils/DatabaseImporter.qml:143
+#: ../qml/utils/DatabaseImporter.qml:133
 msgid "contacts"
 msgstr ""
 
-#: ../qml/utils/DataBaseEraser.qml:16
+#: ../qml/utils/DataBaseEraser.qml:14
 msgid "Select item type(s) to remove"
 msgstr ""
 
-#: ../qml/utils/DataBaseEraser.qml:16
+#: ../qml/utils/DataBaseEraser.qml:14
 msgid "(there is NO restore)"
 msgstr ""
 
-#: ../qml/utils/DataBaseEraser.qml:34
+#: ../qml/utils/DataBaseEraser.qml:26
 msgid "People"
 msgstr ""
 
-#: ../qml/utils/DataBaseEraser.qml:47
+#: ../qml/utils/DataBaseEraser.qml:39
 msgid "Meetings"
 msgstr ""
 
-#: ../qml/utils/DataBaseEraser.qml:75 ../qml/pages/person/PeopleListPage.qml:54
-#: ../qml/pages/person/DetailsPersonPhone.qml:388
-#: ../qml/pages/person/DetailsPersonTablet.qml:377
-#: ../qml/pages/common/AppConfigurationPhone.qml:219
-#: ../qml/pages/common/AppConfigurationTablet.qml:217
+#: ../qml/utils/DataBaseEraser.qml:61 ../qml/pages/person/PeopleListPage.qml:54
+#: ../qml/pages/person/DetailsPersonPhone.qml:389
+#: ../qml/pages/person/DetailsPersonTablet.qml:378
+#: ../qml/pages/common/AppConfigurationPhone.qml:224
+#: ../qml/pages/common/AppConfigurationTablet.qml:220
 msgid "Delete"
 msgstr ""
 
-#: ../qml/utils/DataBaseEraser.qml:83
+#: ../qml/utils/DataBaseEraser.qml:69
 msgid "Please, select an option"
 msgstr ""
 
-#: ../qml/utils/DataBaseEraser.qml:99
+#: ../qml/utils/DataBaseEraser.qml:85
 msgid "Deletion executed successfully"
 msgstr ""
 
-#: ../qml/utils/DataBaseEraser.qml:99
+#: ../qml/utils/DataBaseEraser.qml:85
 msgid "Deleted"
 msgstr ""
 
-#: ../qml/utils/DataBaseEraser.qml:99
+#: ../qml/utils/DataBaseEraser.qml:85
 msgid "pepole and"
 msgstr ""
 
-#: ../qml/utils/DataBaseEraser.qml:99
+#: ../qml/utils/DataBaseEraser.qml:85
 msgid "meetings"
 msgstr ""
 
@@ -136,12 +136,12 @@ msgid "Operation Result"
 msgstr ""
 
 #: ../qml/dialogs/OperationResult.qml:12
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:79
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:136
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:84
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:152
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:75
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:143
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:81
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:138
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:86
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:154
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:77
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:145
 msgid "Operation executed successfully"
 msgstr ""
 
@@ -149,45 +149,45 @@ msgstr ""
 #: ../qml/dialogs/ConfirmInsertPeople.qml:15
 #: ../qml/dialogs/ConfirmInsertMeeting.qml:14
 #: ../qml/dialogs/ConfirmUpdatePeople.qml:13
-#: ../qml/pages/person/DetailsPersonTablet.qml:320
-#: ../qml/pages/meeting/EditMeetingTablet.qml:294
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:41
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:93
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:44
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:96
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:43
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:87
-#: ../qml/pages/meeting/EditMeetingPhone.qml:304
-#: ../qml/pages/common/AppConfigurationPhone.qml:43
-#: ../qml/pages/common/AppConfigurationTablet.qml:44
+#: ../qml/pages/person/DetailsPersonTablet.qml:321
+#: ../qml/pages/meeting/EditMeetingTablet.qml:298
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:43
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:95
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:46
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:98
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:45
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:89
+#: ../qml/pages/meeting/EditMeetingPhone.qml:308
+#: ../qml/pages/common/AppConfigurationPhone.qml:44
+#: ../qml/pages/common/AppConfigurationTablet.qml:45
 msgid "Confirmation"
 msgstr ""
 
 #: ../qml/dialogs/ConfirmDeletePeople.qml:18
 #: ../qml/dialogs/ConfirmInsertMeeting.qml:18
 #: ../qml/dialogs/ConfirmUpdatePeople.qml:17
-#: ../qml/pages/person/DetailsPersonTablet.qml:324
-#: ../qml/pages/meeting/EditMeetingTablet.qml:300
-#: ../qml/pages/meeting/EditMeetingPhone.qml:310
-#: ../qml/pages/common/AppConfigurationPhone.qml:54
-#: ../qml/pages/common/AppConfigurationTablet.qml:55
+#: ../qml/pages/person/DetailsPersonTablet.qml:325
+#: ../qml/pages/meeting/EditMeetingTablet.qml:304
+#: ../qml/pages/meeting/EditMeetingPhone.qml:314
+#: ../qml/pages/common/AppConfigurationPhone.qml:55
+#: ../qml/pages/common/AppConfigurationTablet.qml:56
 msgid "Cancel"
 msgstr ""
 
 #: ../qml/dialogs/ConfirmDeletePeople.qml:23
 #: ../qml/dialogs/ConfirmInsertMeeting.qml:23
 #: ../qml/dialogs/ConfirmUpdatePeople.qml:22
-#: ../qml/pages/person/DetailsPersonTablet.qml:329
-#: ../qml/pages/meeting/EditMeetingTablet.qml:305
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:69
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:128
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:69
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:137
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:68
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:128
-#: ../qml/pages/meeting/EditMeetingPhone.qml:315
-#: ../qml/pages/common/AppConfigurationPhone.qml:60
-#: ../qml/pages/common/AppConfigurationTablet.qml:61
+#: ../qml/pages/person/DetailsPersonTablet.qml:330
+#: ../qml/pages/meeting/EditMeetingTablet.qml:309
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:71
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:130
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:71
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:139
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:70
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:130
+#: ../qml/pages/meeting/EditMeetingPhone.qml:319
+#: ../qml/pages/common/AppConfigurationPhone.qml:61
+#: ../qml/pages/common/AppConfigurationTablet.qml:62
 msgid "Execute"
 msgstr ""
 
@@ -195,107 +195,107 @@ msgstr ""
 msgid "Save this person ?"
 msgstr ""
 
-#: ../qml/pages/person/InsertPersonTablet.qml:42
-#: ../qml/pages/person/InsertPersonPhone.qml:43
-#: ../qml/pages/person/DetailsPersonPhone.qml:45
-#: ../qml/pages/person/DetailsPersonTablet.qml:44
-#: ../qml/pages/meeting/EditMeetingTablet.qml:101
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:170
+#: ../qml/pages/person/InsertPersonTablet.qml:43
+#: ../qml/pages/person/InsertPersonPhone.qml:44
+#: ../qml/pages/person/DetailsPersonPhone.qml:46
+#: ../qml/pages/person/DetailsPersonTablet.qml:45
+#: ../qml/pages/meeting/EditMeetingTablet.qml:105
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:172
 #: ../qml/pages/meeting/InsertMeetingFormPhone.qml:43
 #: ../qml/pages/meeting/InsertMeetingFormTablet.qml:43
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:190
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:181
-#: ../qml/pages/meeting/EditMeetingPhone.qml:103
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:192
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:183
+#: ../qml/pages/meeting/EditMeetingPhone.qml:107
 msgid "Name"
 msgstr ""
 
-#: ../qml/pages/person/InsertPersonTablet.qml:57
-#: ../qml/pages/person/InsertPersonPhone.qml:64
-#: ../qml/pages/person/DetailsPersonPhone.qml:72
-#: ../qml/pages/person/DetailsPersonTablet.qml:66
-#: ../qml/pages/meeting/EditMeetingTablet.qml:117
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:170
+#: ../qml/pages/person/InsertPersonTablet.qml:58
+#: ../qml/pages/person/InsertPersonPhone.qml:65
+#: ../qml/pages/person/DetailsPersonPhone.qml:73
+#: ../qml/pages/person/DetailsPersonTablet.qml:67
+#: ../qml/pages/meeting/EditMeetingTablet.qml:121
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:172
 #: ../qml/pages/meeting/InsertMeetingFormPhone.qml:70
 #: ../qml/pages/meeting/InsertMeetingFormTablet.qml:67
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:190
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:181
-#: ../qml/pages/meeting/EditMeetingPhone.qml:122
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:192
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:183
+#: ../qml/pages/meeting/EditMeetingPhone.qml:126
 msgid "Surname"
 msgstr ""
 
-#: ../qml/pages/person/InsertPersonTablet.qml:77
-#: ../qml/pages/person/InsertPersonPhone.qml:84
-#: ../qml/pages/person/DetailsPersonPhone.qml:92
-#: ../qml/pages/person/DetailsPersonTablet.qml:85
+#: ../qml/pages/person/InsertPersonTablet.qml:78
+#: ../qml/pages/person/InsertPersonPhone.qml:85
+#: ../qml/pages/person/DetailsPersonPhone.qml:93
+#: ../qml/pages/person/DetailsPersonTablet.qml:86
 msgid "Job"
 msgstr ""
 
-#: ../qml/pages/person/InsertPersonTablet.qml:92
-#: ../qml/pages/person/InsertPersonPhone.qml:104
-#: ../qml/pages/person/DetailsPersonPhone.qml:114
-#: ../qml/pages/person/DetailsPersonTablet.qml:101
+#: ../qml/pages/person/InsertPersonTablet.qml:93
+#: ../qml/pages/person/InsertPersonPhone.qml:105
+#: ../qml/pages/person/DetailsPersonPhone.qml:115
+#: ../qml/pages/person/DetailsPersonTablet.qml:102
 msgid "Birthday"
 msgstr ""
 
-#: ../qml/pages/person/InsertPersonTablet.qml:138
-#: ../qml/pages/person/InsertPersonPhone.qml:150
-#: ../qml/pages/person/DetailsPersonPhone.qml:161
-#: ../qml/pages/person/DetailsPersonTablet.qml:146
+#: ../qml/pages/person/InsertPersonTablet.qml:139
+#: ../qml/pages/person/InsertPersonPhone.qml:151
+#: ../qml/pages/person/DetailsPersonPhone.qml:162
+#: ../qml/pages/person/DetailsPersonTablet.qml:147
 msgid "Tax code"
 msgstr ""
 
-#: ../qml/pages/person/InsertPersonTablet.qml:159
-#: ../qml/pages/person/InsertPersonPhone.qml:171
-#: ../qml/pages/person/DetailsPersonPhone.qml:183
-#: ../qml/pages/person/DetailsPersonTablet.qml:167
+#: ../qml/pages/person/InsertPersonTablet.qml:160
+#: ../qml/pages/person/InsertPersonPhone.qml:172
+#: ../qml/pages/person/DetailsPersonPhone.qml:184
+#: ../qml/pages/person/DetailsPersonTablet.qml:168
 msgid "Vat code"
 msgstr ""
 
-#: ../qml/pages/person/InsertPersonTablet.qml:180
-#: ../qml/pages/person/InsertPersonPhone.qml:192
-#: ../qml/pages/person/DetailsPersonPhone.qml:205
-#: ../qml/pages/person/DetailsPersonTablet.qml:187
+#: ../qml/pages/person/InsertPersonTablet.qml:181
+#: ../qml/pages/person/InsertPersonPhone.qml:193
+#: ../qml/pages/person/DetailsPersonPhone.qml:206
+#: ../qml/pages/person/DetailsPersonTablet.qml:188
 msgid "Address"
 msgstr ""
 
-#: ../qml/pages/person/InsertPersonTablet.qml:200
-#: ../qml/pages/person/InsertPersonPhone.qml:212
-#: ../qml/pages/person/DetailsPersonPhone.qml:227
-#: ../qml/pages/person/DetailsPersonTablet.qml:207
+#: ../qml/pages/person/InsertPersonTablet.qml:201
+#: ../qml/pages/person/InsertPersonPhone.qml:213
+#: ../qml/pages/person/DetailsPersonPhone.qml:228
+#: ../qml/pages/person/DetailsPersonTablet.qml:208
 msgid "Phone"
 msgstr ""
 
-#: ../qml/pages/person/InsertPersonTablet.qml:216
-#: ../qml/pages/person/InsertPersonPhone.qml:232
-#: ../qml/pages/person/DetailsPersonPhone.qml:250
-#: ../qml/pages/person/DetailsPersonTablet.qml:224
+#: ../qml/pages/person/InsertPersonTablet.qml:217
+#: ../qml/pages/person/InsertPersonPhone.qml:233
+#: ../qml/pages/person/DetailsPersonPhone.qml:251
+#: ../qml/pages/person/DetailsPersonTablet.qml:225
 msgid "Mobile"
 msgstr ""
 
-#: ../qml/pages/person/InsertPersonTablet.qml:237
-#: ../qml/pages/person/InsertPersonPhone.qml:253
-#: ../qml/pages/person/DetailsPersonPhone.qml:273
-#: ../qml/pages/person/DetailsPersonTablet.qml:245
+#: ../qml/pages/person/InsertPersonTablet.qml:238
+#: ../qml/pages/person/InsertPersonPhone.qml:254
+#: ../qml/pages/person/DetailsPersonPhone.qml:274
+#: ../qml/pages/person/DetailsPersonTablet.qml:246
 msgid "Email"
 msgstr ""
 
-#: ../qml/pages/person/InsertPersonTablet.qml:251
-#: ../qml/pages/person/InsertPersonPhone.qml:272
-#: ../qml/pages/person/DetailsPersonPhone.qml:295
-#: ../qml/pages/person/DetailsPersonTablet.qml:261
+#: ../qml/pages/person/InsertPersonTablet.qml:252
+#: ../qml/pages/person/InsertPersonPhone.qml:273
+#: ../qml/pages/person/DetailsPersonPhone.qml:296
+#: ../qml/pages/person/DetailsPersonTablet.qml:262
 msgid "Skype"
 msgstr ""
 
-#: ../qml/pages/person/InsertPersonTablet.qml:271
-#: ../qml/pages/person/InsertPersonPhone.qml:292
-#: ../qml/pages/person/DetailsPersonPhone.qml:317
-#: ../qml/pages/person/DetailsPersonTablet.qml:282
+#: ../qml/pages/person/InsertPersonTablet.qml:272
+#: ../qml/pages/person/InsertPersonPhone.qml:293
+#: ../qml/pages/person/DetailsPersonPhone.qml:318
+#: ../qml/pages/person/DetailsPersonTablet.qml:283
 msgid "Telegram"
 msgstr ""
 
-#: ../qml/pages/person/InsertPersonTablet.qml:310
+#: ../qml/pages/person/InsertPersonTablet.qml:311
 #: ../qml/pages/person/PeopleListPage.qml:46
-#: ../qml/pages/person/InsertPersonPhone.qml:337
+#: ../qml/pages/person/InsertPersonPhone.qml:338
 msgid "Add"
 msgstr ""
 
@@ -312,10 +312,10 @@ msgid "name OR surname to search"
 msgstr ""
 
 #: ../qml/pages/person/PeopleListPage.qml:151
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:180
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:178
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:168
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:169
+#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:184
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:181
+#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:171
+#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:172
 msgid "Search"
 msgstr ""
 
@@ -332,20 +332,20 @@ msgstr ""
 msgid "Today"
 msgstr ""
 
-#: ../qml/pages/person/DetailsPersonPhone.qml:377
-#: ../qml/pages/person/DetailsPersonTablet.qml:367
-#: ../qml/pages/meeting/EditMeetingTablet.qml:279
-#: ../qml/pages/meeting/EditMeetingPhone.qml:289
+#: ../qml/pages/person/DetailsPersonPhone.qml:378
+#: ../qml/pages/person/DetailsPersonTablet.qml:368
+#: ../qml/pages/meeting/EditMeetingTablet.qml:283
+#: ../qml/pages/meeting/EditMeetingPhone.qml:293
 msgid "Update"
 msgstr ""
 
-#: ../qml/pages/person/DetailsPersonPhone.qml:381
-#: ../qml/pages/person/DetailsPersonTablet.qml:370
+#: ../qml/pages/person/DetailsPersonPhone.qml:382
+#: ../qml/pages/person/DetailsPersonTablet.qml:371
 msgid "Confirm the update ?"
 msgstr ""
 
-#: ../qml/pages/person/DetailsPersonPhone.qml:391
-#: ../qml/pages/person/DetailsPersonTablet.qml:381
+#: ../qml/pages/person/DetailsPersonPhone.qml:392
+#: ../qml/pages/person/DetailsPersonTablet.qml:382
 msgid "Delete person AND his meetings ?"
 msgstr ""
 
@@ -357,208 +357,208 @@ msgstr ""
 msgid "Details for"
 msgstr ""
 
-#: ../qml/pages/person/PeopleListDelegate.qml:90
-#: ../qml/pages/birthday/TodayBirthDayTablet.qml:95
-#: ../qml/pages/birthday/TodayBirthDayPhone.qml:95
+#: ../qml/pages/person/PeopleListDelegate.qml:92
+#: ../qml/pages/birthday/TodayBirthDayTablet.qml:97
+#: ../qml/pages/birthday/TodayBirthDayPhone.qml:97
 msgid "phone"
 msgstr ""
 
-#: ../qml/pages/person/PeopleListDelegate.qml:94
-#: ../qml/pages/birthday/TodayBirthDayTablet.qml:99
-#: ../qml/pages/birthday/TodayBirthDayPhone.qml:99
+#: ../qml/pages/person/PeopleListDelegate.qml:96
+#: ../qml/pages/birthday/TodayBirthDayTablet.qml:101
+#: ../qml/pages/birthday/TodayBirthDayPhone.qml:101
 msgid "mobile"
 msgstr ""
 
-#: ../qml/pages/person/PeopleListDelegate.qml:98
-#: ../qml/pages/birthday/TodayBirthDayTablet.qml:103
-#: ../qml/pages/birthday/TodayBirthDayPhone.qml:103
+#: ../qml/pages/person/PeopleListDelegate.qml:100
+#: ../qml/pages/birthday/TodayBirthDayTablet.qml:105
+#: ../qml/pages/birthday/TodayBirthDayPhone.qml:105
 msgid "mail"
 msgstr ""
 
 #: ../qml/pages/meeting/EditMeetingTablet.qml:38
 #: ../qml/pages/meeting/EditMeetingTablet.qml:40
-#: ../qml/pages/meeting/EditMeetingTablet.qml:75
-#: ../qml/pages/meeting/EditMeetingTablet.qml:76
 #: ../qml/pages/meeting/EditMeetingTablet.qml:79
-#: ../qml/pages/meeting/EditMeetingTablet.qml:81
+#: ../qml/pages/meeting/EditMeetingTablet.qml:80
+#: ../qml/pages/meeting/EditMeetingTablet.qml:83
+#: ../qml/pages/meeting/EditMeetingTablet.qml:85
 #: ../qml/pages/meeting/EditMeetingPhone.qml:38
 #: ../qml/pages/meeting/EditMeetingPhone.qml:40
-#: ../qml/pages/meeting/EditMeetingPhone.qml:77
-#: ../qml/pages/meeting/EditMeetingPhone.qml:78
 #: ../qml/pages/meeting/EditMeetingPhone.qml:81
-#: ../qml/pages/meeting/EditMeetingPhone.qml:83
-#: ../qml/pages/common/AppConfigurationPhone.qml:63
-#: ../qml/pages/common/AppConfigurationTablet.qml:64
+#: ../qml/pages/meeting/EditMeetingPhone.qml:82
+#: ../qml/pages/meeting/EditMeetingPhone.qml:85
+#: ../qml/pages/meeting/EditMeetingPhone.qml:87
+#: ../qml/pages/common/AppConfigurationPhone.qml:64
+#: ../qml/pages/common/AppConfigurationTablet.qml:65
 msgid "SCHEDULED"
 msgstr ""
 
-#: ../qml/pages/meeting/EditMeetingTablet.qml:69
+#: ../qml/pages/meeting/EditMeetingTablet.qml:73
 msgid "Change status"
 msgstr ""
 
-#: ../qml/pages/meeting/EditMeetingTablet.qml:73
-#: ../qml/pages/meeting/EditMeetingTablet.qml:76
+#: ../qml/pages/meeting/EditMeetingTablet.qml:77
 #: ../qml/pages/meeting/EditMeetingTablet.qml:80
-#: ../qml/pages/meeting/EditMeetingTablet.qml:81
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:134
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:199
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:219
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:303
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:210
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:294
-#: ../qml/pages/meeting/EditMeetingPhone.qml:75
-#: ../qml/pages/meeting/EditMeetingPhone.qml:78
+#: ../qml/pages/meeting/EditMeetingTablet.qml:84
+#: ../qml/pages/meeting/EditMeetingTablet.qml:85
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:136
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:201
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:221
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:305
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:212
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:296
+#: ../qml/pages/meeting/EditMeetingPhone.qml:79
 #: ../qml/pages/meeting/EditMeetingPhone.qml:82
-#: ../qml/pages/meeting/EditMeetingPhone.qml:83
-#: ../qml/pages/common/AppConfigurationPhone.qml:66
-#: ../qml/pages/common/AppConfigurationTablet.qml:67
+#: ../qml/pages/meeting/EditMeetingPhone.qml:86
+#: ../qml/pages/meeting/EditMeetingPhone.qml:87
+#: ../qml/pages/common/AppConfigurationPhone.qml:67
+#: ../qml/pages/common/AppConfigurationTablet.qml:68
 msgid "ARCHIVED"
 msgstr ""
 
-#: ../qml/pages/meeting/EditMeetingTablet.qml:138
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:185
+#: ../qml/pages/meeting/EditMeetingTablet.qml:142
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:187
 #: ../qml/pages/meeting/InsertMeetingFormPhone.qml:93
 #: ../qml/pages/meeting/InsertMeetingFormTablet.qml:90
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:205
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:196
-#: ../qml/pages/meeting/EditMeetingPhone.qml:143
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:207
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:198
+#: ../qml/pages/meeting/EditMeetingPhone.qml:147
 msgid "Subject"
 msgstr ""
 
-#: ../qml/pages/meeting/EditMeetingTablet.qml:159
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:180
+#: ../qml/pages/meeting/EditMeetingTablet.qml:163
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:182
 #: ../qml/pages/meeting/InsertMeetingFormPhone.qml:116
 #: ../qml/pages/meeting/InsertMeetingFormTablet.qml:113
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:200
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:191
-#: ../qml/pages/meeting/EditMeetingPhone.qml:164
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:202
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:193
+#: ../qml/pages/meeting/EditMeetingPhone.qml:168
 msgid "Place"
 msgstr ""
 
-#: ../qml/pages/meeting/EditMeetingTablet.qml:180
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:175
+#: ../qml/pages/meeting/EditMeetingTablet.qml:184
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:177
 #: ../qml/pages/meeting/InsertMeetingFormPhone.qml:138
 #: ../qml/pages/meeting/InsertMeetingFormTablet.qml:135
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:195
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:186
-#: ../qml/pages/meeting/EditMeetingPhone.qml:185
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:197
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:188
+#: ../qml/pages/meeting/EditMeetingPhone.qml:189
 msgid "Date"
 msgstr ""
 
-#: ../qml/pages/meeting/EditMeetingTablet.qml:218
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:175
+#: ../qml/pages/meeting/EditMeetingTablet.qml:222
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:177
 #: ../qml/pages/meeting/InsertMeetingFormPhone.qml:184
 #: ../qml/pages/meeting/InsertMeetingFormTablet.qml:176
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:195
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:186
-#: ../qml/pages/meeting/EditMeetingPhone.qml:228
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:197
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:188
+#: ../qml/pages/meeting/EditMeetingPhone.qml:232
 msgid "Time"
 msgstr ""
 
-#: ../qml/pages/meeting/EditMeetingTablet.qml:283
-#: ../qml/pages/meeting/EditMeetingPhone.qml:293
+#: ../qml/pages/meeting/EditMeetingTablet.qml:287
+#: ../qml/pages/meeting/EditMeetingPhone.qml:297
 msgid "Update the meeting ?"
 msgstr ""
 
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:43
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:46
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:45
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:45
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:48
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:47
 msgid "Delete selected Meeting ?"
 msgstr ""
 
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:99
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:102
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:93
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:101
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:104
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:95
 msgid "Mark as 'ARCHIVED' and leave it in the database ?"
 msgstr ""
 
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:100
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:103
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:94
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:102
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:105
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:96
 msgid "(if you archive a meeting you can reuse it"
 msgstr ""
 
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:101
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:103
 msgid "in the future simply updating the date)"
 msgstr ""
 
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:191
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:153
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:211
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:149
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:202
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:143
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:146
-#: ../qml/pages/common/AppConfigurationPhone.qml:197
-#: ../qml/pages/common/AppConfigurationTablet.qml:199
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:193
+#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:155
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:213
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:150
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:204
+#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:144
+#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:147
+#: ../qml/pages/common/AppConfigurationPhone.qml:200
+#: ../qml/pages/common/AppConfigurationTablet.qml:200
 msgid "Meeting status"
 msgstr ""
 
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:200
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:220
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:211
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:202
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:222
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:213
 msgid "(EXPIRED)"
 msgstr ""
 
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:48
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:46
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:46
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:48
-#: ../qml/pages/common/AppConfigurationTablet.qml:104
+#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:50
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:47
+#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:47
+#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:49
+#: ../qml/pages/common/AppConfigurationTablet.qml:105
 msgid "From"
 msgstr ""
 
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:90
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:87
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:87
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:90
-#: ../qml/pages/common/AppConfigurationPhone.qml:141
-#: ../qml/pages/common/AppConfigurationTablet.qml:145
+#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:92
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:88
+#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:88
+#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:91
+#: ../qml/pages/common/AppConfigurationPhone.qml:142
+#: ../qml/pages/common/AppConfigurationTablet.qml:146
 msgid "To"
 msgstr ""
 
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:145
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:142
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:136
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:139
-#: ../qml/pages/common/AppConfigurationPhone.qml:190
-#: ../qml/pages/common/AppConfigurationTablet.qml:191
+#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:147
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:143
+#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:137
+#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:140
+#: ../qml/pages/common/AppConfigurationPhone.qml:193
+#: ../qml/pages/common/AppConfigurationTablet.qml:192
 msgid "Scheduled"
 msgstr ""
 
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:145
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:142
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:136
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:139
-#: ../qml/pages/common/AppConfigurationPhone.qml:190
-#: ../qml/pages/common/AppConfigurationTablet.qml:191
+#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:147
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:143
+#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:137
+#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:140
+#: ../qml/pages/common/AppConfigurationPhone.qml:193
+#: ../qml/pages/common/AppConfigurationTablet.qml:192
 msgid "meetings to participate"
 msgstr ""
 
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:146
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:143
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:137
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:140
-#: ../qml/pages/common/AppConfigurationPhone.qml:65
-#: ../qml/pages/common/AppConfigurationPhone.qml:191
-#: ../qml/pages/common/AppConfigurationTablet.qml:66
-#: ../qml/pages/common/AppConfigurationTablet.qml:192
+#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:148
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:144
+#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:138
+#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:141
+#: ../qml/pages/common/AppConfigurationPhone.qml:66
+#: ../qml/pages/common/AppConfigurationPhone.qml:194
+#: ../qml/pages/common/AppConfigurationTablet.qml:67
+#: ../qml/pages/common/AppConfigurationTablet.qml:193
 msgid "Archived"
 msgstr ""
 
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:146
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:143
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:137
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:140
-#: ../qml/pages/common/AppConfigurationPhone.qml:191
-#: ../qml/pages/common/AppConfigurationTablet.qml:192
+#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:148
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:144
+#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:138
+#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:141
+#: ../qml/pages/common/AppConfigurationPhone.qml:194
+#: ../qml/pages/common/AppConfigurationTablet.qml:193
 msgid "participated old meetings"
 msgstr ""
 
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:198
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:195
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:185
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:186
+#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:202
+#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:198
+#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:188
+#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:189
 msgid "meeting(s) (listed in chronological order)"
 msgstr ""
 
@@ -576,8 +576,8 @@ msgstr ""
 msgid "Search meetings with any people"
 msgstr ""
 
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:104
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:95
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:106
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:97
 msgid "in the future simply updating it)"
 msgstr ""
 
@@ -593,7 +593,7 @@ msgstr ""
 msgid "Search meeting with"
 msgstr ""
 
-#: ../qml/pages/meeting/EditMeetingPhone.qml:71
+#: ../qml/pages/meeting/EditMeetingPhone.qml:75
 msgid "Change"
 msgstr ""
 
@@ -605,27 +605,27 @@ msgstr ""
 msgid "Today BirthDay"
 msgstr ""
 
-#: ../qml/pages/common/AppConfigurationPhone.qml:45
-#: ../qml/pages/common/AppConfigurationTablet.qml:46
+#: ../qml/pages/common/AppConfigurationPhone.qml:46
+#: ../qml/pages/common/AppConfigurationTablet.qml:47
 msgid "Remove meetings in the range (no restore) ?"
 msgstr ""
 
-#: ../qml/pages/common/AppConfigurationPhone.qml:71
-#: ../qml/pages/common/AppConfigurationTablet.qml:72
+#: ../qml/pages/common/AppConfigurationPhone.qml:72
+#: ../qml/pages/common/AppConfigurationTablet.qml:73
 msgid "Done, deleted"
 msgstr ""
 
-#: ../qml/pages/common/AppConfigurationPhone.qml:71
-#: ../qml/pages/common/AppConfigurationTablet.qml:72
+#: ../qml/pages/common/AppConfigurationPhone.qml:72
+#: ../qml/pages/common/AppConfigurationTablet.qml:73
 msgid "meeting(s)"
 msgstr ""
 
-#: ../qml/pages/common/AppConfigurationPhone.qml:87
-#: ../qml/pages/common/AppConfigurationTablet.qml:91
+#: ../qml/pages/common/AppConfigurationPhone.qml:88
+#: ../qml/pages/common/AppConfigurationTablet.qml:92
 msgid "MAINTENANCE: delete old meetings"
 msgstr ""
 
-#: ../qml/pages/common/AppConfigurationPhone.qml:100
+#: ../qml/pages/common/AppConfigurationPhone.qml:101
 msgid "From:"
 msgstr ""
 
@@ -704,7 +704,7 @@ msgstr ""
 msgid "Little fix for layout"
 msgstr ""
 
-#: ../qml/pages/common/ProductNewFeatures.qml:28
+#: ../qml/pages/common/ProductNewFeatures.qml:30
 msgid "Don't show again"
 msgstr ""
 

@@ -24,7 +24,8 @@ Column{
 
     /* transparent placeholder */
     Rectangle {
-        color: "transparent"
+        /* to get the background color of the curreunt theme. Necessary if default theme is not used */
+        color: theme.palette.normal.background
         width: parent.width
         height: units.gu(6)
     }
@@ -202,6 +203,8 @@ Column{
               Rectangle{
                   width:units.gu(27)
                   height:units.gu(7)
+                  /* to get the background color of the curreunt theme. Necessary if default theme is not used */
+                  color: theme.palette.normal.background
 
                   ListItem.ItemSelector {
                       id: meetingTypeItemSelector

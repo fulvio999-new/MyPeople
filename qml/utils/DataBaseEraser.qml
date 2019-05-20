@@ -1,8 +1,6 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
-
-/* to replace the 'incomplete' QML API U1db with the low-level QtQuick API */
 import QtQuick.LocalStorage 2.0
 
 import "../js/storage.js" as Storage
@@ -12,22 +10,16 @@ import "../js/storage.js" as Storage
     Show a Dialog where the user can choose to delete ALL the save contacts/people and/or the saved meetings
  */
 Dialog {
-    id: dataBaseEraserDialog
-    text: "<b>"+ i18n.tr("Select item type(s) to remove")+"<br/>"+i18n.tr("(there is NO restore)")+ "</b>"
+        id: dataBaseEraserDialog
+        text: "<b>"+ i18n.tr("Select item type(s) to remove")+"<br/>"+i18n.tr("(there is NO restore)")+ "</b>"
 
-    Rectangle {
-        id: rectangleContainer
-        width: units.gu(180);
-        height: units.gu(16);
-
-        Item{
-
-            Column{
+        Column{
                 id: mainColumn
                 spacing: units.gu(2)
+                anchors.horizontalCenter: parent.horizontalCenter
 
                 Row {
-                    x: rectangleContainer.width/4
+                    anchors.horizontalCenter: parent.horizontalCenter
                     spacing: units.gu(2.3)
 
                     Label {
@@ -40,11 +32,11 @@ Dialog {
                 }
 
                 Row{
-                    x: rectangleContainer.width/4
+                    anchors.horizontalCenter: parent.horizontalCenter
                     spacing: units.gu(0.5)
 
                     Label {
-                          text: i18n.tr("Meetings")
+                        text: i18n.tr("Meetings")
                     }
                     CheckBox {
                         id: deleteMeetingsCheckBox
@@ -53,14 +45,8 @@ Dialog {
                 }
 
                 Row{
+                    anchors.horizontalCenter: parent.horizontalCenter
                     spacing: units.gu(1)
-
-                    /* placeholder */
-                    Rectangle {
-                        color: "transparent"
-                        width:  units.gu(3)
-                        height: units.gu(3)
-                    }
 
                     Button {
                         id: closeButton
@@ -106,7 +92,7 @@ Dialog {
                                 /* refresh lists */
                                 Storage.loadAllPeople();
                                 Storage.getTodayBirthDays();
-                                Storage.getTodayMeetings();                              
+                                Storage.getTodayMeetings();
 
                                 adaptivePageLayout.removePages(personDetailsPage)
                                 loadingPageActivity.running = false
@@ -116,12 +102,10 @@ Dialog {
                 }
 
                 Row{
-                    x: rectangleContainer.width/8
+                    anchors.horizontalCenter: parent.horizontalCenter
                     Label{
                         id: deleteOperationResult
                     }
                 }
-            }
-        }
-    }
+          }
 }

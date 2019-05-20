@@ -22,7 +22,8 @@ Column{
 
     /* transparent placeholder: required to place the content under the header */
     Rectangle {
-        color: "transparent"
+        /* to get the background color of the curreunt theme. Necessary if default theme is not used */
+        color: theme.palette.normal.background
         width: parent.width
         height: units.gu(5)
     }
@@ -149,6 +150,8 @@ Column{
         Rectangle{
             width:units.gu(30)
             height:units.gu(7)
+            /* to get the background color of the curreunt theme. Necessary if default theme is not used */
+            color: theme.palette.normal.background
 
             ListItem.ItemSelector {
                 id: meetingTypeItemSelector

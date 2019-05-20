@@ -51,9 +51,11 @@ Column {
     }
 
     Rectangle{
-        color: "transparent"
+        //color: "transparent"
         width: parent.width
         height: units.gu(4)
+        /* to get the background color of the curreunt theme. Necessary if default theme is not used */
+        color: theme.palette.normal.background
     }
 
     Rectangle {
@@ -61,6 +63,8 @@ Column {
         width: parent.width -units.gu(2);
         height: units.gu(4)
         border.color: "lightsteelblue"
+        /* to get the background color of the curreunt theme. Necessary if default theme is not used */
+        color: theme.palette.normal.background
 
         Button{
             id: changeStatusButton

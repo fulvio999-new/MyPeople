@@ -18,7 +18,7 @@ import Ubuntu.Layouts 1.0
                 enabled: false
                 autoSize: true
                 horizontalAlignment: TextEdit.AlignHCenter
-                placeholderText: "*"+i18n.tr("Code refactoring")+"<br/> *"+i18n.tr("Little fix for layout")+"<br/>"
+                placeholderText: "*"+i18n.tr("Support for Dark theme")+"<br/> *"+i18n.tr("French translation")+"<br/>"
             }
         }
 

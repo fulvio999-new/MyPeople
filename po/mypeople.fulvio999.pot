@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mypeople.fulvio999\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-20 14:43+0000\n"
+"POT-Creation-Date: 2019-05-20 14:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -697,11 +697,11 @@ msgid "What's new in this version"
 msgstr ""
 
 #: ../qml/pages/common/ProductNewFeatures.qml:21
-msgid "Code refactoring"
+msgid "Support for Dark theme"
 msgstr ""
 
 #: ../qml/pages/common/ProductNewFeatures.qml:21
-msgid "Little fix for layout"
+msgid "French translation"
 msgstr ""
 
 #: ../qml/pages/common/ProductNewFeatures.qml:30

@@ -35,7 +35,7 @@ MainView {
     /* to test themes others then default one */
     theme.name: "Ubuntu.Components.Themes.SuruDark"
 
-    property string appVersion: "1.7.4"
+    property string appVersion: "1.7.5"
 
     /* applicationName needs to match the "name" field in the application manifest
        Note:' applicationName' value sets the DB storage path if using U1DB api (remove the blank spaces in the url):

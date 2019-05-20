@@ -32,10 +32,10 @@ MainView {
     automaticOrientation: true
     anchorToKeyboard: true
 
-    /* to test themes others then default one */
-    theme.name: "Ubuntu.Components.Themes.SuruDark"
+    /* enable to test themes others then default one */
+    //theme.name: "Ubuntu.Components.Themes.SuruDark"
 
-    property string appVersion: "1.7.5"
+    property string appVersion: "1.7.6"
 
     /* applicationName needs to match the "name" field in the application manifest
        Note:' applicationName' value sets the DB storage path if using U1DB api (remove the blank spaces in the url):
@@ -49,12 +49,12 @@ MainView {
     //height: units.gu(111)
 
     //horizontal (rel)
-    //width: units.gu(100)
-    //height: units.gu(75)
+    width: units.gu(100)
+    height: units.gu(75)
 
     //Tablet horizontal
-    width: units.gu(128)
-    height: units.gu(80)
+    //width: units.gu(128)
+    //height: units.gu(80)
 
     //Tablet vertical
     //width: units.gu(80)

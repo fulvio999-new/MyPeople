@@ -65,6 +65,14 @@ Page{
                 }
             },
 
+            Action {
+                iconName: "save"
+                text: i18n.tr("Export as CSV")
+                onTriggered:{
+                    PopupUtils.open(dataBaseExporter)
+                }
+            },
+
             /* New config page from version 1.6 */
             Action {
                 iconName: "settings"

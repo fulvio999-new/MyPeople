@@ -1,6 +1,7 @@
 /*
     This file contains utility functions to Create the dataBase and perform some operations on it
-    (Note: database is save in the folder ~phablet/.local/share/<applicationName>.<appname>/Databases)
+    On Phone/Tablet database is saved in: ~phablet/.local/share/<applicationName>.<appname>/Databases
+    On Desktop development is saved in: /<user-home-folder>/.clickable/home/.local/share/<applicationName>/Databases
 */
 
 //.import "DateUtils.js" as DateUtils
@@ -15,7 +16,6 @@ Qt.include("DateUtils.js")
 function getUUID(suffix){
     return  Math.floor((1 + Math.random()) * 10000) +"-"+suffix;
 }
-
 
 //----------------------------------------------------------------------------
 
@@ -64,6 +64,66 @@ function getUUID(suffix){
              settings.addTelegramField = false
         }
     }
+
+    /* Export ALL the PEOPLE saved in the database using CVS format ready to be saved on file */
+    function exportPeopleTableAsCsv(){
+
+        var db = getDatabase();
+
+        var header = "name,surname,job,taxCode,vatNumber,birthday,address,phone,mobilePhone,email,skype,telegram,note";
+        var res = header+"\n";;
+
+        db.transaction(
+           function(tx) {
+              var rs =  tx.executeSql('SELECT * FROM people');
+
+              for(var i =0;i < rs.rows.length;i++){
+                    res += rs.rows.item(i).name+"," +
+                           rs.rows.item(i).surname+"," +
+                           rs.rows.item(i).job+","  +
+                           rs.rows.item(i).taxCode+"," +
+                           rs.rows.item(i).vatNumber+"," +
+                           rs.rows.item(i).birthday+"," +
+                           rs.rows.item(i).address+"," +
+                           rs.rows.item(i).phone+"," +
+                           rs.rows.item(i).mobilePhone+","  +
+                           rs.rows.item(i).email+","+
+                           rs.rows.item(i).skype+"," +
+                           rs.rows.item(i).telegram+"," +
+                           rs.rows.item(i).note+"\n";
+              }
+        });
+
+        return res;
+    }
+
+
+    /* Export ALL the MEETINGS saved in the database using CVS format ready to be saved on file */
+    function exportMeetingsTableAsCsv(){
+
+        var db = getDatabase();
+
+        var header = "name,surname,subject,place,date,note,status";
+        var res = header+"\n";;
+
+        db.transaction(
+           function(tx) {
+              var rs =  tx.executeSql('SELECT * FROM meeting');
+
+              for(var i =0;i < rs.rows.length;i++){
+                    res += rs.rows.item(i).name+"," +
+                           rs.rows.item(i).surname+"," +
+                           rs.rows.item(i).subject+","  +
+                           rs.rows.item(i).place+"," +
+                           rs.rows.item(i).date+"," +
+                           rs.rows.item(i).note+"," +
+                           rs.rows.item(i).status+"\n";
+             }
+        });
+
+        return res;
+    }
+
 
     /* Delete a table whose name is in argument */
     function deleteTable(tableName){

@@ -1,9 +1,24 @@
+/*
+ * Copyright (C) 2019  fulvio
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; version 3.
+ *
+ * ubuntu-calculator-app is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
-import QtQuick 2.4
+import QtQuick 2.7
 import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
-import Ubuntu.Components.Pickers 1.3
-import Ubuntu.Layouts 1.0
+import QtQuick.Layouts 1.3
+import Qt.labs.settings 1.0
+import Fileutils 1.0
 
 import U1db 1.0 as U1db
 
@@ -22,12 +37,10 @@ import "./pages/meeting"
 import "./pages/person"
 import "./pages/common"
 
-/*
-  App Main View
-*/
+
 MainView {
 
-    id: root
+  id: root
     objectName: "mainView"
     automaticOrientation: true
     anchorToKeyboard: true
@@ -35,13 +48,17 @@ MainView {
     /* enable to test themes others then default one */
     //theme.name: "Ubuntu.Components.Themes.SuruDark"
 
-    property string appVersion: "1.7.6"
+    /* application hidden folder where are saved the files. (path is fixed due to Appp confinement rules) */
+    property string fileSavingPath: "/.local/share/mypeople.fulvio999/"
+
+    property string appVersion: "1.7.7"
 
     /* applicationName needs to match the "name" field in the application manifest
        Note:' applicationName' value sets the DB storage path if using U1DB api (remove the blank spaces in the url):
        eg: ~phablet/.local/share/<applicationName>/file:/opt/<click.ubuntu.com>/<applicationName>/<version-number>/MyPeople/MyPeople_db
     */
-    applicationName: "mypeople.fulvio999"
+    applicationName: 'mypeople.fulvio999'
+
 
     /*------- Tablet (width >= 110) -------- */
     //vertical
@@ -141,8 +158,8 @@ MainView {
     }
 
     Component {
-        id: showNewFeaturesDialogue
-        ProductNewFeatures{}
+        id: dataBaseExporter
+        DatabaseExporter{}
     }
 
     Component {
@@ -159,7 +176,6 @@ MainView {
 
         /* mandatory field for AdaptivePageLayout */
         primaryPage: PeopleListPage{}
-
     }
 
     /*
@@ -171,7 +187,7 @@ MainView {
     */
 
 
-    /* For MyPepole version 1.0 importing data */
+    /* For MyPepole LEGACY version 1.0 importing data. Will be removed in the future */
     U1db.Database {
         id: mypeopleDb1_0
         /* create an empty db in: ~phablet/.local/share/<applicationName>/1.1/

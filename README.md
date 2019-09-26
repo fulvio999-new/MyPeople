@@ -6,4 +6,4 @@ NO data are stored or shared online.
 
 Available on OpensStore: https://open-store.io/app/mypeople.fulvio999
 
-V. 1.7.2 : added spanish translation
+V. 1.7.7 : added CSV file export

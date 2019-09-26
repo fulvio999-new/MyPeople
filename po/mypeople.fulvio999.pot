@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mypeople.fulvio999\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-20 14:57+0000\n"
+"POT-Creation-Date: 2019-09-26 19:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,7 +62,7 @@ msgid "Contact(s) from"
 msgstr ""
 
 #: ../qml/utils/DatabaseImporter.qml:76 ../qml/utils/DataBaseEraser.qml:54
-#: ../qml/dialogs/OperationResult.qml:17
+#: ../qml/utils/DatabaseExporter.qml:90 ../qml/dialogs/OperationResult.qml:17
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:58
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:117
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:57
@@ -95,11 +95,11 @@ msgstr ""
 msgid "(there is NO restore)"
 msgstr ""
 
-#: ../qml/utils/DataBaseEraser.qml:26
+#: ../qml/utils/DataBaseEraser.qml:26 ../qml/utils/DatabaseExporter.qml:31
 msgid "People"
 msgstr ""
 
-#: ../qml/utils/DataBaseEraser.qml:39
+#: ../qml/utils/DataBaseEraser.qml:39 ../qml/utils/DatabaseExporter.qml:32
 msgid "Meetings"
 msgstr ""
 
@@ -129,6 +129,34 @@ msgstr ""
 
 #: ../qml/utils/DataBaseEraser.qml:85
 msgid "meetings"
+msgstr ""
+
+#: ../qml/utils/DatabaseExporter.qml:16
+msgid "Export to a CSV file"
+msgstr ""
+
+#: ../qml/utils/DatabaseExporter.qml:17
+msgid "(CSV: comma separated values)"
+msgstr ""
+
+#: ../qml/utils/DatabaseExporter.qml:48
+msgid "File name"
+msgstr ""
+
+#: ../qml/utils/DatabaseExporter.qml:54
+msgid "Export"
+msgstr ""
+
+#: ../qml/utils/DatabaseExporter.qml:74
+msgid "File already exist. Change the file name"
+msgstr ""
+
+#: ../qml/utils/DatabaseExporter.qml:78
+msgid "Could not write file"
+msgstr ""
+
+#: ../qml/utils/DatabaseExporter.qml:81
+msgid "SUCCESS, file saved under the folder"
 msgstr ""
 
 #: ../qml/dialogs/OperationResult.qml:9
@@ -303,15 +331,19 @@ msgstr ""
 msgid "Help"
 msgstr ""
 
-#: ../qml/pages/person/PeopleListPage.qml:71
+#: ../qml/pages/person/PeopleListPage.qml:70
+msgid "Export as CSV"
+msgstr ""
+
+#: ../qml/pages/person/PeopleListPage.qml:79
 msgid "Settings"
 msgstr ""
 
-#: ../qml/pages/person/PeopleListPage.qml:139
+#: ../qml/pages/person/PeopleListPage.qml:147
 msgid "name OR surname to search"
 msgstr ""
 
-#: ../qml/pages/person/PeopleListPage.qml:151
+#: ../qml/pages/person/PeopleListPage.qml:159
 #: ../qml/pages/meeting/MeetingListGlobalPhone.qml:184
 #: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:181
 #: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:171
@@ -319,16 +351,16 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: ../qml/pages/person/PeopleListPage.qml:175
+#: ../qml/pages/person/PeopleListPage.qml:183
 msgid "Total people found"
 msgstr ""
 
-#: ../qml/pages/person/PeopleListPage.qml:189
+#: ../qml/pages/person/PeopleListPage.qml:197
 msgid "Global Agenda Meetings"
 msgstr ""
 
-#: ../qml/pages/person/PeopleListPage.qml:235
-#: ../qml/pages/person/PeopleListPage.qml:258
+#: ../qml/pages/person/PeopleListPage.qml:243
+#: ../qml/pages/person/PeopleListPage.qml:266
 msgid "Today"
 msgstr ""
 

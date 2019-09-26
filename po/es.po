@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-20 14:48+0000\n"
-"PO-Revision-Date: 2019-05-20 16:51+0200\n"
+"POT-Creation-Date: 2019-09-26 19:06+0000\n"
+"PO-Revision-Date: 2019-09-26 21:12+0200\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
 "Language-Team: UBports Spanish Team\n"
 "Language: es\n"
@@ -62,7 +62,7 @@ msgid "Contact(s) from"
 msgstr "Contactos de"
 
 #: ../qml/utils/DatabaseImporter.qml:76 ../qml/utils/DataBaseEraser.qml:54
-#: ../qml/dialogs/OperationResult.qml:17
+#: ../qml/utils/DatabaseExporter.qml:90 ../qml/dialogs/OperationResult.qml:17
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:58
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:117
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:57
@@ -95,11 +95,11 @@ msgstr "Seleccionar el tipo(s) de objeto para eliminar"
 msgid "(there is NO restore)"
 msgstr "(NO hay restaurar)"
 
-#: ../qml/utils/DataBaseEraser.qml:26
+#: ../qml/utils/DataBaseEraser.qml:26 ../qml/utils/DatabaseExporter.qml:31
 msgid "People"
 msgstr "Personas"
 
-#: ../qml/utils/DataBaseEraser.qml:39
+#: ../qml/utils/DataBaseEraser.qml:39 ../qml/utils/DatabaseExporter.qml:32
 msgid "Meetings"
 msgstr "Reuniones"
 
@@ -130,6 +130,34 @@ msgstr "gente y"
 #: ../qml/utils/DataBaseEraser.qml:85
 msgid "meetings"
 msgstr "reuniones"
+
+#: ../qml/utils/DatabaseExporter.qml:16
+msgid "Export to a CSV file"
+msgstr "Exportar a un archivo CSV"
+
+#: ../qml/utils/DatabaseExporter.qml:17
+msgid "(CSV: comma separated values)"
+msgstr "(CSV: valores separados por comas)"
+
+#: ../qml/utils/DatabaseExporter.qml:48
+msgid "File name"
+msgstr "Nombre de archivo"
+
+#: ../qml/utils/DatabaseExporter.qml:54
+msgid "Export"
+msgstr "Exportar"
+
+#: ../qml/utils/DatabaseExporter.qml:74
+msgid "File already exist. Change the file name"
+msgstr "El archivo ya existe. Cambiar el nombre"
+
+#: ../qml/utils/DatabaseExporter.qml:78
+msgid "Could not write file"
+msgstr "No se pudo escribir el archivo"
+
+#: ../qml/utils/DatabaseExporter.qml:81
+msgid "SUCCESS, file saved under the folder"
+msgstr "ÉXITO, archivo guardado en la carpeta"
 
 #: ../qml/dialogs/OperationResult.qml:9
 msgid "Operation Result"
@@ -303,15 +331,19 @@ msgstr "Añadir"
 msgid "Help"
 msgstr "Ayuda"
 
-#: ../qml/pages/person/PeopleListPage.qml:71
+#: ../qml/pages/person/PeopleListPage.qml:70
+msgid "Export as CSV"
+msgstr "Exportar como CSV"
+
+#: ../qml/pages/person/PeopleListPage.qml:79
 msgid "Settings"
 msgstr "Configuraciones"
 
-#: ../qml/pages/person/PeopleListPage.qml:139
+#: ../qml/pages/person/PeopleListPage.qml:147
 msgid "name OR surname to search"
 msgstr "nombre O apellido para buscar"
 
-#: ../qml/pages/person/PeopleListPage.qml:151
+#: ../qml/pages/person/PeopleListPage.qml:159
 #: ../qml/pages/meeting/MeetingListGlobalPhone.qml:184
 #: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:181
 #: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:171
@@ -319,16 +351,16 @@ msgstr "nombre O apellido para buscar"
 msgid "Search"
 msgstr "Buscar"
 
-#: ../qml/pages/person/PeopleListPage.qml:175
+#: ../qml/pages/person/PeopleListPage.qml:183
 msgid "Total people found"
 msgstr "Total de personas encontradas"
 
-#: ../qml/pages/person/PeopleListPage.qml:189
+#: ../qml/pages/person/PeopleListPage.qml:197
 msgid "Global Agenda Meetings"
 msgstr "Reuniones de la agenda global"
 
-#: ../qml/pages/person/PeopleListPage.qml:235
-#: ../qml/pages/person/PeopleListPage.qml:258
+#: ../qml/pages/person/PeopleListPage.qml:243
+#: ../qml/pages/person/PeopleListPage.qml:266
 msgid "Today"
 msgstr "Hoy"
 

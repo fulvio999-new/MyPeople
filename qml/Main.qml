@@ -51,7 +51,7 @@ MainView {
     /* application hidden folder where are saved the files. (path is fixed due to Appp confinement rules) */
     property string fileSavingPath: "/.local/share/mypeople.fulvio999/"
 
-    property string appVersion: "1.7.7"
+    property string appVersion: "1.7.8"
 
     /* applicationName needs to match the "name" field in the application manifest
        Note:' applicationName' value sets the DB storage path if using U1DB api (remove the blank spaces in the url):

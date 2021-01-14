@@ -117,10 +117,10 @@ import "../../js/DateUtils.js" as DateUtils
                         text: i18n.tr("Close")
                         width: units.gu(14)
                         onClicked: {
-                          // Storage.searchMeetingByTimeAndPerson(peopleMeetingFoundDelegate.personName,peopleMeetingFoundDelegate.personSurname,peopleMeetingFoundDelegate.dateFrom,peopleMeetingFoundDelegate.dateTo,peopleMeetingFoundDelegate.meetingStatus);
+                            // Storage.searchMeetingByTimeAndPerson(peopleMeetingFoundDelegate.personName,peopleMeetingFoundDelegate.personSurname,peopleMeetingFoundDelegate.dateFrom,peopleMeetingFoundDelegate.dateTo,peopleMeetingFoundDelegate.meetingStatus);
                             Storage.searchMeetingByTimeAndPerson(searchMeetingWithPersonPage.personName,searchMeetingWithPersonPage.personSurname,searchMeetingWithPersonPage.dateFrom,searchMeetingWithPersonPage.dateTo,searchMeetingWithPersonPage.meetingStatus);
 
-                           PopupUtils.close(confirmArchiveMeeting)
+                            PopupUtils.close(confirmArchiveMeeting)
                         }
                     }
 
@@ -164,7 +164,7 @@ import "../../js/DateUtils.js" as DateUtils
             spacing: units.gu(0.5)
 
             Column {
-                width: background.width - 10 - editMeetingColumn.width;
+                width: background.width - units.gu(2) - editMeetingColumn.width;
                 height: peopleMeetingFoundDelegate.height
                 spacing: units.gu(0.2)
 
@@ -197,7 +197,7 @@ import "../../js/DateUtils.js" as DateUtils
 
                 Component.onCompleted: {
 
-                    /* if a meeting with status TODO and date greater than now is notified as expired */
+                    /* if a meeting with status SCHEDULED and date greater than now is notified as SCHEDULED (expired) */
                     if(date < todayDateFormatted && status !== i18n.tr("ARCHIVED")) {
                        meetingStatusLabel.text =  meetingStatusLabel.text + " "+i18n.tr("(EXPIRED)")
                        meetingStatusLabel.color = "orange"
@@ -224,7 +224,7 @@ import "../../js/DateUtils.js" as DateUtils
                             height: editMeetingIcon.height
                             onClicked: {
 
-                                adaptivePageLayout.addPageToNextColumn(searchMeetingWithPersonPage, Qt.resolvedUrl("EditMeetingPage.qml"),
+                                  pageStack.push(Qt.resolvedUrl("EditMeetingPage.qml"),
                                                                        {
                                                                           /* <page-variable-name>:<property-value-to-pass> */
                                                                           id:id,
@@ -240,7 +240,7 @@ import "../../js/DateUtils.js" as DateUtils
                                                                           dateTo:searchMeetingWithPersonPage.dateTo,
                                                                           meetingStatus:searchMeetingWithPersonPage.meetingStatus
                                                                         }
-                                                                       )
+                                                    );
 
                              }
                         }

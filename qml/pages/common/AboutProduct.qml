@@ -25,6 +25,7 @@ Dialog {
 
        Button {
            width: units.gu(18)
+           anchors.horizontalCenter: parent.horizontalCenter
            text: i18n.tr("Close")
            onClicked: PopupUtils.close(aboutDialogue)
        }

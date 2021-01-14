@@ -16,7 +16,7 @@ Dialog {
     text: i18n.tr("Save this person ?")
 
     Button {
-        text: "Cancel"
+        text: "Close"
         onClicked: PopupUtils.close(confirmDialogue)
     }
 
@@ -57,7 +57,7 @@ Dialog {
             newTelegramField.text = ""
             newNoteTextArea.text = ""
 
-            adaptivePageLayout.removePages(addPersonPage)
+            //adaptivePageLayout.removePages(addPersonPage)
 
             Storage.loadAllPeople();
 

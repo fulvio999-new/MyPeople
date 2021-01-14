@@ -15,7 +15,7 @@ Dialog {
     modal:true
 
     Button {
-       text: i18n.tr("Cancel")
+       text: i18n.tr("Close")
        onClicked: PopupUtils.close(dialogue)
     }
 
@@ -33,7 +33,7 @@ Dialog {
 
             PopupUtils.open(operationResultDialogue)
 
-            adaptivePageLayout.removePages(createMeetingWithPersonPage)
+          //adaptivePageLayout.removePages(createMeetingWithPersonPage)
         }
     }
 }

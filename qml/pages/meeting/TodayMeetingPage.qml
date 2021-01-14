@@ -27,18 +27,47 @@ Page {
         title: i18n.tr("Today Meeting")+ ": " + todayMeetingModel.count
      }
 
-     Layouts {
-         id: layoutTodayMeetingPage
-         anchors.fill: parent
-         layouts:[
 
-             ConditionalLayout {
-                 name: "layoutTodayMeeting"
-                 when: root.width > units.gu(120)
-                 TodayMeetingTablet{}
+     Item{
+         id: todayMeetingTablet
+
+         anchors.fill: parent
+
+         UbuntuListView {
+             id: todayMeetingResultList
+             /* necessary, otherwise hide the page header */
+             anchors.topMargin: todayMeetingPageHeader.height
+             anchors.fill: parent
+             focus: true
+             /* nececessary otherwise the list scroll under the header */
+             clip: true
+             model: todayMeetingModel
+             boundsBehavior: Flickable.StopAtBounds
+             highlight: Component{
+
+                 id: highlightComponent
+
+                 Rectangle {
+                     width: 180; height: 44
+                     color: "blue";
+
+                     radius: 2
+                     /* move the Rectangle on the currently selected List item with the keyboard */
+                     y: todayMeetingResultList.currentItem.y
+
+                     /* show an animation on change ListItem selection */
+                     Behavior on y {
+                         SpringAnimation {
+                             spring: 5
+                             damping: 0.1
+                         }
+                     }
+                 }
              }
-         ]
-         //else
-         TodayMeetingPhone{}
+
+             delegate: TodayMeetingFoundDelegate{}
+         }
      }
+
+
  }

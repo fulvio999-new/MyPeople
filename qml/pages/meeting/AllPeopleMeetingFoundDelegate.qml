@@ -217,7 +217,7 @@ import "../../js/DateUtils.js" as DateUtils
 
                 Component.onCompleted: {
 
-                    /* if a meeting with status TODO and date greater than now is notified as expired */
+                    /* if a meeting with status SCHEDULED and date greater than now is notified as expired */
                     if(date < todayDateFormatted && status !== i18n.tr("ARCHIVED")) {
                        meetingStatusLabel.text =  meetingStatusLabel.text + " "+i18n.tr("(EXPIRED)")
                        meetingStatusLabel.color = "orange"
@@ -243,9 +243,8 @@ import "../../js/DateUtils.js" as DateUtils
                             width: editMeetingIcon.width
                             height: editMeetingIcon.height
                             onClicked: {
-
-                                adaptivePageLayout.addPageToNextColumn(searchAnyMeetingPage,Qt.resolvedUrl("EditMeetingPage.qml") ,
-                                                                       {
+                            pageStack.push(Qt.resolvedUrl("EditMeetingPage.qml"),
+                                                 {
                                                                           /* <page-variable-name>:<property-value-to-pass> */
                                                                           id:id,
                                                                           name:name,
@@ -253,15 +252,11 @@ import "../../js/DateUtils.js" as DateUtils
                                                                           subject:subject,
                                                                           date:date,
                                                                           place:place,
-                                                                          status: meetingStatusLabel.text,
+                                                                          meetingStatus: status,
                                                                           note:note,
-                                                                          isFromGlobalMeetingSearch:true
-                                                                          //dateFrom:dateFrom,
-                                                                          //dateTo:dateTo,
-                                                                          //meetingStatus:meetingStatus
-                                                                        }
-                                                                       )
-
+                                                                          isFromGlobalMeetingSearch:true                                                                        
+                                                          }
+                                            );
                              }
                         }
                     }

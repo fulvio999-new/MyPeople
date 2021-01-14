@@ -94,7 +94,7 @@ Dialog {
                                 Storage.getTodayBirthDays();
                                 Storage.getTodayMeetings();
 
-                                adaptivePageLayout.removePages(personDetailsPage)
+                                //adaptivePageLayout.removePages(personDetailsPage)
                                 loadingPageActivity.running = false
                             }
                         }

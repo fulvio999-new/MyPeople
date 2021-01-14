@@ -130,15 +130,7 @@ import "../../js/DateUtils.js" as DateUtils
                         text: i18n.tr("Execute") //ARCHIVE
 
                         onClicked: {
-
-                            var meetingId;
-                            /* depending on the source page, pick-up the meetingId from a different UbuntuListView */
-                            //if(isFromTodayMeetingPage === true){
-                               meetingId = todayMeetingModel.get(todayMeetingResultList.currentIndex).id;
-                            //}else{
-                               /* the 'id' of the selected meeting */
-                            //   meetingId = allPeopleMeetingFoundModel.get(allPeopleMeetingSearchResultList.currentIndex).id;
-                            //}
+                            var meetingId = todayMeetingModel.get(todayMeetingResultList.currentIndex).id;
 
                             Storage.updateMeetingStatus(meetingId,"ARCHIVED");
 
@@ -201,7 +193,7 @@ import "../../js/DateUtils.js" as DateUtils
 
                 Label {
                     id: meetingStatusLabel
-                    text: "<b>"+i18n.tr("Meeting status")+": </b>"+"<b>"+status+"</b>"
+                    text: "<b>"+i18n.tr("Status")+": </b>"+"<b>"+status+"</b>"
                     fontSize: "medium"
                     color: "grey"
                 }
@@ -234,8 +226,7 @@ import "../../js/DateUtils.js" as DateUtils
                             width: editMeetingIcon.width
                             height: editMeetingIcon.height
                             onClicked: {
-
-                                adaptivePageLayout.addPageToNextColumn(todayMeetingPage,Qt.resolvedUrl("EditMeetingPage.qml") ,
+                            pageStack.push(Qt.resolvedUrl("EditMeetingPage.qml"),
                                                                        {
                                                                           /* <page-variable-name>:<property-value-to-pass> */
                                                                           id:id,
@@ -244,14 +235,11 @@ import "../../js/DateUtils.js" as DateUtils
                                                                           subject:subject,
                                                                           date:date,
                                                                           place:place,
-                                                                          status: meetingStatusLabel.text,
+                                                                          meetingStatus: status,
                                                                           note:note,
                                                                           isFromGlobalMeetingSearch:true
-                                                                          //dateFrom:dateFrom,
-                                                                          //dateTo:dateTo,
-                                                                          //meetingStatus:meetingStatus
                                                                         }
-                                                                       )
+                                           );
 
                              }
                         }

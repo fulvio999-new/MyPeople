@@ -23,6 +23,7 @@ import "../meeting"
 */
 Page{
     id: peopleListPage
+    anchors.fill: parent
 
     header: PageHeader {
         title: "MyPeople"
@@ -45,7 +46,7 @@ Page{
                 iconName: "list-add"
                 text: i18n.tr("Add")
                 onTriggered:{
-                    adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("AddPersonPage.qml"))
+                    pageStack.push(Qt.resolvedUrl("../person/AddPersonPage.qml"));
                 }
             },
 
@@ -78,17 +79,30 @@ Page{
                 iconName: "settings"
                 text: i18n.tr("Settings")
                 onTriggered:{
-                    adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("../common/ConfigurationPage.qml") )
+                    pageStack.push(Qt.resolvedUrl("../common/ConfigurationPage.qml"));
                 }
             }
         ]
+    }
+
+    Component.onCompleted: {
+        Storage.loadAllPeople();
+    }
+
+    /* keep sorted the loaded people List */
+    SortFilterModel {
+        id: sortedListPeopleModel
+        model: modelListPeople
+        sort.order: Qt.AscendingOrder
+        sortCaseSensitivity: Qt.CaseSensitive
     }
 
     /* A list of people */
     UbuntuListView {
         id: listView
         anchors.fill: parent
-        model: modelListPeople
+        anchors.topMargin: units.gu(30) /* amount of space from the above component */
+        model: sortedListPeopleModel
         delegate: PeopleListDelegate{}  /* Component used to display an item */
 
         /* disable the dragging of the model list elements */
@@ -115,71 +129,64 @@ Page{
         }
 
         focus: true
+        /* note: clip:true prevent that UbuntuListView draw out of his assigned rectangle, default is false */
+        clip: true
+      }
 
         /* header for the list. Is declared here, inside at the UbuntuListView, to have access at the List items width param */
-        Component{
-            id: listHeader
+        Column{
+                id: clo1
+                anchors.fill: parent
 
-            Item {
-                id: listHeaderItem
-                width: parent.width
-                height: units.gu(29)
-                x: 5; y: 8;
-
-                Column{
-                    id: clo1
-                    spacing: units.gu(1)
-                    anchors.verticalCenter: parent.verticalCenter
-                    /* placeholder */
-                    Rectangle {
+                spacing: units.gu(1)
+                anchors.verticalCenter: parent.verticalCenter
+                /* placeholder */
+                Rectangle {
                         color: "transparent"
                         width: parent.width
                         height: units.gu(7)
-                    }
+                }
 
-                    Row{
-                        id:row1
-                        spacing: units.gu(2)
-                        anchors.horizontalCenter: parent.horizontalCenter
+                Row{
+                      id:row1
+                      spacing: units.gu(2)
+                      anchors.horizontalCenter: parent.horizontalCenter
 
-                        TextField{
+                      TextField{
                             id: searchField
-                            placeholderText: i18n.tr("name OR surname to search")
-                            onTextChanged: {
-                                if(text.length == 0 ) {
-                                    Storage.loadAllPeople();
-                                }
+                            width: units.gu(30)
+                            placeholderText: i18n.tr("Filter by surname")
+                            inputMethodHints: Qt.ImhNoPredictiveText /* disable text prediction with underlining */
+                                            onTextChanged: {
+
+                                                if (text.length > 0) /* do filter */ {
+                                                    /* flag "i" = ignore case */
+                                                    sortedListPeopleModel.filter.pattern = new RegExp(searchField.text, "i")
+                                                    sortedListPeopleModel.sort.order = Qt.AscendingOrder
+                                                    sortedListPeopleModel.sortCaseSensitivity = Qt.CaseSensitive
+
+                                                    /* filter by surname */
+                                                    sortedListPeopleModel.sort.property = "surname"
+                                                    sortedListPeopleModel.filter.property = "surname"
+
+                                                } else {
+                                                    /* show all people */
+                                                    sortedListPeopleModel.filter.pattern = /./
+                                                    sortedListPeopleModel.sort.order = Qt.AscendingOrder
+                                                    sortedListPeopleModel.sortCaseSensitivity = Qt.CaseSensitive
+                                                }
+                                            }
+
                             }
-                        }
 
-                        Button{
-                            id: filterButton
-                            objectName: "Search"
-                            width: units.gu(10)
-                            text: i18n.tr("Search")
-                            onClicked: {
-                                if(searchField.text.length > 0 )
-                                {
-                                    modelListPeople.clear();
-                                    var peopleFound = Storage.searchPeopleByNameOrSurname(searchField.text);
-
-                                    for(var i =0;i < peopleFound.length;i++){
-                                        modelListPeople.append(peopleFound[i]);
-                                    }
-
-                                } else {
-                                    Storage.loadAllPeople()
-                                }
-                            }
-                        }
                     }
 
                     Row{
                         id:row2
                         spacing: units.gu(1)
+                        anchors.horizontalCenter: parent.horizontalCenter
                         Label{
                             id: peopleFoundLabel
-                            anchors.centerIn: parent.Center
                             text: i18n.tr("Total people found")+": " + listView.count
                             font.bold: false
                             font.pointSize: units.gu(1.5)
@@ -188,30 +195,26 @@ Page{
 
                     Row{
                         id:row3
-                        spacing: units.gu(1.5)
                         anchors.horizontalCenter: parent.horizontalCenter
-                        width: parent.width
 
                         Button{
                             id: showReportbutton
                             text: i18n.tr("Global Agenda Meetings")
                             color: UbuntuColors.green
                             height: units.gu(4)
-                            anchors.centerIn: parent.Center
-                            width: parent.width
                             onClicked: {
-                                /* clean data to prevent caching after delete from maintenance page */
+                                /* clean data to prevent caching after delete executed from maintenance page */
                                 meetingWithPersonFoundModel.clear();
                                 allPeopleMeetingFoundModel.clear();
-                                                                       //sintax: (current-page, page to add)
-                                adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("../meeting/SearchAnyMeetingPage.qml"));
+
+                                pageStack.push(Qt.resolvedUrl("../meeting/SearchAnyMeetingPage.qml"));
                             }
                         }
                     }
 
                     Row{
                         id:todayInfo
-
+                        anchors.horizontalCenter: parent.horizontalCenter
                         Grid {
                             id: categoryInstantReportChartRow
                             visible: true
@@ -234,7 +237,7 @@ Page{
 
                                 onClicked: {
                                     Storage.getTodayBirthDays();
-                                    adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("../birthday/TodayBirthdayPage.qml"))
+                                    pageStack.push(Qt.resolvedUrl("../birthday/TodayBirthdayPage.qml"));
                                 }
                             }
 
@@ -257,7 +260,7 @@ Page{
 
                                 onClicked: {
                                     Storage.getTodayMeetings();
-                                    adaptivePageLayout.addPageToNextColumn(peopleListPage, Qt.resolvedUrl("../meeting/TodayMeetingPage.qml"))
+                                    pageStack.push(Qt.resolvedUrl("../meeting/TodayMeetingPage.qml"));
                                 }
                             }
 
@@ -267,12 +270,7 @@ Page{
                             }
                         }
                     }
-                }
             }
-        }
-
-        header: listHeader
-    }
 
     Scrollbar {
         flickableItem: listView

@@ -51,14 +51,9 @@ MainView {
     /* application hidden folder where are saved the files. (path is fixed due to Appp confinement rules) */
     property string fileSavingPath: "/.local/share/mypeople.fulvio999/"
 
-    property string appVersion: "1.7.8"
+    property string appVersion: "1.8"
 
-    /* applicationName needs to match the "name" field in the application manifest
-       Note:' applicationName' value sets the DB storage path if using U1DB api (remove the blank spaces in the url):
-       eg: ~phablet/.local/share/<applicationName>/file:/opt/<click.ubuntu.com>/<applicationName>/<version-number>/MyPeople/MyPeople_db
-    */
     applicationName: 'mypeople.fulvio999'
-
 
     /*------- Tablet (width >= 110) -------- */
     //vertical
@@ -66,8 +61,8 @@ MainView {
     //height: units.gu(111)
 
     //horizontal (rel)
-    width: units.gu(100)
-    height: units.gu(75)
+    //width: units.gu(100)
+    //height: units.gu(75)
 
     //Tablet horizontal
     //width: units.gu(128)
@@ -79,8 +74,8 @@ MainView {
 
     /* ----- phone 4.5 (the smallest one) ---- */
     //vertical
-    //width: units.gu(50)
-    //height: units.gu(96)
+    width: units.gu(50)
+    height: units.gu(96)
 
     //horizontal
     //width: units.gu(96)
@@ -167,15 +162,13 @@ MainView {
         OperationResult{}
     }
 
+    PageStack {
+           id: pageStack
 
-    /* AdaptivePageLayout provides a flexible way of viewing a stack of pages in one or more columns */
-    AdaptivePageLayout {
-
-        id: adaptivePageLayout
-        anchors.fill: parent
-
-        /* mandatory field for AdaptivePageLayout */
-        primaryPage: PeopleListPage{}
+           /* set the firts page of the application */
+           Component.onCompleted: {
+                pageStack.push(Qt.resolvedUrl("./pages/person/PeopleListPage.qml"));
+            }
     }
 
     /*
@@ -185,7 +178,6 @@ MainView {
       MyPeople 1.2 (and futere release) uses QT LocalStorage API instead of QML U1DB, so that the Database  will be located
       in a fixed folder independent from thre application version and NO import was necessary.
     */
-
 
     /* For MyPepole LEGACY version 1.0 importing data. Will be removed in the future */
     U1db.Database {

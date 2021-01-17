@@ -37,9 +37,9 @@ function showNewFeatures(){
 /*  the scroll heigth for newMeetingPage page */
 function getNewMeetingContentHeight(){
     if(root.width > units.gu(80))
-        return createMeetingWithPersonPage.height + units.gu(30)
+        return createMeetingWithPersonPage.height + units.gu(43)
     else
-        return createMeetingWithPersonPage.height + units.gu(30) //phone
+        return createMeetingWithPersonPage.height + units.gu(43) //phone
 }
 
 /*  the scroll heigth for editMeetingPage page */

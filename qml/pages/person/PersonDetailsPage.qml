@@ -61,7 +61,7 @@ Page{
     Flickable {
         id: personDetailsFlickable
         clip: true
-        contentHeight: personDetailsPage.height * 2 - units.gu(10)  //Utility.getPageHeight(personDetailsPage)
+        contentHeight: personDetailsPage.height * 2  + units.gu(10) //Utility.getPageHeight(personDetailsPage)
         anchors {
             top: parent.top
             left: parent.left

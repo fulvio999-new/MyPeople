@@ -39,7 +39,7 @@ Page {
     Flickable {
         id: newPersonPageFlickable
         clip: true
-        contentHeight: addPersonPage.height * 2 - units.gu(10)
+        contentHeight: addPersonPage.height * 2 + units.gu(10)
         anchors {
             top: parent.top
             left: parent.left

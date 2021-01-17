@@ -16,12 +16,14 @@ Dialog {
                   +i18n.tr("b) Create an Agenda of meetings with the archived people")+"<br/>"+"<br/>"
                   +"<b>"+i18n.tr("What is the meeting status ?")+"</b><br/>"
                   +i18n.tr("Is a flag used to organize the stored meetings.")+"<br/>"
-                  +i18n.tr("Currently there are three status: <br/><b>'SCHEDULED', 'ARCHIVED', 'SCHEDULED (EXPIRED)''</b>")+"<br/><br/>"
+                  +i18n.tr("There are three status: <br/><b>'SCHEDULED', 'ARCHIVED', 'SCHEDULED (EXPIRED)''</b>")+"<br/><br/>"
                   +i18n.tr("A just created meeting (for a future data) get 'SCHEDULED' status (that means 'is programmed').")+"<br/><br/>"
-                  +i18n.tr("A meeting can be deleted or archived by the user.")+ "<br/>"+i18n.tr("Archiving set the meeting status to 'ARCHIVED'")+"<br/>"
-                  +i18n.tr("That means: 'kept the meeting to use it again in the future, just change his time'.")+"<br/><br/>"
-                  +i18n.tr("When the current time is greater than the meeting one, the meeting is set as 'SCHEDULED (EXPIRED)'.")+"<br/><br/>"
-                  +i18n.tr("Updating the date of a 'SCHEDULED (EXPIRED)' meeting with a future date, it return automatically in 'SCHEDULED' status.")+"<br/>"
+                  +i18n.tr("Any meeting, can be deleted.")+ "<br/>"+i18n.tr("Archiving set the meeting status to 'ARCHIVED'")+"<br/>"
+                  +i18n.tr("Archiving a meeting means 'leave it in database'. You can schedule again an archived meeting,")+"<br/>"
+                  +i18n.tr("just set a future date and change his status to 'SCHEDULED'")+"<br/>"
+                  +i18n.tr("Is not possible schedule a new meeting in a past date")+"<br/><br/>"
+                  +i18n.tr("When current time is greater than the meeting one, the meeting is 'SCHEDULED (EXPIRED)'.")+"<br/><br/>"
+                  +i18n.tr("Updating the date to a future one return to 'SCHEDULED'")
 
        Button {
            width: units.gu(18)

@@ -67,7 +67,7 @@ Page{
     Flickable {
         id: editMeetingPageFlickable
         clip: true
-        contentHeight: Utility.getEditMeetingPageContentHeight()
+        contentHeight: editMeetingPage.height + editMeetingPage.height/2  //Utility.getEditMeetingPageContentHeight()
         anchors {
             top: parent.top
             left: parent.left
@@ -146,7 +146,7 @@ Page{
                     id: nameField
                     text: editMeetingPage.name
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     hasClearButton: false
                     readOnly: true
                     anchors {
@@ -177,7 +177,7 @@ Page{
                     placeholderText: ""
                     text: editMeetingPage.surname
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     hasClearButton: false
                     readOnly: true
                     anchors {
@@ -210,7 +210,7 @@ Page{
                     text: editMeetingPage.subject
                     echoMode: TextInput.Normal
                     readOnly: false
-                    width: units.gu(30)
+                    width: units.gu(28)
                     hasClearButton: false
                     anchors {
                             leftMargin: units.gu(1)
@@ -242,7 +242,7 @@ Page{
                     text: editMeetingPage.place
                     echoMode: TextInput.Normal
                     readOnly: false
-                    width: units.gu(30)
+                    width: units.gu(28)
                     hasClearButton: true
                     anchors {
                             leftMargin: units.gu(1)
@@ -381,7 +381,7 @@ Page{
                     textFormat:TextEdit.AutoText
                     text: editMeetingPage.note
                     height: units.gu(15)
-                    width: units.gu(30)
+                    width: units.gu(28)
                     readOnly: false
                     anchors {
                             leftMargin: units.gu(1)

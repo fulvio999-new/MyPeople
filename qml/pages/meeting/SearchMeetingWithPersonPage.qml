@@ -251,7 +251,7 @@ Page{
                      searchMeetingWithPersonPage.dateTo = meetingDateToButton.text;
                      searchMeetingWithPersonPage.meetingStatus = meetingStatus;
 
-                     meetingFoundLabel.text = "<b>"+i18n.tr("Found")+": </b>"+ meetingSearchResultList.count +"<b> "+i18n.tr("meeting(s) (listed in chronological order)")+"</b>"
+                     meetingFoundLabel.text = "<b>"+i18n.tr("Found")+": </b>"+ meetingSearchResultList.count +"<b> "+i18n.tr("meeting(s) (in chronological order)")+"</b>"
 
                  }
              }

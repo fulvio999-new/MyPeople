@@ -21,8 +21,14 @@ Page {
     id: addPersonPage
     visible: false
 
+    property int inputTextWidth;
+
     header: PageHeader {
-        title: i18n.tr("Add new person")
+       title: i18n.tr("Add new person")
+    }
+
+    Component.onCompleted: {
+      inputTextWidth: units.gu(10);
     }
 
     Component {
@@ -33,7 +39,7 @@ Page {
     Flickable {
         id: newPersonPageFlickable
         clip: true
-        contentHeight: Utility.getContentHeight()
+        contentHeight: addPersonPage.height * 2 - units.gu(10)
         anchors {
             top: parent.top
             left: parent.left
@@ -75,7 +81,7 @@ Page {
                     echoMode: TextInput.Normal
                     inputMethodHints: Qt.ImhNoPredictiveText
                     hasClearButton: true
-                    width: units.gu(30)
+                    width: units.gu(28)
                     anchors {
                        leftMargin: units.gu(1)
                        rightMargin: units.gu(2)
@@ -104,7 +110,7 @@ Page {
                     id: newSurnameField
                     echoMode: TextInput.Normal
                     inputMethodHints: Qt.ImhNoPredictiveText
-                    width: units.gu(30)
+                    width: units.gu(28)
                     anchors {
                           leftMargin: units.gu(1)
                           rightMargin: units.gu(2)
@@ -132,7 +138,7 @@ Page {
                 TextField {
                     id: newJobField
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
                             leftMargin: units.gu(1)
@@ -217,7 +223,7 @@ Page {
                 TextField {
                     id: newTaxCodeField
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
                             leftMargin: units.gu(1)
@@ -246,7 +252,7 @@ Page {
                 TextField {
                     id: newVatNumberField
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
                             leftMargin: units.gu(1)
@@ -275,7 +281,7 @@ Page {
                 TextField {
                     id: newAddressField
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
                             leftMargin: units.gu(1)
@@ -305,7 +311,7 @@ Page {
                 {
                     id: newPhoneField
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
                             leftMargin: units.gu(1)
@@ -335,7 +341,7 @@ Page {
                 {
                     id: newMobilePhoneField
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
                             leftMargin: units.gu(1)
@@ -364,7 +370,7 @@ Page {
                 TextField {
                     id: newEmailField
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
                             leftMargin: units.gu(1)
@@ -393,7 +399,7 @@ Page {
                 TextField {
                     id: newSkypeField
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
                             leftMargin: units.gu(1)
@@ -422,7 +428,7 @@ Page {
                 TextField {
                     id: newTelegramField
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
                             leftMargin: units.gu(1)
@@ -452,7 +458,7 @@ Page {
                     id: newNoteTextArea
                     textFormat:TextEdit.AutoText
                     height: units.gu(15)
-                    width: units.gu(30)
+                    width: units.gu(28)
                     anchors {
                             leftMargin: units.gu(1)
                             rightMargin: units.gu(2)
@@ -476,7 +482,7 @@ Page {
                         PopupUtils.open(confirmAddPeopleDialog)
                     }
                     anchors {
-                        top: newNoteRow.bottom
+                        top: newNoteTextArea.bottom
                         topMargin: units.gu(5)
                         horizontalCenter: parent.horizontalCenter
                     }

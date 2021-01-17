@@ -24,7 +24,7 @@ Page {
         id: searchAnyMeetingPage
 
         header: PageHeader {
-           title: i18n.tr("Search meetings with any people")
+           title: i18n.tr("Search meetings with anyone")
         }
 
         /* the values chosen in the search meeting form */
@@ -246,7 +246,7 @@ Page {
                        searchAnyMeetingPage.meetingStatus = meetingStatus;
 
                        /* using the 'count' field of the Listview instead of ListModel we have an auto-refresh wen a meeting is deleted */
-                       meetingFoundLabel.text = "<b>"+i18n.tr("Found")+": </b>"+ allPeopleMeetingSearchResultList.count +"<b> "+i18n.tr("meeting(s) (listed in chronological order)")+"</b>"
+                       meetingFoundLabel.text = "<b>"+i18n.tr("Found")+": </b>"+ allPeopleMeetingSearchResultList.count +"<b> "+i18n.tr("meeting(s) (in chronological order)")+"</b>"
                     }
                   }
              }

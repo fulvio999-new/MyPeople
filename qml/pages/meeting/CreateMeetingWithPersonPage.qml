@@ -12,6 +12,7 @@ import QtQuick.LocalStorage 2.0
 /* note: alias name must have first letter in upperCase */
 import "../../js/utility.js" as Utility
 import "../../js/storage.js" as Storage
+import "../../js/DateUtils.js" as DateUtils
 
 /* import folder */
 import "../../dialogs"
@@ -28,6 +29,9 @@ Page{
     property string id  /* PK field not shown */
     property string personName;
     property string personSurname
+
+    /* the text to show in the message popUp */
+    property string infoText: ""
 
     header: PageHeader {
         id: headerAddMeetingPage
@@ -248,6 +252,20 @@ Page{
                         }
                     }
                 }
+
+                /* To notify messages at the user */
+                Component {
+                     id: popover
+                     Dialog {
+                         id: po
+                         text: "<b>"+infoText+"</b>"
+                         MouseArea {
+                            anchors.fill: parent
+                            onClicked: PopupUtils.close(po)
+                         }
+                     }
+                }
+
              }
 
              ListItem{
@@ -348,7 +366,14 @@ Page{
                     color: UbuntuColors.orange
                     width: units.gu(18)
                     onClicked: {
-                        PopupUtils.open(confirmInsertMeetingDialog, saveButton,{text: i18n.tr("Save the new meeting ?")})
+                        /* check for chosen date: Is no possible schedule a meeting with a passed date-time */
+                        if(! DateUtils.isMeetingDateValid(newMeetingDateButton.text,newMeetingTimeButton.text)){
+                            infoText = "\n" + i18n.tr("Can't schedule to a passed date") + "\n";
+                            PopupUtils.open(popover);
+                            //console.log("You are SCHEDULING the meeting to a passed date");
+                        } else {
+                           PopupUtils.open(confirmInsertMeetingDialog, saveButton,{text: i18n.tr("Save the new meeting ?")})
+                        }
                     }
                     anchors {
                         top: meetingObjectRow.bottom

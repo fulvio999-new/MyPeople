@@ -40,7 +40,7 @@ import "./pages/common"
 
 MainView {
 
-  id: root
+    id: root
     objectName: "mainView"
     automaticOrientation: true
     anchorToKeyboard: true

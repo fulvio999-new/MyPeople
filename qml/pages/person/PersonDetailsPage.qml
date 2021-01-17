@@ -61,7 +61,7 @@ Page{
     Flickable {
         id: personDetailsFlickable
         clip: true
-        contentHeight: Utility.getPageHeight(personDetailsPage)
+        contentHeight: personDetailsPage.height * 2 - units.gu(10)  //Utility.getPageHeight(personDetailsPage)
         anchors {
             top: parent.top
             left: parent.left
@@ -103,7 +103,7 @@ Page{
                     text: personDetailsPage.personName
                     inputMethodHints: Qt.ImhNoPredictiveText
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     hasClearButton: false
                     /*  Dummy solution to have a refresh of the 'birthdayButton' when user select another person
                         all the other text field are update in auto; 'birthdayButton' is not refreshed (bug?)
@@ -142,7 +142,7 @@ Page{
                     inputMethodHints: Qt.ImhNoPredictiveText
                     text: personDetailsPage.personSurname
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     hasClearButton: false
                     anchors {
                           leftMargin: units.gu(1)
@@ -173,7 +173,7 @@ Page{
                     inputMethodHints: Qt.ImhNoPredictiveText
                     text: personDetailsPage.personJob
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     hasClearButton: false
                     anchors {
                             leftMargin: units.gu(1)
@@ -261,7 +261,7 @@ Page{
                     inputMethodHints: Qt.ImhNoPredictiveText
                     text: personDetailsPage.personTaxCode
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     hasClearButton: false
                     anchors {
                             leftMargin: units.gu(1)
@@ -292,7 +292,7 @@ Page{
                     text: personDetailsPage.personVatNumber
                     echoMode: TextInput.Normal
                     inputMethodHints: Qt.ImhNoPredictiveText
-                    width: units.gu(30)
+                    width: units.gu(28)
                     anchors {
                             leftMargin: units.gu(1)
                             rightMargin: units.gu(2)
@@ -322,7 +322,7 @@ Page{
                     text: personDetailsPage.personAddress
                     echoMode: TextInput.Normal
                     inputMethodHints: Qt.ImhNoPredictiveText
-                    width: units.gu(30)
+                    width: units.gu(28)
                     anchors {
                             leftMargin: units.gu(1)
                             rightMargin: units.gu(2)
@@ -354,7 +354,7 @@ Page{
                     inputMethodHints: Qt.ImhNoPredictiveText
                     text: personDetailsPage.personPhone
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     anchors {
                             leftMargin: units.gu(1)
                             rightMargin: units.gu(2)
@@ -385,7 +385,7 @@ Page{
                     inputMethodHints: Qt.ImhNoPredictiveText
                     text: personDetailsPage.personMobilePhone
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     anchors {
                             leftMargin: units.gu(1)
                             rightMargin: units.gu(2)
@@ -414,7 +414,7 @@ Page{
                     id: emailField
                     text: personDetailsPage.personEmail
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
                             leftMargin: units.gu(1)
@@ -444,7 +444,7 @@ Page{
                     id: skypeField
                     text: personDetailsPage.personSkype
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
                           leftMargin: units.gu(1)
@@ -474,7 +474,7 @@ Page{
                     id: telegramField
                     text: personDetailsPage.personTelegram
                     echoMode: TextInput.Normal
-                    width: units.gu(30)
+                    width: units.gu(28)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
                             leftMargin: units.gu(1)
@@ -506,7 +506,7 @@ Page{
                     textFormat:TextEdit.AutoText
                     text: personDetailsPage.personNote
                     height: units.gu(15)
-                    width: units.gu(30)
+                    width: units.gu(28)
                     anchors {
                             leftMargin: units.gu(1)
                             rightMargin: units.gu(2)

@@ -177,7 +177,7 @@ import "../../js/DateUtils.js" as DateUtils
                 }
 
                 Label {
-                    text: "<b>"+i18n.tr("Date")+"(yyyy-mm-dd): </b>"+date.split(' ')[0] + "  <b>"+i18n.tr("Time")+": </b>"+date.split(' ')[1]
+                    text: "<b>"+i18n.tr("Date")+"(y-m-d): </b>"+date.split(' ')[0] + "  <b>"+i18n.tr("Time")+": </b>"+date.split(' ')[1]
                     fontSize: "medium"
                 }
 
@@ -199,13 +199,13 @@ import "../../js/DateUtils.js" as DateUtils
                 }
 
                 Component.onCompleted: {
-
                     /* if a meeting with status TODO and date greater than now is notified as expired */
                     if(date < todayDateFormatted && status !== i18n.tr("ARCHIVED")) {
                        meetingStatusLabel.text =  meetingStatusLabel.text + " "+i18n.tr("(EXPIRED)")
                        meetingStatusLabel.color = "orange"
                     }
                 }
+
             }
 
             Column{

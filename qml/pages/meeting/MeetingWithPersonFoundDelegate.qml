@@ -174,7 +174,7 @@ import "../../js/DateUtils.js" as DateUtils
                 }
 
                 Label {
-                    text: "<b>"+i18n.tr("Date")+" (yyyy-mm-dd): </b>"+date.split(' ')[0] + "  <b>"+i18n.tr("Time")+": </b>"+date.split(' ')[1]
+                    text: "<b>"+i18n.tr("Date")+" (y-m-d): </b>"+date.split(' ')[0] + "  <b>"+i18n.tr("Time")+": </b>"+date.split(' ')[1]
                     fontSize: "medium"
                 }
 

@@ -7,85 +7,83 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-26 19:06+0000\n"
-"PO-Revision-Date: 2019-09-26 21:12+0200\n"
+"POT-Creation-Date: 2021-01-17 18:59+0000\n"
+"PO-Revision-Date: 2021-01-17 20:08+0100\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
 "Language-Team: UBports Spanish Team\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.4.2\n"
 
-#: ../qml/utils/DatabaseImporter.qml:16
-msgid "To import data from old versions 1.0 and 1.1 visit"
-msgstr "Para importar datos de las versiones anteriores, visite"
+#: ../qml/dialogs/ConfirmInsertMeeting.qml:14
+#: ../qml/dialogs/ConfirmInsertPeople.qml:15
+#: ../qml/dialogs/ConfirmDeletePeople.qml:13
+#: ../qml/dialogs/ConfirmUpdatePeople.qml:13
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:45
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:89
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:46
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:98
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:43
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:95
+#: ../qml/pages/meeting/EditMeetingPage.qml:429
+#: ../qml/pages/common/ConfigurationPage.qml:54
+msgid "Confirmation"
+msgstr "Confirmación"
 
-#: ../qml/utils/DatabaseImporter.qml:30
-msgid "No contacts found (First installation ?)"
-msgstr "No se encontraron contactos (¿Primera instalación?)"
-
-#: ../qml/utils/DatabaseImporter.qml:37
-#: ../qml/pages/person/InsertPersonTablet.qml:292
-#: ../qml/pages/person/InsertPersonPhone.qml:313
-#: ../qml/pages/person/DetailsPersonPhone.qml:340
-#: ../qml/pages/person/DetailsPersonTablet.qml:303
-#: ../qml/pages/meeting/EditMeetingTablet.qml:264
-#: ../qml/pages/meeting/InsertMeetingFormPhone.qml:230
-#: ../qml/pages/meeting/InsertMeetingFormTablet.qml:222
-#: ../qml/pages/meeting/EditMeetingPhone.qml:274
-msgid "Note"
-msgstr "Nota"
-
-#: ../qml/utils/DatabaseImporter.qml:37
-msgid "an import was already done"
-msgstr "una importación ya estaba hecha"
-
-#: ../qml/utils/DatabaseImporter.qml:37
-msgid "If redone you can have duplicated"
-msgstr "Si se vuelve a hacer, puedes duplicar"
-
-#: ../qml/utils/DatabaseImporter.qml:47
-msgid "<a href=\"%1\">http://iutility.blogspot.it/2016/11/MyPeople.html</a>"
-msgstr "<a href=\"%1\">http://iutility.blogspot.it/2016/11/MyPeople.html</a>"
-
-#: ../qml/utils/DatabaseImporter.qml:61 ../qml/utils/DatabaseImporter.qml:66
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:202
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:198
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:188
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:189
-msgid "Found"
-msgstr "Encontró"
-
-#: ../qml/utils/DatabaseImporter.qml:61 ../qml/utils/DatabaseImporter.qml:66
-msgid "Contact(s) from"
-msgstr "Contactos de"
-
-#: ../qml/utils/DatabaseImporter.qml:76 ../qml/utils/DataBaseEraser.qml:54
-#: ../qml/utils/DatabaseExporter.qml:90 ../qml/dialogs/OperationResult.qml:17
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:58
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:117
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:57
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:121
+#: ../qml/dialogs/ConfirmInsertMeeting.qml:18
+#: ../qml/dialogs/OperationResult.qml:17 ../qml/utils/DataBaseEraser.qml:54
+#: ../qml/utils/DatabaseExporter.qml:90 ../qml/utils/DatabaseImporter.qml:76
 #: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:56
 #: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:112
-#: ../qml/pages/common/AboutProduct.qml:28
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:57
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:121
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:58
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:117
 #: ../qml/pages/common/ProductNewFeatures.qml:59
+#: ../qml/pages/common/AboutProduct.qml:31
 msgid "Close"
 msgstr "Cerrar"
 
-#: ../qml/utils/DatabaseImporter.qml:83
-#: ../qml/pages/person/PeopleListPage.qml:62
-msgid "Import"
-msgstr "Importar"
+#: ../qml/dialogs/ConfirmInsertMeeting.qml:23
+#: ../qml/dialogs/ConfirmDeletePeople.qml:23
+#: ../qml/dialogs/ConfirmUpdatePeople.qml:22
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:70
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:130
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:71
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:139
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:71
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:130
+#: ../qml/pages/meeting/EditMeetingPage.qml:440
+#: ../qml/pages/common/ConfigurationPage.qml:72
+msgid "Execute"
+msgstr "Ejecutar"
 
-#: ../qml/utils/DatabaseImporter.qml:133
-msgid "OK, succesfully imported"
-msgstr "Vale, importado correctamente"
+#: ../qml/dialogs/ConfirmInsertPeople.qml:16
+msgid "Save this person ?"
+msgstr "¿Guardar esta persona?"
 
-#: ../qml/utils/DatabaseImporter.qml:133
-msgid "contacts"
-msgstr "contactos"
+#: ../qml/dialogs/ConfirmDeletePeople.qml:18
+#: ../qml/dialogs/ConfirmUpdatePeople.qml:17
+#: ../qml/pages/meeting/EditMeetingPage.qml:435
+#: ../qml/pages/common/ConfigurationPage.qml:66
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../qml/dialogs/OperationResult.qml:9
+msgid "Operation Result"
+msgstr "Resultado de la operación"
+
+#: ../qml/dialogs/OperationResult.qml:12
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:77
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:137
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:86
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:154
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:81
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:138
+msgid "Operation executed successfully"
+msgstr "Operación ejecutada correctamente"
 
 #: ../qml/utils/DataBaseEraser.qml:14
 msgid "Select item type(s) to remove"
@@ -103,11 +101,10 @@ msgstr "Personas"
 msgid "Meetings"
 msgstr "Reuniones"
 
-#: ../qml/utils/DataBaseEraser.qml:61 ../qml/pages/person/PeopleListPage.qml:54
-#: ../qml/pages/person/DetailsPersonPhone.qml:389
-#: ../qml/pages/person/DetailsPersonTablet.qml:378
-#: ../qml/pages/common/AppConfigurationPhone.qml:224
-#: ../qml/pages/common/AppConfigurationTablet.qml:220
+#: ../qml/utils/DataBaseEraser.qml:61
+#: ../qml/pages/person/PersonDetailsPage.qml:538
+#: ../qml/pages/person/PeopleListPage.qml:55
+#: ../qml/pages/common/ConfigurationPage.qml:234
 msgid "Delete"
 msgstr "Eliminar"
 
@@ -159,507 +156,408 @@ msgstr "No se pudo escribir el archivo"
 msgid "SUCCESS, file saved under the folder"
 msgstr "ÉXITO, archivo guardado en la carpeta"
 
-#: ../qml/dialogs/OperationResult.qml:9
-msgid "Operation Result"
-msgstr "Resultado de la operación"
+#: ../qml/utils/DatabaseImporter.qml:16
+msgid "To import data from old versions 1.0 and 1.1 visit"
+msgstr "Para importar datos de las versiones anteriores, visite"
 
-#: ../qml/dialogs/OperationResult.qml:12
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:81
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:138
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:86
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:154
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:77
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:145
-msgid "Operation executed successfully"
-msgstr "Operación ejecutada correctamente"
+#: ../qml/utils/DatabaseImporter.qml:30
+msgid "No contacts found (First installation ?)"
+msgstr "No se encontraron contactos (¿Primera instalación?)"
 
-#: ../qml/dialogs/ConfirmDeletePeople.qml:13
-#: ../qml/dialogs/ConfirmInsertPeople.qml:15
-#: ../qml/dialogs/ConfirmInsertMeeting.qml:14
-#: ../qml/dialogs/ConfirmUpdatePeople.qml:13
-#: ../qml/pages/person/DetailsPersonTablet.qml:321
-#: ../qml/pages/meeting/EditMeetingTablet.qml:298
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:43
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:95
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:46
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:98
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:45
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:89
-#: ../qml/pages/meeting/EditMeetingPhone.qml:308
-#: ../qml/pages/common/AppConfigurationPhone.qml:44
-#: ../qml/pages/common/AppConfigurationTablet.qml:45
-msgid "Confirmation"
-msgstr "Confirmación"
+#: ../qml/utils/DatabaseImporter.qml:37
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:334
+#: ../qml/pages/meeting/EditMeetingPage.qml:371
+#: ../qml/pages/person/AddPersonPage.qml:449
+#: ../qml/pages/person/PersonDetailsPage.qml:496
+msgid "Note"
+msgstr "Nota"
 
-#: ../qml/dialogs/ConfirmDeletePeople.qml:18
-#: ../qml/dialogs/ConfirmInsertMeeting.qml:18
-#: ../qml/dialogs/ConfirmUpdatePeople.qml:17
-#: ../qml/pages/person/DetailsPersonTablet.qml:325
-#: ../qml/pages/meeting/EditMeetingTablet.qml:304
-#: ../qml/pages/meeting/EditMeetingPhone.qml:314
-#: ../qml/pages/common/AppConfigurationPhone.qml:55
-#: ../qml/pages/common/AppConfigurationTablet.qml:56
-msgid "Cancel"
-msgstr "Cancelar"
+#: ../qml/utils/DatabaseImporter.qml:37
+msgid "an import was already done"
+msgstr "una importación ya estaba hecha"
 
-#: ../qml/dialogs/ConfirmDeletePeople.qml:23
-#: ../qml/dialogs/ConfirmInsertMeeting.qml:23
-#: ../qml/dialogs/ConfirmUpdatePeople.qml:22
-#: ../qml/pages/person/DetailsPersonTablet.qml:330
-#: ../qml/pages/meeting/EditMeetingTablet.qml:309
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:71
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:130
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:71
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:139
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:70
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:130
-#: ../qml/pages/meeting/EditMeetingPhone.qml:319
-#: ../qml/pages/common/AppConfigurationPhone.qml:61
-#: ../qml/pages/common/AppConfigurationTablet.qml:62
-msgid "Execute"
-msgstr "Ejecutar"
+#: ../qml/utils/DatabaseImporter.qml:37
+msgid "If redone you can have duplicated"
+msgstr "Si se vuelve a hacer, puedes duplicar"
 
-#: ../qml/dialogs/ConfirmInsertPeople.qml:16
-msgid "Save this person ?"
-msgstr "¿Guardar esta persona?"
+#: ../qml/utils/DatabaseImporter.qml:47
+msgid "<a href=\"%1\">http://iutility.blogspot.it/2016/11/MyPeople.html</a>"
+msgstr "<a href=\"%1\">http://iutility.blogspot.it/2016/11/MyPeople.html</a>"
 
-#: ../qml/pages/person/InsertPersonTablet.qml:43
-#: ../qml/pages/person/InsertPersonPhone.qml:44
-#: ../qml/pages/person/DetailsPersonPhone.qml:46
-#: ../qml/pages/person/DetailsPersonTablet.qml:45
-#: ../qml/pages/meeting/EditMeetingTablet.qml:105
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:172
-#: ../qml/pages/meeting/InsertMeetingFormPhone.qml:43
-#: ../qml/pages/meeting/InsertMeetingFormTablet.qml:43
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:192
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:183
-#: ../qml/pages/meeting/EditMeetingPhone.qml:107
-msgid "Name"
-msgstr "Nombre"
+#: ../qml/utils/DatabaseImporter.qml:61 ../qml/utils/DatabaseImporter.qml:66
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:249
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:254
+msgid "Found"
+msgstr "Encontró"
 
-#: ../qml/pages/person/InsertPersonTablet.qml:58
-#: ../qml/pages/person/InsertPersonPhone.qml:65
-#: ../qml/pages/person/DetailsPersonPhone.qml:73
-#: ../qml/pages/person/DetailsPersonTablet.qml:67
-#: ../qml/pages/meeting/EditMeetingTablet.qml:121
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:172
-#: ../qml/pages/meeting/InsertMeetingFormPhone.qml:70
-#: ../qml/pages/meeting/InsertMeetingFormTablet.qml:67
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:192
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:183
-#: ../qml/pages/meeting/EditMeetingPhone.qml:126
-msgid "Surname"
-msgstr "Apellido"
+#: ../qml/utils/DatabaseImporter.qml:61 ../qml/utils/DatabaseImporter.qml:66
+msgid "Contact(s) from"
+msgstr "Contactos de"
 
-#: ../qml/pages/person/InsertPersonTablet.qml:78
-#: ../qml/pages/person/InsertPersonPhone.qml:85
-#: ../qml/pages/person/DetailsPersonPhone.qml:93
-#: ../qml/pages/person/DetailsPersonTablet.qml:86
-msgid "Job"
-msgstr "Empleo"
+#: ../qml/utils/DatabaseImporter.qml:83
+#: ../qml/pages/person/PeopleListPage.qml:63
+msgid "Import"
+msgstr "Importar"
 
-#: ../qml/pages/person/InsertPersonTablet.qml:93
-#: ../qml/pages/person/InsertPersonPhone.qml:105
-#: ../qml/pages/person/DetailsPersonPhone.qml:115
-#: ../qml/pages/person/DetailsPersonTablet.qml:102
-msgid "Birthday"
-msgstr "Fecha de nacimiento"
+#: ../qml/utils/DatabaseImporter.qml:133
+msgid "OK, succesfully imported"
+msgstr "Vale, importado correctamente"
 
-#: ../qml/pages/person/InsertPersonTablet.qml:139
-#: ../qml/pages/person/InsertPersonPhone.qml:151
-#: ../qml/pages/person/DetailsPersonPhone.qml:162
-#: ../qml/pages/person/DetailsPersonTablet.qml:147
-msgid "Tax code"
-msgstr "Código fiscal"
+#: ../qml/utils/DatabaseImporter.qml:133
+msgid "contacts"
+msgstr "contactos"
 
-#: ../qml/pages/person/InsertPersonTablet.qml:160
-#: ../qml/pages/person/InsertPersonPhone.qml:172
-#: ../qml/pages/person/DetailsPersonPhone.qml:184
-#: ../qml/pages/person/DetailsPersonTablet.qml:168
-msgid "Vat code"
-msgstr "Código de IVA"
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:27
+msgid "Search meetings with anyone"
+msgstr "Buscar reuniones con cualquier persona"
 
-#: ../qml/pages/person/InsertPersonTablet.qml:181
-#: ../qml/pages/person/InsertPersonPhone.qml:193
-#: ../qml/pages/person/DetailsPersonPhone.qml:206
-#: ../qml/pages/person/DetailsPersonTablet.qml:188
-msgid "Address"
-msgstr "Dirección"
-
-#: ../qml/pages/person/InsertPersonTablet.qml:201
-#: ../qml/pages/person/InsertPersonPhone.qml:213
-#: ../qml/pages/person/DetailsPersonPhone.qml:228
-#: ../qml/pages/person/DetailsPersonTablet.qml:208
-msgid "Phone"
-msgstr "Teléfono fijo"
-
-#: ../qml/pages/person/InsertPersonTablet.qml:217
-#: ../qml/pages/person/InsertPersonPhone.qml:233
-#: ../qml/pages/person/DetailsPersonPhone.qml:251
-#: ../qml/pages/person/DetailsPersonTablet.qml:225
-msgid "Mobile"
-msgstr "Teléfono móvil"
-
-#: ../qml/pages/person/InsertPersonTablet.qml:238
-#: ../qml/pages/person/InsertPersonPhone.qml:254
-#: ../qml/pages/person/DetailsPersonPhone.qml:274
-#: ../qml/pages/person/DetailsPersonTablet.qml:246
-msgid "Email"
-msgstr "Correo electrónico"
-
-#: ../qml/pages/person/InsertPersonTablet.qml:252
-#: ../qml/pages/person/InsertPersonPhone.qml:273
-#: ../qml/pages/person/DetailsPersonPhone.qml:296
-#: ../qml/pages/person/DetailsPersonTablet.qml:262
-msgid "Skype"
-msgstr "Skype"
-
-#: ../qml/pages/person/InsertPersonTablet.qml:272
-#: ../qml/pages/person/InsertPersonPhone.qml:293
-#: ../qml/pages/person/DetailsPersonPhone.qml:318
-#: ../qml/pages/person/DetailsPersonTablet.qml:283
-msgid "Telegram"
-msgstr "Telegram"
-
-#: ../qml/pages/person/InsertPersonTablet.qml:311
-#: ../qml/pages/person/PeopleListPage.qml:46
-#: ../qml/pages/person/InsertPersonPhone.qml:338
-msgid "Add"
-msgstr "Añadir"
-
-#: ../qml/pages/person/PeopleListPage.qml:35
-msgid "Help"
-msgstr "Ayuda"
-
-#: ../qml/pages/person/PeopleListPage.qml:70
-msgid "Export as CSV"
-msgstr "Exportar como CSV"
-
-#: ../qml/pages/person/PeopleListPage.qml:79
-msgid "Settings"
-msgstr "Configuraciones"
-
-#: ../qml/pages/person/PeopleListPage.qml:147
-msgid "name OR surname to search"
-msgstr "nombre O apellido para buscar"
-
-#: ../qml/pages/person/PeopleListPage.qml:159
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:184
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:181
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:171
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:172
-msgid "Search"
-msgstr "Buscar"
-
-#: ../qml/pages/person/PeopleListPage.qml:183
-msgid "Total people found"
-msgstr "Total de personas encontradas"
-
-#: ../qml/pages/person/PeopleListPage.qml:197
-msgid "Global Agenda Meetings"
-msgstr "Reuniones de la agenda global"
-
-#: ../qml/pages/person/PeopleListPage.qml:243
-#: ../qml/pages/person/PeopleListPage.qml:266
-msgid "Today"
-msgstr "Hoy"
-
-#: ../qml/pages/person/DetailsPersonPhone.qml:378
-#: ../qml/pages/person/DetailsPersonTablet.qml:368
-#: ../qml/pages/meeting/EditMeetingTablet.qml:283
-#: ../qml/pages/meeting/EditMeetingPhone.qml:293
-msgid "Update"
-msgstr "Actualizar"
-
-#: ../qml/pages/person/DetailsPersonPhone.qml:382
-#: ../qml/pages/person/DetailsPersonTablet.qml:371
-msgid "Confirm the update ?"
-msgstr "¿Confirmar la actualización?"
-
-#: ../qml/pages/person/DetailsPersonPhone.qml:392
-#: ../qml/pages/person/DetailsPersonTablet.qml:382
-msgid "Delete person AND his meetings ?"
-msgstr "¿Borrar persona Y sus reuniones?"
-
-#: ../qml/pages/person/AddPersonPage.qml:24
-msgid "Add new person"
-msgstr "Añadir nueva persona"
-
-#: ../qml/pages/person/PersonDetailsPage.qml:46
-msgid "Details for"
-msgstr "Detalles para"
-
-#: ../qml/pages/person/PeopleListDelegate.qml:92
-#: ../qml/pages/birthday/TodayBirthDayTablet.qml:97
-#: ../qml/pages/birthday/TodayBirthDayPhone.qml:97
-msgid "phone"
-msgstr "teléfono fijo"
-
-#: ../qml/pages/person/PeopleListDelegate.qml:96
-#: ../qml/pages/birthday/TodayBirthDayTablet.qml:101
-#: ../qml/pages/birthday/TodayBirthDayPhone.qml:101
-msgid "mobile"
-msgstr "teléfono móvil"
-
-#: ../qml/pages/person/PeopleListDelegate.qml:100
-#: ../qml/pages/birthday/TodayBirthDayTablet.qml:105
-#: ../qml/pages/birthday/TodayBirthDayPhone.qml:105
-msgid "mail"
-msgstr "correo electrónico"
-
-#: ../qml/pages/meeting/EditMeetingTablet.qml:38
-#: ../qml/pages/meeting/EditMeetingTablet.qml:40
-#: ../qml/pages/meeting/EditMeetingTablet.qml:79
-#: ../qml/pages/meeting/EditMeetingTablet.qml:80
-#: ../qml/pages/meeting/EditMeetingTablet.qml:83
-#: ../qml/pages/meeting/EditMeetingTablet.qml:85
-#: ../qml/pages/meeting/EditMeetingPhone.qml:38
-#: ../qml/pages/meeting/EditMeetingPhone.qml:40
-#: ../qml/pages/meeting/EditMeetingPhone.qml:81
-#: ../qml/pages/meeting/EditMeetingPhone.qml:82
-#: ../qml/pages/meeting/EditMeetingPhone.qml:85
-#: ../qml/pages/meeting/EditMeetingPhone.qml:87
-#: ../qml/pages/common/AppConfigurationPhone.qml:64
-#: ../qml/pages/common/AppConfigurationTablet.qml:65
-msgid "SCHEDULED"
-msgstr "PROGRAMADO"
-
-#: ../qml/pages/meeting/EditMeetingTablet.qml:73
-msgid "Change status"
-msgstr "Cambiar el estado"
-
-#: ../qml/pages/meeting/EditMeetingTablet.qml:77
-#: ../qml/pages/meeting/EditMeetingTablet.qml:80
-#: ../qml/pages/meeting/EditMeetingTablet.qml:84
-#: ../qml/pages/meeting/EditMeetingTablet.qml:85
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:136
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:201
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:221
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:305
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:212
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:296
-#: ../qml/pages/meeting/EditMeetingPhone.qml:79
-#: ../qml/pages/meeting/EditMeetingPhone.qml:82
-#: ../qml/pages/meeting/EditMeetingPhone.qml:86
-#: ../qml/pages/meeting/EditMeetingPhone.qml:87
-#: ../qml/pages/common/AppConfigurationPhone.qml:67
-#: ../qml/pages/common/AppConfigurationTablet.qml:68
-msgid "ARCHIVED"
-msgstr "ARCHIVADO"
-
-#: ../qml/pages/meeting/EditMeetingTablet.qml:142
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:187
-#: ../qml/pages/meeting/InsertMeetingFormPhone.qml:93
-#: ../qml/pages/meeting/InsertMeetingFormTablet.qml:90
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:207
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:198
-#: ../qml/pages/meeting/EditMeetingPhone.qml:147
-msgid "Subject"
-msgstr "Tema"
-
-#: ../qml/pages/meeting/EditMeetingTablet.qml:163
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:182
-#: ../qml/pages/meeting/InsertMeetingFormPhone.qml:116
-#: ../qml/pages/meeting/InsertMeetingFormTablet.qml:113
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:202
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:193
-#: ../qml/pages/meeting/EditMeetingPhone.qml:168
-msgid "Place"
-msgstr "Lugar"
-
-#: ../qml/pages/meeting/EditMeetingTablet.qml:184
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:177
-#: ../qml/pages/meeting/InsertMeetingFormPhone.qml:138
-#: ../qml/pages/meeting/InsertMeetingFormTablet.qml:135
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:197
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:188
-#: ../qml/pages/meeting/EditMeetingPhone.qml:189
-msgid "Date"
-msgstr "Fecha"
-
-#: ../qml/pages/meeting/EditMeetingTablet.qml:222
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:177
-#: ../qml/pages/meeting/InsertMeetingFormPhone.qml:184
-#: ../qml/pages/meeting/InsertMeetingFormTablet.qml:176
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:197
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:188
-#: ../qml/pages/meeting/EditMeetingPhone.qml:232
-msgid "Time"
-msgstr "Horario"
-
-#: ../qml/pages/meeting/EditMeetingTablet.qml:287
-#: ../qml/pages/meeting/EditMeetingPhone.qml:297
-msgid "Update the meeting ?"
-msgstr "¿Actualizar la reunión?"
-
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:45
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:48
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:47
-msgid "Delete selected Meeting ?"
-msgstr "¿Borrar la reunión seleccionada?"
-
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:101
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:104
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:95
-msgid "Mark as 'ARCHIVED' and leave it in the database ?"
-msgstr "¿Marcar como 'ARCHIVADA' y dejarla en la base de datos?"
-
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:102
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:105
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:96
-msgid "(if you archive a meeting you can reuse it"
-msgstr "(si archiva una reunión puede usarla de nuevo"
-
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:103
-msgid "in the future simply updating the date)"
-msgstr "en el futuro simplemente actualizando la fecha)"
-
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:193
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:155
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:213
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:150
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:204
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:144
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:147
-#: ../qml/pages/common/AppConfigurationPhone.qml:200
-#: ../qml/pages/common/AppConfigurationTablet.qml:200
-msgid "Meeting status"
-msgstr "Estado de la reunión"
-
-#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:202
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:222
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:213
-msgid "(EXPIRED)"
-msgstr "(MUERTO)"
-
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:50
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:47
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:47
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:49
-#: ../qml/pages/common/AppConfigurationTablet.qml:105
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:129
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:134
+#: ../qml/pages/common/ConfigurationPage.qml:137
 msgid "From"
 msgstr "Desde"
 
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:92
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:88
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:88
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:91
-#: ../qml/pages/common/AppConfigurationPhone.qml:142
-#: ../qml/pages/common/AppConfigurationTablet.qml:146
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:169
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:173
+#: ../qml/pages/common/ConfigurationPage.qml:175
 msgid "To"
 msgstr "Hasta"
 
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:147
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:143
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:137
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:140
-#: ../qml/pages/common/AppConfigurationPhone.qml:193
-#: ../qml/pages/common/AppConfigurationTablet.qml:192
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:193
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:197
+#: ../qml/pages/common/ConfigurationPage.qml:201
 msgid "Scheduled"
 msgstr "Programado"
 
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:147
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:143
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:137
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:140
-#: ../qml/pages/common/AppConfigurationPhone.qml:193
-#: ../qml/pages/common/AppConfigurationTablet.qml:192
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:193
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:197
+#: ../qml/pages/common/ConfigurationPage.qml:201
 msgid "meetings to participate"
 msgstr "reuniones para participar"
 
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:148
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:144
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:138
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:141
-#: ../qml/pages/common/AppConfigurationPhone.qml:66
-#: ../qml/pages/common/AppConfigurationPhone.qml:194
-#: ../qml/pages/common/AppConfigurationTablet.qml:67
-#: ../qml/pages/common/AppConfigurationTablet.qml:193
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:194
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:198
+#: ../qml/pages/common/ConfigurationPage.qml:77
+#: ../qml/pages/common/ConfigurationPage.qml:202
 msgid "Archived"
 msgstr "Archivado"
 
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:148
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:144
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:138
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:141
-#: ../qml/pages/common/AppConfigurationPhone.qml:194
-#: ../qml/pages/common/AppConfigurationTablet.qml:193
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:194
+#: ../qml/pages/common/ConfigurationPage.qml:202
 msgid "participated old meetings"
 msgstr "participó en reuniones antiguas"
 
-#: ../qml/pages/meeting/MeetingListGlobalPhone.qml:202
-#: ../qml/pages/meeting/MeetingListWithPersonPhone.qml:198
-#: ../qml/pages/meeting/MeetingListWithPersonTablet.qml:188
-#: ../qml/pages/meeting/MeetingListGlobalTablet.qml:189
-msgid "meeting(s) (listed in chronological order)"
-msgstr "reuniones (enumeradas en orden cronológico)"
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:200
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:196
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:204
+#: ../qml/pages/common/ConfigurationPage.qml:208
+msgid "Status"
+msgstr "Estado"
 
-#: ../qml/pages/meeting/InsertMeetingFormPhone.qml:250
-#: ../qml/pages/meeting/InsertMeetingFormTablet.qml:242
-msgid "Save"
-msgstr "Guardar"
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:231
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:237
+msgid "Search"
+msgstr "Buscar"
 
-#: ../qml/pages/meeting/InsertMeetingFormPhone.qml:254
-#: ../qml/pages/meeting/InsertMeetingFormTablet.qml:246
-msgid "Save the new meeting ?"
-msgstr "¿Guardar la nueva reunión?"
-
-#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:27
-msgid "Search meetings with any people"
-msgstr "Buscar reuniones con cualquier persona"
-
-#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:106
-#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:97
-msgid "in the future simply updating it)"
-msgstr "en el futuro simplemente actualizándola)"
-
-#: ../qml/pages/meeting/EditMeetingPage.qml:39
-msgid "Edit meeting with"
-msgstr "Editar reunión con"
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:249
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:254
+msgid "meeting(s) (in chronological order)"
+msgstr "reuniones (en orden cronológico)"
 
 #: ../qml/pages/meeting/TodayMeetingPage.qml:27
 msgid "Today Meeting"
 msgstr "Reunión de hoy"
 
-#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:40
-msgid "Search meeting with"
-msgstr "Buscar reunión con"
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:47
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:48
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:45
+msgid "Delete selected Meeting ?"
+msgstr "¿Borrar la reunión seleccionada?"
 
-#: ../qml/pages/meeting/EditMeetingPhone.qml:75
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:95
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:104
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:101
+msgid "Mark as 'ARCHIVED' and leave it in the database ?"
+msgstr "¿Marcar como 'ARCHIVADA' y dejarla en la base de datos?"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:96
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:105
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:102
+msgid "(if you archive a meeting you can reuse it"
+msgstr "(si archiva una reunión puede usarla de nuevo"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:97
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:106
+msgid "in the future simply updating it)"
+msgstr "en el futuro simplemente actualizándola)"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:175
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:192
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:172
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:75
+#: ../qml/pages/meeting/EditMeetingPage.qml:137
+#: ../qml/pages/person/AddPersonPage.qml:71
+#: ../qml/pages/person/PersonDetailsPage.qml:92
+msgid "Name"
+msgstr "Nombre"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:175
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:192
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:172
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:113
+#: ../qml/pages/meeting/EditMeetingPage.qml:167
+#: ../qml/pages/person/AddPersonPage.qml:101
+#: ../qml/pages/person/PersonDetailsPage.qml:132
+msgid "Surname"
+msgstr "Apellido"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:180
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:197
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:177
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:208
+#: ../qml/pages/meeting/EditMeetingPage.qml:263
+msgid "Date"
+msgstr "Fecha"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:180
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:197
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:177
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:278
+#: ../qml/pages/meeting/EditMeetingPage.qml:317
+msgid "Time"
+msgstr "Horario"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:185
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:202
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:182
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:176
+#: ../qml/pages/meeting/EditMeetingPage.qml:231
+msgid "Place"
+msgstr "Lugar"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:190
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:207
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:187
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:145
+#: ../qml/pages/meeting/EditMeetingPage.qml:199
+msgid "Subject"
+msgstr "Tema"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:203
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:284
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:221
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:300
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:136
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:201
+#: ../qml/pages/meeting/EditMeetingPage.qml:58
+#: ../qml/pages/meeting/EditMeetingPage.qml:126
+#: ../qml/pages/common/ConfigurationPage.qml:78
+msgid "ARCHIVED"
+msgstr "ARCHIVADO"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:204
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:222
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:202
+msgid "(EXPIRED)"
+msgstr "(MUERTO)"
+
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:213
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:193
+msgid "Meeting status"
+msgstr "Estado de la reunión"
+
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:103
+msgid "in the future simply updating the date)"
+msgstr "en el futuro simplemente actualizando la fecha)"
+
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:38
+msgid "new meeting with"
+msgstr "buscar reunión con"
+
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:365
+msgid "Save"
+msgstr "Guardar"
+
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:371
+#: ../qml/pages/meeting/EditMeetingPage.qml:409
+msgid "Can't schedule to a passed date"
+msgstr "No se puede programar para una fecha pasada"
+
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:375
+msgid "Save the new meeting ?"
+msgstr "¿Guardar la nueva reunión?"
+
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:40
+msgid "Meeting with"
+msgstr "Editar reunión con"
+
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:198
+msgid "participated meetings"
+msgstr "participó en reuniones antiguas"
+
+#: ../qml/pages/meeting/EditMeetingPage.qml:45
+msgid "Edit meeting with"
+msgstr "Editar reunión con"
+
+#: ../qml/pages/meeting/EditMeetingPage.qml:51
+msgid "EXPIRED"
+msgstr "(MUERTO)"
+
+#: ../qml/pages/meeting/EditMeetingPage.qml:60
+#: ../qml/pages/meeting/EditMeetingPage.qml:63
+#: ../qml/pages/meeting/EditMeetingPage.qml:125
+#: ../qml/pages/meeting/EditMeetingPage.qml:126
+#: ../qml/pages/common/ConfigurationPage.qml:75
+msgid "SCHEDULED"
+msgstr "PROGRAMADO"
+
+#: ../qml/pages/meeting/EditMeetingPage.qml:122
 msgid "Change"
 msgstr "Cambiar"
 
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:32
-msgid "Create a meeting with"
-msgstr "Crear una reunión con"
+#: ../qml/pages/meeting/EditMeetingPage.qml:401
+#: ../qml/pages/person/PersonDetailsPage.qml:527
+msgid "Update"
+msgstr "Actualizar"
+
+#: ../qml/pages/meeting/EditMeetingPage.qml:413
+msgid "Update the meeting ?"
+msgstr "¿Actualizar la reunión?"
 
 #: ../qml/pages/birthday/TodayBirthdayPage.qml:24
 msgid "Today BirthDay"
 msgstr "Cumpleaños hoy"
 
-#: ../qml/pages/common/AppConfigurationPhone.qml:46
-#: ../qml/pages/common/AppConfigurationTablet.qml:47
-msgid "Remove meetings in the range (no restore) ?"
-msgstr "Eliminar reuniones en el rango (sin restaurar)?"
+#: ../qml/pages/birthday/TodayBirthdayPage.qml:115
+#: ../qml/pages/person/PeopleListDelegate.qml:94
+msgid "phone"
+msgstr "teléfono fijo"
 
-#: ../qml/pages/common/AppConfigurationPhone.qml:72
-#: ../qml/pages/common/AppConfigurationTablet.qml:73
-msgid "Done, deleted"
-msgstr "Hecho, eliminado"
+#: ../qml/pages/birthday/TodayBirthdayPage.qml:119
+#: ../qml/pages/person/PeopleListDelegate.qml:98
+msgid "mobile"
+msgstr "teléfono móvil"
 
-#: ../qml/pages/common/AppConfigurationPhone.qml:72
-#: ../qml/pages/common/AppConfigurationTablet.qml:73
-msgid "meeting(s)"
-msgstr "reuniones"
+#: ../qml/pages/birthday/TodayBirthdayPage.qml:123
+#: ../qml/pages/person/PeopleListDelegate.qml:102
+msgid "mail"
+msgstr "correo electrónico"
 
-#: ../qml/pages/common/AppConfigurationPhone.qml:88
-#: ../qml/pages/common/AppConfigurationTablet.qml:92
-msgid "MAINTENANCE: delete old meetings"
-msgstr "MANTENIMIENTO: eliminar reuniones antiguas"
+#: ../qml/pages/person/AddPersonPage.qml:27
+msgid "Add new person"
+msgstr "Añadir nueva persona"
 
-#: ../qml/pages/common/AppConfigurationPhone.qml:101
-msgid "From:"
-msgstr "Desde:"
+#: ../qml/pages/person/AddPersonPage.qml:130
+#: ../qml/pages/person/PersonDetailsPage.qml:163
+msgid "Job"
+msgstr "Empleo"
+
+#: ../qml/pages/person/AddPersonPage.qml:159
+#: ../qml/pages/person/PersonDetailsPage.qml:194
+msgid "Birthday"
+msgstr "Fecha de nacimiento"
+
+#: ../qml/pages/person/AddPersonPage.qml:215
+#: ../qml/pages/person/PersonDetailsPage.qml:251
+msgid "Tax code"
+msgstr "Código fiscal"
+
+#: ../qml/pages/person/AddPersonPage.qml:244
+#: ../qml/pages/person/PersonDetailsPage.qml:282
+msgid "Vat code"
+msgstr "Código de IVA"
+
+#: ../qml/pages/person/AddPersonPage.qml:273
+#: ../qml/pages/person/PersonDetailsPage.qml:312
+msgid "Address"
+msgstr "Dirección"
+
+#: ../qml/pages/person/AddPersonPage.qml:302
+#: ../qml/pages/person/PersonDetailsPage.qml:343
+msgid "Phone"
+msgstr "Teléfono fijo"
+
+#: ../qml/pages/person/AddPersonPage.qml:332
+#: ../qml/pages/person/PersonDetailsPage.qml:374
+msgid "Mobile"
+msgstr "Teléfono móvil"
+
+#: ../qml/pages/person/AddPersonPage.qml:362
+#: ../qml/pages/person/PersonDetailsPage.qml:405
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: ../qml/pages/person/AddPersonPage.qml:391
+#: ../qml/pages/person/PersonDetailsPage.qml:435
+msgid "Skype"
+msgstr "Skype"
+
+#: ../qml/pages/person/AddPersonPage.qml:420
+#: ../qml/pages/person/PersonDetailsPage.qml:465
+msgid "Telegram"
+msgstr "Telegram"
+
+#: ../qml/pages/person/AddPersonPage.qml:478
+#: ../qml/pages/person/PeopleListPage.qml:47
+msgid "Add"
+msgstr "Añadir"
+
+#: ../qml/pages/person/PersonDetailsPage.qml:47
+msgid "Details for"
+msgstr "Detalles para"
+
+#: ../qml/pages/person/PersonDetailsPage.qml:531
+msgid "Confirm the update ?"
+msgstr "¿Confirmar la actualización?"
+
+#: ../qml/pages/person/PersonDetailsPage.qml:541
+msgid "Delete person AND his meetings ?"
+msgstr "¿Borrar persona Y sus reuniones?"
+
+#: ../qml/pages/person/PeopleListPage.qml:36
+msgid "Help"
+msgstr "Ayuda"
+
+#: ../qml/pages/person/PeopleListPage.qml:71
+msgid "Export as CSV"
+msgstr "Exportar como CSV"
+
+#: ../qml/pages/person/PeopleListPage.qml:80
+msgid "Settings"
+msgstr "Configuraciones"
+
+#: ../qml/pages/person/PeopleListPage.qml:158
+msgid "Filter by surname"
+msgstr "Filtrar por apellido"
+
+#: ../qml/pages/person/PeopleListPage.qml:190
+msgid "Total people found"
+msgstr "Total de personas encontradas"
+
+#: ../qml/pages/person/PeopleListPage.qml:202
+msgid "Global Agenda Meetings"
+msgstr "Reuniones de la agenda global"
+
+#: ../qml/pages/person/PeopleListPage.qml:246
+#: ../qml/pages/person/PeopleListPage.qml:269
+msgid "Today"
+msgstr "Hoy"
+
+#: ../qml/pages/common/ProductNewFeatures.qml:12
+msgid "What's new in this version"
+msgstr "Novedades en esta versión"
+
+#: ../qml/pages/common/ProductNewFeatures.qml:21
+msgid "Support for Dark theme"
+msgstr "Soporte para el tema oscuro"
+
+#: ../qml/pages/common/ProductNewFeatures.qml:21
+msgid "French translation"
+msgstr "traducción francés"
+
+#: ../qml/pages/common/ProductNewFeatures.qml:30
+msgid "Don't show again"
+msgstr "No mostrar de nuevo"
 
 #: ../qml/pages/common/AboutProduct.qml:10
 msgid "Product Info"
@@ -690,8 +588,8 @@ msgstr "Una bandera para mantener el estado de la reunión."
 
 #: ../qml/pages/common/AboutProduct.qml:19
 msgid ""
-"Currently there are three status: <br/><b>'SCHEDULED', 'ARCHIVED', "
-"'SCHEDULED (EXPIRED)''</b>"
+"There are three status: <br/><b>'SCHEDULED', 'ARCHIVED', 'SCHEDULED "
+"(EXPIRED)''</b>"
 msgstr ""
 "Hay tres estados: <br/><b>'PLANEADA', 'ARCHIVADA', 'PLANEADA (VENCIDA)'</b>"
 
@@ -704,8 +602,8 @@ msgstr ""
 "que está programada."
 
 #: ../qml/pages/common/AboutProduct.qml:21
-msgid "A meeting can be deleted or archived by the user."
-msgstr "A meeting can be deleted or archived by the user."
+msgid "Any meeting, can be deleted."
+msgstr "Cualquier reunión, puede ser eliminado."
 
 #: ../qml/pages/common/AboutProduct.qml:21
 msgid "Archiving set the meeting status to 'ARCHIVED'"
@@ -713,51 +611,82 @@ msgstr "Archivar una reunión colocarlo en estado 'ARCHIVADO'"
 
 #: ../qml/pages/common/AboutProduct.qml:22
 msgid ""
-"That means: 'kept the meeting to use it again in the future, just change his "
-"time'."
+"Archiving a meeting means 'leave it in database'. You can schedule again an "
+"archived meeting,"
 msgstr ""
-"Eso significa: 'mantuve la reunión para usarla de nuevo en el futuro, solo "
-"cambia su hora'."
+"Archivar una reunión significa que se mantiene en la base de datos, así que "
+"puede volver a planearla en un futuro,"
 
 #: ../qml/pages/common/AboutProduct.qml:23
+msgid "just set a future date and change his status to 'SCHEDULED'"
+msgstr ""
+"simplemente establezca una fecha futura y cambie su estado a 'PLANEADA'"
+
+#: ../qml/pages/common/AboutProduct.qml:24
+msgid "Is not possible schedule a new meeting in a past date"
+msgstr "No es posible programar una nueva reunión en una fecha pasada"
+
+#: ../qml/pages/common/AboutProduct.qml:25
 msgid ""
-"When the current time is greater than the meeting one, the meeting is set as "
-"'SCHEDULED (EXPIRED)'."
+"When current time is greater than the meeting one, the meeting is 'SCHEDULED "
+"(EXPIRED)'."
 msgstr ""
 "Cuando la hora actual es superior a la hora de la reunión, la reunión es "
 "'PLANEADA (VENCIDA)'."
 
-#: ../qml/pages/common/AboutProduct.qml:24
-msgid ""
-"Updating the date of a 'SCHEDULED (EXPIRED)' meeting with a future date, it "
-"return automatically in 'SCHEDULED' status."
-msgstr ""
-"Actualizar la fecha de una reunión 'PLANEADA (VENCIDA)' con una fecha "
-"futura, automáticamente la devuelve al estado PLANEADA de nuevo."
+#: ../qml/pages/common/AboutProduct.qml:26
+msgid "Updating the date to a future one return to 'SCHEDULED'"
+msgstr "Actualizando la fecha a una futura regrese a 'PLANEADA'"
 
-#: ../qml/pages/common/ProductNewFeatures.qml:12
-msgid "What's new in this version"
-msgstr "Novedades en esta versión"
-
-#: ../qml/pages/common/ProductNewFeatures.qml:21
-msgid "Support for Dark theme"
-msgstr "Soporte para el tema oscuro"
-
-#: ../qml/pages/common/ProductNewFeatures.qml:21
-msgid "French translation"
-msgstr "traducción francés"
-
-#: ../qml/pages/common/ProductNewFeatures.qml:30
-msgid "Don't show again"
-msgstr "No mostrar de nuevo"
-
-#: ../qml/pages/common/ConfigurationPage.qml:22
+#: ../qml/pages/common/ConfigurationPage.qml:27
 msgid "Application Configuration"
 msgstr "Configuración de la aplicación"
+
+#: ../qml/pages/common/ConfigurationPage.qml:56
+msgid "Remove meetings in the range (no restore) ?"
+msgstr "Eliminar reuniones en el rango (sin restaurar)?"
+
+#: ../qml/pages/common/ConfigurationPage.qml:83
+msgid "Done, deleted"
+msgstr "Hecho, eliminado"
+
+#: ../qml/pages/common/ConfigurationPage.qml:83
+msgid "meeting(s)"
+msgstr "reuniones"
+
+#: ../qml/pages/common/ConfigurationPage.qml:99
+msgid "MAINTENANCE: delete old meetings"
+msgstr "MANTENIMIENTO: eliminar reuniones antiguas"
 
 #: MyPeople.desktop.in.h:1
 msgid "MyPeople"
 msgstr "MiGente"
+
+#~ msgid "name OR surname to search"
+#~ msgstr "nombre O apellido para buscar"
+
+#~ msgid "Change status"
+#~ msgstr "Cambiar el estado"
+
+#~ msgid "Create a meeting with"
+#~ msgstr "Crear una reunión con"
+
+#~ msgid "From:"
+#~ msgstr "Desde:"
+
+#~ msgid ""
+#~ "That means: 'kept the meeting to use it again in the future, just change "
+#~ "his time'."
+#~ msgstr ""
+#~ "Eso significa: 'mantuve la reunión para usarla de nuevo en el futuro, "
+#~ "solo cambia su hora'."
+
+#~ msgid ""
+#~ "Updating the date of a 'SCHEDULED (EXPIRED)' meeting with a future date, "
+#~ "it return automatically in 'SCHEDULED' status."
+#~ msgstr ""
+#~ "Actualizar la fecha de una reunión 'PLANEADA (VENCIDA)' con una fecha "
+#~ "futura, automáticamente la devuelve al estado PLANEADA de nuevo."
 
 #~ msgid "Code refactoring"
 #~ msgstr "Código de refactorización"
@@ -773,14 +702,6 @@ msgstr "MiGente"
 
 #~ msgid "(for example when is finished or deleted)"
 #~ msgstr "(por ejemplo, cuando termina o se elimina)"
-
-#~ msgid ""
-#~ "Archiving a meeting means that is kept in the database,so that can be re-"
-#~ "scheduled in the future, or simply to keep it as a report."
-#~ msgstr ""
-#~ "Archivar una reunión significa que se mantiene en la base de datos, así "
-#~ "que puede volver a planearla en un futuro, o simplemente mantenerla como "
-#~ "un informe."
 
 #~ msgid ""
 #~ "An ARCHIVED meeting can return in SCHEDULED status setting his datetime "

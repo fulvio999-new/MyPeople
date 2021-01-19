@@ -8,7 +8,7 @@
 */
 function formatFullDateToString(date)
 {
-  //console.log('Formatting date: '+date)  ;
+  //console.log('Formatting date: '+date);
 
   var dd = (date.getDate() < 10 ? '0' : '') + date.getDate();
   var MM = ((date.getMonth() + 1) < 10 ? '0' : '') + (date.getMonth() + 1);
@@ -17,6 +17,18 @@ function formatFullDateToString(date)
   var mm = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
 
   return (yyyy + "-" + MM + "-" + dd+ " "+hh+ ":"+mm);
+}
+
+/* Used to create a suffix used in the database export to CSV */
+function formatFullDateForCsvExport(date)
+{
+    var dd = (date.getDate() < 10 ? '0' : '') + date.getDate();
+    var MM = ((date.getMonth() + 1) < 10 ? '0' : '') + (date.getMonth() + 1);
+    var yyyy = date.getFullYear();
+    var hh = (date.getHours() < 10 ? '0' : '') + date.getHours();
+    var mm = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
+
+    return (yyyy + "-" + MM + "-" + dd+ "_"+hh+ ":"+mm);
 }
 
 

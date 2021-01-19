@@ -1,111 +1,109 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
-import Ubuntu.Components.ListItems 1.3 as ListItem
+//import Ubuntu.Components.ListItems 1.3 as ListItem
 import Fileutils 1.0
 import QtQuick.LocalStorage 2.0
 
 import "../js/storage.js" as Storage
+import "../js/DateUtils.js" as DateUtils
 
 /*
    Dialog to export People or Mettings to a CSV file. Destination folder depends on the device.
    On PC desktop export path is: /<home-folder>/.clickable/home/.local/share/<applicationName>
 */
 Dialog {
-        id: dialogue
-        title: i18n.tr("Export to a CSV file")
-        text: i18n.tr("(CSV: comma separated values)")
+        id: dataBaseExportDialog
+        title: i18n.tr("Export as CSV file")
+        text: i18n.tr("to")+": " +root.fileSavingPath
 
-        Component {
-            id: entityTypeSelectorDelegate
-            OptionSelectorDelegate { text: name}
-        }
+        Column{
+                id: mainColumn
+                spacing: units.gu(1)
+                anchors.horizontalCenter: parent.horizontalCenter
 
-        /* Contains the two type of entity to be exported: People and Meetings */
-        ListModel {
-            id: exportEntityTypeModel
-        }
+                Row {
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    spacing: units.gu(4)
 
-        /* fill Listmodel using this method because allow you to use i18n */
-        Component.onCompleted: {
-            exportEntityTypeModel.append( { name: "<b>"+i18n.tr("People")+"</b>" , value:1 } );
-            exportEntityTypeModel.append( { name: "<b>"+i18n.tr("Meetings")+"</b>", value:2 } );
+                    Label {
+                        text: i18n.tr("People")
+                    }
+                    CheckBox {
+                        id: exportContactsCheckBox
+                        checked: false
+                    }
 
-            fileNameField.forceActiveFocus()
-        }
+                    Label {
+                        text: i18n.tr("Meetings")
+                    }
+                    CheckBox {
+                        id: exportMeetingsCheckBox
+                        checked: false
+                    }
+                }
 
-        ListItem.ItemSelector {
-            id: entityTypeItemSelector
-            delegate: entityTypeSelectorDelegate
-            model: exportEntityTypeModel
-            containerHeight: itemHeight * 3
-            expanded: true
-        }
+                Row{
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    spacing: units.gu(2)
 
-        TextField {
-            id: fileNameField
-            text: ""
-            placeholderText: i18n.tr("File name")
-            inputMethodHints: Qt.ImhNoPredictiveText | Qt.ImhNoAutoUppercase
-        }
+                    Button {
+                        id: closeButton
+                        width: units.gu(12)
+                        text:  i18n.tr("Close")
+                        onClicked: PopupUtils.close(dataBaseExportDialog)
+                    }
 
-        Button {
-            id:exportButton
-            text: i18n.tr("Export")
-            color: UbuntuColors.green
-            onClicked: {
-                var exportFileName = "file://" + Fileutils.getHomePath() + root.fileSavingPath + fileNameField.text+".csv";
-                var exportFilePath = root.fileSavingPath;
-                var csvContentToExport;
+                    Button {
+                        id: exportButton
+                        width: units.gu(12)
+                        text:  i18n.tr("Export")
+                        color: UbuntuColors.red
+                        onClicked: {
+                            var exportFileName = "file://" + Fileutils.getHomePath() + root.fileSavingPath;
+                            var exportFilePath = root.fileSavingPath;
 
-                if (exportEntityTypeModel.get(entityTypeItemSelector.selectedIndex).value === 1) {
-                    //console.log("Exporting People");
-                    csvContentToExport = Storage.exportPeopleTableAsCsv();
-                 }else{
-                    //console.log("Exporting Meetings");
-                    csvContentToExport = Storage.exportMeetingsTableAsCsv();
-                 }
+                            var csvContactToExport = "na";
+                            var csvMeetingToExport = "na";
 
-                 //console.log("Destination CSV File: "+exportFileName);
-                 //console.log("CSV content file: "+csvContentToExport);
+                            var contactFileName;
+                            var meetingFileName;
 
-                 if(Fileutils.exists(exportFileName)){
-                    importOperationResult.color = UbuntuColors.red
-                    importOperationResult.text = i18n.tr("File already exist. Change the file name");
-                    pathToFileLabel.text = " "
+                            var todayDate = DateUtils.formatFullDateForCsvExport(new Date());
 
-                 } else if(!Fileutils.write(exportFileName, csvContentToExport)) {
-                    importOperationResult.text = i18n.tr("Could not write file");
+                            if(!exportContactsCheckBox.checked && !exportMeetingsCheckBox.checked){
 
-                 } else {
-                    importOperationResult.text = i18n.tr("SUCCESS, file saved under the folder")+":"
-                    importOperationResult.color = UbuntuColors.green
-                    pathToFileLabel.text = exportFilePath
-                 }
-            }
-        }
+                                operationResult.color = UbuntuColors.red
+                                operationResult.text = i18n.tr("Please, select an option");
 
-        Button {
-            id: closeButton
-            text: i18n.tr("Close")
-            onClicked: {
-              PopupUtils.close(dialogue)
-            }
-        }
+                            }else{
 
-        Row{
-            anchors.horizontalCenter: parent.horizontalCenter
-            Label{              
-               id: importOperationResult
-               textSize:Label.Medium
-               text: " " /* placeholder for layout */
-            }
-        }
+                                if(exportContactsCheckBox.checked) {
+                                   csvContactToExport = Storage.exportPeopleTableAsCsv();
+                                   contactFileName = exportFileName +"MyPeople-"+todayDate+"-contacts.csv";
+                                   Fileutils.write(contactFileName, csvContactToExport)
+                                }
 
-        Row{
-            Label{
-                id: pathToFileLabel
-                text: " " /* placeholder for layout */
-            }
-        }
+                                if(exportMeetingsCheckBox.checked) {
+                                   csvMeetingToExport = Storage.exportMeetingsTableAsCsv();
+                                   meetingFileName = exportFileName +"MyPeople-"+todayDate+"-meetings.csv";
+                                   Fileutils.write(meetingFileName, csvMeetingToExport);
+                                }
+
+                                operationResult.color = UbuntuColors.green
+                                operationResult.text = i18n.tr("OK, saved as: ")+ "MyPeople-"+todayDate;
+                                closeButton.enabled = true
+                            }
+                        }
+                    }
+                }
+
+                Row{
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    Label{
+                        id: operationResult
+                        text: " "
+                    }
+                }
+          }
  }

@@ -13,6 +13,7 @@ import QtQuick.LocalStorage 2.0
 import "../../js/utility.js" as Utility
 import "../../js/storage.js" as Storage
 import "../../js/DateUtils.js" as DateUtils
+import "../../js/screenUtils.js" as ScreenUtils
 
 /* import folder */
 import "../../dialogs"
@@ -42,7 +43,7 @@ Page{
     Flickable {
         id: createMeetingWithPersonPageFlickable
         clip: true
-        contentHeight: Utility.getNewMeetingContentHeight()
+        contentHeight: ScreenUtils.getScrollHeightForNewMeetingPage(root.landscapeWindow, createMeetingWithPersonPage.height) //Utility.getNewMeetingContentHeight()
         anchors {
             top: parent.top
             left: parent.left

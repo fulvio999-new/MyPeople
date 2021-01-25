@@ -10,7 +10,7 @@ import QtQuick.LocalStorage 2.0
 import "../../js/storage.js" as Storage
 import "../../js/utility.js" as Utility
 import "../../js/DateUtils.js" as DateUtils
-
+import "../../js/screenUtils.js" as ScreenUtils
 
 /*
   Edit an existing Meeting
@@ -67,7 +67,7 @@ Page{
     Flickable {
         id: editMeetingPageFlickable
         clip: true
-        contentHeight: editMeetingPage.height + editMeetingPage.height/2  //Utility.getEditMeetingPageContentHeight()
+        contentHeight: ScreenUtils.getScrollHeightForEditMeetingPage(root.landscapeWindow, editMeetingPage.height) //editMeetingPage.height + editMeetingPage.height/2  //Utility.getEditMeetingPageContentHeight()
         anchors {
             top: parent.top
             left: parent.left

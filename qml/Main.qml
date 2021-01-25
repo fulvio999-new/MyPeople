@@ -45,15 +45,18 @@ MainView {
     automaticOrientation: true
     anchorToKeyboard: true
 
-    /* enable to test themes others then default one */
+    /* to test themes others then default one */
     //theme.name: "Ubuntu.Components.Themes.SuruDark"
 
     /* application hidden folder where are saved the files. (path is fixed due to Appp confinement rules) */
     property string fileSavingPath: "/.local/share/mypeople.fulvio999/"
 
-    property string appVersion: "1.8.1"
+    property string appVersion: "1.8.2"
 
     applicationName: 'mypeople.fulvio999'
+
+    /* true if screen is horizontal  */
+    property bool landscapeWindow: root.width > root.height
 
     /*------- Tablet (width >= 110) -------- */
     //vertical

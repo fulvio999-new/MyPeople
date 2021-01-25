@@ -15,7 +15,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
 
 #: ../qml/dialogs/ConfirmInsertMeeting.qml:14
 #: ../qml/dialogs/ConfirmInsertPeople.qml:15
@@ -130,19 +129,19 @@ msgstr "réunions"
 
 #: ../qml/utils/DatabaseExporter.qml:17
 msgid "Export as CSV file"
-msgstr "Exporter un fichier CSV"
+msgstr "Exporter en tant que fichier CSV"
 
 #: ../qml/utils/DatabaseExporter.qml:18
 msgid "to"
-msgstr "à"
+msgstr "vers"
 
 #: ../qml/utils/DatabaseExporter.qml:60
 msgid "Export"
-msgstr "Exportation"
+msgstr "Exporter"
 
 #: ../qml/utils/DatabaseExporter.qml:94
 msgid "OK, saved as: "
-msgstr "OK, enregistré sous:"
+msgstr "Enregistré en tant que :"
 
 #: ../qml/utils/DatabaseImporter.qml:16
 msgid "To import data from old versions 1.0 and 1.1 visit"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mypeople.fulvio999\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-17 18:59+0000\n"
-"PO-Revision-Date: 2021-01-17 20:20+0100\n"
+"POT-Creation-Date: 2021-01-25 11:21+0000\n"
+"PO-Revision-Date: 2021-01-25 12:42+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -35,7 +35,7 @@ msgstr "Bevestiging"
 
 #: ../qml/dialogs/ConfirmInsertMeeting.qml:18
 #: ../qml/dialogs/OperationResult.qml:17 ../qml/utils/DataBaseEraser.qml:54
-#: ../qml/utils/DatabaseExporter.qml:90 ../qml/utils/DatabaseImporter.qml:76
+#: ../qml/utils/DatabaseExporter.qml:53 ../qml/utils/DatabaseImporter.qml:76
 #: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:56
 #: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:112
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:57
@@ -94,22 +94,22 @@ msgstr "Kies de te verwijderen itemsoort(en)"
 msgid "(there is NO restore)"
 msgstr "(onomkeerbaar)"
 
-#: ../qml/utils/DataBaseEraser.qml:26 ../qml/utils/DatabaseExporter.qml:31
+#: ../qml/utils/DataBaseEraser.qml:26 ../qml/utils/DatabaseExporter.qml:30
 msgid "People"
 msgstr "Personen"
 
-#: ../qml/utils/DataBaseEraser.qml:39 ../qml/utils/DatabaseExporter.qml:32
+#: ../qml/utils/DataBaseEraser.qml:39 ../qml/utils/DatabaseExporter.qml:38
 msgid "Meetings"
 msgstr "Vergaderingen"
 
 #: ../qml/utils/DataBaseEraser.qml:61
-#: ../qml/pages/person/PersonDetailsPage.qml:538
+#: ../qml/pages/person/PersonDetailsPage.qml:539
 #: ../qml/pages/person/PeopleListPage.qml:55
 #: ../qml/pages/common/ConfigurationPage.qml:234
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: ../qml/utils/DataBaseEraser.qml:69
+#: ../qml/utils/DataBaseEraser.qml:69 ../qml/utils/DatabaseExporter.qml:77
 msgid "Please, select an option"
 msgstr "Kies een optie"
 
@@ -129,33 +129,21 @@ msgstr "personen en"
 msgid "meetings"
 msgstr "vergaderingen"
 
-#: ../qml/utils/DatabaseExporter.qml:16
-msgid "Export to a CSV file"
+#: ../qml/utils/DatabaseExporter.qml:17
+msgid "Export as CSV file"
 msgstr "Exporteren naar csv-bestand"
 
-#: ../qml/utils/DatabaseExporter.qml:17
-msgid "(CSV: comma separated values)"
-msgstr "(CSV: kommagescheiden waarden)"
+#: ../qml/utils/DatabaseExporter.qml:18
+msgid "to"
+msgstr "naar"
 
-#: ../qml/utils/DatabaseExporter.qml:48
-msgid "File name"
-msgstr "Bestandsnaam"
-
-#: ../qml/utils/DatabaseExporter.qml:54
+#: ../qml/utils/DatabaseExporter.qml:60
 msgid "Export"
 msgstr "Exporteren"
 
-#: ../qml/utils/DatabaseExporter.qml:74
-msgid "File already exist. Change the file name"
-msgstr "Dit bestand bestaat al. Geef een andere naam op."
-
-#: ../qml/utils/DatabaseExporter.qml:78
-msgid "Could not write file"
-msgstr "Kan bestand niet wegschrijven"
-
-#: ../qml/utils/DatabaseExporter.qml:81
-msgid "SUCCESS, file saved under the folder"
-msgstr "Het bestand is opgeslagen"
+#: ../qml/utils/DatabaseExporter.qml:94
+msgid "OK, saved as: "
+msgstr "OK, opgeslagen als:"
 
 #: ../qml/utils/DatabaseImporter.qml:16
 msgid "To import data from old versions 1.0 and 1.1 visit"
@@ -166,10 +154,10 @@ msgid "No contacts found (First installation ?)"
 msgstr "Geen contactpersonen aangetroffen (eerste gebruik?)"
 
 #: ../qml/utils/DatabaseImporter.qml:37
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:334
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:335
 #: ../qml/pages/meeting/EditMeetingPage.qml:371
-#: ../qml/pages/person/AddPersonPage.qml:449
-#: ../qml/pages/person/PersonDetailsPage.qml:496
+#: ../qml/pages/person/AddPersonPage.qml:450
+#: ../qml/pages/person/PersonDetailsPage.qml:497
 msgid "Note"
 msgstr "Aantekening"
 
@@ -296,27 +284,27 @@ msgstr "op een later moment hergebruiken door bij te werken)"
 #: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:175
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:192
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:172
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:75
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:76
 #: ../qml/pages/meeting/EditMeetingPage.qml:137
-#: ../qml/pages/person/AddPersonPage.qml:71
-#: ../qml/pages/person/PersonDetailsPage.qml:92
+#: ../qml/pages/person/AddPersonPage.qml:72
+#: ../qml/pages/person/PersonDetailsPage.qml:93
 msgid "Name"
 msgstr "Voornaam"
 
 #: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:175
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:192
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:172
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:113
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:114
 #: ../qml/pages/meeting/EditMeetingPage.qml:167
-#: ../qml/pages/person/AddPersonPage.qml:101
-#: ../qml/pages/person/PersonDetailsPage.qml:132
+#: ../qml/pages/person/AddPersonPage.qml:102
+#: ../qml/pages/person/PersonDetailsPage.qml:133
 msgid "Surname"
 msgstr "Achteraam"
 
 #: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:180
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:197
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:177
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:208
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:209
 #: ../qml/pages/meeting/EditMeetingPage.qml:263
 msgid "Date"
 msgstr "Datum"
@@ -324,7 +312,7 @@ msgstr "Datum"
 #: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:180
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:197
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:177
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:278
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:279
 #: ../qml/pages/meeting/EditMeetingPage.qml:317
 msgid "Time"
 msgstr "Tijd"
@@ -332,7 +320,7 @@ msgstr "Tijd"
 #: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:185
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:202
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:182
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:176
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:177
 #: ../qml/pages/meeting/EditMeetingPage.qml:231
 msgid "Place"
 msgstr "Locatie"
@@ -340,7 +328,7 @@ msgstr "Locatie"
 #: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:190
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:207
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:187
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:145
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:146
 #: ../qml/pages/meeting/EditMeetingPage.qml:199
 msgid "Subject"
 msgstr "Onderwerp"
@@ -372,20 +360,20 @@ msgstr "Vergaderingsstatus"
 msgid "in the future simply updating the date)"
 msgstr "op een later moment hergebruiken door de datum aan te passen)"
 
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:38
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:39
 msgid "new meeting with"
 msgstr "Zoeken naar vergadering met"
 
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:365
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:366
 msgid "Save"
 msgstr "Opslaan"
 
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:371
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:372
 #: ../qml/pages/meeting/EditMeetingPage.qml:409
 msgid "Can't schedule to a passed date"
 msgstr "Kan geen verstreken datum plannen"
 
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:375
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:376
 msgid "Save the new meeting ?"
 msgstr "Wil je de vergadering opslaan?"
 
@@ -418,7 +406,7 @@ msgid "Change"
 msgstr "Aanpassen"
 
 #: ../qml/pages/meeting/EditMeetingPage.qml:401
-#: ../qml/pages/person/PersonDetailsPage.qml:527
+#: ../qml/pages/person/PersonDetailsPage.qml:528
 msgid "Update"
 msgstr "Bijwerken"
 
@@ -445,74 +433,74 @@ msgstr "mobiel telefoonnummer"
 msgid "mail"
 msgstr "e-mailadres"
 
-#: ../qml/pages/person/AddPersonPage.qml:27
+#: ../qml/pages/person/AddPersonPage.qml:28
 msgid "Add new person"
 msgstr "Persoon toevoegen"
 
-#: ../qml/pages/person/AddPersonPage.qml:130
-#: ../qml/pages/person/PersonDetailsPage.qml:163
+#: ../qml/pages/person/AddPersonPage.qml:131
+#: ../qml/pages/person/PersonDetailsPage.qml:164
 msgid "Job"
 msgstr "Functie"
 
-#: ../qml/pages/person/AddPersonPage.qml:159
-#: ../qml/pages/person/PersonDetailsPage.qml:194
+#: ../qml/pages/person/AddPersonPage.qml:160
+#: ../qml/pages/person/PersonDetailsPage.qml:195
 msgid "Birthday"
 msgstr "Verjaardag"
 
-#: ../qml/pages/person/AddPersonPage.qml:215
-#: ../qml/pages/person/PersonDetailsPage.qml:251
+#: ../qml/pages/person/AddPersonPage.qml:216
+#: ../qml/pages/person/PersonDetailsPage.qml:252
 msgid "Tax code"
 msgstr "Belastingnummer"
 
-#: ../qml/pages/person/AddPersonPage.qml:244
-#: ../qml/pages/person/PersonDetailsPage.qml:282
+#: ../qml/pages/person/AddPersonPage.qml:245
+#: ../qml/pages/person/PersonDetailsPage.qml:283
 msgid "Vat code"
 msgstr "BTW-nummer"
 
-#: ../qml/pages/person/AddPersonPage.qml:273
-#: ../qml/pages/person/PersonDetailsPage.qml:312
+#: ../qml/pages/person/AddPersonPage.qml:274
+#: ../qml/pages/person/PersonDetailsPage.qml:313
 msgid "Address"
 msgstr "Adres"
 
-#: ../qml/pages/person/AddPersonPage.qml:302
-#: ../qml/pages/person/PersonDetailsPage.qml:343
+#: ../qml/pages/person/AddPersonPage.qml:303
+#: ../qml/pages/person/PersonDetailsPage.qml:344
 msgid "Phone"
 msgstr "Telefoonnummer"
 
-#: ../qml/pages/person/AddPersonPage.qml:332
-#: ../qml/pages/person/PersonDetailsPage.qml:374
+#: ../qml/pages/person/AddPersonPage.qml:333
+#: ../qml/pages/person/PersonDetailsPage.qml:375
 msgid "Mobile"
 msgstr "Mobiel telefoonnummer"
 
-#: ../qml/pages/person/AddPersonPage.qml:362
-#: ../qml/pages/person/PersonDetailsPage.qml:405
+#: ../qml/pages/person/AddPersonPage.qml:363
+#: ../qml/pages/person/PersonDetailsPage.qml:406
 msgid "Email"
 msgstr "E-mailadres"
 
-#: ../qml/pages/person/AddPersonPage.qml:391
-#: ../qml/pages/person/PersonDetailsPage.qml:435
+#: ../qml/pages/person/AddPersonPage.qml:392
+#: ../qml/pages/person/PersonDetailsPage.qml:436
 msgid "Skype"
 msgstr "Skype"
 
-#: ../qml/pages/person/AddPersonPage.qml:420
-#: ../qml/pages/person/PersonDetailsPage.qml:465
+#: ../qml/pages/person/AddPersonPage.qml:421
+#: ../qml/pages/person/PersonDetailsPage.qml:466
 msgid "Telegram"
 msgstr "Telegram"
 
-#: ../qml/pages/person/AddPersonPage.qml:478
+#: ../qml/pages/person/AddPersonPage.qml:479
 #: ../qml/pages/person/PeopleListPage.qml:47
 msgid "Add"
 msgstr "Toevoegen"
 
-#: ../qml/pages/person/PersonDetailsPage.qml:47
+#: ../qml/pages/person/PersonDetailsPage.qml:48
 msgid "Details for"
 msgstr "Informatie over"
 
-#: ../qml/pages/person/PersonDetailsPage.qml:531
+#: ../qml/pages/person/PersonDetailsPage.qml:532
 msgid "Confirm the update ?"
 msgstr "Wil je bijwerken?"
 
-#: ../qml/pages/person/PersonDetailsPage.qml:541
+#: ../qml/pages/person/PersonDetailsPage.qml:542
 msgid "Delete person AND his meetings ?"
 msgstr "Wil je de persoon EN vergaderingen verwijderen?"
 
@@ -571,9 +559,11 @@ msgstr "Met Personen kun je:"
 
 #: ../qml/pages/common/AboutProduct.qml:15
 msgid ""
-"a) Store (locally) informations of people <br/> (No data are shared online)"
+"a) Store (locally) informations of people <br/> <b>(No data are shared "
+"online)</b>"
 msgstr ""
-"a) (lokaal) informatie over personen opslaan <br/> (er wordt niks verstuurd)"
+"a) (lokaal) informatie over personen opslaan <br/><b>(er wordt niks "
+"verstuurd)</b>"
 
 #: ../qml/pages/common/AboutProduct.qml:16
 msgid "b) Create an Agenda of meetings with the archived people"
@@ -609,7 +599,7 @@ msgstr ""
 "Een vergadering kan door de gebruiken worden verwijderd of gearchiveerd."
 
 #: ../qml/pages/common/AboutProduct.qml:21
-msgid "Archiving set the meeting status to 'ARCHIVED'"
+msgid "Archiving, set the meeting status to 'ARCHIVED'"
 msgstr "Archiveren stelt de status in op 'GEARCHIVEERD'"
 
 #: ../qml/pages/common/AboutProduct.qml:22
@@ -624,14 +614,14 @@ msgstr ""
 "stel gewoon een toekomstige datum in en verander zijn status in 'GEPLAND'"
 
 #: ../qml/pages/common/AboutProduct.qml:24
-msgid "Is not possible schedule a new meeting in a past date"
+msgid "Is not possible schedule a new meeting with a past date"
 msgstr ""
 "Het is niet mogelijk om een ​​nieuwe vergadering te plannen in een eerdere "
 "datum"
 
 #: ../qml/pages/common/AboutProduct.qml:25
 msgid ""
-"When current time is greater than the meeting one, the meeting is 'SCHEDULED "
+"If current time is greater than the meeting one, meeting is 'SCHEDULED "
 "(EXPIRED)'."
 msgstr ""
 "Als de huidige datum voorbij die van de vergadering ligt, wordt de "
@@ -664,6 +654,21 @@ msgstr "BEHEER: oude vergaderingen verwijderen"
 #: MyPeople.desktop.in.h:1
 msgid "MyPeople"
 msgstr "Personen"
+
+#~ msgid "(CSV: comma separated values)"
+#~ msgstr "(CSV: kommagescheiden waarden)"
+
+#~ msgid "File name"
+#~ msgstr "Bestandsnaam"
+
+#~ msgid "File already exist. Change the file name"
+#~ msgstr "Dit bestand bestaat al. Geef een andere naam op."
+
+#~ msgid "Could not write file"
+#~ msgstr "Kan bestand niet wegschrijven"
+
+#~ msgid "SUCCESS, file saved under the folder"
+#~ msgstr "Het bestand is opgeslagen"
 
 #~ msgid "name OR surname to search"
 #~ msgstr "Zoeken op voor- of achternaam"

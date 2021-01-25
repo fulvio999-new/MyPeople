@@ -12,6 +12,7 @@ import QtQuick.LocalStorage 2.0
 /* note: alias name must have first letter in upperCase */
 import "../../js/utility.js" as Utility
 import "../../js/storage.js" as Storage
+import "../../js/screenUtils.js" as ScreenUtils
 
 /* import folder */
 import "../../dialogs"
@@ -39,7 +40,7 @@ Page {
     Flickable {
         id: newPersonPageFlickable
         clip: true
-        contentHeight: addPersonPage.height * 2 + units.gu(10)
+        contentHeight: ScreenUtils.getScrollHeight(root.landscapeWindow, addPersonPage.height)
         anchors {
             top: parent.top
             left: parent.left

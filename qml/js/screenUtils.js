@@ -6,7 +6,7 @@ function getScrollHeight(isHorizontalScreen, currentPageHeight){
     if(isHorizontalScreen){
         return currentPageHeight * 2 + units.gu(45);
     }else{
-        return currentPageHeight * 2 + units.gu(10);
+        return currentPageHeight * 2 + units.gu(20);
     }
 }
 
@@ -16,7 +16,7 @@ function getScrollHeightForNewMeetingPage(isHorizontalScreen, currentPageHeight)
     if(isHorizontalScreen){
         return currentPageHeight * 2 + units.gu(25);
     }else{
-        return currentPageHeight * 2 + units.gu(10);
+        return currentPageHeight * 2 + units.gu(20);
     }
 }
 
@@ -27,6 +27,6 @@ function getScrollHeightForEditMeetingPage(isHorizontalScreen, currentPageHeight
     if(isHorizontalScreen){
         return currentPageHeight * 2 + units.gu(10);
     }else{
-        return currentPageHeight * 2 + units.gu(10);
+        return currentPageHeight * 2 + units.gu(20);
     }
 }

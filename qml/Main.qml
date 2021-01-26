@@ -51,7 +51,7 @@ MainView {
     /* application hidden folder where are saved the files. (path is fixed due to Appp confinement rules) */
     property string fileSavingPath: "/.local/share/mypeople.fulvio999/"
 
-    property string appVersion: "1.8.2"
+    property string appVersion: "1.8.3"
 
     applicationName: 'mypeople.fulvio999'
 
@@ -64,8 +64,8 @@ MainView {
     //height: units.gu(111)
 
     //horizontal (rel)
-    //width: units.gu(100)
-    //height: units.gu(75)
+    width: units.gu(100)
+    height: units.gu(75)
 
     //Tablet horizontal
     //width: units.gu(128)
@@ -81,8 +81,8 @@ MainView {
     //height: units.gu(96)
 
     //horizontal
-    width: units.gu(96)
-    height: units.gu(50)
+    //width: units.gu(96)
+    //height: units.gu(50)
     /* -------------------------------------- */
 
     /* Settings file is saved in ~user/.config/<applicationName>/<applicationName>.conf  File */

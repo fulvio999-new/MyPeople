@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mypeople.fulvio999\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-26 17:18+0000\n"
+"POT-Creation-Date: 2021-02-12 18:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,7 @@ msgstr ""
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:98
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:43
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:95
-#: ../qml/pages/meeting/EditMeetingPage.qml:429
+#: ../qml/pages/meeting/EditMeetingPage.qml:405
 #: ../qml/pages/common/ConfigurationPage.qml:54
 msgid "Confirmation"
 msgstr ""
@@ -42,7 +42,7 @@ msgstr ""
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:58
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:117
 #: ../qml/pages/common/ProductNewFeatures.qml:59
-#: ../qml/pages/common/AboutProduct.qml:31
+#: ../qml/pages/common/AboutProduct.qml:32
 msgid "Close"
 msgstr ""
 
@@ -55,7 +55,7 @@ msgstr ""
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:139
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:71
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:130
-#: ../qml/pages/meeting/EditMeetingPage.qml:440
+#: ../qml/pages/meeting/EditMeetingPage.qml:416
 #: ../qml/pages/common/ConfigurationPage.qml:72
 msgid "Execute"
 msgstr ""
@@ -66,7 +66,7 @@ msgstr ""
 
 #: ../qml/dialogs/ConfirmDeletePeople.qml:18
 #: ../qml/dialogs/ConfirmUpdatePeople.qml:17
-#: ../qml/pages/meeting/EditMeetingPage.qml:435
+#: ../qml/pages/meeting/EditMeetingPage.qml:411
 #: ../qml/pages/common/ConfigurationPage.qml:66
 msgid "Cancel"
 msgstr ""
@@ -102,7 +102,7 @@ msgid "Meetings"
 msgstr ""
 
 #: ../qml/utils/DataBaseEraser.qml:61
-#: ../qml/pages/person/PersonDetailsPage.qml:539
+#: ../qml/pages/person/PersonDetailsPage.qml:545
 #: ../qml/pages/person/PeopleListPage.qml:55
 #: ../qml/pages/common/ConfigurationPage.qml:234
 msgid "Delete"
@@ -153,10 +153,10 @@ msgid "No contacts found (First installation ?)"
 msgstr ""
 
 #: ../qml/utils/DatabaseImporter.qml:37
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:335
-#: ../qml/pages/meeting/EditMeetingPage.qml:371
-#: ../qml/pages/person/AddPersonPage.qml:450
-#: ../qml/pages/person/PersonDetailsPage.qml:497
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:332
+#: ../qml/pages/meeting/EditMeetingPage.qml:374
+#: ../qml/pages/person/AddPersonPage.qml:455
+#: ../qml/pages/person/PersonDetailsPage.qml:494
 msgid "Note"
 msgstr ""
 
@@ -282,20 +282,20 @@ msgstr ""
 #: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:175
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:192
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:172
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:76
-#: ../qml/pages/meeting/EditMeetingPage.qml:137
-#: ../qml/pages/person/AddPersonPage.qml:72
-#: ../qml/pages/person/PersonDetailsPage.qml:93
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:80
+#: ../qml/pages/meeting/EditMeetingPage.qml:140
+#: ../qml/pages/person/AddPersonPage.qml:77
+#: ../qml/pages/person/PersonDetailsPage.qml:94
 msgid "Name"
 msgstr ""
 
 #: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:175
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:192
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:172
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:114
-#: ../qml/pages/meeting/EditMeetingPage.qml:167
-#: ../qml/pages/person/AddPersonPage.qml:102
-#: ../qml/pages/person/PersonDetailsPage.qml:133
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:118
+#: ../qml/pages/meeting/EditMeetingPage.qml:170
+#: ../qml/pages/person/AddPersonPage.qml:107
+#: ../qml/pages/person/PersonDetailsPage.qml:132
 msgid "Surname"
 msgstr ""
 
@@ -303,31 +303,31 @@ msgstr ""
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:197
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:177
 #: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:209
-#: ../qml/pages/meeting/EditMeetingPage.qml:263
+#: ../qml/pages/meeting/EditMeetingPage.qml:266
 msgid "Date"
 msgstr ""
 
 #: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:180
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:197
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:177
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:279
-#: ../qml/pages/meeting/EditMeetingPage.qml:317
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:277
+#: ../qml/pages/meeting/EditMeetingPage.qml:320
 msgid "Time"
 msgstr ""
 
 #: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:185
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:202
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:182
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:177
-#: ../qml/pages/meeting/EditMeetingPage.qml:231
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:179
+#: ../qml/pages/meeting/EditMeetingPage.qml:234
 msgid "Place"
 msgstr ""
 
 #: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:190
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:207
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:187
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:146
-#: ../qml/pages/meeting/EditMeetingPage.qml:199
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:149
+#: ../qml/pages/meeting/EditMeetingPage.qml:202
 msgid "Subject"
 msgstr ""
 
@@ -337,8 +337,8 @@ msgstr ""
 #: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:300
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:136
 #: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:201
-#: ../qml/pages/meeting/EditMeetingPage.qml:58
-#: ../qml/pages/meeting/EditMeetingPage.qml:126
+#: ../qml/pages/meeting/EditMeetingPage.qml:57
+#: ../qml/pages/meeting/EditMeetingPage.qml:129
 #: ../qml/pages/common/ConfigurationPage.qml:78
 msgid "ARCHIVED"
 msgstr ""
@@ -358,57 +358,57 @@ msgstr ""
 msgid "in the future simply updating the date)"
 msgstr ""
 
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:39
-msgid "new meeting with"
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:37
+msgid "Create a meeting"
 msgstr ""
 
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:366
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:362
 msgid "Save"
 msgstr ""
 
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:372
-#: ../qml/pages/meeting/EditMeetingPage.qml:409
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:368
+#: ../qml/pages/meeting/EditMeetingPage.qml:475
 msgid "Can't schedule to a passed date"
 msgstr ""
 
-#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:376
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:372
 msgid "Save the new meeting ?"
 msgstr ""
 
 #: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:40
-msgid "Meeting with"
+msgid "Search meeting with"
 msgstr ""
 
 #: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:198
 msgid "participated meetings"
 msgstr ""
 
-#: ../qml/pages/meeting/EditMeetingPage.qml:45
-msgid "Edit meeting with"
+#: ../qml/pages/meeting/EditMeetingPage.qml:44
+msgid "Edit meeting"
 msgstr ""
 
-#: ../qml/pages/meeting/EditMeetingPage.qml:51
+#: ../qml/pages/meeting/EditMeetingPage.qml:50
 msgid "EXPIRED"
 msgstr ""
 
-#: ../qml/pages/meeting/EditMeetingPage.qml:60
-#: ../qml/pages/meeting/EditMeetingPage.qml:63
-#: ../qml/pages/meeting/EditMeetingPage.qml:125
-#: ../qml/pages/meeting/EditMeetingPage.qml:126
+#: ../qml/pages/meeting/EditMeetingPage.qml:59
+#: ../qml/pages/meeting/EditMeetingPage.qml:62
+#: ../qml/pages/meeting/EditMeetingPage.qml:128
+#: ../qml/pages/meeting/EditMeetingPage.qml:129
 #: ../qml/pages/common/ConfigurationPage.qml:75
 msgid "SCHEDULED"
 msgstr ""
 
-#: ../qml/pages/meeting/EditMeetingPage.qml:122
+#: ../qml/pages/meeting/EditMeetingPage.qml:125
 msgid "Change"
 msgstr ""
 
-#: ../qml/pages/meeting/EditMeetingPage.qml:401
-#: ../qml/pages/person/PersonDetailsPage.qml:528
+#: ../qml/pages/meeting/EditMeetingPage.qml:467
+#: ../qml/pages/person/PersonDetailsPage.qml:534
 msgid "Update"
 msgstr ""
 
-#: ../qml/pages/meeting/EditMeetingPage.qml:413
+#: ../qml/pages/meeting/EditMeetingPage.qml:479
 msgid "Update the meeting ?"
 msgstr ""
 
@@ -435,70 +435,70 @@ msgstr ""
 msgid "Add new person"
 msgstr ""
 
-#: ../qml/pages/person/AddPersonPage.qml:131
-#: ../qml/pages/person/PersonDetailsPage.qml:164
+#: ../qml/pages/person/AddPersonPage.qml:136
+#: ../qml/pages/person/PersonDetailsPage.qml:162
 msgid "Job"
 msgstr ""
 
-#: ../qml/pages/person/AddPersonPage.qml:160
-#: ../qml/pages/person/PersonDetailsPage.qml:195
+#: ../qml/pages/person/AddPersonPage.qml:165
+#: ../qml/pages/person/PersonDetailsPage.qml:192
 msgid "Birthday"
 msgstr ""
 
-#: ../qml/pages/person/AddPersonPage.qml:216
-#: ../qml/pages/person/PersonDetailsPage.qml:252
+#: ../qml/pages/person/AddPersonPage.qml:221
+#: ../qml/pages/person/PersonDetailsPage.qml:249
 msgid "Tax code"
 msgstr ""
 
-#: ../qml/pages/person/AddPersonPage.qml:245
-#: ../qml/pages/person/PersonDetailsPage.qml:283
+#: ../qml/pages/person/AddPersonPage.qml:250
+#: ../qml/pages/person/PersonDetailsPage.qml:280
 msgid "Vat code"
 msgstr ""
 
-#: ../qml/pages/person/AddPersonPage.qml:274
-#: ../qml/pages/person/PersonDetailsPage.qml:313
+#: ../qml/pages/person/AddPersonPage.qml:279
+#: ../qml/pages/person/PersonDetailsPage.qml:310
 msgid "Address"
 msgstr ""
 
-#: ../qml/pages/person/AddPersonPage.qml:303
-#: ../qml/pages/person/PersonDetailsPage.qml:344
+#: ../qml/pages/person/AddPersonPage.qml:308
+#: ../qml/pages/person/PersonDetailsPage.qml:341
 msgid "Phone"
 msgstr ""
 
-#: ../qml/pages/person/AddPersonPage.qml:333
-#: ../qml/pages/person/PersonDetailsPage.qml:375
+#: ../qml/pages/person/AddPersonPage.qml:338
+#: ../qml/pages/person/PersonDetailsPage.qml:372
 msgid "Mobile"
 msgstr ""
 
-#: ../qml/pages/person/AddPersonPage.qml:363
-#: ../qml/pages/person/PersonDetailsPage.qml:406
+#: ../qml/pages/person/AddPersonPage.qml:368
+#: ../qml/pages/person/PersonDetailsPage.qml:403
 msgid "Email"
 msgstr ""
 
-#: ../qml/pages/person/AddPersonPage.qml:392
-#: ../qml/pages/person/PersonDetailsPage.qml:436
+#: ../qml/pages/person/AddPersonPage.qml:397
+#: ../qml/pages/person/PersonDetailsPage.qml:433
 msgid "Skype"
 msgstr ""
 
-#: ../qml/pages/person/AddPersonPage.qml:421
-#: ../qml/pages/person/PersonDetailsPage.qml:466
+#: ../qml/pages/person/AddPersonPage.qml:426
+#: ../qml/pages/person/PersonDetailsPage.qml:463
 msgid "Telegram"
 msgstr ""
 
-#: ../qml/pages/person/AddPersonPage.qml:479
+#: ../qml/pages/person/AddPersonPage.qml:485
 #: ../qml/pages/person/PeopleListPage.qml:47
 msgid "Add"
 msgstr ""
 
-#: ../qml/pages/person/PersonDetailsPage.qml:48
-msgid "Details for"
+#: ../qml/pages/person/PersonDetailsPage.qml:46
+msgid "Person details"
 msgstr ""
 
-#: ../qml/pages/person/PersonDetailsPage.qml:532
+#: ../qml/pages/person/PersonDetailsPage.qml:538
 msgid "Confirm the update ?"
 msgstr ""
 
-#: ../qml/pages/person/PersonDetailsPage.qml:542
+#: ../qml/pages/person/PersonDetailsPage.qml:548
 msgid "Delete person AND his meetings ?"
 msgstr ""
 
@@ -551,69 +551,69 @@ msgstr ""
 msgid "Product Info"
 msgstr ""
 
-#: ../qml/pages/common/AboutProduct.qml:14
+#: ../qml/pages/common/AboutProduct.qml:15
 msgid "With MyPeople you can:"
 msgstr ""
 
-#: ../qml/pages/common/AboutProduct.qml:15
+#: ../qml/pages/common/AboutProduct.qml:16
 msgid ""
 "a) Store (locally) informations of people <br/> <b>(No data are shared "
 "online)</b>"
 msgstr ""
 
-#: ../qml/pages/common/AboutProduct.qml:16
+#: ../qml/pages/common/AboutProduct.qml:17
 msgid "b) Create an Agenda of meetings with the archived people"
 msgstr ""
 
-#: ../qml/pages/common/AboutProduct.qml:17
+#: ../qml/pages/common/AboutProduct.qml:18
 msgid "What is the meeting status ?"
 msgstr ""
 
-#: ../qml/pages/common/AboutProduct.qml:18
+#: ../qml/pages/common/AboutProduct.qml:19
 msgid "Is a flag used to organize the stored meetings."
 msgstr ""
 
-#: ../qml/pages/common/AboutProduct.qml:19
+#: ../qml/pages/common/AboutProduct.qml:20
 msgid ""
 "There are three status: <br/><b>'SCHEDULED', 'ARCHIVED', 'SCHEDULED "
 "(EXPIRED)''</b>"
 msgstr ""
 
-#: ../qml/pages/common/AboutProduct.qml:20
+#: ../qml/pages/common/AboutProduct.qml:21
 msgid ""
 "A just created meeting (for a future data) get 'SCHEDULED' status (that "
 "means 'is programmed')."
 msgstr ""
 
-#: ../qml/pages/common/AboutProduct.qml:21
+#: ../qml/pages/common/AboutProduct.qml:22
 msgid "Any meeting, can be deleted."
 msgstr ""
 
-#: ../qml/pages/common/AboutProduct.qml:21
+#: ../qml/pages/common/AboutProduct.qml:22
 msgid "Archiving, set the meeting status to 'ARCHIVED'"
 msgstr ""
 
-#: ../qml/pages/common/AboutProduct.qml:22
+#: ../qml/pages/common/AboutProduct.qml:23
 msgid ""
 "Archiving a meeting means 'leave it in database'. You can schedule again an "
 "archived meeting,"
 msgstr ""
 
-#: ../qml/pages/common/AboutProduct.qml:23
+#: ../qml/pages/common/AboutProduct.qml:24
 msgid "just set a future date and change his status to 'SCHEDULED'"
 msgstr ""
 
-#: ../qml/pages/common/AboutProduct.qml:24
+#: ../qml/pages/common/AboutProduct.qml:25
 msgid "Is not possible schedule a new meeting with a past date"
 msgstr ""
 
-#: ../qml/pages/common/AboutProduct.qml:25
+#: ../qml/pages/common/AboutProduct.qml:26
 msgid ""
 "If current time is greater than the meeting one, meeting is 'SCHEDULED "
 "(EXPIRED)'."
 msgstr ""
 
-#: ../qml/pages/common/AboutProduct.qml:26
+#: ../qml/pages/common/AboutProduct.qml:27
 msgid "Updating the date to a future one return to 'SCHEDULED'"
 msgstr ""
 

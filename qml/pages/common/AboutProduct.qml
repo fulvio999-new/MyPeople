@@ -10,7 +10,8 @@ Dialog {
        title: i18n.tr("Product Info")
        contentWidth: Utility.getHelpPageWidth()
 
-       text: "<b>"+"MyPeople version: "+root.appVersion+"  Author: fulvio"+"</b><br/><br/>"+
+       text: "<b>"+"MyPeople version: "+root.appVersion+"  Author: fulvio"+"</b><br/>"
+                  +"Thanks: Josele13 for Testing"+"<br/>"+
              "<b>"+i18n.tr("With MyPeople you can:")+"</b><br/>"
                   +i18n.tr("a) Store (locally) informations of people <br/> <b>(No data are shared online)</b>")+"<br/>"
                   +i18n.tr("b) Create an Agenda of meetings with the archived people")+"<br/>"+"<br/>"

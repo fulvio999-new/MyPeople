@@ -20,7 +20,7 @@ Component {
         id: personItem
         //width: listView.width
         width: parent.width
-        height: units.gu(11)
+        height: units.gu(12)
 
         /* a container for each person summary info */
         Rectangle {

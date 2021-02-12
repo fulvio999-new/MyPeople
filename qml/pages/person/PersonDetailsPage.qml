@@ -3,12 +3,10 @@ import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Components.Pickers 1.3
 import Ubuntu.Layouts 1.0
-
 import U1db 1.0 as U1db
 
 /* replace the 'incomplete' QML API U1db with the low-level QtQuick API */
 import QtQuick.LocalStorage 2.0
-
 
 /* note: alias name must have first letter in upperCase */
 import "../../js/utility.js" as Utility
@@ -45,7 +43,7 @@ Page{
 
     header: PageHeader {
         id: headerDetailsPage
-        title: i18n.tr("Details for") + " <b>"+personDetailsPage.personName + " "+personDetailsPage.personSurname+"<\b>"
+        title: i18n.tr("Person details") //personDetailsPage.personName + "<br> "+personDetailsPage.personSurname+"<\b>"
     }
 
     Component {
@@ -62,19 +60,23 @@ Page{
     Flickable {
         id: personDetailsFlickable
         clip: true
-        contentHeight: ScreenUtils.getScrollHeight(root.landscapeWindow, personDetailsPage.height)
+        contentHeight: personDetailPageColumn.height + units.gu(5)
         anchors {
-            top: parent.top
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-            bottomMargin: units.gu(2)
+             top: parent.top
+             left: parent.left
+             right: parent.right
+             bottom: commandButtonRow.top
+             bottomMargin: units.gu(2)
         }
 
-
         Column {
-            id: personDetailPageLayout
-            anchors.fill: parent
+            id: personDetailPageColumn
+            anchors {
+                top: parent.top
+                left: parent.left
+                right: parent.right
+                margins: units.gu(1)
+            }
 
             Rectangle {
                 /* to get the background color of the curreunt theme. Necessary if default theme is not used */
@@ -83,7 +85,6 @@ Page{
                 height: units.gu(6)
             }
 
-            //------------- Name --------------
             ListItem{
                 id: newNameRow
                 divider.visible: false
@@ -92,11 +93,10 @@ Page{
                     id: nameLabel
                     text:  i18n.tr("Name")+":"
                     anchors {
-                       leftMargin: units.gu(1)
-                       left: parent.left
-                       verticalCenter: nameField.verticalCenter
+                        leftMargin: units.gu(1)
+                        left: parent.left
+                        verticalCenter: nameField.verticalCenter
                    }
-
                 }
 
                 TextField {
@@ -104,7 +104,7 @@ Page{
                     text: personDetailsPage.personName
                     inputMethodHints: Qt.ImhNoPredictiveText
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     hasClearButton: false
                     /*  Dummy solution to have a refresh of the 'birthdayButton' when user select another person
                         all the other text field are update in auto; 'birthdayButton' is not refreshed (bug?)
@@ -113,16 +113,15 @@ Page{
                     //    birthdayButton.text = personDetailsPage.personBirthday
                     //}
                     anchors {
-                       leftMargin: units.gu(1)
-                       rightMargin: units.gu(2)
+                       leftMargin: units.gu(0.5)
+                       rightMargin: units.gu(1)
                        right: parent.right
                        verticalCenter: parent.verticalCenter
                     }
-
                 }
             }
 
-            //------------- Surname --------------
+
             ListItem{
                 id: newSurnameRow
                 divider.visible: false
@@ -143,18 +142,17 @@ Page{
                     inputMethodHints: Qt.ImhNoPredictiveText
                     text: personDetailsPage.personSurname
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     hasClearButton: false
                     anchors {
-                          leftMargin: units.gu(1)
-                          rightMargin: units.gu(2)
+                          leftMargin: units.gu(0.5)
+                          rightMargin: units.gu(1)
                           right: parent.right
                           verticalCenter: parent.verticalCenter
                     }
                 }
             }
 
-            //------------- Job -------------
             ListItem{
                 id: newJobRow
                 divider.visible: false
@@ -174,18 +172,17 @@ Page{
                     inputMethodHints: Qt.ImhNoPredictiveText
                     text: personDetailsPage.personJob
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     hasClearButton: false
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
-                            right: parent.right
-                            verticalCenter: parent.verticalCenter
+                          leftMargin: units.gu(0.5)
+                          rightMargin: units.gu(1)
+                          right: parent.right
+                          verticalCenter: parent.verticalCenter
                     }
                 }
             }
 
-            //------------ Birthday ------------
             ListItem{
                 id:newBirthdayRow
                 divider.visible: false
@@ -194,13 +191,14 @@ Page{
                     id: birthdayLabel
                     text: i18n.tr("Birthday")+":"
                     anchors {
-                       leftMargin: units.gu(1)
-                       left: parent.left
-                       verticalCenter: birthdayButton.verticalCenter
+                        leftMargin: units.gu(1)
+                        left: parent.left
+                        verticalCenter: birthdayButton.verticalCenter
                    }
                 }
 
-                /* Create a PopOver containing a DatePicker, necessary use a PopOver a container due to a bug on setting minimum date
+                /*
+                   Create a PopOver containing a DatePicker, necessary use a PopOver a container due to a bug on setting minimum date
                    with a simple DatePicker Component
                 */
                 Component {
@@ -234,15 +232,14 @@ Page{
                         PopupUtils.open(popoverDatePickerComponent, birthdayButton)
                     }
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
-                            right: parent.right
-                            verticalCenter: parent.verticalCenter
+                          leftMargin: units.gu(0.5)
+                          rightMargin: units.gu(1)
+                          right: parent.right
+                          verticalCenter: parent.verticalCenter
                     }
                 }
             }
 
-            //--------------- Tax Code --------------
             ListItem{
                 id: newTaxCodeRow
                 divider.visible: false
@@ -262,18 +259,18 @@ Page{
                     inputMethodHints: Qt.ImhNoPredictiveText
                     text: personDetailsPage.personTaxCode
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     hasClearButton: false
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
-                            right: parent.right
-                            verticalCenter: parent.verticalCenter
+                          leftMargin: units.gu(0.5)
+                          rightMargin: units.gu(1)
+                          right: parent.right
+                          verticalCenter: parent.verticalCenter
                     }
                 }
             }
 
-            //--------------- Vat Code --------------
+
             ListItem{
                 id:newVatNumberRow
                 divider.visible: false
@@ -293,17 +290,17 @@ Page{
                     text: personDetailsPage.personVatNumber
                     echoMode: TextInput.Normal
                     inputMethodHints: Qt.ImhNoPredictiveText
-                    width: units.gu(28)
+                    width: units.gu(27)
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
+                            leftMargin: units.gu(0.5)
+                            rightMargin: units.gu(1)
                             right: parent.right
                             verticalCenter: parent.verticalCenter
                     }
                 }
             }
 
-            //--------------- Address --------------
+
             ListItem{
                 id: newAddressRow
                 divider.visible: false
@@ -323,17 +320,17 @@ Page{
                     text: personDetailsPage.personAddress
                     echoMode: TextInput.Normal
                     inputMethodHints: Qt.ImhNoPredictiveText
-                    width: units.gu(28)
+                    width: units.gu(27)
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
+                            leftMargin: units.gu(0.5)
+                            rightMargin: units.gu(1)
                             right: parent.right
                             verticalCenter: parent.verticalCenter
                     }
                 }
             }
 
-            //--------------- Phone --------------
+
             ListItem{
                 id: newPhoneRow
                 divider.visible: false
@@ -355,17 +352,17 @@ Page{
                     inputMethodHints: Qt.ImhNoPredictiveText
                     text: personDetailsPage.personPhone
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
-                            right: parent.right
-                            verticalCenter: parent.verticalCenter
+                          leftMargin: units.gu(0.5)
+                          rightMargin: units.gu(1)
+                          right: parent.right
+                          verticalCenter: parent.verticalCenter
                     }
                 }
             }
 
-            //---------- Mobile phone ------------
+
             ListItem{
                 id: newMobilePhoneRow
                 divider.visible: false
@@ -374,9 +371,9 @@ Page{
                     id: mobilePhoneLabel
                     text: i18n.tr("Mobile")+":"
                     anchors {
-                       leftMargin: units.gu(1)
-                       left: parent.left
-                       verticalCenter: mobilePhoneField.verticalCenter
+                        leftMargin: units.gu(1)
+                        left: parent.left
+                        verticalCenter: mobilePhoneField.verticalCenter
                    }
                 }
 
@@ -386,17 +383,17 @@ Page{
                     inputMethodHints: Qt.ImhNoPredictiveText
                     text: personDetailsPage.personMobilePhone
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
-                            right: parent.right
-                            verticalCenter: parent.verticalCenter
+                          leftMargin: units.gu(0.5)
+                          rightMargin: units.gu(1)
+                          right: parent.right
+                          verticalCenter: parent.verticalCenter
                     }
                 }
             }
 
-            //---------- Email -------------
+
             ListItem{
                 id: newEmailRow
                 divider.visible: false
@@ -405,9 +402,9 @@ Page{
                     id: emailLabel
                     text: i18n.tr("Email")+":"
                     anchors {
-                       leftMargin: units.gu(1)
-                       left: parent.left
-                       verticalCenter: emailField.verticalCenter
+                        leftMargin: units.gu(1)
+                        left: parent.left
+                        verticalCenter: emailField.verticalCenter
                    }
                 }
 
@@ -415,18 +412,18 @@ Page{
                     id: emailField
                     text: personDetailsPage.personEmail
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
-                            right: parent.right
-                            verticalCenter: parent.verticalCenter
+                          leftMargin: units.gu(0.5)
+                          rightMargin: units.gu(1)
+                          right: parent.right
+                          verticalCenter: parent.verticalCenter
                     }
                 }
             }
 
-            //---------- Skype -------------
+
             ListItem{
                 id: newSkypeRow
                 divider.visible: false
@@ -435,9 +432,9 @@ Page{
                     id: skypeLabel
                     text: i18n.tr("Skype")+":"
                     anchors {
-                       leftMargin: units.gu(1)
-                       left: parent.left
-                       verticalCenter: skypeField.verticalCenter
+                        leftMargin: units.gu(1)
+                        left: parent.left
+                        verticalCenter: skypeField.verticalCenter
                    }
                 }
 
@@ -445,18 +442,18 @@ Page{
                     id: skypeField
                     text: personDetailsPage.personSkype
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
-                          leftMargin: units.gu(1)
-                          rightMargin: units.gu(2)
+                          leftMargin: units.gu(0.5)
+                          rightMargin: units.gu(1)
                           right: parent.right
                           verticalCenter: parent.verticalCenter
                     }
                 }
             }
 
-            //---------- Telegram ----------
+
             ListItem{
                 id: newTelegramRow
                 divider.visible: false
@@ -465,9 +462,9 @@ Page{
                     id: telegramLabel
                     text: i18n.tr("Telegram")+":"
                     anchors {
-                       leftMargin: units.gu(1)
-                       left: parent.left
-                       verticalCenter: telegramField.verticalCenter
+                        leftMargin: units.gu(1)
+                        left: parent.left
+                        verticalCenter: telegramField.verticalCenter
                    }
                 }
 
@@ -475,18 +472,18 @@ Page{
                     id: telegramField
                     text: personDetailsPage.personTelegram
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
-                            right: parent.right
-                            verticalCenter: parent.verticalCenter
+                          leftMargin: units.gu(0.5)
+                          rightMargin: units.gu(1)
+                          right: parent.right
+                          verticalCenter: parent.verticalCenter
                     }
                 }
             }
 
-            //---------- Note -------------
+
             ListItem{
                 id: newNoteRow
                 divider.visible: false
@@ -496,9 +493,9 @@ Page{
                     id: noteLabel
                     text: i18n.tr("Note")+":"
                     anchors {
-                       leftMargin: units.gu(1)
-                       left: parent.left
-                       verticalCenter: noteTextArea.verticalCenter
+                        leftMargin: units.gu(1)
+                        left: parent.left
+                        verticalCenter: noteTextArea.verticalCenter
                    }
                 }
 
@@ -507,45 +504,50 @@ Page{
                     textFormat:TextEdit.AutoText
                     text: personDetailsPage.personNote
                     height: units.gu(15)
-                    width: units.gu(28)
+                    width: units.gu(27)
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
-                            right: parent.right
-                            verticalCenter: parent.verticalCenter
+                          leftMargin: units.gu(0.5)
+                          rightMargin: units.gu(1)
+                          right: parent.right
+                          verticalCenter: parent.verticalCenter
                     }
                 }
             }
 
-            //------------- Command buttoms -------------
-            Row{
-                anchors.horizontalCenter: parent.horizontalCenter
-                spacing:units.gu(2)
+        } //col
 
-                Button {
-                    id: updateButton
-                    objectName: "Update"
-                    text: i18n.tr("Update")
-                    width: units.gu(12)
-                    color: UbuntuColors.red
-                    onClicked: {
-                        PopupUtils.open(confirmUpdateDialog,updateButton,{text: i18n.tr("Confirm the update ?")})
-                    }
-                }
+    } //flick
 
-                Button {
-                    id: deleteButton
-                    objectName: "Delete"
-                    text: i18n.tr("Delete")
-                    width: units.gu(12)
-                    onClicked: {
-                        PopupUtils.open(confirmDeleteDialog, deleteButton,{text: i18n.tr("Delete person AND his meetings ?")})
-                    }
-                }
-            }
-
+    //------------- Command buttoms -------------
+    Row{
+        id: commandButtonRow
+        spacing:units.gu(2)
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            bottom: parent.bottom
+            margins: units.gu(2)
         }
 
+        Button {
+            id: updateButton
+            objectName: "Update"
+            text: i18n.tr("Update")
+            width: units.gu(12)
+            color: UbuntuColors.red
+            onClicked: {
+                PopupUtils.open(confirmUpdateDialog,updateButton,{text: i18n.tr("Confirm the update ?")})
+            }
+        }
+
+        Button {
+            id: deleteButton
+            objectName: "Delete"
+            text: i18n.tr("Delete")
+            width: units.gu(12)
+            onClicked: {
+                PopupUtils.open(confirmDeleteDialog, deleteButton,{text: i18n.tr("Delete person AND his meetings ?")})
+            }
+        }
     }
 
     /* To show a scrollbar on the side */

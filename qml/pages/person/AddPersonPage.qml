@@ -40,19 +40,24 @@ Page {
     Flickable {
         id: newPersonPageFlickable
         clip: true
-        contentHeight: ScreenUtils.getScrollHeight(root.landscapeWindow, addPersonPage.height)
+        contentHeight: addPersonPageColumn.height + units.gu(5) //ScreenUtils.getScrollHeight(root.landscapeWindow, addPersonPage.height)
         anchors {
             top: parent.top
             left: parent.left
             right: parent.right
-            bottom: parent.bottom
+            bottom: addButton.top
             bottomMargin: units.gu(2)
         }
 
         /* Display a form with the components to insert/add a new contact: used in Phone view */
         Column{
-            id: addPersonPageLayout
-            anchors.fill: parent
+            id: addPersonPageColumn
+            anchors {
+                top: parent.top
+                left: parent.left
+                right: parent.right
+                margins: units.gu(1)
+            }
 
             /* transparent placeholder */
             Rectangle {
@@ -82,10 +87,10 @@ Page {
                     echoMode: TextInput.Normal
                     inputMethodHints: Qt.ImhNoPredictiveText
                     hasClearButton: true
-                    width: units.gu(28)
+                    width: units.gu(27)
                     anchors {
-                       leftMargin: units.gu(1)
-                       rightMargin: units.gu(2)
+                       leftMargin: units.gu(0.5)
+                       rightMargin: units.gu(1)
                        right: parent.right
                        verticalCenter: parent.verticalCenter
                     }
@@ -111,10 +116,10 @@ Page {
                     id: newSurnameField
                     echoMode: TextInput.Normal
                     inputMethodHints: Qt.ImhNoPredictiveText
-                    width: units.gu(28)
+                    width: units.gu(27)
                     anchors {
-                          leftMargin: units.gu(1)
-                          rightMargin: units.gu(2)
+                          leftMargin: units.gu(0.5)
+                          rightMargin: units.gu(1)
                           right: parent.right
                           verticalCenter: parent.verticalCenter
                     }
@@ -139,11 +144,11 @@ Page {
                 TextField {
                     id: newJobField
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
+                            leftMargin: units.gu(0.5)
+                            rightMargin: units.gu(1)
                             right: parent.right
                             verticalCenter: parent.verticalCenter
                     }
@@ -173,8 +178,8 @@ Page {
                     //Don't use the PickerPanel api because doesn't allow to set minum date
                     onClicked: PopupUtils.open(newPopoverDatePickerComponent, newBirthdayButton)
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
+                            leftMargin: units.gu(0.5)
+                            rightMargin: units.gu(1)
                             right: parent.right
                             verticalCenter: parent.verticalCenter
                     }
@@ -224,11 +229,11 @@ Page {
                 TextField {
                     id: newTaxCodeField
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
+                            leftMargin: units.gu(0.5)
+                            rightMargin: units.gu(1)
                             right: parent.right
                             verticalCenter: parent.verticalCenter
                     }
@@ -253,11 +258,11 @@ Page {
                 TextField {
                     id: newVatNumberField
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
+                            leftMargin: units.gu(0.5)
+                            rightMargin: units.gu(1)
                             right: parent.right
                             verticalCenter: parent.verticalCenter
                     }
@@ -282,11 +287,11 @@ Page {
                 TextField {
                     id: newAddressField
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
+                            leftMargin: units.gu(0.5)
+                            rightMargin: units.gu(1)
                             right: parent.right
                             verticalCenter: parent.verticalCenter
                     }
@@ -312,11 +317,11 @@ Page {
                 {
                     id: newPhoneField
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
+                            leftMargin: units.gu(0.5)
+                            rightMargin: units.gu(1)
                             right: parent.right
                             verticalCenter: parent.verticalCenter
                     }
@@ -342,11 +347,11 @@ Page {
                 {
                     id: newMobilePhoneField
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
+                            leftMargin: units.gu(0.5)
+                            rightMargin: units.gu(1)
                             right: parent.right
                             verticalCenter: parent.verticalCenter
                     }
@@ -371,11 +376,11 @@ Page {
                 TextField {
                     id: newEmailField
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
+                            leftMargin: units.gu(0.5)
+                            rightMargin: units.gu(1)
                             right: parent.right
                             verticalCenter: parent.verticalCenter
                     }
@@ -400,11 +405,11 @@ Page {
                 TextField {
                     id: newSkypeField
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
+                            leftMargin: units.gu(0.5)
+                            rightMargin: units.gu(1)
                             right: parent.right
                             verticalCenter: parent.verticalCenter
                     }
@@ -429,11 +434,11 @@ Page {
                 TextField {
                     id: newTelegramField
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     inputMethodHints: Qt.ImhNoPredictiveText
                     anchors {
                             leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
+                            rightMargin: units.gu(1)
                             right: parent.right
                             verticalCenter: parent.verticalCenter
                     }
@@ -459,37 +464,35 @@ Page {
                     id: newNoteTextArea
                     textFormat:TextEdit.AutoText
                     height: units.gu(15)
-                    width: units.gu(28)
+                    width: units.gu(27)
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
+                            leftMargin: units.gu(0.5)
+                            rightMargin: units.gu(1)
                             right: parent.right
                             verticalCenter: parent.verticalCenter
                     }
                 }
             }
 
-            //------------- Command buttom -------------
-            ListItem{
-                divider.visible: false
-
-                Button {
-                    id: addButton
-                    objectName: "Add"
-                    text: i18n.tr("Add")
-                    color: UbuntuColors.orange
-                    width: units.gu(12)
-                    onClicked: {
-                        PopupUtils.open(confirmAddPeopleDialog)
-                    }
-                    anchors {
-                        top: newNoteTextArea.bottom
-                        topMargin: units.gu(5)
-                        horizontalCenter: parent.horizontalCenter
-                    }
-                }
-            }
         } //col
+
+    } //flick
+
+    //------------- Command buttom -------------
+    Button {
+        id: addButton
+        objectName: "Add"
+        text: i18n.tr("Add")
+        color: UbuntuColors.orange
+        width: units.gu(12)
+        onClicked: {
+            PopupUtils.open(confirmAddPeopleDialog)
+        }
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            bottom: parent.bottom
+            margins: units.gu(2)
+        }
     }
 
     /* To show a scrolbar on the side */

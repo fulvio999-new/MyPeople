@@ -31,7 +31,6 @@ Page{
     property string subject;
     property string date : "1970-01-01 00:00"; /* placeholder value */
     property string place;
-    //property string status;
     property string note;
     property bool isFromGlobalMeetingSearch; /* true if the user has made meeting search with any people */
     /* info used to repeat the search */
@@ -42,11 +41,11 @@ Page{
 
     header: PageHeader {
         id: headerEditExpensePage
-        title: i18n.tr("Edit meeting with") +": "+ "<b>" +editMeetingPage.name +" "+ editMeetingPage.surname+"</b>"
+        title: i18n.tr("Edit meeting") //": "+ "<b>" +editMeetingPage.name +" "+ editMeetingPage.surname+"</b>"
     }
 
      Component.onCompleted: {
-         console.log("Meeting status: "+meetingStatus);
+         /* console.log("Meeting status: "+meetingStatus); */
          if(date < todayDateFormatted) {
              meetingStatusLabel.text = meetingStatus + " (" +i18n.tr("EXPIRED")+ ")"
          } else {
@@ -67,12 +66,12 @@ Page{
     Flickable {
         id: editMeetingPageFlickable
         clip: true
-        contentHeight: ScreenUtils.getScrollHeightForEditMeetingPage(root.landscapeWindow, editMeetingPage.height) //editMeetingPage.height + editMeetingPage.height/2  //Utility.getEditMeetingPageContentHeight()
+        contentHeight: editMeetingColumn.height + units.gu(5)
         anchors {
             top: parent.top
             left: parent.left
             right: parent.right
-            bottom: editMeetingPage.bottom
+            bottom: saveButton.top
             bottomMargin: units.gu(2)
         }
 
@@ -80,8 +79,13 @@ Page{
           Content of the EditMeeting page for PHONES
         */
         Column {
-            id: editMeetingLayout
-            anchors.fill: parent
+            id: editMeetingColumn
+            anchors {
+                top: parent.top
+                left: parent.left
+                right: parent.right
+                margins: units.gu(1)
+            }
 
             Rectangle{
                 width: parent.width
@@ -106,7 +110,6 @@ Page{
                     fontSize: Label.Small
                     anchors {
                        leftMargin: units.gu(3)
-                       //rightMargin: units.gu(3)
                        right: parent.right
                        verticalCenter: parent.verticalCenter
                     }
@@ -146,12 +149,12 @@ Page{
                     id: nameField
                     text: editMeetingPage.name
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     hasClearButton: false
                     readOnly: true
                     anchors {
-                       leftMargin: units.gu(1)
-                       rightMargin: units.gu(2)
+                       leftMargin: units.gu(0.5)
+                       rightMargin: units.gu(1)
                        right: parent.right
                        verticalCenter: parent.verticalCenter
                     }
@@ -177,12 +180,12 @@ Page{
                     placeholderText: ""
                     text: editMeetingPage.surname
                     echoMode: TextInput.Normal
-                    width: units.gu(28)
+                    width: units.gu(27)
                     hasClearButton: false
                     readOnly: true
                     anchors {
-                          leftMargin: units.gu(1)
-                          rightMargin: units.gu(2)
+                          leftMargin: units.gu(0.5)
+                          rightMargin: units.gu(1)
                           right: parent.right
                           verticalCenter: parent.verticalCenter
                     }
@@ -210,11 +213,11 @@ Page{
                     text: editMeetingPage.subject
                     echoMode: TextInput.Normal
                     readOnly: false
-                    width: units.gu(28)
+                    width: units.gu(27)
                     hasClearButton: false
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
+                            leftMargin: units.gu(0.5)
+                            rightMargin: units.gu(1)
                             right: parent.right
                             verticalCenter: parent.verticalCenter
                     }
@@ -242,11 +245,11 @@ Page{
                     text: editMeetingPage.place
                     echoMode: TextInput.Normal
                     readOnly: false
-                    width: units.gu(28)
+                    width: units.gu(27)
                     hasClearButton: true
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
+                            leftMargin: units.gu(0.5)
+                            rightMargin: units.gu(1)
                             right: parent.right
                             verticalCenter: parent.verticalCenter
                     }
@@ -274,8 +277,8 @@ Page{
                     text: editMeetingPage.date.split(' ')[0].trim()
                     onClicked: PopupUtils.open(popoverDatePickerComponent, editMeetingDateButton)
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
+                            leftMargin: units.gu(0.5)
+                            rightMargin: units.gu(1)
                             right: parent.right
                             verticalCenter: parent.verticalCenter
                     }
@@ -328,7 +331,7 @@ Page{
                     onClicked: PopupUtils.open(popoverDatePickerComponent2, meetingTimeButton)
                     anchors {
                             leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
+                            rightMargin: units.gu(1)
                             right: parent.right
                             verticalCenter: parent.verticalCenter
                     }
@@ -360,7 +363,7 @@ Page{
                 }
             }
 
-              ListItem{
+            ListItem{
                 id: meetingObjectRow
                 divider.visible: false
                 height: units.gu(18)
@@ -381,44 +384,17 @@ Page{
                     textFormat:TextEdit.AutoText
                     text: editMeetingPage.note
                     height: units.gu(15)
-                    width: units.gu(28)
+                    width: units.gu(27)
                     readOnly: false
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
+                            leftMargin: units.gu(0.5)
+                            rightMargin: units.gu(1)
                             right: parent.right
                             verticalCenter: parent.verticalCenter
                     }
                 }
-            }
+           }
 
-            ListItem{
-                divider.visible: false
-
-                Button {
-                    id: saveButton
-                    objectName: "update"
-                    text: i18n.tr("Update")
-                    color: UbuntuColors.orange
-                    width: units.gu(18)
-                    onClicked: {
-                          /* check for chosen date: if the meeting is "SCHEDULED" and user choose a date lower than now,
-                             notify that is not possbile: user is creating an already Expired meeting
-                          */
-                          if(! DateUtils.isMeetingDateValid(editMeetingDateButton.text,meetingTimeButton.text)){
-                              infoText = "\n" + i18n.tr("Can't schedule to a passed date") + "\n";
-                              PopupUtils.open(popover);
-                              //console.log("You are SCHEDULING the meeting to a passed date");
-                          } else {
-                              PopupUtils.open(confirmUpdateMeetingDialog, saveButton,{text: i18n.tr("Update the meeting ?")})
-                          }
-                      }
-                    anchors {
-                        topMargin: units.gu(5)
-                        horizontalCenter: parent.horizontalCenter
-                    }
-                }
-            }
 
            /* Ask a confirmation before updating Meeting informations and/or status */
            Component {
@@ -479,7 +455,35 @@ Page{
                      }
                  }
             }
-        }
+
+        } //col
+
+    } //flick
+
+
+    Button {
+        id: saveButton
+        objectName: "update"
+        text: i18n.tr("Update")
+        color: UbuntuColors.orange
+        width: units.gu(18)
+        onClicked: {
+              /* check for chosen date: if the meeting is "SCHEDULED" and user choose a date lower than now,
+                 notify that is not possbile: user is creating an already Expired meeting
+              */
+              if(! DateUtils.isMeetingDateValid(editMeetingDateButton.text,meetingTimeButton.text)){
+                  infoText = "\n" + i18n.tr("Can't schedule to a passed date") + "\n";
+                  PopupUtils.open(popover);
+                  //console.log("You are SCHEDULING the meeting to a passed date");
+              } else {
+                  PopupUtils.open(confirmUpdateMeetingDialog, saveButton,{text: i18n.tr("Update the meeting ?")})
+              }
+          }
+          anchors {
+              horizontalCenter: parent.horizontalCenter
+              bottom: parent.bottom
+              margins: units.gu(2)
+          }
     }
 
 

@@ -3,7 +3,6 @@ import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Components.Pickers 1.3
 import Ubuntu.Layouts 1.0
-
 import U1db 1.0 as U1db
 
 /* replace the 'incomplete' QML API U1db with the low-level QtQuick API */
@@ -19,11 +18,10 @@ import "../../js/screenUtils.js" as ScreenUtils
 import "../../dialogs"
 
 /*
-   CREATE A NEW MEETING WITH the selected person in the People listed
+   CREATE A NEW MEETING WITH the selected person in the People list
 */
 Page{
     id:createMeetingWithPersonPage
-
     anchors.fill: parent
 
     /* values passed when the user has chosen a people in the  people list */
@@ -36,28 +34,35 @@ Page{
 
     header: PageHeader {
         id: headerAddMeetingPage
-        title: i18n.tr("new meeting with")+ ": " + "<b>"+createMeetingWithPersonPage.personName + " "+createMeetingWithPersonPage.personSurname+"<\b>"
+        title: i18n.tr("Create a meeting") //"<b>"+createMeetingWithPersonPage.personName + " "+createMeetingWithPersonPage.personSurname+"<\b>"
+    }
+
+    Component {
+        id: confirmInsertMeetingDialog
+        ConfirmInsertMeeting{}
     }
 
     /* to have a scrollable column when the keyboard cover some input field */
     Flickable {
         id: createMeetingWithPersonPageFlickable
         clip: true
-        contentHeight: ScreenUtils.getScrollHeightForNewMeetingPage(root.landscapeWindow, createMeetingWithPersonPage.height) //Utility.getNewMeetingContentHeight()
+        contentHeight: newMeetingwithPersonColumn.height + units.gu(5)
         anchors {
             top: parent.top
             left: parent.left
             right: parent.right
-            bottom: createMeetingWithPersonPage.bottom
+            bottom: saveButton.top
             bottomMargin: units.gu(2)
         }
 
         Column {
-
-            id: newMeetingwithPersonLayout
-            anchors.fill: parent
-            spacing: units.gu(3)
-            //anchors.leftMargin: units.gu(2)
+            id: newMeetingwithPersonColumn
+            anchors {
+                top: parent.top
+                left: parent.left
+                right: parent.right
+                margins: units.gu(2)
+            }
 
             Rectangle{
                 color: "transparent"
@@ -69,7 +74,6 @@ Page{
                 id: newNameRow
                 divider.visible: false
 
-                //------------- Name --------------
                 Label {
                     id: nameLabel
                     anchors.verticalCenter: nameField.verticalCenter
@@ -107,7 +111,7 @@ Page{
             ListItem{
                 id: newSurnameRow
                 divider.visible: false
-                //------------- Surname --------------
+
                 Label {
                     id: surnameLabel
                     anchors.verticalCenter: surnameField.verticalCenter
@@ -135,7 +139,6 @@ Page{
                     }
                 }
             }
-
 
             ListItem{
                 id: meetingSubjectRow
@@ -170,7 +173,6 @@ Page{
                 id: meetingPlaceRow
                 divider.visible: false
 
-                //------------- Place --------------
                 Label {
                     id:  meetingPlaceLabel
                     anchors.verticalCenter: meetingPlaceField.verticalCenter
@@ -198,12 +200,10 @@ Page{
                 }
             }
 
-
             ListItem{
                 id: meetingDateRow
                 divider.visible: false
 
-                //------------- Date --------------
                 Label {
                     id: meetingDateLabel
                     text: i18n.tr("Date")+":"
@@ -219,18 +219,18 @@ Page{
                     property date date: new Date()
                     text: Qt.formatDateTime(date, "dd MMMM yyyy")
                     width: units.gu(18)
-                    //Don't use the PickerPanel api because doesn't allow to set minum date
+                    /* Don't use the PickerPanel api because doesn't allow to set minum date */
                     onClicked: PopupUtils.open(newPopoverDatePickerComponent, newMeetingDateButton)
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
-                            right: parent.right
-                            verticalCenter: parent.verticalCenter
+                          leftMargin: units.gu(1)
+                          rightMargin: units.gu(2)
+                          right: parent.right
+                          verticalCenter: parent.verticalCenter
                     }
                 }
 
                 /* Create a PopOver conteining a DatePicker, necessary use a PopOver a container due to a bug on setting minimum date
-                       with a simple DatePicker Component
+                   with a simple DatePicker Component
                 */
                 Component {
                     id: newPopoverDatePickerComponent
@@ -266,21 +266,19 @@ Page{
                          }
                      }
                 }
-
              }
 
              ListItem{
-                 id: timeRow
-                 divider.visible: false
+                id: timeRow
+                divider.visible: false
 
-                //------------- Time --------------
                 Label {
                     id: newMeetingTimeLabel
                     text: i18n.tr("Time")+":"
                     anchors {
-                       leftMargin: units.gu(1)
-                       left: parent.left
-                       verticalCenter: newMeetingTimeButton.verticalCenter
+                        leftMargin: units.gu(1)
+                        left: parent.left
+                        verticalCenter: newMeetingTimeButton.verticalCenter
                    }
                 }
 
@@ -288,18 +286,18 @@ Page{
                     id: newMeetingTimeButton
                     property date date: new Date()
                     text: Qt.formatDateTime(date, "hh:mm")
-                    //Don't use the PickerPanel api because doesn't allow to set minum date
+                    /* Don't use the PickerPanel api because doesn't allow to set minum date */
                     onClicked: PopupUtils.open(newPopoverDatePickerComponent2, newMeetingTimeButton)
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
-                            right: parent.right
-                            verticalCenter: parent.verticalCenter
+                        leftMargin: units.gu(1)
+                        rightMargin: units.gu(2)
+                        right: parent.right
+                        verticalCenter: parent.verticalCenter
                     }
                 }
 
                 /* Create a PopOver conteining a DatePicker, necessary use a PopOver a container due to a bug on setting minimum date
-                       with a simple DatePicker Component
+                   with a simple DatePicker Component
                 */
                 Component {
                     id: newPopoverDatePickerComponent2
@@ -329,7 +327,6 @@ Page{
                 height: units.gu(18)
                 divider.visible: false
 
-                //------------- Note --------------
                 Label {
                     id: noteLabel
                     text: i18n.tr("Note")+":"
@@ -348,46 +345,37 @@ Page{
                     width: units.gu(30)
                     readOnly: false
                     anchors {
-                            leftMargin: units.gu(1)
-                            rightMargin: units.gu(2)
-                            right: parent.right
-                            verticalCenter: parent.verticalCenter
+                          leftMargin: units.gu(1)
+                          rightMargin: units.gu(2)
+                          right: parent.right
+                          verticalCenter: parent.verticalCenter
                     }
                 }
             }
 
+        }
+    }
 
-            ListItem{
-                divider.visible: false
-
-                Button {
-                    id: saveButton
-                    objectName: "save"
-                    text: i18n.tr("Save")
-                    color: UbuntuColors.orange
-                    width: units.gu(18)
-                    onClicked: {
-                        /* check for chosen date: Is no possible schedule a meeting with a passed date-time */
-                        if(! DateUtils.isMeetingDateValid(newMeetingDateButton.text,newMeetingTimeButton.text)){
-                            infoText = "\n" + i18n.tr("Can't schedule to a passed date") + "\n";
-                            PopupUtils.open(popover);
-                            //console.log("You are SCHEDULING the meeting to a passed date");
-                        } else {
-                           PopupUtils.open(confirmInsertMeetingDialog, saveButton,{text: i18n.tr("Save the new meeting ?")})
-                        }
-                    }
-                    anchors {
-                        top: meetingObjectRow.bottom
-                        topMargin: units.gu(5)
-                        horizontalCenter: parent.horizontalCenter
-                    }
-                }
+    Button {
+        id: saveButton
+        objectName: "save"
+        text: i18n.tr("Save")
+        color: UbuntuColors.orange
+        width: units.gu(18)
+        onClicked: {
+            /* check for chosen date: Is no possible schedule a meeting with a passed date-time */
+            if(! DateUtils.isMeetingDateValid(newMeetingDateButton.text,newMeetingTimeButton.text)){
+                infoText = "\n" + i18n.tr("Can't schedule to a passed date") + "\n";
+                PopupUtils.open(popover);
+                //console.log("You are SCHEDULING the meeting to a passed date");
+            } else {
+               PopupUtils.open(confirmInsertMeetingDialog, saveButton,{text: i18n.tr("Save the new meeting ?")})
             }
-
-            Component {
-                id: confirmInsertMeetingDialog
-                ConfirmInsertMeeting{}
-            }
+        }
+        anchors {
+             horizontalCenter: parent.horizontalCenter
+             bottom: parent.bottom
+             margins: units.gu(2)
         }
     }
 

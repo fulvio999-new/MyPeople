@@ -57,12 +57,14 @@ Dialog {
             newTelegramField.text = ""
             newNoteTextArea.text = ""
 
-            //adaptivePageLayout.removePages(addPersonPage)
 
             Storage.loadAllPeople();
 
             /* refresh in case of persan have today birthday */
             Storage.getTodayBirthDays();
+
+            pageStack.pop(Qt.resolvedUrl("./pages/person/AddPersonPage.qml"));
+
         }
     }
 }

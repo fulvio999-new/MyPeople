@@ -37,7 +37,7 @@ Page{
 
     header: PageHeader {
         id: headersearchAnyMeetingPage
-        title: i18n.tr("Meeting with") + ": <b>"+searchMeetingWithPersonPage.personName + " "+searchMeetingWithPersonPage.personSurname+"<\b>"
+        title: i18n.tr("Search meeting with") + ":<br> "+searchMeetingWithPersonPage.personName + " "+searchMeetingWithPersonPage.personSurname
     }
 
      UbuntuListView {

@@ -51,7 +51,7 @@ MainView {
     /* application hidden folder where are saved the files. (path is fixed due to Appp confinement rules) */
     property string fileSavingPath: "/.local/share/mypeople.fulvio999/"
 
-    property string appVersion: "1.8.3"
+    property string appVersion: "1.8.5"
 
     applicationName: 'mypeople.fulvio999'
 

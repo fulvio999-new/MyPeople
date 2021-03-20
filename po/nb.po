@@ -1,0 +1,651 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the mypeople.fulvio999 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mypeople.fulvio999\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-12 18:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: NORWEGIAN <LL@li.org>\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../qml/dialogs/ConfirmInsertMeeting.qml:14
+#: ../qml/dialogs/ConfirmInsertPeople.qml:15
+#: ../qml/dialogs/ConfirmDeletePeople.qml:13
+#: ../qml/dialogs/ConfirmUpdatePeople.qml:13
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:45
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:89
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:46
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:98
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:43
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:95
+#: ../qml/pages/meeting/EditMeetingPage.qml:405
+#: ../qml/pages/common/ConfigurationPage.qml:54
+msgid "Confirmation"
+msgstr "Bekreftelse"
+
+#: ../qml/dialogs/ConfirmInsertMeeting.qml:18
+#: ../qml/dialogs/OperationResult.qml:17 ../qml/utils/DataBaseEraser.qml:54
+#: ../qml/utils/DatabaseExporter.qml:53 ../qml/utils/DatabaseImporter.qml:76
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:56
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:112
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:57
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:121
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:58
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:117
+#: ../qml/pages/common/ProductNewFeatures.qml:59
+#: ../qml/pages/common/AboutProduct.qml:32
+msgid "Close"
+msgstr "Lukk"
+
+#: ../qml/dialogs/ConfirmInsertMeeting.qml:23
+#: ../qml/dialogs/ConfirmDeletePeople.qml:23
+#: ../qml/dialogs/ConfirmUpdatePeople.qml:22
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:70
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:130
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:71
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:139
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:71
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:130
+#: ../qml/pages/meeting/EditMeetingPage.qml:416
+#: ../qml/pages/common/ConfigurationPage.qml:72
+msgid "Execute"
+msgstr "Utfør"
+
+#: ../qml/dialogs/ConfirmInsertPeople.qml:16
+msgid "Save this person ?"
+msgstr "Lagre denne personen ?"
+
+#: ../qml/dialogs/ConfirmDeletePeople.qml:18
+#: ../qml/dialogs/ConfirmUpdatePeople.qml:17
+#: ../qml/pages/meeting/EditMeetingPage.qml:411
+#: ../qml/pages/common/ConfigurationPage.qml:66
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: ../qml/dialogs/OperationResult.qml:9
+msgid "Operation Result"
+msgstr "Operasjonsresultat"
+
+#: ../qml/dialogs/OperationResult.qml:12
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:77
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:137
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:86
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:154
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:81
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:138
+msgid "Operation executed successfully"
+msgstr "Operasjon utført vellykket"
+
+#: ../qml/utils/DataBaseEraser.qml:14
+msgid "Select item type(s) to remove"
+msgstr "Velg varetype(r) du vil fjerne"
+
+#: ../qml/utils/DataBaseEraser.qml:14
+msgid "(there is NO restore)"
+msgstr "(det er INGEN gjenoppretting)"
+
+#: ../qml/utils/DataBaseEraser.qml:26 ../qml/utils/DatabaseExporter.qml:30
+msgid "People"
+msgstr "Personer"
+
+#: ../qml/utils/DataBaseEraser.qml:39 ../qml/utils/DatabaseExporter.qml:38
+msgid "Meetings"
+msgstr "Møter"
+
+#: ../qml/utils/DataBaseEraser.qml:61
+#: ../qml/pages/person/PersonDetailsPage.qml:545
+#: ../qml/pages/person/PeopleListPage.qml:55
+#: ../qml/pages/common/ConfigurationPage.qml:234
+msgid "Delete"
+msgstr "Slett"
+
+#: ../qml/utils/DataBaseEraser.qml:69 ../qml/utils/DatabaseExporter.qml:77
+msgid "Please, select an option"
+msgstr "Vennligst velg et alternativ"
+
+#: ../qml/utils/DataBaseEraser.qml:85
+msgid "Deletion executed successfully"
+msgstr "Sletting utført vellykket"
+
+#: ../qml/utils/DataBaseEraser.qml:85
+msgid "Deleted"
+msgstr "Slettet"
+
+#: ../qml/utils/DataBaseEraser.qml:85
+msgid "people and"
+msgstr "personer og"
+
+#: ../qml/utils/DataBaseEraser.qml:85
+msgid "meetings"
+msgstr "møter"
+
+#: ../qml/utils/DatabaseExporter.qml:17
+msgid "Export as CSV file"
+msgstr "Eksporter som CSV fil"
+
+#: ../qml/utils/DatabaseExporter.qml:18
+msgid "to"
+msgstr "til"
+
+#: ../qml/utils/DatabaseExporter.qml:60
+msgid "Export"
+msgstr "Eksport"
+
+#: ../qml/utils/DatabaseExporter.qml:94
+msgid "OK, saved as: "
+msgstr "OK, lagret som: "
+
+#: ../qml/utils/DatabaseImporter.qml:16
+msgid "To import data from old versions 1.0 and 1.1 visit"
+msgstr "For å importere data fra gamle versjoner 1.0 og 1.1 gå til"
+
+#: ../qml/utils/DatabaseImporter.qml:30
+msgid "No contacts found (First installation ?)"
+msgstr "Ingen kontakter funnet (første installasjon ?)"
+
+#: ../qml/utils/DatabaseImporter.qml:37
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:332
+#: ../qml/pages/meeting/EditMeetingPage.qml:374
+#: ../qml/pages/person/AddPersonPage.qml:455
+#: ../qml/pages/person/PersonDetailsPage.qml:494
+msgid "Note"
+msgstr "Notat"
+
+#: ../qml/utils/DatabaseImporter.qml:37
+msgid "an import was already done"
+msgstr "en import var allerede gjort"
+
+#: ../qml/utils/DatabaseImporter.qml:37
+msgid "If redone you can have duplicated"
+msgstr "Hvis du gjør om, kan du ha duplisert"
+
+#: ../qml/utils/DatabaseImporter.qml:47
+msgid "<a href=\"%1\">http://iutility.blogspot.it/2016/11/MyPeople.html</a>"
+msgstr "<a href=\"%1\">http://iutility.blogspot.it/2016/11/MyPeople.html</a>"
+
+#: ../qml/utils/DatabaseImporter.qml:61 ../qml/utils/DatabaseImporter.qml:66
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:249
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:254
+msgid "Found"
+msgstr "Funnet"
+
+#: ../qml/utils/DatabaseImporter.qml:61 ../qml/utils/DatabaseImporter.qml:66
+msgid "Contact(s) from"
+msgstr "Kontakt(er) fra"
+
+#: ../qml/utils/DatabaseImporter.qml:83
+#: ../qml/pages/person/PeopleListPage.qml:63
+msgid "Import"
+msgstr "Importer"
+
+#: ../qml/utils/DatabaseImporter.qml:133
+msgid "OK, succesfully imported"
+msgstr "OK, vellykket import"
+
+#: ../qml/utils/DatabaseImporter.qml:133
+msgid "contacts"
+msgstr "kontakter"
+
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:27
+msgid "Search meetings with anyone"
+msgstr "Søk på møter med hvem som helst"
+
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:129
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:134
+#: ../qml/pages/common/ConfigurationPage.qml:137
+msgid "From"
+msgstr "Fra"
+
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:169
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:173
+#: ../qml/pages/common/ConfigurationPage.qml:175
+msgid "To"
+msgstr "Til"
+
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:193
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:197
+#: ../qml/pages/common/ConfigurationPage.qml:201
+msgid "Scheduled"
+msgstr "Planlagt"
+
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:193
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:197
+#: ../qml/pages/common/ConfigurationPage.qml:201
+msgid "meetings to participate"
+msgstr "møter for å delta"
+
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:194
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:198
+#: ../qml/pages/common/ConfigurationPage.qml:77
+#: ../qml/pages/common/ConfigurationPage.qml:202
+msgid "Archived"
+msgstr "Arkivert"
+
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:194
+#: ../qml/pages/common/ConfigurationPage.qml:202
+msgid "participated old meetings"
+msgstr "gamle møtedeltakelser"
+
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:200
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:196
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:204
+#: ../qml/pages/common/ConfigurationPage.qml:208
+msgid "Status"
+msgstr "Status"
+
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:231
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:237
+msgid "Search"
+msgstr "Søk"
+
+#: ../qml/pages/meeting/SearchAnyMeetingPage.qml:249
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:254
+msgid "meeting(s) (in chronological order)"
+msgstr "møte(r) (i kronologisk rekkefølge)"
+
+#: ../qml/pages/meeting/TodayMeetingPage.qml:27
+msgid "Today Meeting"
+msgstr "Dagens møter"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:47
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:48
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:45
+msgid "Delete selected Meeting ?"
+msgstr "Slette valgte møte ?"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:95
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:104
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:101
+msgid "Mark as 'ARCHIVED' and leave it in the database ?"
+msgstr "Merk som 'ARKIVERT' og la det ligge i databasen ?"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:96
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:105
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:102
+msgid "(if you archive a meeting you can reuse it"
+msgstr "(hvis du arkiverer et møte, kan du bruke det på nytt"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:97
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:106
+msgid "in the future simply updating it)"
+msgstr "i fremtiden bare ved å oppdatere det)"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:175
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:192
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:172
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:80
+#: ../qml/pages/meeting/EditMeetingPage.qml:140
+#: ../qml/pages/person/AddPersonPage.qml:77
+#: ../qml/pages/person/PersonDetailsPage.qml:94
+msgid "Name"
+msgstr "Navn"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:175
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:192
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:172
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:118
+#: ../qml/pages/meeting/EditMeetingPage.qml:170
+#: ../qml/pages/person/AddPersonPage.qml:107
+#: ../qml/pages/person/PersonDetailsPage.qml:132
+msgid "Surname"
+msgstr "Etternavn"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:180
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:197
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:177
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:209
+#: ../qml/pages/meeting/EditMeetingPage.qml:266
+msgid "Date"
+msgstr "Dato"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:180
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:197
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:177
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:277
+#: ../qml/pages/meeting/EditMeetingPage.qml:320
+msgid "Time"
+msgstr "Tid"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:185
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:202
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:182
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:179
+#: ../qml/pages/meeting/EditMeetingPage.qml:234
+msgid "Place"
+msgstr "Sted"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:190
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:207
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:187
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:149
+#: ../qml/pages/meeting/EditMeetingPage.qml:202
+msgid "Subject"
+msgstr "Emne"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:203
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:284
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:221
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:300
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:136
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:201
+#: ../qml/pages/meeting/EditMeetingPage.qml:57
+#: ../qml/pages/meeting/EditMeetingPage.qml:129
+#: ../qml/pages/common/ConfigurationPage.qml:78
+msgid "ARCHIVED"
+msgstr "ARKIVERT"
+
+#: ../qml/pages/meeting/TodayMeetingFoundDelegate.qml:204
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:222
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:202
+msgid "(EXPIRED)"
+msgstr "(UTLØPT)"
+
+#: ../qml/pages/meeting/AllPeopleMeetingFoundDelegate.qml:213
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:193
+msgid "Meeting status"
+msgstr "Møtestatus"
+
+#: ../qml/pages/meeting/MeetingWithPersonFoundDelegate.qml:103
+msgid "in the future simply updating the date)"
+msgstr "i fremtiden bare oppdaterer datoen)"
+
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:37
+msgid "Create a meeting"
+msgstr "Opprett et møte"
+
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:362
+msgid "Save"
+msgstr "Lagre"
+
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:368
+#: ../qml/pages/meeting/EditMeetingPage.qml:475
+msgid "Can't schedule to a passed date"
+msgstr "Kan ikke planlegge en passert dato"
+
+#: ../qml/pages/meeting/CreateMeetingWithPersonPage.qml:372
+msgid "Save the new meeting ?"
+msgstr "Vil du lagre det nye møtet ?"
+
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:40
+msgid "Search meeting with"
+msgstr "Søk møte med"
+
+#: ../qml/pages/meeting/SearchMeetingWithPersonPage.qml:198
+msgid "participated meetings"
+msgstr "møtedeltakelser"
+
+#: ../qml/pages/meeting/EditMeetingPage.qml:44
+msgid "Edit meeting"
+msgstr "Rediger møte"
+
+#: ../qml/pages/meeting/EditMeetingPage.qml:50
+msgid "EXPIRED"
+msgstr "UTLØPT"
+
+#: ../qml/pages/meeting/EditMeetingPage.qml:59
+#: ../qml/pages/meeting/EditMeetingPage.qml:62
+#: ../qml/pages/meeting/EditMeetingPage.qml:128
+#: ../qml/pages/meeting/EditMeetingPage.qml:129
+#: ../qml/pages/common/ConfigurationPage.qml:75
+msgid "SCHEDULED"
+msgstr "PLANLAGT"
+
+#: ../qml/pages/meeting/EditMeetingPage.qml:125
+msgid "Change"
+msgstr "Endre"
+
+#: ../qml/pages/meeting/EditMeetingPage.qml:467
+#: ../qml/pages/person/PersonDetailsPage.qml:534
+msgid "Update"
+msgstr "Oppdater"
+
+#: ../qml/pages/meeting/EditMeetingPage.qml:479
+msgid "Update the meeting ?"
+msgstr "Oppdatere møtet ?"
+
+#: ../qml/pages/birthday/TodayBirthdayPage.qml:24
+msgid "Today BirthDay"
+msgstr "Fødselsdager i dag"
+
+#: ../qml/pages/birthday/TodayBirthdayPage.qml:115
+#: ../qml/pages/person/PeopleListDelegate.qml:94
+msgid "phone"
+msgstr "telefon"
+
+#: ../qml/pages/birthday/TodayBirthdayPage.qml:119
+#: ../qml/pages/person/PeopleListDelegate.qml:98
+msgid "mobile"
+msgstr "mobil"
+
+#: ../qml/pages/birthday/TodayBirthdayPage.qml:123
+#: ../qml/pages/person/PeopleListDelegate.qml:102
+msgid "mail"
+msgstr "epost"
+
+#: ../qml/pages/person/AddPersonPage.qml:28
+msgid "Add new person"
+msgstr "Legg til ny person"
+
+#: ../qml/pages/person/AddPersonPage.qml:136
+#: ../qml/pages/person/PersonDetailsPage.qml:162
+msgid "Job"
+msgstr "Jobb"
+
+#: ../qml/pages/person/AddPersonPage.qml:165
+#: ../qml/pages/person/PersonDetailsPage.qml:192
+msgid "Birthday"
+msgstr "Fødselsdag"
+
+#: ../qml/pages/person/AddPersonPage.qml:221
+#: ../qml/pages/person/PersonDetailsPage.qml:249
+msgid "Tax code"
+msgstr "Skattekode"
+
+#: ../qml/pages/person/AddPersonPage.qml:250
+#: ../qml/pages/person/PersonDetailsPage.qml:280
+msgid "Vat code"
+msgstr "MVA kode"
+
+#: ../qml/pages/person/AddPersonPage.qml:279
+#: ../qml/pages/person/PersonDetailsPage.qml:310
+msgid "Address"
+msgstr "Adresse"
+
+#: ../qml/pages/person/AddPersonPage.qml:308
+#: ../qml/pages/person/PersonDetailsPage.qml:341
+msgid "Phone"
+msgstr "Telefon"
+
+#: ../qml/pages/person/AddPersonPage.qml:338
+#: ../qml/pages/person/PersonDetailsPage.qml:372
+msgid "Mobile"
+msgstr "Mobil"
+
+#: ../qml/pages/person/AddPersonPage.qml:368
+#: ../qml/pages/person/PersonDetailsPage.qml:403
+msgid "Email"
+msgstr "Epost"
+
+#: ../qml/pages/person/AddPersonPage.qml:397
+#: ../qml/pages/person/PersonDetailsPage.qml:433
+msgid "Skype"
+msgstr "Skype"
+
+#: ../qml/pages/person/AddPersonPage.qml:426
+#: ../qml/pages/person/PersonDetailsPage.qml:463
+msgid "Telegram"
+msgstr "Telegram"
+
+#: ../qml/pages/person/AddPersonPage.qml:485
+#: ../qml/pages/person/PeopleListPage.qml:47
+msgid "Add"
+msgstr "Legg til"
+
+#: ../qml/pages/person/PersonDetailsPage.qml:46
+msgid "Person details"
+msgstr "Persondetaljer"
+
+#: ../qml/pages/person/PersonDetailsPage.qml:538
+msgid "Confirm the update ?"
+msgstr "Bekreft oppdaterinen ?"
+
+#: ../qml/pages/person/PersonDetailsPage.qml:548
+msgid "Delete person AND his meetings ?"
+msgstr "Slette person OG dens møter ?"
+
+#: ../qml/pages/person/PeopleListPage.qml:36
+msgid "Help"
+msgstr "Hjelp"
+
+#: ../qml/pages/person/PeopleListPage.qml:71
+msgid "Export as CSV"
+msgstr "Eksporter som CSV"
+
+#: ../qml/pages/person/PeopleListPage.qml:80
+msgid "Settings"
+msgstr "Innstillinger"
+
+#: ../qml/pages/person/PeopleListPage.qml:158
+msgid "Filter by surname"
+msgstr "Filtrer på etternavn"
+
+#: ../qml/pages/person/PeopleListPage.qml:190
+msgid "Total people found"
+msgstr "Totalt antall personer funnet"
+
+#: ../qml/pages/person/PeopleListPage.qml:202
+msgid "Global Agenda Meetings"
+msgstr "Globale dagsordenmøter"
+
+#: ../qml/pages/person/PeopleListPage.qml:246
+#: ../qml/pages/person/PeopleListPage.qml:269
+msgid "Today"
+msgstr "I dag"
+
+#: ../qml/pages/common/ProductNewFeatures.qml:12
+msgid "What's new in this version"
+msgstr "Hva er nytt i denne versjonen"
+
+#: ../qml/pages/common/ProductNewFeatures.qml:21
+msgid "Support for Dark theme"
+msgstr "Støtte for mørkt tema"
+
+#: ../qml/pages/common/ProductNewFeatures.qml:21
+msgid "French translation"
+msgstr "Fransk oversettelse"
+
+#: ../qml/pages/common/ProductNewFeatures.qml:30
+msgid "Don't show again"
+msgstr "Ikke vis igjen"
+
+#: ../qml/pages/common/AboutProduct.qml:10
+msgid "Product Info"
+msgstr "Produktinfo"
+
+#: ../qml/pages/common/AboutProduct.qml:15
+msgid "With MyPeople you can:"
+msgstr "Med MyPeople kan du:"
+
+#: ../qml/pages/common/AboutProduct.qml:16
+msgid ""
+"a) Store (locally) informations of people <br/> <b>(No data are shared "
+"online)</b>"
+msgstr ""
+"a) Lagre (lokalt) informasjon om personer <br/> <b> (Ingen data deles "
+"online</b>"
+
+#: ../qml/pages/common/AboutProduct.qml:17
+msgid "b) Create an Agenda of meetings with the archived people"
+msgstr "b) Lag en agenda for møter med de arkiverte personene"
+
+#: ../qml/pages/common/AboutProduct.qml:18
+msgid "What is the meeting status ?"
+msgstr "Hva er møtestatus ?"
+
+#: ../qml/pages/common/AboutProduct.qml:19
+msgid "Is a flag used to organize the stored meetings."
+msgstr "Er et flagg brukt til å organisere de lagrede møtene."
+
+#: ../qml/pages/common/AboutProduct.qml:20
+msgid ""
+"There are three status: <br/><b>'SCHEDULED', 'ARCHIVED', 'SCHEDULED "
+"(EXPIRED)''</b>"
+msgstr "Det er tre statuser: <br/> <b> 'PLANLAGT', 'ARKIVERT', 'PLANLAGT "
+"(UTLØPT)''</b>"
+
+#: ../qml/pages/common/AboutProduct.qml:21
+msgid ""
+"A just created meeting (for a future data) get 'SCHEDULED' status (that "
+"means 'is programmed')."
+msgstr ""
+"Et nettopp opprettet møte (for fremtidige data) får statusen 'PLANLAGT'(at "
+"betyr 'er programmert')."
+
+#: ../qml/pages/common/AboutProduct.qml:22
+msgid "Any meeting, can be deleted."
+msgstr "Ethvert møte kan slettes."
+
+#: ../qml/pages/common/AboutProduct.qml:22
+msgid "Archiving, set the meeting status to 'ARCHIVED'"
+msgstr "Arkiver, sett møtestatus til 'ARKIVERT'"
+
+#: ../qml/pages/common/AboutProduct.qml:23
+msgid ""
+"Archiving a meeting means 'leave it in database'. You can schedule again an "
+"archived meeting,"
+msgstr ""
+"Å arkivere et møte betyr 'la det være i databasen'. Du kan planlegge et"
+"arkivert møte,"
+
+#: ../qml/pages/common/AboutProduct.qml:24
+msgid "just set a future date and change his status to 'SCHEDULED'"
+msgstr "bare sett en fremtidig dato og endre statusen til 'PLANLAGT'"
+
+#: ../qml/pages/common/AboutProduct.qml:25
+msgid "Is not possible schedule a new meeting with a past date"
+msgstr "Er det ikke mulig å planlegge et nytt møte med en tidligere dato"
+
+#: ../qml/pages/common/AboutProduct.qml:26
+msgid ""
+"If current time is greater than the meeting one, meeting is 'SCHEDULED "
+"(EXPIRED)'."
+msgstr ""
+"Hvis nåværende tid er større enn møtet, er møtet 'PLANLAGT "
+"(UTLØPT)'."
+
+#: ../qml/pages/common/AboutProduct.qml:27
+msgid "Updating the date to a future one return to 'SCHEDULED'"
+msgstr "Oppdaterer datoen til en fremtidig retur til 'PLANLAGT'"
+
+#: ../qml/pages/common/ConfigurationPage.qml:27
+msgid "Application Configuration"
+msgstr "Applikasjonskonfigurasjon"
+
+#: ../qml/pages/common/ConfigurationPage.qml:56
+msgid "Remove meetings in the range (no restore) ?"
+msgstr "Fjern møter i området (ingen gjenoppretting) ?"
+
+#: ../qml/pages/common/ConfigurationPage.qml:83
+msgid "Done, deleted"
+msgstr "Utført, slettet"
+
+#: ../qml/pages/common/ConfigurationPage.qml:83
+msgid "meeting(s)"
+msgstr "møte(r)"
+
+#: ../qml/pages/common/ConfigurationPage.qml:99
+msgid "MAINTENANCE: delete old meetings"
+msgstr "VEDLIKEHOLD: slett gamle møter"
+
+#: MyPeople.desktop.in.h:1
+msgid "MyPeople"
+msgstr "MyPeople"
